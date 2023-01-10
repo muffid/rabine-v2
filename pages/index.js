@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      <main className='w-full mx-auto px-12 max-w-[1200px]'>
+      <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
       
         <Hero/>
       </main>
