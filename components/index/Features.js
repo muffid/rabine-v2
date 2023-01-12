@@ -1,6 +1,6 @@
 import React from 'react'
-import { BiShareAlt,BiMap,BiTimer } from "react-icons/bi";
-import { BsArrowsFullscreen,BsMusicNoteBeamed } from "react-icons/bs";
+import { BiShareAlt,BiMap,BiTimer,BiVideo } from "react-icons/bi";
+import { BsArrowsFullscreen,BsMusicNoteBeamed,BsChatLeftDots,BsCardImage } from "react-icons/bs";
 import { HiBellAlert } from "react-icons/hi2";
 
 function Features() {
@@ -60,11 +60,41 @@ function Features() {
             </div>
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-4 gap-y-3 items-center'>
-                <div className='bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center'>
-                    <BiTimer className='text-3xl text-blue-800'/>
+                <div className='bg-emerald-100 w-16 h-16 rounded-xl flex items-center justify-center'>
+                    <BiTimer className='text-3xl text-emerald-800'/>
                 </div>
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Hitung Mundur</h1>
+                    <p className='text-xs text-slate-500 '>will be distracted by the readable content of a page when</p>
+                </div>
+            </div>
+
+            <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-4 gap-y-3 items-center'>
+                <div className='bg-yellow-100 w-16 h-16 rounded-xl flex items-center justify-center'>
+                    <BiVideo className='text-3xl text-yellow-800'/>
+                </div>
+                <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
+                    <h1 className='bold leading-none '>Video Player</h1>
+                    <p className='text-xs text-slate-500 '>will be distracted by the readable content of a page when</p>
+                </div>
+            </div>
+
+            <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-4 gap-y-3 items-center'>
+                <div className='bg-sky-100 w-16 h-16 rounded-xl flex items-center justify-center'>
+                    <BsChatLeftDots className='text-3xl text-sky-800'/>
+                </div>
+                <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
+                    <h1 className='bold leading-none '>Ucapan Doa</h1>
+                    <p className='text-xs text-slate-500 '>will be distracted by the readable content of a page when</p>
+                </div>
+            </div>
+
+            <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-4 gap-y-3 items-center'>
+                <div className='bg-red-100 w-16 h-16 rounded-xl flex items-center justify-center'>
+                    <BsCardImage className='text-3xl text-red-800'/>
+                </div>
+                <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
+                    <h1 className='bold leading-none '>Gallery</h1>
                     <p className='text-xs text-slate-500 '>will be distracted by the readable content of a page when</p>
                 </div>
             </div>
