@@ -3,15 +3,15 @@ import React from 'react'
 
 function Beralih() {
   return (
-    <div className='grid grid-cols-1 lg:flex flex-row items-center mt-28 bg-slate-100/50 justify-between md:gap-x-6 relative border rounded-3xl'>
-        <div className='w-full flex items-end justify-end'>
+    <div className='grid grid-cols-1 lg:flex flex-row items-end mt-28 bg-slate-100/50 justify-between md:gap-x-6 relative border rounded-3xl'>
+        <div className='w-full h-full flex items-end md:items-center py-6 pl-12 md:justify-center justify-end lg:items-end lg:justify-end'>
         <Image
                     src='/img/MODEL_1.png'
                     width={1000}
                     height={1000}
                     alt='woman Rabine.id'
                     style={{objectFit:`cover`}}
-                    className='w-[170px] md:w-[270px] mr-8 lg:absolute z-10 -top-16'
+                    className='w-[170px] md:w-[270px] mr-8 lg:absolute z-10 top-12 '
                 />
         <Image
                     src='/img/BG_LOVE.png'
@@ -21,6 +21,41 @@ function Beralih() {
                     style={{objectFit:`cover`}}
                     className=' w-[1200px] max-h-[490px] top-0 left-0 opacity-50 absolute -z-0 rounded-2xl '
                 />
+           
+        
+        <div className='flex flex-row items-center justify-center bg-white rounded-xl shadow-md gap-x-4 absolute px-3 py-1 top-12 left-8 md:px-4 md:py-3 md:top-24 md:left-12'>
+            <Image
+                src='/img/check-mark.png'
+                width={500}
+                height={500}
+                alt='check rabine'
+                className='w-8'
+            />
+            <p className='semibold text-xs lg:text-base '>Mudah dipakai</p>
+        </div>
+
+        <div className='flex flex-row items-center justify-center bg-white rounded-xl shadow-md gap-x-4 absolute px-3 py-1 top-28 left-12 md:px-4 md:py-3 md:top-48 md:left-28 z-20'>
+            <Image
+                src='/img/check-mark.png'
+                width={500}
+                height={500}
+                alt='check rabine'
+                className='w-8'
+            />
+            <p className='semibold text-xs lg:text-base'>Lebih Murah</p>
+        </div>
+
+        <div className='flex flex-row items-center justify-center bg-white rounded-xl shadow-md gap-x-4 absolute  px-3 py-1 top-44 left-4 md:px-4 md:py-3 md:top-72 md:left-8 z-20'>
+            <Image
+                src='/img/check-mark.png'
+                width={500}
+                height={500}
+                alt='check rabine'
+                className='w-8'
+            />
+            <p className='semibold text-xs lg:text-base'>Mudah disebar</p>
+        </div>
+
         </div>
         
         <div className='flex flex-col items-start gap-y-6 p-8 w-full z-10'>
