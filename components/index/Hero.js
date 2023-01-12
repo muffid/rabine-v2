@@ -11,7 +11,8 @@ function Hero() {
             <div className='h-2 w-14 bg-orange-300 rounded-lg'></div>
             <div>
                 <p className='bold pr-12 text-lg'>Pernikahanmu adalah momen indahmu.</p>
-                <p className='text-sm mt-2 text-slate-500'>Sekarang nggak perlu lagi pusing mikir undangan. Nggak prelu lagi mikir gimana nyetaknya, gimana nyebarnya</p>
+                <p className='text-sm mt-2 text-slate-600 leading-relaxed'>Sekarang nggak perlu lagi pusing mikir undangan. Nggak prelu lagi mikir gimana nyetaknya,
+                 gimana nyebarnya. Dengan <span className='bold text-slate-800'>rabine.id</span> kirim undangan jadi lebih simpel</p>
             </div>
            
             <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0 mt-2'>

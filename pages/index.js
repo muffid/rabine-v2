@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Beralih from '../components/index/Beralih'
+import Features from '../components/index/Features'
 import Hero from '../components/index/Hero'
 import Navbar from '../components/index/Navbar'
 
@@ -14,10 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
         <Hero/>
         <Beralih/>
+        <Features/>
       </main>
     </div>
   )

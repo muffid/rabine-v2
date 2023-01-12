@@ -107,7 +107,7 @@ function Navbar() {
                         <div className={hoverMenu===5 || menuActive===5 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
                 </div>
-                <button className='hidden lg:inline bg-orange-500 p-3 rounded-3xl  text-white text-xs ml-6 hover:bg-orange-600 hover:scale-105 transform duration-200 hover:shadow-xl hover:shadow-orange-200'>Get The App</button>
+                <button className='hidden lg:inline bg-orange-500 p-3 rounded-3xl  text-white text-xs ml-6 hover:bg-orange-600 hover:scale-105 transform duration-200 hover:shadow-xl hover:shadow-orange-200'>Order Sekarang</button>
                 <div className='flex flex-row items-center ml-8 gap-x-4 lg:ml-4'> 
                     <HiSearch className='text-2xl cursor-pointer'/>
                     <HiMenuAlt3 className='text-2xl cursor-pointer md:hidden' onClick={()=>setIsOpen(true)}/>
