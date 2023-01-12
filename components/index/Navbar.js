@@ -7,8 +7,8 @@ function Navbar() {
     const [menuActive,setMenuActive] = useState(1)
 
   return (
-    <div className='w-full'>
-        <div className=' max-w-[1200px] mx-auto px-8 flex flex-row items-center justify-between base text-slate-700  py-6 lg:py-8 '>
+    <div className='w-full bg-white/80 backdrop-blur-sm fixed top-0 z-20  '>
+        <div className=' max-w-[1200px] mx-auto px-8 flex flex-row items-center justify-between base text-slate-700  py-6 '>
             <div className='flex flex-col items-end gap-y-4'>
                 <Image
                     src='/img/rabine.png'
