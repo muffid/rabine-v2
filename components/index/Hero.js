@@ -7,10 +7,14 @@ function Hero() {
   return (
     <div className='mt-[110px] grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-x-4 rounded-3xl border border-slate-200  bg-slate-100/50 px-8 md:pl-24 py-16 gap-y-8 relative'>
         <div className='flex flex-col items-start gap-y-8'>
-            <h1 className='bold text-5xl md:text-5xl lg:text-7xl text-[#2C090B]'>Dont listen to what they say, Go see</h1>
+            <h1 className='bold text-4xl md:text-5xl lg:text-7xl text-[#2C090B]'>Rabi Gausah Mikir Nyetak Undangan</h1>
             <div className='h-2 w-14 bg-orange-300 rounded-lg'></div>
-            <p className='semibold pr-12'>Your ultimate travel companion. Carries all the information you need while travelling.</p>
-            <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0'>
+            <div>
+                <p className='bold pr-12 text-lg'>Pernikahanmu adalah momen indahmu.</p>
+                <p className='text-sm mt-2 text-slate-500'>Sekarang nggak perlu lagi pusing mikir undangan. Nggak prelu lagi mikir gimana nyetaknya, gimana nyebarnya</p>
+            </div>
+           
+            <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0 mt-2'>
                 <div className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 p-3 transform duration-200 lg:px-6 lg:py-2 bg-white rounded-lg shadow-md '>
                     <Image
                         src='/img/apple.png'
