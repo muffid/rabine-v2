@@ -18,43 +18,43 @@ function Navbar() {
             animate={{x: isOpen ? 0 : '100vw'}}
             transition={{duration:0.3,ease:'easeOut'}}
             className='drawer absolute  h-[100vh] w-[280px]  top-0 z-50 right-0 md:hidden '>
-            <div className='bg-red-800 w-full p-6 flex flex-row items-center justify-end text-sm gap-x-2 pr-18'>
+            <div className='bg-gradient-to-r from-orange-300 to-red-500 w-full p-6 flex flex-row items-center justify-end text-sm gap-x-2 pr-18'>
                 <p className='text-white mr-24 bold text-base'>rabine.id</p>
                 <p className='text-white ' onClick={()=>setIsOpen(false)}>Close</p>
                 <BiXCircle className=' text-white'onClick={()=>setIsOpen(false)}/>
             </div>
                 
-            <div className='w-full h-full bg-white flex flex-col items-end p-8 rounded-b-xl gap-y-6 justify-between text-lg relative'>
+            <div className='w-full h-full bg-white/95 backdrop-blur-sm flex flex-col items-end p-8 rounded-b-xl gap-y-6 justify-between text-lg relative'>
                 <div className='bg-white h-16 w-8 -left-3 top-[40%] absolute rounded-xl  flex items-center justify-center'>
-                    <BiDotsVertical className='text-2xl'/>
+                    <BiDotsVertical className='text-2xl cursor-pointer'onClick={()=>setIsOpen(false)}/>
                 </div>
-                <div className='flex flex-col items-end gap-y-2 semibold'>
-                    <div className='flex flex-row items-center gap-x-5 bg-white p-4 rounded-xl 'onClick={()=>setIsOpen(false)}>
+                <div className='flex flex-col items-end gap-y-7 semibold text-sm'>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl 'onClick={()=>setIsOpen(false)}>
                         <p>Home</p>
                         <BiHomeCircle/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5 bg-white p-4 rounded-xl'onClick={()=>setIsOpen(false)}>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>setIsOpen(false)}>
                         <p>About us</p>
                         <BiInfoCircle/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5 bg-white p-4 rounded-xl'>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl'>
                         <p>Pricing</p>
                         <BiDollar/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5 bg-white p-4 rounded-xl'>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl'>
                         <p>Products</p>
                         <BiCartAlt/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5 bg-white p-4 rounded-xl'>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl'>
                         <p>Blog</p>
                         <BiNews/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5 bg-white p-4 rounded-xl'>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl'>
                         <p>Contact</p>
                         <BiPhoneCall/>
                     </div>

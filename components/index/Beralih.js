@@ -37,7 +37,7 @@ function Beralih() {
                 width={500}
                 height={500}
                 alt='check rabine'
-                className='w-8'
+                className='w-6'
             />
             <p className='semibold text-xs lg:text-base '>Mudah dipakai</p>
         </div>
@@ -47,7 +47,7 @@ function Beralih() {
                 width={500}
                 height={500}
                 alt='check rabine'
-                className='w-8'
+                className='w-6'
             />
             <p className='semibold text-xs lg:text-base'>Lebih Murah</p>
         </div>
@@ -57,7 +57,7 @@ function Beralih() {
                 width={500}
                 height={500}
                 alt='check rabine'
-                className='w-8'
+                className='w-6'
             />
             <p className='semibold text-xs lg:text-base'>Mudah disebar</p>
         </div>
@@ -67,7 +67,7 @@ function Beralih() {
                 width={500}
                 height={500}
                 alt='check rabine'
-                className='w-8'
+                className='w-6'
             />
             <p className='semibold text-xs lg:text-base'>Banyak Fitur</p>
         </div>
