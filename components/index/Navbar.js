@@ -102,6 +102,7 @@ function Navbar() {
                     <HiSearch className='text-2xl cursor-pointer'/>
                     <HiMenuAlt3 className='text-2xl cursor-pointer md:hidden' onClick={()=>setIsOpen(true)}/>
                 </div>
+              
             </div>
         </div>
     </div>
