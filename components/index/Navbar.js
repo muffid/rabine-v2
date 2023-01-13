@@ -10,7 +10,7 @@ function Navbar() {
     const[isOpen,setIsOpen] = useState(false)
 
   return (
-    <div className='w-full bg-white/80 backdrop-blur-sm fixed top-0 z-20 '>
+    <div className='w-full bg-white/80 backdrop-blur-sm fixed top-0 z-20 border-b '>
         <div className=' max-w-[1200px] mx-auto px-8 flex flex-row items-center justify-between base text-slate-700  py-6 relative '>
       
         <motion.div
@@ -30,22 +30,16 @@ function Navbar() {
                 </div>
                 <div className='flex flex-col items-end gap-y-7 semibold text-sm'>
                     <div className='flex flex-row items-center gap-x-5  rounded-xl 'onClick={()=>setIsOpen(false)}>
-                        <p>Home</p>
+                        <p>Beranda</p>
                         <BiHomeCircle/>
                     </div>
 
                     <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>setIsOpen(false)}>
-                        <p>About us</p>
+                        <p>Harga</p>
                         <BiInfoCircle/>
                     </div>
-
                     <div className='flex flex-row items-center gap-x-5  rounded-xl'>
-                        <p>Pricing</p>
-                        <BiDollar/>
-                    </div>
-
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl'>
-                        <p>Products</p>
+                        <p>Template</p>
                         <BiCartAlt/>
                     </div>
 
@@ -55,7 +49,7 @@ function Navbar() {
                     </div>
 
                     <div className='flex flex-row items-center gap-x-5  rounded-xl'>
-                        <p>Contact</p>
+                        <p>Kontak</p>
                         <BiPhoneCall/>
                     </div>
                 </div>
@@ -77,22 +71,18 @@ function Navbar() {
             <div className='flex flex-row items-center justify-between gap-x-4'>
                 <div className='hidden md:flex flex-row items-center justify-between gap-x-6 text-sm bold '>
                     <div className=' cursor-pointer relative '>
-                        <p onMouseEnter={()=>setHoverMenu(1)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(1)}>Home</p>
+                        <p onMouseEnter={()=>setHoverMenu(1)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(1)}>Beranda</p>
                         <div className={hoverMenu===1 || menuActive===1 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
+             
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(2)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(2)}>About us</p>
-                        <div className={hoverMenu===2 || menuActive===2 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
-                    </div>
-
-                    <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(3)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(3)}>Pricing</p>
+                        <p onMouseEnter={()=>setHoverMenu(3)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(3)}>Harga</p>
                         <div className={hoverMenu===3 || menuActive===3 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(4)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(4)}>Products</p>
+                        <p onMouseEnter={()=>setHoverMenu(4)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(4)}>Template</p>
                         <div className={hoverMenu===4 || menuActive===4 ?  'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
@@ -103,11 +93,11 @@ function Navbar() {
                     </div>
 
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(5)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(5)}>Contact</p>
+                        <p onMouseEnter={()=>setHoverMenu(5)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(5)}>Kontak</p>
                         <div className={hoverMenu===5 || menuActive===5 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
                 </div>
-                <button className='hidden lg:inline bg-orange-500 p-3 rounded-3xl  text-white text-xs ml-6 hover:bg-orange-600 hover:scale-105 transform duration-200 hover:shadow-xl hover:shadow-orange-200'>Order Sekarang</button>
+                <button className='hidden lg:inline bg-pink-700 p-3 rounded-3xl  text-white text-xs ml-6  hover:scale-105 transform duration-200 hover:shadow-xl hover:shadow-orange-200'>Order Sekarang</button>
                 <div className='flex flex-row items-center ml-8 gap-x-4 lg:ml-4'> 
                     <HiSearch className='text-2xl cursor-pointer'/>
                     <HiMenuAlt3 className='text-2xl cursor-pointer md:hidden' onClick={()=>setIsOpen(true)}/>

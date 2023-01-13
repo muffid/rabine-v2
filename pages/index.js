@@ -3,6 +3,7 @@ import Beralih from '../components/index/Beralih'
 import Features from '../components/index/Features'
 import Hero from '../components/index/Hero'
 import Navbar from '../components/index/Navbar'
+import Pricing from '../components/index/Pricing'
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero/>
         <Beralih/>
         <Features/>
+        <Pricing/>
       </main>
     </div>
   )
