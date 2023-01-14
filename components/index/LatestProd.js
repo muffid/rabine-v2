@@ -21,7 +21,7 @@ function LatestProd() {
             setWindowSize(window.innerWidth)
             winRef.current = windowSize;
             if(winRef.current < 800){
-                setPerSlide(1)
+                setPerSlide(2)
             }else if(winRef.current >= 800 && winRef.current < 1023){
                 setPerSlide(2)
             }else{
@@ -42,7 +42,7 @@ function LatestProd() {
   return (
     <div className='flex flex-col items-center gap-y-4  mx-auto mt-20 mb-20 bg-gradient-to-br from-cyan-50/60 to bg-purple-100/60 py-8'>
     <h1 className={'font-bold  lg:text-4xl text-3xl text-center text-[#181E4B] '}>Preset Desain</h1>
-    <p className='text-center font-semibold text-[#5E6282]'>Desain Terbaru</p>
+    <p className='text-center font-semibold p-2 bg-yellow-200'>Desain Terbaru</p>
     <div className=' mt-8 w-full max-w-[1500px] ' >
        {/* jkkj */}
         <SliderTerbaru slide={perSlide} loop={true}/>
