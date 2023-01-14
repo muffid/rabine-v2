@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { HiMenuAlt3, HiSearch} from "react-icons/hi";
-import { BiXCircle,BiHomeCircle,BiInfoCircle,BiDollar,BiCartAlt,BiNews,BiPhoneCall,BiDotsVertical } from 'react-icons/bi'
+import { BiXCircle,BiHomeCircle,BiInfoCircle,BiDollar,BiCartAlt,BiNews,BiPhoneCall,BiDotsVertical,BiEnvelopeOpen } from 'react-icons/bi'
 import { motion } from 'framer-motion'
 
-function Navbar() {
+function Navbar({fn}) {
     const [hoverMenu,setHoverMenu] = useState(0)
     const [menuActive,setMenuActive] = useState(1)
     const[isOpen,setIsOpen] = useState(false)
@@ -18,7 +18,7 @@ function Navbar() {
             animate={{x: isOpen ? 0 : '100vw'}}
             transition={{duration:0.3,ease:'easeOut'}}
             className='drawer absolute  h-[100vh] w-[280px]  top-0 z-50 right-0 md:hidden '>
-            <div className='bg-gradient-to-r from-orange-300 to-red-500 w-full p-6 flex flex-row items-center justify-end text-sm gap-x-2 pr-18'>
+            <div className='bg-gradient-to-r from-pink-800 to-red-500 w-full p-6 flex flex-row items-center justify-end text-sm gap-x-2 pr-18'>
                 <p className='text-white mr-24 bold text-base'>rabine.id</p>
                 <p className='text-white ' onClick={()=>setIsOpen(false)}>Close</p>
                 <BiXCircle className=' text-white'onClick={()=>setIsOpen(false)}/>
@@ -29,18 +29,18 @@ function Navbar() {
                     <BiDotsVertical className='text-2xl cursor-pointer'onClick={()=>setIsOpen(false)}/>
                 </div>
                 <div className='flex flex-col items-end gap-y-7 semibold text-sm'>
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl 'onClick={()=>setIsOpen(false)}>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl 'onClick={()=>{setIsOpen(false);fn(1)}}>
                         <p>Beranda</p>
                         <BiHomeCircle/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>setIsOpen(false)}>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>{setIsOpen(false);fn(4)}}>
                         <p>Harga</p>
                         <BiInfoCircle/>
                     </div>
                     <div className='flex flex-row items-center gap-x-5  rounded-xl'>
                         <p>Template</p>
-                        <BiCartAlt/>
+                        <BiEnvelopeOpen/>
                     </div>
 
                     <div className='flex flex-row items-center gap-x-5  rounded-xl'>
@@ -71,13 +71,13 @@ function Navbar() {
             <div className='flex flex-row items-center justify-between gap-x-4'>
                 <div className='hidden md:flex flex-row items-center justify-between gap-x-6 text-sm bold '>
                     <div className=' cursor-pointer relative '>
-                        <p onMouseEnter={()=>setHoverMenu(1)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(1)}>Beranda</p>
+                        <p onMouseEnter={()=>setHoverMenu(1)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(1);fn(1)}}>Beranda</p>
                         <div className={hoverMenu===1 || menuActive===1 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
              
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(3)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(3)}>Harga</p>
+                        <p onMouseEnter={()=>setHoverMenu(3)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(3);fn(4)}}>Harga</p>
                         <div className={hoverMenu===3 || menuActive===3 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
@@ -97,7 +97,7 @@ function Navbar() {
                         <div className={hoverMenu===5 || menuActive===5 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
                 </div>
-                <button className='hidden lg:inline bg-pink-700 p-3 rounded-3xl  text-white text-xs ml-6  hover:scale-105 transform duration-200 hover:shadow-xl hover:shadow-orange-200'>Order Sekarang</button>
+                <button className='hidden lg:inline bg-pink-700 p-3 rounded-3xl  text-white text-xs ml-6  hover:scale-105 transform duration-200 '>Order Sekarang</button>
                 <div className='flex flex-row items-center ml-8 gap-x-4 lg:ml-4'> 
                     <HiSearch className='text-2xl cursor-pointer'/>
                     <HiMenuAlt3 className='text-2xl cursor-pointer md:hidden' onClick={()=>setIsOpen(true)}/>

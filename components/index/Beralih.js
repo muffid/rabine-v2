@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 
-function Beralih() {
+function Beralih(props) {
   return (
-    <div className='grid grid-cols-1 lg:flex flex-row items-end mt-28 bg-slate-100/50 justify-between md:gap-x-6 relative border rounded-3xl mb-24'>
+    <div id={`content${props.id}`} className='grid grid-cols-1 lg:flex flex-row items-end mt-28 bg-slate-100/50 justify-between md:gap-x-6 relative border rounded-3xl mb-24'>
         <div className='w-full h-full flex items-end md:items-center py-6 pl-12 md:justify-center justify-end lg:items-end lg:justify-end'>
         <Image
                     src='/img/MODEL_1.png'
