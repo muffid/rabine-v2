@@ -10,7 +10,7 @@ import SingleProduct from '../globals/SingleProduct';
 
 function SliderTerbaru(props) {
   return (
-    <div className='px-6 lg:px-4'>
+    <div className='px-6 lg:px-0'>
          <Swiper
             loop={props.loop}
             slidesPerView={props.slide}
@@ -38,7 +38,7 @@ function SliderTerbaru(props) {
             <SingleProduct name='Faded Corny' cat='PREMIUM' img='prod4.jpg'/>
           </SwiperSlide>
           <SwiperSlide>
-            <SingleProduct name='Lunar Sage' cat='BASIC' img='prod5.jpg'/>
+            <SingleProduct name='Lunar netnotnot' cat='BASIC' img='prod5.jpg'/>
           </SwiperSlide>
         </Swiper> 
     </div>
