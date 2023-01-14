@@ -28,7 +28,7 @@ export default function Home() {
         <Features/>
         <Pricing id={4}/>
       </main>
-      {/* <LatestProd/> */}
+      <LatestProd/>
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
         <SampleProduct/>
       </main>
