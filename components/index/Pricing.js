@@ -30,7 +30,7 @@ function Pricing(props) {
                     <h1 className='semibold text-xl  -ml-1'>000</h1>
                 </div>
                 <p className='text-xs text-slate-500 '>per undangan</p>
-                <button className='rounded-lg px-5 py-3 w-full bg-pink-200 text-pink-900  bold '>Lihat Desain</button>
+                <button className='rounded-lg px-5 py-3 w-full bg-pink-200 text-pink-900  bold hover:scale-105 hover:shadow-xl hover:shadow-pink-100 duration-75 '>Lihat Desain</button>
                 <p className='bold text-sm mt-4'>Fitur Paket Basic</p>
                 <motion.div layout transition={{
                     layout:{
@@ -71,7 +71,7 @@ function Pricing(props) {
                     <div className='flex flex-row gap-x-4 items-center mt-4 cursor-pointer text-blue-600 '>
                         <h1 className='bold text-sm' onClick={()=>setBasicClicked(!isBasicClicked)}>{isBasicClicked ? 'Lihat lebih sedikit' : 'Lihat lebih banyak'}</h1>  
                         <motion.h1 
-                              animate={{ rotate: isBasicClicked ? -90 : 0 }}
+                              animate={{ rotate: isBasicClicked ? -90 : 90 }}
                               transition={{ duration: 0.2 }}
                         className='bold '><BiCaretRight/></motion.h1>
                     </div>
@@ -91,7 +91,7 @@ function Pricing(props) {
                     <h1 className='semibold text-xl  -ml-1'>000</h1>
                 </div>
                 <p className='text-xs text-slate-500 '>per undangan</p>
-                <button className='rounded-lg px-5 py-3 w-full bg-pink-200 text-pink-900  bold '>Lihat Desain</button>
+                <button className='rounded-lg px-5 py-3 w-full bg-pink-200 text-pink-900  bold hover:scale-105 hover:shadow-xl hover:shadow-pink-100 duration-75 '>Lihat Desain</button>
                 <p className='bold text-sm mt-4'>Fitur Paket Premium</p>
                 <motion.div layout transition={{
                     layout:{
@@ -132,7 +132,7 @@ function Pricing(props) {
                     <div className='flex flex-row gap-x-4 items-center mt-4 cursor-pointer text-blue-600 '>
                     <h1 className='bold text-sm' onClick={()=>setPremClicked(!isPremClicked)}>{isPremClicked ? 'Lihat lebih sedikit' : 'Lihat lebih banyak'}</h1>
                     <motion.h1 
-                              animate={{ rotate: isPremClicked ? -90 : 0 }}
+                              animate={{ rotate: isPremClicked ? -90 : 90 }}
                               transition={{ duration: 0.2 }}
                         className='bold '><BiCaretRight/></motion.h1>
                     </div>
@@ -151,7 +151,7 @@ function Pricing(props) {
                     <h1 className='semibold text-xl  -ml-1'>000</h1>
                 </div>
                 <p className='text-xs text-slate-500 '>per undangan</p>
-                <button className='rounded-lg px-5 py-3 w-full bg-pink-200 text-pink-900  bold '>Lihat Desain</button>
+                <button className='rounded-lg px-5 py-3 w-full bg-pink-200 text-pink-900  bold hover:scale-105 hover:shadow-xl hover:shadow-pink-100 duration-75 '>Lihat Desain</button>
                 <p className='bold text-sm mt-4'>Fitur Paket Exclusive</p>
                 <div className='flex flex-col gap-y-1'>
                     <div className='flex flex-row items-center gap-x-3'>

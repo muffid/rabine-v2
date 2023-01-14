@@ -18,7 +18,7 @@ function Navbar({fn}) {
             animate={{x: isOpen ? 0 : '100vw'}}
             transition={{duration:0.3,ease:'easeOut'}}
             className='drawer absolute  h-[100vh] w-[280px]  top-0 z-50 right-0 md:hidden '>
-            <div className='bg-gradient-to-r from-pink-800 to-red-500 w-full p-6 flex flex-row items-center justify-end text-sm gap-x-2 pr-18'>
+            <div className='bg-gradient-to-r from-pink-600 to-orange-500 w-full p-6 flex flex-row items-center justify-end text-sm gap-x-2 pr-18'>
                 <p className='text-white mr-24 bold text-base'>rabine.id</p>
                 <p className='text-white ' onClick={()=>setIsOpen(false)}>Close</p>
                 <BiXCircle className=' text-white'onClick={()=>setIsOpen(false)}/>
@@ -97,7 +97,7 @@ function Navbar({fn}) {
                         <div className={hoverMenu===5 || menuActive===5 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
                 </div>
-                <button className='hidden lg:inline bg-pink-700 p-3 rounded-3xl  text-white text-xs ml-6  hover:scale-105 transform duration-200 '>Order Sekarang</button>
+                <button className='hidden lg:inline bg-gradient-to-r from-pink-600 to-orange-500 p-3 rounded-3xl  text-white text-xs ml-6  hover:scale-105 transform duration-200 '>Order Sekarang</button>
                 <div className='flex flex-row items-center ml-8 gap-x-4 lg:ml-4'> 
                     <HiSearch className='text-2xl cursor-pointer'/>
                     <HiMenuAlt3 className='text-2xl cursor-pointer md:hidden' onClick={()=>setIsOpen(true)}/>
