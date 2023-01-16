@@ -1,6 +1,7 @@
 {
     "article": [
         {
+            "id":"artcl1",
             "title": "5 Hal Yang Membahagiakan Dari Pernikahan",
             "img": "blog1.jpg",
             "author": "John Smith",
@@ -8,6 +9,7 @@
             "mins_read": "5"
         },
         {
+            "id":"artcl2",
             "title": "Jangan Menikah dulu Sebelum Punya Jodoh",
             "img": "blog2.jpg",
             "author": "Jane Doe",
@@ -15,6 +17,7 @@
             "mins_read": "3"
         },
         {
+            "id":"artcl3",
             "title": "Kentut Saat Ijab Qabul Apakah Membatalkan Akad? Simak Penjelasnya",
             "img": "blog3.jpg",
             "author": "Jane Doe",
@@ -22,6 +25,7 @@
             "mins_read": "3"
         },
         {
+            "id":"artcl4",
             "title": "Cara Mengetahui Jika Pasnaganmu Ternyata Adalah Fans MU",
             "img": "blog5.webp",
             "author": "Jane Doe",

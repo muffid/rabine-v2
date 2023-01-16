@@ -17,11 +17,14 @@ function BlogFeed() {
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 '>
                 {articleGrid.article.map((item,index)=>(
-                    <SingleBlogGrid key={index} judul={item.title} img={item.img} admin={item.author} date={item.date} time={item.mins_read} />
+                    <div key={index}>
+                         <SingleBlogGrid  judul={item.title} img={item.img} admin={item.author} date={item.date} time={item.mins_read} />
+                    </div>
                 )
                 )}
             </div>
         </div>
+        <button className='rounded-full text-sm bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 py-3'>Lihat Semua Blog</button>
     </div>
   )
 }

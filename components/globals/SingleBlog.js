@@ -10,6 +10,7 @@ function SingleBlog() {
             height={800}
             style={{objectFit:`cover`}}
             className='w-full rounded-t-2xl '
+            alt='rabine.id wedding'
         />
         
         <h1 className='xbold text-2xl cursor-pointer '>5 Hal yang membahagiakan dari pernikahan</h1>

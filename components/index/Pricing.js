@@ -40,8 +40,8 @@ function Pricing(props) {
                     }
                 }
             }  className='flex flex-col gap-y-1'>
-                   {basic.less.map((item)=> (
-                         <div className='flex flex-row items-center gap-x-3'>
+                   {basic.less.map((item,index)=> (
+                         <div key={index} className='flex flex-row items-center gap-x-3'>
                          <BsCheckLg className='text-emerald-500 text-xs'/>
                          <p className='text-slate-700 text-sm'>{item}</p>
                      </div>
@@ -49,8 +49,8 @@ function Pricing(props) {
                    
                     {isBasicClicked && (
                         <div  className='flex flex-col gap-y-1'>
-                            {basic.more.map((item)=>(
-                                <div className='flex flex-row items-center gap-x-3'>
+                            {basic.more.map((item,index)=>(
+                                <div key={index} className='flex flex-row items-center gap-x-3'>
                                     <BsCheckLg className='text-emerald-500 text-xs'/>
                                     <p className='text-slate-700 text-sm'>{item}</p>
                                 </div>
@@ -89,8 +89,8 @@ function Pricing(props) {
                     }
                 }
             } className='flex flex-col gap-y-1'>
-                      {premium.less.map((item)=> (
-                         <div className='flex flex-row items-center gap-x-3'>
+                      {premium.less.map((item,index)=> (
+                         <div key={index} className='flex flex-row items-center gap-x-3'>
                          <BsCheckLg className='text-emerald-500 text-xs'/>
                          <p className='text-slate-700 text-sm'>{item}</p>
                      </div>
@@ -98,8 +98,8 @@ function Pricing(props) {
                    
                     {isPremClicked && (
                         <div  className='flex flex-col gap-y-1'>
-                        {premium.more.map((item)=>(
-                            <div className='flex flex-row items-center gap-x-3'>
+                        {premium.more.map((item,index)=>(
+                            <div key={index} className='flex flex-row items-center gap-x-3'>
                                 <BsCheckLg className='text-emerald-500 text-xs'/>
                                 <p className='text-slate-700 text-sm'>{item}</p>
                             </div>
