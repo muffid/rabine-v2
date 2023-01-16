@@ -25,9 +25,9 @@ function SingleProduct(props) {
                 <div className='flex flex-row'><FaStar/><FaStar/><FaStar/><FaStar/></div>
                 <h1 className={`text-[0.60rem] bold  p-1 md:p-2 rounde ${props.cat === 'PREMIUM' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}` }>{props.cat}</h1>
             </div>
-            <div className='p-4 flex  gap-y-3  flex-row items-center w-full max-w-[300px] gap-x-2'>
+            <div className='p-4 flex  gap-y-3  flex-row items-center justify-between w-full max-w-[300px] gap-x-2'>
                 <button className='bg-slate-100 px-3 py-1 rounded base text-sm flex flex-row items-center gap-x-3 base'><FaRegEye/></button>
-                <button className='bg-emerald-600 px-2 w-full py-1 text-white rounded base text-sm flex flex-row items-center justify-center gap-x-2 base'><FaCartPlus/><span className='hidden md:inline'>Order Preset</span></button>
+                <button className='bg-emerald-600 px-4  py-1 text-white rounded base text-sm flex flex-row items-center justify-center gap-x-2 base'><FaCartPlus/><span className='md:inline'>Order</span></button>
             </div>
         </div>
     </div>
