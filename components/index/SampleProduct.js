@@ -5,7 +5,7 @@ function SampleProduct(props) {
    const [whatCat,setWhatCat] = useState('ALL')
 
   return (
-    <div id={`content${props.id}`} className='flex flex-col items-center gap-y-4'>
+    <div id={`content${props.id}`} className='flex flex-col items-center gap-y-4 px-6'>
         <h1 className='bold text-xl'>Pilih Preset Desain Yang Kamu Suka</h1>
         <div  className='flex flex-row items-center justify-between gap-x-4 p-4 base text-xs'>
             <h1 onClick={()=>setWhatCat('ALL')} className={`p-2  border rounded-lg ${whatCat === 'ALL' ? 'bg-slate-200' : 'bg-white'}  cursor-pointer`}>Semua</h1>

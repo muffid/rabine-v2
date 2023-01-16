@@ -3,7 +3,7 @@ import React from 'react'
 
 function SingleBlog() {
   return (
-    <div className='flex flex-col items-start gap-y-5 bg-white p-4 rounded-2xl '>
+    <div className='flex flex-col items-start gap-y-5 bg-white px-4 py-6 md:p-4 rounded-2xl '>
         <Image
             src={'/img/blog1.jpg'}
             width={800}

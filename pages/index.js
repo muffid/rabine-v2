@@ -32,7 +32,7 @@ function Home({undangan,fitur}) {
         <Pricing id={4} fitur={fitur}/>
       </main>
       <LatestProd/>
-      <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
+      <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
         <SampleProduct data={undangan} id={5}/>
         <BlogFeed/>
       </main>
