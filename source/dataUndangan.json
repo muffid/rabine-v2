@@ -1,0 +1,45 @@
+{
+    "undangan": [
+      {
+        "nama": "Netnot Netnot",
+        "kategori": "BASIC",
+        "img": "prod1.jpg"
+      },
+      {
+        "nama": "TungTung takdung",
+        "kategori": "PREMIUM",
+        "img": "prod2.jpg"
+      },
+      {
+        "nama": "Plak gedumblang",
+        "kategori": "PREMIUM",
+        "img": "prod4.jpg"
+      },
+      {
+        "nama": "Tumplak plak",
+        "kategori": "BASIC",
+        "img": "prod5.jpg"
+      },
+      {
+        "nama": "Ngeng ngong ngek",
+        "kategori": "BASIC",
+        "img": "prod6.jpg"
+      },
+      {
+        "nama": "Rabino Satyo",
+        "kategori": "PREMIUM",
+        "img": "prod7.jpg"
+      },
+      {
+        "nama": "Muldoco Black",
+        "kategori": "BASIC",
+        "img": "prod8.jpg"
+      },
+      {
+        "nama": "Stencil Lynch",
+        "kategori": "PREMIUM",
+        "img": "prod9.jpg"
+      }
+    ]
+  }
+  

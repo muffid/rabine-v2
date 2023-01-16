@@ -1,0 +1,18 @@
+{
+    "paket" : 
+        {
+            "basic" :{
+                "less":["Desain Basic","Unlimited Share","Informasi Calom Mempelai"],
+                "more":["Informasi Acara","Countdown Timer","Link Lokasi","Quotes","Gallery Max 6","Ucapan & Doa","Background Music","Google Reminder","3X Revisi","Masa Aktif 3 Minggu"]
+            },
+            "premium":{
+                "less":["Semua Fitur Basic","Desain Premium","Gallery Max 15","Embed Video"],
+                "more":["Love Story","RSVP","Amplop Digital","Custom Music","Masa Aktif 3 Bulan"]
+            },
+            "exclusive":{
+                "less":["xsd","fgfgfg","ftwof"],
+                "more":["fars6f","erey"]
+            }
+        }
+
+}

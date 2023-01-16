@@ -38,7 +38,7 @@ function Navbar({fn}) {
                         <p>Harga</p>
                         <BiInfoCircle/>
                     </div>
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl'>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl' onClick={()=>{setIsOpen(false);fn(5)}}>
                         <p>Template</p>
                         <BiEnvelopeOpen/>
                     </div>
@@ -82,7 +82,7 @@ function Navbar({fn}) {
                     </div>
 
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(4)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(4)}>Template</p>
+                        <p onMouseEnter={()=>setHoverMenu(4)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(4);fn(5)}}>Template</p>
                         <div className={hoverMenu===4 || menuActive===4 ?  'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 

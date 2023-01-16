@@ -10,6 +10,8 @@ function Pricing(props) {
     const [isBasicClicked,setBasicClicked] = useState(false)
     const [isPremClicked,setPremClicked] = useState(false)
     const [isExcClicked,setIsExcClcked] = useState(false)
+    const basic = props.fitur.paket.basic
+    const premium = props.fitur.paket.premium
 
   return (
     <div id={`content${props.id}`} className='mt-20 md:w-full lg:w-3/4 mx-auto flex flex-col items-center justify-center gap-y-4 bg-gradient-to-br from-orange-50
@@ -23,7 +25,7 @@ function Pricing(props) {
                     <FaLeaf/>
                     <p>Reguler</p>
                 </div>
-                {/* <p className='text-xs text-slate-500 pr-8'>cocok untuk budget minim </p> */}
+               
                 <div className='flex flex-row items-end mt-4 gap-x-1'>
                     <h1 className='text-slate-500 text-4xl'>Rp</h1>
                     <h1 className='semibold text-4xl'>100.</h1>
@@ -38,38 +40,26 @@ function Pricing(props) {
                     }
                 }
             }  className='flex flex-col gap-y-1'>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'> Foto calon mempelai</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Tanggal Akad dan resepsi</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Peta lokasi</p>
-                    </div>
-
+                   {basic.less.map((item)=> (
+                         <div className='flex flex-row items-center gap-x-3'>
+                         <BsCheckLg className='text-emerald-500 text-xs'/>
+                         <p className='text-slate-700 text-sm'>{item}</p>
+                     </div>
+                   ))}
+                   
                     {isBasicClicked && (
                         <div  className='flex flex-col gap-y-1'>
-                        <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'> Foto calon mempelai</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Tanggal Akad dan resepsi</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Peta lokasi</p>
-                    </div>
-                    </div>)
+                            {basic.more.map((item)=>(
+                                <div className='flex flex-row items-center gap-x-3'>
+                                    <BsCheckLg className='text-emerald-500 text-xs'/>
+                                    <p className='text-slate-700 text-sm'>{item}</p>
+                                </div>
+                            ))}   
+                        </div>)
                     }
 
-                    <div className='flex flex-row gap-x-4 items-center mt-4 cursor-pointer text-blue-600 '>
-                        <h1 className='bold text-sm' onClick={()=>setBasicClicked(!isBasicClicked)}>{isBasicClicked ? 'Lihat lebih sedikit' : 'Lihat lebih banyak'}</h1>  
+                    <div className='flex flex-row gap-x-4 items-center mt-4 cursor-pointer text-blue-600'  onClick={()=>setBasicClicked(!isBasicClicked)}>
+                        <h1 className='bold text-sm'>{isBasicClicked ? 'Lihat lebih sedikit' : 'Lihat lebih banyak'}</h1>  
                         <motion.h1 
                               animate={{ rotate: isBasicClicked ? -90 : 90 }}
                               transition={{ duration: 0.2 }}
@@ -84,7 +74,7 @@ function Pricing(props) {
                     <FaStar/>
                     <p>Premium</p>
                 </div>
-                {/* <p className='text-xs text-slate-500 pr-8'>cocok untuk budget minim </p> */}
+             
                 <div className='flex flex-row items-end mt-4 gap-x-1'>
                     <h1 className='text-slate-500 text-4xl'>Rp</h1>
                     <h1 className='semibold text-4xl'>175.</h1>
@@ -99,38 +89,26 @@ function Pricing(props) {
                     }
                 }
             } className='flex flex-col gap-y-1'>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'> Foto calon mempelai</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Tanggal Akad dan resepsi</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Peta lokasi</p>
-                    </div>
-
+                      {premium.less.map((item)=> (
+                         <div className='flex flex-row items-center gap-x-3'>
+                         <BsCheckLg className='text-emerald-500 text-xs'/>
+                         <p className='text-slate-700 text-sm'>{item}</p>
+                     </div>
+                   ))}
+                   
                     {isPremClicked && (
                         <div  className='flex flex-col gap-y-1'>
-                        <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'> Foto calon mempelai</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Tanggal Akad dan resepsi</p>
-                    </div>
-                    <div className='flex flex-row items-center gap-x-3'>
-                        <BsCheckLg className='text-emerald-500 text-xs'/>
-                        <p className='text-slate-500 text-xs'>Peta lokasi</p>
-                    </div>
+                        {premium.more.map((item)=>(
+                            <div className='flex flex-row items-center gap-x-3'>
+                                <BsCheckLg className='text-emerald-500 text-xs'/>
+                                <p className='text-slate-700 text-sm'>{item}</p>
+                            </div>
+                        ))}   
                     </div>)
                     }
                     
-                    <div className='flex flex-row gap-x-4 items-center mt-4 cursor-pointer text-blue-600 '>
-                    <h1 className='bold text-sm' onClick={()=>setPremClicked(!isPremClicked)}>{isPremClicked ? 'Lihat lebih sedikit' : 'Lihat lebih banyak'}</h1>
+                    <div className='flex flex-row gap-x-4 items-center mt-4 cursor-pointer text-blue-600' onClick={()=>setPremClicked(!isPremClicked)}>
+                    <h1 className='bold text-sm' >{isPremClicked ? 'Lihat lebih sedikit' : 'Lihat lebih banyak'}</h1>
                     <motion.h1 
                               animate={{ rotate: isPremClicked ? -90 : 90 }}
                               transition={{ duration: 0.2 }}
@@ -144,7 +122,7 @@ function Pricing(props) {
                     <FaCrown/>
                     <p>Exclusive</p>
                 </div>
-                {/* <p className='text-xs text-slate-500 pr-8'>cocok untuk budget minim </p> */}
+            
                 <div className='flex flex-row items-end mt-4 gap-x-1'>
                     <h1 className='text-slate-500 text-4xl'>Rp</h1>
                     <h1 className='semibold text-4xl'>200.</h1>

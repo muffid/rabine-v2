@@ -6,10 +6,13 @@ import LatestProd from '../components/index/LatestProd'
 import Navbar from '../components/index/Navbar'
 import Pricing from '../components/index/Pricing'
 import SampleProduct from '../components/index/SampleProduct'
+import data from '../source/dataUndangan.json'
+import fitur from'../source/dataFitur.json'
+import BlogFeed from '../components/index/BlogFeed'
 
 
 
-export default function Home() {
+function Home({undangan,fitur}) {
   const onNavMenuClicked = (value) =>{
     const element = document.getElementById(`content${value}`)
     element.scrollIntoView({behavior:'smooth'})
@@ -26,12 +29,20 @@ export default function Home() {
         <Hero id={1} fn={onNavMenuClicked}/>
         <Beralih id={2}/>
         <Features/>
-        <Pricing id={4}/>
+        <Pricing id={4} fitur={fitur}/>
       </main>
       <LatestProd/>
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-        <SampleProduct/>
+        <SampleProduct data={undangan} id={5}/>
+        <BlogFeed/>
       </main>
     </div>
   )
 }
+
+Home.getInitialProps = async () => {
+  
+  return { undangan: data.undangan,fitur }
+}
+
+export default Home;

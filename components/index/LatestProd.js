@@ -14,7 +14,7 @@ function LatestProd() {
 
       useEffect(() => {
        if(window.innerWidth > 1023){
-        setPerSlide(4)
+        setPerSlide(5)
        }
         function handleResize() {
 
@@ -25,7 +25,7 @@ function LatestProd() {
             }else if(winRef.current >= 800 && winRef.current < 1023){
                 setPerSlide(2)
             }else{
-                setPerSlide(4)
+                setPerSlide(5)
             }
 
         }
@@ -44,7 +44,6 @@ function LatestProd() {
     <h1 className={'font-bold  lg:text-4xl text-3xl text-center text-[#181E4B] '}>Preset Desain</h1>
     <p className='text-center font-semibold p-2 bg-yellow-200'>Desain Terbaru</p>
     <div className=' mt-8 w-full max-w-[1500px] ' >
-       {/* jkkj */}
         <SliderTerbaru slide={perSlide} loop={true}/>
     </div>
    
