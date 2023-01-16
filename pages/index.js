@@ -12,6 +12,7 @@ import BlogFeed from '../components/index/BlogFeed'
 
 
 
+
 function Home({undangan,fitur}) {
   const onNavMenuClicked = (value) =>{
     const element = document.getElementById(`content${value}`)
@@ -34,8 +35,10 @@ function Home({undangan,fitur}) {
       <LatestProd/>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
         <SampleProduct data={undangan} id={5}/>
-        <BlogFeed/>
+       
       </main>
+      <BlogFeed/>
+   
     </div>
   )
 }

@@ -18,7 +18,7 @@ function SingleProduct(props) {
                             <FaStar/>
                         </div>) : ''}
             <div className='p-4 flex flex-row items-start justify-between w-full max-w-[300px] gap-x-2'>
-                <h1 className='bold text-sm md:text-lg'>{props.name}</h1>
+                <h1 className='bold text-sm md:text-base'>{props.name}</h1>
                 
             </div>
             <div className='flex flex-row justify-between w-full items-center text-orange-300 text-[0.65rem] px-4'>

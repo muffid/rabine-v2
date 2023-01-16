@@ -3,14 +3,14 @@ import React from 'react'
 
 function SingleBlogGrid(props) {
   return (
-    <div  className='flex flex-row lg:flex-col items-start justify-between gap-y-5 bg-white p-4
+    <div  className='flex flex-row  items-start justify-between gap-y-5 bg-white p-4
                      transition duration-100 hover:shadow-xl hover:scale-105 rounded-2xl lg:self-start gap-x-4'>
     <Image
         src={'/img/'+props.img}
         width={800}
         height={800}
         style={{objectFit:`cover`}}
-        className='w-28 lg:w-full rounded-xl '
+        className='w-28  rounded-xl '
         alt='rabine.id wedding'
     />
     <div className='flex w-full flex-col gap-y-4'>

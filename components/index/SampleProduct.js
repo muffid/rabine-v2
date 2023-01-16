@@ -12,7 +12,7 @@ function SampleProduct(props) {
             <h1 onClick={()=>setWhatCat('BASIC')} className={`p-2  border rounded-lg  ${whatCat === 'BASIC' ? 'bg-green-200' : 'bg-white'} cursor-pointer`}>Basic</h1>
             <h1 onClick={()=>setWhatCat('PREMIUM')} className={`p-2 border rounded-lg  ${whatCat === 'PREMIUM' ? 'bg-yellow-200' : 'bg-white'} cursor-pointer`}>Premium</h1>
         </div>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4'>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-4'>
             {props.data.map((item)=>
                 whatCat === 'ALL' ? (
                  <SingleProduct img={item.img} cat={item.kategori} name={item.nama} key={item.nama}/>

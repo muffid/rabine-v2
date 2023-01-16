@@ -3,17 +3,17 @@ import React from 'react'
 
 function SingleBlog() {
   return (
-    <div className='flex flex-col items-start gap-y-5 bg-white px-4 py-6 md:p-4 rounded-2xl '>
+    <div className='flex flex-col items-start gap-y-5 bg-white px-4 py-6 md:p-7 rounded-2xl '>
         <Image
             src={'/img/blog1.jpg'}
             width={800}
             height={800}
             style={{objectFit:`cover`}}
-            className='w-full rounded-t-2xl '
+            className='w-full rounded-2xl '
             alt='rabine.id wedding'
         />
         
-        <h1 className='xbold text-2xl cursor-pointer '>5 Hal yang membahagiakan dari pernikahan</h1>
+        <h1 className='xbold text-2xl lg:text-3xl cursor-pointer '>5 Hal yang membahagiakan dari pernikahan</h1>
         <p className='text-sm text-slate-500 pr-6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident excepturi repellat placeat molestias numquam ea recusandae vitae reiciendis ut soluta.</p>
         <div className='flex flex-row justify-between items-center w-full'>
             <p className='text-sm bold'>Muff Mahnun</p>
