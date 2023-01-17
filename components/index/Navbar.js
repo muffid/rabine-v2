@@ -43,7 +43,7 @@ function Navbar({fn}) {
                         <BiEnvelopeOpen/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl'>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl' onClick={()=>{setIsOpen(false);fn(6)}}>
                         <p>Blog</p>
                         <BiNews/>
                     </div>
@@ -87,7 +87,7 @@ function Navbar({fn}) {
                     </div>
 
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(6)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>setMenuActive(6)}>Blog</p>
+                        <p onMouseEnter={()=>setHoverMenu(6)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(6);fn(6)}}>Blog</p>
                         <div className={hoverMenu===6 || menuActive===6 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     
                     </div>

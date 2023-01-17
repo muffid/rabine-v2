@@ -35,9 +35,8 @@ function Home({undangan,fitur}) {
       <LatestProd/>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
         <SampleProduct data={undangan} id={5}/>
-       
       </main>
-      <BlogFeed/>
+      <BlogFeed id={6}/>
    
     </div>
   )
