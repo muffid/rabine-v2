@@ -5,7 +5,7 @@ import Image from 'next/image'
 function SingleProduct(props) {
   return (
     <div className='flex flex-col items-center justify-start  p-2 mt-4'>
-        <div className='flex flex-col items-start  bg-white border rounded-2xl hover:shadow-xl hover:scale-105 transform transition '>
+        <div className='flex flex-col items-start  bg-white border rounded-2xl hover:shadow-xl cursor-pointer hover:scale-105 transform transition '>
             <Image
                 src={'/img/'+props.img}
                 width={400}
@@ -21,14 +21,11 @@ function SingleProduct(props) {
                 <h1 className='bold text-sm md:text-base'>{props.name}</h1>
                 
             </div>
-            <div className='flex flex-row justify-between w-full items-center text-orange-300 text-[0.65rem] px-4'>
+            <div className='flex flex-row justify-between w-full items-center text-orange-300 text-[0.65rem] px-5 py-4' >
                 <div className='flex flex-row'><FaStar/><FaStar/><FaStar/><FaStar/></div>
-                <h1 className={`text-[0.60rem] bold  p-1 md:p-2 rounde ${props.cat === 'PREMIUM' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}` }>{props.cat}</h1>
+                <h1 className={`text-[0.60rem] bold  p-1 md:p-2 rounded-lg ${props.cat === 'PREMIUM' ? 'bg-yellow-200 text-yellow-700' : 'bg-green-100 text-green-800'}` }>{props.cat}</h1>
             </div>
-            <div className='p-4 flex  gap-y-3  flex-row items-center justify-between w-full max-w-[300px] gap-x-2'>
-                <button className='bg-slate-100 px-3 py-1 rounded base text-sm flex flex-row items-center gap-x-3 base'><FaRegEye/></button>
-                <button className='bg-emerald-600 px-4  py-1 text-white rounded base text-sm flex flex-row items-center justify-center gap-x-2 base'><FaCartPlus/><span className='md:inline'>Order</span></button>
-            </div>
+            
         </div>
     </div>
   )
