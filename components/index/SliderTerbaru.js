@@ -9,6 +9,7 @@ import SingleProduct from '../globals/SingleProduct';
 
 
 function SliderTerbaru(props) {
+  
   return (
     <div className='px-6 lg:px-0'>
          <Swiper
@@ -28,18 +29,14 @@ function SliderTerbaru(props) {
             modules={[Autoplay,Pagination, Navigation]}
             className="mySwiper py-8 flex flex-col gap-y-8"
         >
-          <SwiperSlide>
-            <SingleProduct name='Moss Summer' cat='BASIC' img='prod1.jpg'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <SingleProduct name='Dorby Cassen' cat='PREMIUM' img='prod2.jpg'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <SingleProduct name='Faded Corny' cat='PREMIUM' img='prod4.jpg'/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <SingleProduct name='Lunar netnotnot' cat='BASIC' img='prod5.jpg'/>
-          </SwiperSlide>
+            {props.data.map((item)=>
+              <SwiperSlide>
+                 <SingleProduct id={item.id} img={item.img} cat={item.kategori} name={item.nama} key={item.nama}/>
+               
+              </SwiperSlide>
+                
+            )}
+ 
         </Swiper> 
     </div>
   )

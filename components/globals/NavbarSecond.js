@@ -5,11 +5,19 @@ import { BiXCircle,BiHomeCircle,BiInfoCircle,BiDollar,BiCartAlt,BiNews,BiPhoneCa
 import { motion } from 'framer-motion'
 import { useRecoilState } from 'recoil';
 import { navState } from '../../recoil/navState';
+import { useRouter } from 'next/router';
 
-function Navbar() {
+function NavbarSecond() {
     const [hoverMenu,setHoverMenu] = useState(0)
     const [menuActive,setMenuActive] = useRecoilState(navState)
     const[isOpen,setIsOpen] = useState(false)
+    const router = useRouter()
+
+    function goToHome(){
+      router.push({
+        pathname:'/'
+      })
+    }
 
   return (
     <div className='w-full bg-white/80 backdrop-blur-sm fixed top-0 z-20 border-b '>
@@ -31,21 +39,21 @@ function Navbar() {
                     <BiDotsVertical className='text-2xl cursor-pointer'onClick={()=>setIsOpen(false)}/>
                 </div>
                 <div className='flex flex-col items-end gap-y-7 semibold text-sm'>
-                <div className='flex flex-row items-center gap-x-5  rounded-xl 'onClick={()=>{setIsOpen(false);setMenuActive(1)}}>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl 'onClick={()=>{setIsOpen(false);setMenuActive(1);goToHome()}}>
                         <p>Beranda</p>
                         <BiHomeCircle/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>{setIsOpen(false);setMenuActive(3)}}>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>{setIsOpen(false);setMenuActive(3);goToHome()}}>
                         <p>Harga</p>
                         <BiInfoCircle/>
                     </div>
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl' onClick={()=>{setIsOpen(false);setMenuActive(5)}}>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl' onClick={()=>{setIsOpen(false);setMenuActive(5);goToHome()}}>
                         <p>Template</p>
                         <BiEnvelopeOpen/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl' onClick={()=>{setIsOpen(false);setMenuActive(6)}}>
+                    <div className='flex flex-row items-center gap-x-5  rounded-xl' onClick={()=>{setIsOpen(false);setMenuActive(6);goToHome()}}>
                         <p>Blog</p>
                         <BiNews/>
                     </div>
@@ -60,6 +68,7 @@ function Navbar() {
 
             <div className='flex flex-col items-end gap-y-4'>
                 <Image
+                  onClick={()=>{goToHome();setMenuActive(1)}}
                     src='/img/rabine.png'
                     width={200}
                     height={200}
@@ -71,23 +80,23 @@ function Navbar() {
             <div className='flex flex-row items-center justify-between gap-x-4'>
                 <div className='hidden md:flex flex-row items-center justify-between gap-x-6 text-sm bold '>
                     <div className=' cursor-pointer relative '>
-                        <p onMouseEnter={()=>setHoverMenu(1)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(1)}}>Beranda</p>
+                        <p onMouseEnter={()=>setHoverMenu(1)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(1);goToHome()}}>Beranda</p>
                         <div className={hoverMenu===1 || menuActive===1 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
              
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(3)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(3)}}>Harga</p>
+                        <p onMouseEnter={()=>setHoverMenu(3)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(3);goToHome()}}>Harga</p>
                         <div className={hoverMenu===3 || menuActive===3 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(5)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(5)}}>Template</p>
+                        <p onMouseEnter={()=>setHoverMenu(5)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(5);goToHome()}}>Template</p>
                         <div className={hoverMenu===5 || menuActive===5 ?  'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     </div>
 
                     <div className=' cursor-pointer relative'>
-                        <p onMouseEnter={()=>setHoverMenu(6)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(6)}}>Blog</p>
+                        <p onMouseEnter={()=>setHoverMenu(6)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(6);goToHome()}}>Blog</p>
                         <div className={hoverMenu===6 || menuActive===6 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
                     
                     </div>
@@ -109,4 +118,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default NavbarSecond

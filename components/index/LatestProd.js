@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import Image from 'next/image'
 import SliderTerbaru from './SliderTerbaru';
 
-function LatestProd() {
+function LatestProd({data}) {
     const [windowSize, setWindowSize] = useState(3);
     const [perSlide,setPerSlide] = useState(1)
     const winRef = useRef(windowSize)
@@ -44,7 +44,7 @@ function LatestProd() {
     <h1 className={'font-bold  lg:text-4xl text-3xl text-center text-[#181E4B] '}>Preset Desain</h1>
     <p className='text-center font-semibold p-2 bg-yellow-200'>Desain Terbaru</p>
     <div className=' mt-8 w-full max-w-[1500px] ' >
-        <SliderTerbaru slide={perSlide} loop={true}/>
+        <SliderTerbaru slide={perSlide} loop={true} data={data}/>
     </div>
    
 </div>
