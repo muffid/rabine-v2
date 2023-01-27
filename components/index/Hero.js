@@ -45,13 +45,13 @@ function Hero(props) {
                 </div>
             </div>
         </div>
-        <div className='w-full relative mt-8'>
+        <div className='w-full relative mt-8 self-end'>
             <Image
                 src='/img/mobile.png'
                 width={1000}
                 height={1000}
-                className='md:absolute -top-48 w-[300px] md:w-[450px] right-0 lg:-right-12'
-                alt='mobile-rabine'
+                className='md:absolute bottom-0 w-[300px] md:w-[450px] right-0 lg:-right-12'
+                alt='rabine.id'
             />
            
         </div>

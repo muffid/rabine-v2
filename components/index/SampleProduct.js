@@ -19,6 +19,7 @@ function SampleProduct(props) {
                 ): whatCat === item.kategori ? (<SingleProduct img={item.img} cat={item.kategori} name={item.nama} key={item.nama}  tag={item.tag}/>):''
             )}
         </div>
+        <button className=' hover:scale-105 transition duration-100 rounded-full text-sm bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 mt-8 py-3'>Semua Template</button>
     </div>
   )
 }

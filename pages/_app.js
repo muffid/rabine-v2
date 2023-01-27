@@ -22,3 +22,5 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
+// https://www.freepik.com/premium-photo/smiling-beautiful-asian-woman-casual-shirt-showing-peace-sign-gesture-looking-camera-isolated-white-background_28135584.htm#page=21&query=islamic%20camera&position=6&from_view=keyword

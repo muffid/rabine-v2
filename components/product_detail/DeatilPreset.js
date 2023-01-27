@@ -39,13 +39,13 @@ function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,tagPreset}
             </div>
            
             <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0 mt-2'>
-                <div className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-4 py-3  bg-white rounded-lg shadow-md '>
+                <div className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-4 py-3  bg-white rounded-full shadow-md '>
                    <FaEye/>
                    
                         <h1 className=' text-slate-900 text-sm '>Demo</h1>
                 </div>
 
-                <div className='hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-5 py-3 bg-gradient-to-r from-pink-600 to-orange-500 rounded-lg shadow-md '>
+                <div className='hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-5 py-3 bg-gradient-to-r from-pink-600 to-orange-500 rounded-full shadow-md '>
                    <FaCartPlus className='text-white'/>
                     <h1 className=' text-white text-sm  '>Order</h1>
                 </div>

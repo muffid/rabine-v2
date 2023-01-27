@@ -12,6 +12,8 @@ import BlogFeed from '../components/index/BlogFeed'
 import { useRecoilState } from 'recoil'
 import { navState } from '../recoil/navState'
 import { useEffect } from 'react'
+import { motion } from 'framer-motion'
+
 
 
 
@@ -35,16 +37,60 @@ function Home({undangan,fitur}) {
       </Head>
       <Navbar />
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-        <Hero id={1} />
-        <Beralih id={2}/>
-        <Features/>
+     
+         <Hero id={1} />
+
+         <motion.div
+            initial={{ opacity: 0,y:'20vw' }}
+            whileInView={{ opacity: 1,y:0 }}
+            viewport={{ once: true }}
+            transition={{duration:0.5,ease:'easeOut'}}
+          >
+          <Beralih id={2}/>
+        </motion.div>
+        <motion.div
+            initial={{ opacity: 0,y:'20vw' }}
+            whileInView={{ opacity: 1,y:0 }}
+            viewport={{ once: true }}
+            transition={{duration:0.5,ease:'easeOut'}}
+        >
+          <Features/>
+        </motion.div>
+        <motion.div
+            initial={{ opacity: 0,y:'20vw' }}
+            whileInView={{ opacity: 1,y:0 }}
+            viewport={{ once: true }}
+            transition={{duration:0.5,ease:'easeOut'}}
+        >
         <Pricing id={3} fitur={fitur}/>
+        </motion.div>
       </main>
+      <motion.div
+            initial={{ opacity: 0,y:'20vw' }}
+            whileInView={{ opacity: 1,y:0 }}
+            viewport={{ once: true }}
+            transition={{duration:0.5,ease:'easeOut'}}
+        >
       <LatestProd data={undangan}/>
+      </motion.div>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
+      <motion.div
+            initial={{ opacity: 0,y:'20vw' }}
+            whileInView={{ opacity: 1,y:0 }}
+            viewport={{ once: true }}
+            transition={{duration:0.5,ease:'easeOut'}}
+        >
         <SampleProduct data={undangan} id={5}/>
+        </motion.div>
       </main>
+      <motion.div
+            initial={{ opacity: 0,y:'20vw' }}
+            whileInView={{ opacity: 1,y:0 }}
+            viewport={{ once: true }}
+            transition={{duration:0.5,ease:'easeOut'}}
+        >
       <BlogFeed id={6}/>
+      </motion.div>
    
     </div>
   )
