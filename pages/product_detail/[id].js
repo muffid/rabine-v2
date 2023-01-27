@@ -7,7 +7,7 @@ import NavbarSecond from '../../components/globals/NavbarSecond'
 import DetailPreset from '../../components/product_detail/DeatilPreset'
 
 
-function prodId({undangan,price}) {
+function ProdId({undangan,price}) {
 
     const router = useRouter()
     const {presetId} = router.query
@@ -36,7 +36,7 @@ function prodId({undangan,price}) {
   )
 }
 
-prodId.getInitialProps = async () => {
+ProdId.getInitialProps = async () => {
     return { undangan: data.undangan, price:price.paket }
   }
-export default prodId
+export default ProdId
