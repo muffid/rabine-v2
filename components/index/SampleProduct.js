@@ -3,7 +3,7 @@ import SingleProduct from '../globals/SingleProduct'
 
 function SampleProduct(props) {
    const [whatCat,setWhatCat] = useState('ALL')
-
+    console.log(props.data)
   return (
     <div id={`content${props.id}`} className='flex flex-col items-center gap-y-4 px-6'>
         <h1 className='bold text-xl'>Pilih Preset Desain Yang Kamu Suka</h1>
@@ -15,8 +15,8 @@ function SampleProduct(props) {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-4'>
             {props.data.map((item)=>
                 whatCat === 'ALL' ? (
-                 <SingleProduct id={item.id} img={item.img} cat={item.kategori} name={item.nama} key={item.nama}/>
-                ): whatCat === item.kategori ? (<SingleProduct img={item.img} cat={item.kategori} name={item.nama} key={item.nama}/>):''
+                 <SingleProduct id={item.id} img={item.img} cat={item.kategori} name={item.nama} key={item.nama} tag={item.tag}/>
+                ): whatCat === item.kategori ? (<SingleProduct img={item.img} cat={item.kategori} name={item.nama} key={item.nama}  tag={item.tag}/>):''
             )}
         </div>
     </div>

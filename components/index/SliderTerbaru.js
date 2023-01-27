@@ -31,7 +31,7 @@ function SliderTerbaru(props) {
         >
             {props.data.map((items)=>
               <SwiperSlide  key={items.id}>
-                 <SingleProduct  id={items.id} img={items.img} cat={items.kategori} name={items.nama} />
+                 <SingleProduct  id={items.id} img={items.img} cat={items.kategori} name={items.nama} tag={items.tag}/>
               </SwiperSlide>
                 
             )}

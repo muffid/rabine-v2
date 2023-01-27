@@ -42,7 +42,7 @@ function Home({undangan,fitur}) {
       </main>
       <LatestProd data={undangan}/>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
-        <SampleProduct data={undangan} id={5} />
+        <SampleProduct data={undangan} id={5}/>
       </main>
       <BlogFeed id={6}/>
    

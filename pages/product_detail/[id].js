@@ -29,7 +29,7 @@ function ProdId({undangan,price}) {
       </Head>
       <NavbarSecond />
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-        <DetailPreset idPreset={selected.id} namePreset={selected.nama} catPreset={selected.kategori} imgPreset={selected.img} priceP={pricePreset} />
+        <DetailPreset idPreset={selected.id} namePreset={selected.nama} catPreset={selected.kategori} imgPreset={selected.img} priceP={pricePreset} tagPreset={selected.tag}/>
      </main>
     </div>
 
