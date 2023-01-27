@@ -1,12 +1,16 @@
 import React from 'react'
-import { FaCartPlus, FaRegEye, FaStar } from 'react-icons/fa'
+import {  FaStar } from 'react-icons/fa'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { navState } from '../../recoil/navState';
+import { useRecoilState } from 'recoil';
 
 function SingleProduct(props) {
 
+    const [menuActive,setMenuActive] = useRecoilState(navState)
     const router= useRouter()
     function viewProduct(){
+        setMenuActive(5)
         router.push({
             pathname:'/product_detail/preset',
            query:{

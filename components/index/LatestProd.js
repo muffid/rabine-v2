@@ -1,10 +1,6 @@
 import React, { useState,useEffect,useRef } from 'react'
-import { RiSendPlaneFill } from "react-icons/ri";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay,Pagination,Navigation } from 'swiper';
 import 'swiper/css';
 import "swiper/css/pagination";
-import Image from 'next/image'
 import SliderTerbaru from './SliderTerbaru';
 
 function LatestProd({data}) {

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import { BiCaretRight } from "react-icons/bi";

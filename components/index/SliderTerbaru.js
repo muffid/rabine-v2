@@ -29,9 +29,9 @@ function SliderTerbaru(props) {
             modules={[Autoplay,Pagination, Navigation]}
             className="mySwiper py-8 flex flex-col gap-y-8"
         >
-            {props.data.map((item)=>
-              <SwiperSlide key={item}>
-                 <SingleProduct id={item.id} img={item.img} cat={item.kategori} name={item.nama} key={item.nama}/>
+            {props.data.map((items)=>
+              <SwiperSlide  key={items.id}>
+                 <SingleProduct  id={items.id} img={items.img} cat={items.kategori} name={items.nama} />
               </SwiperSlide>
                 
             )}

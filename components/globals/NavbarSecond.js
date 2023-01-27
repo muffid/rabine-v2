@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { HiMenuAlt3, HiSearch} from "react-icons/hi";
-import { BiXCircle,BiHomeCircle,BiInfoCircle,BiDollar,BiCartAlt,BiNews,BiPhoneCall,BiDotsVertical,BiEnvelopeOpen } from 'react-icons/bi'
+import { BiXCircle,BiHomeCircle,BiInfoCircle,BiNews,BiPhoneCall,BiDotsVertical,BiEnvelopeOpen } from 'react-icons/bi'
 import { motion } from 'framer-motion'
 import { useRecoilState } from 'recoil';
 import { navState } from '../../recoil/navState';
