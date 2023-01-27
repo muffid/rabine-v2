@@ -30,9 +30,8 @@ function SliderTerbaru(props) {
             className="mySwiper py-8 flex flex-col gap-y-8"
         >
             {props.data.map((item)=>
-              <SwiperSlide>
+              <SwiperSlide key={item}>
                  <SingleProduct id={item.id} img={item.img} cat={item.kategori} name={item.nama} key={item.nama}/>
-               
               </SwiperSlide>
                 
             )}
