@@ -5,6 +5,7 @@ import price from '../../source/dataFitur.json'
 import Head from 'next/head'
 import NavbarSecond from '../../components/globals/NavbarSecond'
 import DetailPreset from '../../components/product_detail/DeatilPreset'
+import Footer from '../../components/globals/Footer'
 
 
 function ProdId({undangan,price}) {
@@ -31,6 +32,7 @@ function ProdId({undangan,price}) {
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
         <DetailPreset idPreset={selected.id} namePreset={selected.nama} catPreset={selected.kategori} imgPreset={selected.img} priceP={pricePreset} tagPreset={selected.tag}/>
      </main>
+     <Footer/>
     </div>
 
   )

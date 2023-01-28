@@ -6,9 +6,9 @@ import { FaEye,FaCartPlus, FaStar } from 'react-icons/fa'
 function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,tagPreset}) {
  
   return (
-    <div className='mt-[110px] grid grid-cols-1 md:grid-cols-2 md:items-start lg:items-center justify-between gap-x-8 rounded-3xl border bg-slate-50 border-slate-200  px-8  py-6 gap-y-8 relative'>
+    <div className='mt-[110px] grid grid-cols-1 md:grid-cols-2 md:items-start lg:items-center justify-between gap-x-8 rounded-3xl border bg-slate-50 border-slate-200  md:px-6  md:py-4 gap-y-8 relative'>
         
-        <div className='w-full relative mt-8 p-8 rounded-xl bg-white'>
+        <div className='w-full relative md:mt-8 p-8 rounded-t-3xl bg-white'>
             <Image
                 src={'/img/'+imgPreset}
                 width={1000}
@@ -22,7 +22,7 @@ function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,tagPreset}
            
         </div>
 
-        <div className='flex flex-col items-start justify-center  h-full  p-8 gap-y-6'>
+        <div className='flex flex-col items-start justify-center  h-full  p-8 gap-y-4'>
             <h1 className='bold text-2xl md:text-3xl lg:text-3xl text-[#2C090B]'>{namePreset}</h1>
             <div className='h-2 w-14 bg-orange-300 rounded-lg'></div>
             <div className='flex flex-col gap-y-4 flex-grow-0 items-start'>

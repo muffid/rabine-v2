@@ -13,6 +13,7 @@ import { useRecoilState } from 'recoil'
 import { navState } from '../recoil/navState'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Footer from '../components/globals/Footer'
 
 
 
@@ -21,6 +22,9 @@ import { motion } from 'framer-motion'
 function Home({undangan,fitur}) {
 
   const [menuActive,setMenuActive] = useRecoilState(navState)
+  const intersect='25vw'
+  const duration = 0.4
+  const style = 'easeOut'
 
   useEffect(()=>{
     const element = document.getElementById(`content${menuActive}`)
@@ -41,57 +45,57 @@ function Home({undangan,fitur}) {
          <Hero id={1} />
 
          <motion.div
-            initial={{ opacity: 0,y:'20vw' }}
+            initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
-            transition={{duration:0.5,ease:'easeOut'}}
+            transition={{duration:duration,ease:style}}
           >
           <Beralih id={2}/>
         </motion.div>
         <motion.div
-            initial={{ opacity: 0,y:'20vw' }}
+            initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
-            transition={{duration:0.5,ease:'easeOut'}}
+            transition={{duration:duration,ease:'circOut'}}
         >
           <Features/>
         </motion.div>
         <motion.div
-            initial={{ opacity: 0,y:'20vw' }}
+            initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
-            transition={{duration:0.5,ease:'easeOut'}}
+            transition={{duration:duration,ease:style}}
         >
         <Pricing id={3} fitur={fitur}/>
         </motion.div>
       </main>
       <motion.div
-            initial={{ opacity: 0,y:'20vw' }}
+            initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
-            transition={{duration:0.5,ease:'easeOut'}}
+            transition={{duration:duration,ease:style}}
         >
       <LatestProd data={undangan}/>
       </motion.div>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
       <motion.div
-            initial={{ opacity: 0,y:'20vw' }}
+            initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
-            transition={{duration:0.5,ease:'easeOut'}}
+            transition={{duration:duration,ease:style}}
         >
         <SampleProduct data={undangan} id={5}/>
         </motion.div>
       </main>
       <motion.div
-            initial={{ opacity: 0,y:'20vw' }}
+            initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
-            transition={{duration:0.5,ease:'easeOut'}}
+            transition={{duration:duration,ease:style}}
         >
       <BlogFeed id={6}/>
       </motion.div>
-   
+    <Footer/>
     </div>
   )
 }
