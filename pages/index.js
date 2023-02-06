@@ -19,17 +19,17 @@ import Footer from '../components/globals/Footer'
 
 
 
-function Home({undangan,fitur}) {
+function Home({data,fitur,dataApi}) {
 
   const [menuActive,setMenuActive] = useRecoilState(navState)
-  const intersect='25vw'
+  const intersect='20vw'
   const duration = 0.4
   const style = 'easeOut'
-
+  console.log(dataApi)
   useEffect(()=>{
     const element = document.getElementById(`content${menuActive}`)
     element.scrollIntoView({behavior:'smooth'})
-    console.log(menuActive);
+  
   },[menuActive])
 
   return (
@@ -75,7 +75,7 @@ function Home({undangan,fitur}) {
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
-      <LatestProd data={undangan}/>
+      <LatestProd data={data.undangan}/>
       </motion.div>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
       <motion.div
@@ -84,7 +84,7 @@ function Home({undangan,fitur}) {
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
-        <SampleProduct data={undangan} id={5}/>
+        <SampleProduct data={data.undangan} id={5}/>
         </motion.div>
       </main>
       <motion.div
@@ -100,9 +100,21 @@ function Home({undangan,fitur}) {
   )
 }
 
-Home.getInitialProps = async () => {
-  
-  return { undangan: data.undangan,fitur }
+
+export async function getStaticProps(){
+  const dataApi = await fetch('http://api.rabine.id/select').
+  then(res => res.json());
+  return {
+    props:{
+    data,fitur,dataApi
+    }
+  }
 }
+
+
+
+
+
+
 
 export default Home;

@@ -3,7 +3,7 @@ import SingleProduct from '../globals/SingleProduct'
 
 function SampleProduct(props) {
    const [whatCat,setWhatCat] = useState('ALL')
-    console.log(props.data)
+
   return (
     <div id={`content${props.id}`} className='flex flex-col items-center gap-y-4 px-6'>
         <h1 className='bold text-xl'>Pilih Preset Desain Yang Kamu Suka</h1>
