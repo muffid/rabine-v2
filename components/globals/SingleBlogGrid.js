@@ -14,9 +14,9 @@ function SingleBlogGrid(props) {
         alt='rabine.id wedding'
     />
     <div className='flex w-full flex-col gap-y-4'>
-        <h1 className='bold cursor-pointer text-sm lg:text-base leading-tight'>{props.judul}</h1>
+        <h1 className='bold cursor-pointer text-sm lg:text-base leading-tight hover:text-sky-800'>{props.judul}</h1>
         <div className='flex flex-col justify-between items-start gap-y-2 w-full'>
-            <p className='text-sm bold text-sky-800'>{props.admin}</p>
+            <p className='text-sm bold text-sky-800 hover:underline cursor-pointer'>{props.admin}</p>
             <div className='flex flex-row items-center justify-between w-full text-slate-500 text-xs'>
                 <p className=''>{props.date}</p>
                 <p className='semibold'>{props.time} mins read</p>

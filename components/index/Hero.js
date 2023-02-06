@@ -55,9 +55,9 @@ function Hero(props) {
             />
            
         </div>
-         <div onClick={()=>props.fn(2)} className='bg-white hover:text-orange-600 text-slate-600  rounded-full w-16 h-16 absolute shadow-md -bottom-10 right-[40%] md:right-[50%] flex items-center justify-center cursor-pointer'>
+         {/* <div onClick={()=>props.fn(2)} className='bg-white hover:text-orange-600 text-slate-600  rounded-full w-16 h-16 absolute shadow-md -bottom-10 right-[40%] md:right-[50%] flex items-center justify-center cursor-pointer'>
                 <BiDownArrowCircle className='text-center text-4xl  '/>
-        </div>
+        </div> */}
         <div className='absolute md:flex flex-col items-center gap-y-3 -left-6 hidden '>
           <div className='w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center cursor-pointer hover:text-orange-600'>
                 <FaTwitter/>

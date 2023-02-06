@@ -14,6 +14,7 @@ import { navState } from '../recoil/navState'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Footer from '../components/globals/Footer'
+import axios from 'axios';
 
 
 
@@ -101,14 +102,17 @@ function Home({data,fitur,dataApi}) {
 }
 
 
-export async function getStaticProps(){
-  const dataApi = await fetch('http://api.rabine.id/select').
-  then(res => res.json());
+
+
+export async function getServerSideProps() {
+  const res = await axios.get('http://api.rabine.id/select');
+  const dataApi = res.data;
+
   return {
-    props:{
-    data,fitur,dataApi
-    }
-  }
+    props: {
+      data,fitur,dataApi
+    },
+  };
 }
 
 
