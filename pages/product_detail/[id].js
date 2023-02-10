@@ -1,25 +1,15 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import data from '../../source/dataUndangan.json'
-import price from '../../source/dataFitur.json'
 import Head from 'next/head'
 import NavbarSecond from '../../components/globals/NavbarSecond'
-import DetailPreset from '../../components/product_detail/DeatilPreset'
 import Footer from '../../components/globals/Footer'
+import DetailPreset from '../../components/product_detail/DetailPreset'
 
-
-function ProdId({undangan,price}) {
+function ProdId({preset}) {
 
     const router = useRouter()
     const {presetId} = router.query
-    const selected = undangan.filter(item => item.id === presetId )[0];
-    let pricePreset
-   if(selected.kategori === 'basic'){
-      pricePreset = price.basic.price
-   }else{
-      pricePreset = price.premium.price
-   }
-
+    const detailData = preset.undangan[0]
   return (
 
     <div className='w-full base '>
@@ -30,7 +20,8 @@ function ProdId({undangan,price}) {
       </Head>
       <NavbarSecond />
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-        <DetailPreset idPreset={selected.id} namePreset={selected.nama} catPreset={selected.kategori} imgPreset={selected.img} priceP={pricePreset} tagPreset={selected.tag}/>
+        
+        <DetailPreset idPreset={presetId} namePreset={detailData.title} catPreset={detailData.category} imgPreset={detailData.img} priceP={25000} tagPreset={["elegant","rustic","minimalist","grey"]}/>
      </main>
      <Footer/>
     </div>
@@ -38,7 +29,14 @@ function ProdId({undangan,price}) {
   )
 }
 
-ProdId.getInitialProps = async () => {
-    return { undangan: data.undangan, price:price.paket }
-  }
+export async function getServerSideProps(context) {
+
+  const {id} = context.params
+  const res = await fetch(`http://apirabine.cendikabangsa.sch.id/product/id/${id}`)
+  const preset = await res.json()
+
+  return { props: {preset} }
+}
+
+
 export default ProdId

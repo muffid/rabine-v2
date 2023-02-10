@@ -85,7 +85,7 @@ function Home({data,fitur,dataApi}) {
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
-        <SampleProduct data={data.undangan} id={5}/>
+        <SampleProduct data={dataApi.undangan} id={5}/>
         </motion.div>
       </main>
       <motion.div
@@ -104,18 +104,25 @@ function Home({data,fitur,dataApi}) {
 
 
 
+// export async function getServerSideProps() {
+//   const res = await axios.get('http://api.rabine.id/select');
+//   const dataApi = res.data;
+
+//   return {
+//     props: {
+//       data,fitur,dataApi
+//     },
+//   };
+// }
+
 export async function getServerSideProps() {
-  const res = await axios.get('http://api.rabine.id/select');
-  const dataApi = res.data;
+  // Fetch data from external API
+  const res = await fetch(`http://apirabine.cendikabangsa.sch.id/product`)
+  const dataApi = await res.json()
 
-  return {
-    props: {
-      data,fitur,dataApi
-    },
-  };
+  // Pass data to the page via props
+  return { props: { dataApi,data,fitur } }
 }
-
-
 
 
 

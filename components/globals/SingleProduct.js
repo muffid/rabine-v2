@@ -12,10 +12,8 @@ function SingleProduct(props) {
     function viewProduct(){
         setMenuActive(5)
         router.push({
-            pathname:'/product_detail/preset',
-           query:{
-            presetId:props.id,
-           }
+            pathname:`/product_detail/${props.id}`
+          
         })
     }
 
@@ -39,7 +37,7 @@ function SingleProduct(props) {
             </div>
             <div className='flex flex-row justify-between w-full items-center text-orange-300 text-[0.65rem] px-5 py-4' >
                 <div className='flex flex-row'><FaStar/><FaStar/><FaStar/><FaStar/></div>
-                <h1 className={`text-xs   p-1 md:p-2 rounded-lg ${props.cat === 'premium' ? 'bg-yellow-100 text-orange-600' : 'bg-green-100 text-green-800'}` }>{props.cat}</h1>
+                <h1 className={`text-xs   p-1 md:p-2 rounded-lg ${props.cat === 'Premium' ? 'bg-yellow-100 text-orange-600' : 'bg-green-100 text-green-800'}` }>{props.cat}</h1>
             </div>
             
         </div>
