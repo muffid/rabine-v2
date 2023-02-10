@@ -20,7 +20,7 @@ import axios from 'axios';
 
 
 
-function Home({data,fitur,dataApi,dataLatest}) {
+function Home({fitur,dataApi,dataLatest}) {
 
   const [menuActive,setMenuActive] = useRecoilState(navState)
   const intersect='20vw'
@@ -112,7 +112,7 @@ export async function getServerSideProps() {
   const dataApi = await res.json()
   const dataLatest = await latest.json()
 
-  return { props: { dataApi,data,fitur,dataLatest } }
+  return { props: { dataApi,fitur,dataLatest } }
 }
 
 export default Home;
