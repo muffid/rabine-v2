@@ -31,11 +31,10 @@ function ProdId({preset}) {
 
 export async function getServerSideProps(context) {
 
-  const baseUrl = process.env.BASE_API
   const {id} = context.params
 
   //fetch detail preset by id
-  const res = await fetch(baseUrl+`/product/id/${id}`)
+  const res = await fetch(`http://api.rabine.id/product/id/${id}`)
   const preset = await res.json()
 
   

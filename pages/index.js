@@ -107,9 +107,8 @@ function Home({data,fitur,dataApi,dataLatest}) {
 
 export async function getServerSideProps() {
 
-  const baseUrl = process.env.BASE_API
-  const res = await fetch(baseUrl+`/product`)
-  const latest = await fetch(baseUrl+'/product/latest')
+  const res = await fetch(`http://api.rabine.id/product`)
+  const latest = await fetch('http://api.rabine.id/product/latest')
   const dataApi = await res.json()
   const dataLatest = await latest.json()
 
