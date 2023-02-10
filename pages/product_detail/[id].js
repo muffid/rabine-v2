@@ -10,6 +10,8 @@ function ProdId({preset}) {
     const router = useRouter()
     const {presetId} = router.query
     const detailData = preset.undangan[0]
+
+    
   return (
 
     <div className='w-full base '>
@@ -20,21 +22,23 @@ function ProdId({preset}) {
       </Head>
       <NavbarSecond />
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-        
-        <DetailPreset idPreset={presetId} namePreset={detailData.title} catPreset={detailData.category} imgPreset={detailData.img} priceP={25000} tagPreset={["elegant","rustic","minimalist","grey"]}/>
+        <DetailPreset idPreset={detailData.id} namePreset={detailData.title} catPreset={detailData.category} imgPreset={detailData.img} priceP={25000} tagPreset={detailData.tag}/>
      </main>
      <Footer/>
     </div>
-
   )
 }
 
 export async function getServerSideProps(context) {
 
+  const baseUrl = process.env.BASE_API
   const {id} = context.params
-  const res = await fetch(`http://apirabine.cendikabangsa.sch.id/product/id/${id}`)
+
+  //fetch detail preset by id
+  const res = await fetch(baseUrl+`/product/id/${id}`)
   const preset = await res.json()
 
+  
   return { props: {preset} }
 }
 

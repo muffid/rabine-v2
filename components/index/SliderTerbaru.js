@@ -5,9 +5,6 @@ import 'swiper/css';
 import "swiper/css/pagination";
 import SingleProduct from '../globals/SingleProduct';
 
-
-
-
 function SliderTerbaru(props) {
   
   return (
@@ -31,7 +28,7 @@ function SliderTerbaru(props) {
         >
             {props.data.map((items)=>
               <SwiperSlide  key={items.id}>
-                 <SingleProduct  id={items.id} img={items.img} cat={items.kategori} name={items.nama} tag={items.tag}/>
+                 <SingleProduct  id={items.id} img={items.img} cat={items.category} name={items.title} tag={items.tag}/>
               </SwiperSlide>
                 
             )}

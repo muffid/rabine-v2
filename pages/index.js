@@ -20,13 +20,13 @@ import axios from 'axios';
 
 
 
-function Home({data,fitur,dataApi}) {
+function Home({data,fitur,dataApi,dataLatest}) {
 
   const [menuActive,setMenuActive] = useRecoilState(navState)
   const intersect='20vw'
   const duration = 0.4
   const style = 'easeOut'
-  console.log(dataApi)
+
   useEffect(()=>{
     const element = document.getElementById(`content${menuActive}`)
     element.scrollIntoView({behavior:'smooth'})
@@ -76,7 +76,7 @@ function Home({data,fitur,dataApi}) {
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
-      <LatestProd data={data.undangan}/>
+      <LatestProd data={dataLatest.undangan}/>
       </motion.div>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
       <motion.div
@@ -104,28 +104,16 @@ function Home({data,fitur,dataApi}) {
 
 
 
-// export async function getServerSideProps() {
-//   const res = await axios.get('http://api.rabine.id/select');
-//   const dataApi = res.data;
-
-//   return {
-//     props: {
-//       data,fitur,dataApi
-//     },
-//   };
-// }
 
 export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`http://apirabine.cendikabangsa.sch.id/product`)
+
+  const baseUrl = process.env.BASE_API
+  const res = await fetch(baseUrl+`/product`)
+  const latest = await fetch(baseUrl+'/product/latest')
   const dataApi = await res.json()
+  const dataLatest = await latest.json()
 
-  // Pass data to the page via props
-  return { props: { dataApi,data,fitur } }
+  return { props: { dataApi,data,fitur,dataLatest } }
 }
-
-
-
-
 
 export default Home;

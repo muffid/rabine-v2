@@ -4,7 +4,8 @@ import { FaEye,FaCartPlus, FaStar } from 'react-icons/fa'
 
 
 function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,tagPreset}) {
- 
+
+
   return (
     <div className='mt-[110px] grid grid-cols-1 md:grid-cols-2 md:items-start lg:items-center justify-between gap-x-8 rounded-3xl border bg-slate-50 border-slate-200  md:px-6  md:py-4 gap-y-8 relative'>
         
