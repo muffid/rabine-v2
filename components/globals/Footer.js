@@ -4,7 +4,7 @@ import React from 'react'
 function Footer() {
   return (
     <div className=' mx-auto bg-slate-50 text-slate-700 p-8 mt-8'>
-      <div className='flex max-w-[1200px] mx-auto flex-col items-center justify-center space-y-4 px-16 '>
+      <div className='flex md:max-w-[1200px] mx-auto flex-col items-center justify-center space-y-4 lg:px-16 '>
         <div className='grid grid-cols-2  md:grid-cols-5 gap-x-2 gap-y-4 '>
             <div className='flex flex-col items-start gap-y-4 col-span-2 lg:col-span-1 pr-36 md:pr-24 mb-4 md:mb-0'>
              <Image
@@ -64,3 +64,4 @@ function Footer() {
 }
 
 export default Footer
+// Duitkuisme_123 Midtransisme_123

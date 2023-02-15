@@ -107,8 +107,16 @@ function Home({fitur,dataApi,dataLatest}) {
 
 export async function getServerSideProps() {
 
-  const res = await fetch(`http://api.rabine.id/product`)
-  const latest = await fetch('http://api.rabine.id/product/latest')
+  const res = await fetch(`http://api.rabine.id/product`, {
+    headers: {
+      Authorization: 'Bearer '+process.env.API_TOKEN
+    }
+  })
+  const latest = await fetch('http://api.rabine.id/product/latest', {
+    headers: {
+      Authorization: 'Bearer '+process.env.API_TOKEN
+    }
+  })
   const dataApi = await res.json()
   const dataLatest = await latest.json()
 
