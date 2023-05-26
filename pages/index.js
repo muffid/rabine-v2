@@ -106,12 +106,12 @@ export async function getServerSideProps() {
 
   const res = await fetch(`http://api.rabine.id/product`, {
     headers: {
-      Authorization: 'Bearer ' + process.env.API_TOKEN
+      Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
     }
   })
   const latest = await fetch('http://api.rabine.id/product/latest', {
     headers: {
-      Authorization: 'Bearer ' + process.env.API_TOKEN
+      Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
     }
   })
   const dataApi = await res.json()

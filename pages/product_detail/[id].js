@@ -34,7 +34,7 @@ export async function getServerSideProps(context) {
   //fetch detail preset by id
   const res = await fetch(`http://api.rabine.id/product/id/${id}`, {
     headers: {
-      Authorization: 'Bearer ' + process.env.API_TOKEN
+      Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR' 
     }
   })
   const preset = await res.json()
