@@ -6,7 +6,6 @@ import LatestProd from '../components/index/LatestProd'
 import Navbar from '../components/index/Navbar'
 import Pricing from '../components/index/Pricing'
 import SampleProduct from '../components/index/SampleProduct'
-import data from '../source/dataUndangan.json'
 import fitur from'../source/dataFitur.json'
 import BlogFeed from '../components/index/BlogFeed'
 import { useRecoilState } from 'recoil'
@@ -42,10 +41,8 @@ function Home({fitur,dataApi,dataLatest}) {
       </Head>
       <Navbar />
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-     
-         <Hero id={1} />
-
-         <motion.div
+        <Hero id={1} />
+        <motion.div
             initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
@@ -109,12 +106,12 @@ export async function getServerSideProps() {
 
   const res = await fetch(`http://api.rabine.id/product`, {
     headers: {
-      Authorization: 'Bearer '+process.env.API_TOKEN
+      Authorization: 'Bearer ' + process.env.API_TOKEN
     }
   })
   const latest = await fetch('http://api.rabine.id/product/latest', {
     headers: {
-      Authorization: 'Bearer '+process.env.API_TOKEN
+      Authorization: 'Bearer ' + process.env.API_TOKEN
     }
   })
   const dataApi = await res.json()

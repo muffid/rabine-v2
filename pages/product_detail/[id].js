@@ -11,9 +11,7 @@ function ProdId({preset}) {
     const {presetId} = router.query
     const detailData = preset.undangan[0]
 
-    
   return (
-
     <div className='w-full base '>
       <Head>
         <title>Rabine.id - Lihat Preset Desain</title>
@@ -36,7 +34,7 @@ export async function getServerSideProps(context) {
   //fetch detail preset by id
   const res = await fetch(`http://api.rabine.id/product/id/${id}`, {
     headers: {
-      Authorization: 'Bearer '+process.env.API_TOKEN
+      Authorization: 'Bearer ' + process.env.API_TOKEN
     }
   })
   const preset = await res.json()
