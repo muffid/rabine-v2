@@ -14,6 +14,7 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Footer from '../components/globals/Footer'
 import axios from 'axios';
+require('dotenv').config();
 
 
 
@@ -102,12 +103,12 @@ function Home({fitur,dataApi,dataLatest}) {
 export async function getServerSideProps() {
 
 
-  const res = await fetch('https://apirbn.cendikabangsa.sch.id/product/', {
+  const res = await fetch(process.env.API_URL_PROD+'product/', {
     headers: {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
     }
   })
-  const latest = await fetch('https://apirbn.cendikabangsa.sch.id/product/latest', {
+  const latest = await fetch(process.env.API_URL_PROD+'product/latest', {
     headers: {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
     }
