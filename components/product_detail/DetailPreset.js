@@ -30,11 +30,11 @@ function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,tagPreset}
                 <p className='bold text-lg'>Rp. {priceP}</p>
                 <p className={`${catPreset === 'basic' ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-600'} px-1 `}>{catPreset}</p>
              
-                    <div className='grid grid-flow-col gap-x-4 gap-y-4 text-sm'>
+                    {/* <div className='grid grid-flow-col gap-x-4 gap-y-4 text-sm'>
                         {tagPreset.map((item)=>
                             <p key={item} className='text-slate-600 px-2 py-1 rounded-xl border cursor-pointer hover:bg-white hover:shadow-lg flex-grow-0'>{item}</p>
                         )}
-                    </div>
+                    </div> */}
             
               
             </div>
