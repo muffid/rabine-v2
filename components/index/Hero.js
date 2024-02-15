@@ -5,9 +5,10 @@ import { FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 function Hero(props) {
   return (
-    <div id={`content${props.id}`} className='mt-[110px] grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-x-4 rounded-3xl border border-slate-200  bg-slate-100/50 px-8 md:pl-24 py-16 gap-y-8 relative'>
+    
+    <div id={`content${props.id}`} className='mt-[80px] grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-x-4 rounded-3xl border border-slate-200  bg-slate-100/50 px-8 md:pl-24 py-16 gap-y-8 relative'>
         <div className='flex flex-col items-start gap-y-8'>
-            <h1 className='bold text-4xl md:text-5xl lg:text-7xl text-[#2C090B]'>Rabi Gausah Mikir Nyetak Undangan</h1>
+            <h1 className='bold text-4xl md:text-5xl  text-[#2C090B]'>Ganti Undangan Kertasmu Dengan Undangan Digital</h1>
             <div className='h-2 w-14 bg-orange-300 rounded-lg'></div>
             <div>
                 <p className='bold pr-12 text-lg'>Pernikahanmu adalah momen indahmu.</p>
@@ -50,7 +51,7 @@ function Hero(props) {
                 src='/img/mobile.png'
                 width={1000}
                 height={1000}
-                className='md:absolute bottom-0 w-[300px] md:w-[450px] right-0 lg:-right-12'
+                className='md:absolute -bottom-16 w-[300px] md:w-[450px] right-0 lg:-right-12'
                 alt='rabine.id'
             />
            

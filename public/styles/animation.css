@@ -1,0 +1,19 @@
+@keyframes scrollAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    50% {
+      opacity: 1;
+     
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+  }
+  
+  .scroll-me {
+    animation: scrollAnimation 1.5s ease-out infinite;
+  }
+  

@@ -1,5 +1,6 @@
 import { RecoilRoot } from 'recoil'
 import '../styles/globals.css'
+import '../public/styles/animation.css'
 import ProgressBar from '@badrap/bar-of-progress'
 import Router from 'next/router'
 
