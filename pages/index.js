@@ -102,13 +102,13 @@ function Home({fitur,dataApi,dataLatest}) {
 
 export async function getServerSideProps() {
 
-
-  const res = await fetch(process.env.API_URL_PROD+'product/', {
+  const url = `${process.env.API_URL_PROD}`
+  const res = await fetch(url+'product/', {
     headers: {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
     }
   })
-  const latest = await fetch(process.env.API_URL_PROD+'product/latest', {
+  const latest = await fetch(url+'product/latest', {
     headers: {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
     }

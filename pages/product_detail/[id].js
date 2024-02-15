@@ -32,7 +32,8 @@ export async function getServerSideProps(context) {
   const {id} = context.params
 
   //fetch detail preset by id
-  const res = await fetch(`https://apirbn.cendikabangsa.sch.id/product/id/${id}`, {
+  const url = `${process.env.API_URL_PROD}`
+  const res = await fetch(url+`product/id/${id}`, {
     headers: {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR' 
     }
