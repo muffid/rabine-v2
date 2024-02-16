@@ -37,7 +37,7 @@ function PresA01() {
                             <h1>THE WEDDING OF</h1>
                             <h1 className='font-bold text-5xl pb-8 '>ANDRE & CITRA</h1>
                             <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
-                            <h1 className='py-8 font-bold'>Tamu</h1>
+                            <h1 className='py-8 font-bold'>{to}</h1>
                             <button className='flex flex-row items-center justify-center gap-2 blink bg-white rounded-lg 
                                             text-black px-5 py-2 hover:bg-yellow-100' onClick={moveUp}>
                                <FaRegEnvelopeOpen/> Buka Undangan
