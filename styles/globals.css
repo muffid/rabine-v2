@@ -31,6 +31,28 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Batusa";
+  src: url('../fonts/Batusa.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Royal-Exq";
+  src: url('../fonts/royalexquisite.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-Batusa{
+  font-family: 'Batusa' , sans-serif;
+  font-weight: 400;
+}
+.font-Royal-Exq{
+  font-family: 'Royal-Exq' , sans-serif;
+  font-weight: 400;
+}
+
 .base {
   font-family: 'Satoshi' , sans-serif;
   font-weight: 400;

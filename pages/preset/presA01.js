@@ -60,7 +60,7 @@ function PresA01() {
                                  py-12 px-10'>
                     <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
                         <h1>scroll ke bawah</h1>
-                        <h1 className='text-3xl font-bold text-right'>The Wedding Of Randy And Citra</h1>
+                        <h1 className='text-3xl font-bold text-right font-Batusa'>The Wedding Of Randy And Citra</h1>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@ function PresA01() {
                    <div className='w-full h-screen relative'>
                         <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end'>
                             <p>THE WEDDING OF</p>
-                            <h1 className='font-bold text-6xl py-4'>ANDRE &<br/>CITRA</h1>
+                            <h1 className='font-bold text-6xl py-4 font-Royal-Exq'>ANDRE &<br/>CITRA</h1>
                             <div className='flex flex-row items-end justify-start w-full'>
                                 <p className='tracking-[0.5rem]'>24.05.2024</p>
                                 <div className='w-full h-[1px] bg-white'></div>
@@ -148,7 +148,7 @@ function PresA01() {
                      <div className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[100px] text-center'
                         style={{backgroundImage: "url('/img/preset/A01/Template-1-Marble.webp')"}}>
                         <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover'  style={{backgroundImage: "url('/img/preset/A01/bride.png')"}}></div>
-                        <h1 className='font-bold text-2xl'>Citra Lestari Alamku</h1>
+                        <h1 className='font-bold text-2xl font-Royal-Exq'>Citra Lestari Alamku</h1>
                         <Image
                             src='/img/preset/A01/separator-sparkling.svg'
                             width={1200}
@@ -161,9 +161,9 @@ function PresA01() {
                             <FaInstagram/>
                             citra_la
                         </div>
-                        <h1 className='text-[5rem] my-10'>&</h1>
+                        <h1 className='text-[5rem] my-10 font-Royal-Exq'>&</h1>
                         <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover'  style={{backgroundImage: "url('/img/preset/A01/groom.png')"}}></div>
-                        <h1 className='font-bold text-2xl'>Andre Taulanu</h1>
+                        <h1 className='font-bold text-2xl font-Royal-Exq'>Andre Taulanu</h1>
                         <Image
                             src='/img/preset/A01/separator-sparkling.svg'
                             width={1200}
@@ -183,7 +183,7 @@ function PresA01() {
                         <div className='bg-gradient-to-t from-black to-black/50 via-black/80 w-full h-full  flex flex-col items-center justify-center
                                         py-20 px-12 gap-y-10 text-center'>
                             <div className='flex flex-col items-center justify-center'>
-                                <h1 className='text-2xl'>Minggu, 24 Mei 2024</h1>
+                                <h1 className='text-2xl font-Royal-Exq'>Minggu, 24 Mei 2024</h1>
                                 <Image
                                     src='/img/preset/A01/separator-sparkling.svg'
                                     width={1200}
@@ -193,15 +193,15 @@ function PresA01() {
                                 />
                             </div>
                             <div className='flex flex-col items-center justify-center'>
-                                <h1 className='text-3xl'>Akad Nikah</h1>
+                                <h1 className='text-3xl font-Royal-Exq'>Akad Nikah</h1>
                                 <p>08.00 WIB s/d Selesai</p>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
-                                <h1 className='text-3xl'>Resepsi Pernikahan</h1>
+                                <h1 className='text-3xl font-Royal-Exq'>Resepsi Pernikahan</h1>
                                 <p>10.00 WIB s/d Selesai</p>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
-                                <h1 className='text-3xl'>Hotel Jayakarta Bandung</h1>
+                                <h1 className='text-3xl font-Royal-Exq'>Hotel Jayakarta Bandung</h1>
                                 <p>Jl. Ir. Juanda No 381A, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat</p>
                             </div>
 
