@@ -12,8 +12,28 @@
         transform: translateY(0);
     }
   }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation: blink 2s infinite ease-in-out;
+  }
   
   .scroll-me {
     animation: scrollAnimation 1.5s ease-out infinite;
+  }
+
+  .moving-up {
+    transition: top 1s ease-out;
   }
   
