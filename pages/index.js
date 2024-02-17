@@ -77,7 +77,7 @@ function Home({fitur,dataApi,dataLatest}) {
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
-      <LatestProd data={dataLatest.undangan}/>
+      {/* <LatestProd data={dataLatest.undangan}/> */}
       </motion.div>
       <main className='w-full mx-auto  md:px-12 max-w-[1300px]'>
       <motion.div
