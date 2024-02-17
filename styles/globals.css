@@ -37,6 +37,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Royal-Exq";
   src: url('../fonts/royalexquisite.otf');
@@ -44,13 +45,26 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "GameCube";
+  src: url('../fonts/GameCube.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
 .font-Batusa{
   font-family: 'Batusa' , sans-serif;
   font-weight: 400;
 }
+
 .font-Royal-Exq{
   font-family: 'Royal-Exq' , sans-serif;
   font-weight: 400;
+}
+
+.font-GameCube{
+  font-family: 'GameCube' , sans-serif;
+  font-weight: 300;
 }
 
 .base {

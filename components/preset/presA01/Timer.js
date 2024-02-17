@@ -2,52 +2,67 @@
 import React from 'react'
 import { useState, useEffect,useRef} from 'react'
 import { FaRegCalendarPlus } from "react-icons/fa"
-const Timer = () => {
-  const calculateTimeLeft = () => {
-    const difference = +new Date('2024-05-24T08:00:00Z') - +new Date();
-    let timeLeft = {};
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const timerRef = useRef(null);
+const Timer = (props) => {
+  const propsTarget = props.targetDate
+  const [timeRemaining, setTimeRemaining] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
   useEffect(() => {
-    timerRef.current = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+    const targetDate = new Date(propsTarget);
+    const intervalId = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+    
+      
+      if (difference <= 0) {
+        clearInterval(intervalId);
+        setTimeRemaining({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        });
+      } else {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        
+        setTimeRemaining({
+          days,
+          hours,
+          minutes,
+          seconds
+        });
+      }
     }, 1000);
 
-    return () => clearInterval(timerRef.current);
+    return () => clearInterval(intervalId);
   }, []);
-
   return (
-    <div className='w-full flex flex-col items-center justify-center bg-black py-20 px-12 gap-y-8'>
-        <h1 className='text-3xl'>Save The Date</h1>
+    <div className='w-full flex flex-col items-center justify-center bg-black py-20 px-12 gap-y-8'
+          style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
+        <h1 className='text-[2.5rem] font-Royal-Exq'>Save The Date</h1>
          <div className='grid grid-cols-4 gap-4'>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl'>{timeLeft.days}</h1>
+              <h1 className='text-[2rem] font-Royal-Exq'>{timeRemaining.days}</h1>
               <p>Hari</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl'>{timeLeft.hours}</h1>
+              <h1 className='text-[2rem] font-Royal-Exq'>{timeRemaining.hours}</h1>
               <p>Jam</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl'>{timeLeft.minutes}</h1>
+              <h1 className='text-[2rem] font-Royal-Exq'>{timeRemaining.minutes}</h1>
               <p>Menit</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl'>{timeLeft.seconds}</h1>
+              <h1 className='text-[2rem] font-Royal-Exq'>{timeRemaining.seconds}</h1>
               <p>Detik</p>
             </div>
           </div>

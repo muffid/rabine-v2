@@ -4,21 +4,28 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { useState} from 'react'
 import Timer from '../../components/preset/presA01/Timer'
-import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, FaSearchLocation } from "react-icons/fa"
+import Gallery from '../../components/preset/presA01/Gallery'
+import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
+        FaSearchLocation, FaRegCopy, FaHeart, FaCalendarAlt
+        ,FaImages, FaGift } from "react-icons/fa"
 
 
 function PresA01() {
 
     const router = useRouter()
     const { to } = router.query
-
     const [topPosition, setTopPosition] = useState(0)
 
     const moveUp = () => {
         setTopPosition(topPosition - 1000);
     }
 
-
+    const images = [
+        { src: '/images/preset/A01/gallery-1.jpg', alt: 'First' },
+        { src: '/images/preset/A01/gallery-2.jpg', alt: 'First' },
+        { src: '/images/preset/A01/gallery-3.jpg', alt: 'First' },
+        { src: '/images/preset/A01/gallery-4.jpg', alt: 'First' },  
+    ]
   
     return (
         <div className=' w-full box-content text-white'>
@@ -35,7 +42,7 @@ function PresA01() {
                         <div className='flex flex-col items-center justify-end absolute bg-gradient-to-t from-black 
                                         to-transparent via-black/75 w-full h-screen top-0 pb-20'>
                             <h1>THE WEDDING OF</h1>
-                            <h1 className='font-bold text-5xl pb-8 '>ANDRE & CITRA</h1>
+                            <h1 className='font-bold text-5xl pb-8 font-Royal-Exq'>ANDRE & CITRA</h1>
                             <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
                             <h1 className='py-8 font-bold'>{to}</h1>
                             <button className='flex flex-row items-center justify-center gap-2 blink bg-white rounded-lg 
@@ -44,7 +51,7 @@ function PresA01() {
                             </button>
                         </div>
                         <Image
-                            src='/img/preset/A01/bg-couple.jpg'
+                            src='/images/preset/A01/bg-couple.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover h-full'
@@ -54,18 +61,37 @@ function PresA01() {
                 </div>
 
                 {/* SISI KIRI (TAMPILAN PC) */}
-                <div className="hidden md:flex bg-cover bg-center md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0 " 
-                     style={{backgroundImage: "url('/img/preset/A01/bg-couple.jpg')"}}>
+                <div className="hidden md:flex bg-cover bg-center md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0" 
+                     style={{backgroundImage: "url('/images/preset/A01/bg-couple.jpg')"}}>
                     <div className='gap-y-4 w-full h-full bg-gradient-to-l from-black to-transparent flex flex-col justify-end items-end 
-                                 py-12 px-10'>
-                    <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
+                                 py-12 px-10 relative'>
+                        <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
                         <h1>scroll ke bawah</h1>
                         <h1 className='text-3xl font-bold text-right font-Batusa'>The Wedding Of Randy And Citra</h1>
+                        <div className='flex flex-col items-center justify-center gap-y-4 bg-white/80 rounded-full 
+                                    text-black top-1/2 right-8 py-5 px-2 absolute  z-50 ' >
+                            <FaHeart className=" hover:text-orange-800 cursor-pointer"/>
+                            <FaCalendarAlt className=" hover:text-orange-800 cursor-pointer"/>
+                            <FaSearchLocation className=" hover:text-orange-800 cursor-pointer"/>
+                            <FaImages className=" hover:text-orange-800 cursor-pointer"/>
+                            <FaGift className=" hover:text-orange-800 cursor-pointer"/>
+                        </div>
                     </div>
                 </div>
 
                 {/* SISI KANAN */}
-                <div className='w-full md:w-1/2 lg:w-[40%] overflow-y-auto'>
+                <div className='w-full md:w-1/2 lg:w-[40%] overflow-y-auto relative'>
+
+                    {/* MENU NAVIGASI BAWAH */}
+                    <div className='md:hidden fixed bottom-0 z-30 w-full p-4 bg-white/70 text-black 
+                                    flex flex-row items-center justify-center gap-x-6 text-xl backdrop-blur-xl'>
+                        <FaHeart className=" hover:text-orange-800 cursor-pointer"/>
+                        <FaCalendarAlt className=" hover:text-orange-800 cursor-pointer"/>
+                        <FaSearchLocation className=" hover:text-orange-800 cursor-pointer"/>
+                        <FaImages className=" hover:text-orange-800 cursor-pointer"/>
+                        <FaGift className=" hover:text-orange-800 cursor-pointer"/>
+                        
+                    </div>
 
                     {/* OPENING_PHOTO */}
                    <div className='w-full h-screen relative'>
@@ -78,7 +104,7 @@ function PresA01() {
                             </div>
                         </div>
                         <Image
-                            src='/img/preset/A01/couple-opening.jpg'
+                            src='/images/preset/A01/couple-opening.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover h-full'
@@ -88,16 +114,16 @@ function PresA01() {
 
                    {/* AYAT ALQUR'AN */}
                     <div className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[200px]'
-                         style={{backgroundImage: "url('/img/preset/A01/Template-1-Marble.webp')"}}>
+                         style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
                          <Image
-                            src='/img/preset/A01/separator-saphire.svg'
+                            src='/images/preset/A01/separator-saphire.svg'
                                 width={1200}
                                 height={1200}
                                 className='w-[5%] absolute top-10'
                                 alt='appstore'
                         />
                          <Image
-                            src='/img/preset/A01/separator-saphire.svg'
+                            src='/images/preset/A01/separator-saphire.svg'
                                 width={1200}
                                 height={1200}
                                 className='w-[5%] absolute bottom-28'
@@ -117,18 +143,18 @@ function PresA01() {
                      <div className='w-full  relative'>
                         <div className='p-12 absolute top-0 bg-black/80 w-full h-full flex flex-col items-center justify-between'>
                         <Image
-                            src='/img/preset/A01/bg-couple.jpg'
+                            src='/images/preset/A01/bg-couple.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover rounded-xl -mt-28'
                             alt='appstore'
                         />
-                        <p className='text-center font-bold text-xl lg:text-3xl px-10 lg:px-28'>
+                        <p className='text-center font-bold text-xl lg:text-2xl px-10 lg:px-16 font-Batusa'>
                             Love seems the swiftest but it is the slowest of all growths. No man or woman really knows what perfect 
                             love is until they have been married a quarter of a century.
                         </p>
                         <Image
-                            src='/img/preset/A01/separator-sparkling.svg'
+                            src='/images/preset/A01/separator-sparkling.svg'
                             width={1200}
                             height={1200}
                             className='object-cover w-[8%]'
@@ -136,7 +162,7 @@ function PresA01() {
                         />
                         </div>
                         <Image
-                            src='/img/preset/A01/bg-section-1.jpg'
+                            src='/images/preset/A01/bg-section-1.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover h-full'
@@ -146,11 +172,11 @@ function PresA01() {
 
                      {/* MEMPELAI */}
                      <div className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[100px] text-center'
-                        style={{backgroundImage: "url('/img/preset/A01/Template-1-Marble.webp')"}}>
-                        <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover'  style={{backgroundImage: "url('/img/preset/A01/bride.png')"}}></div>
-                        <h1 className='font-bold text-2xl font-Royal-Exq'>Citra Lestari Alamku</h1>
+                        style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
+                        <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover'  style={{backgroundImage: "url('/images/preset/A01/bride.png')"}}></div>
+                        <h1 className='font-bold text-2xl font-Royal-Exq py-6'>Citra Lestari Alamku</h1>
                         <Image
-                            src='/img/preset/A01/separator-sparkling.svg'
+                            src='/images/preset/A01/separator-sparkling.svg'
                             width={1200}
                             height={1200}
                             className='object-cover w-[8%] my-6'
@@ -162,10 +188,10 @@ function PresA01() {
                             citra_la
                         </div>
                         <h1 className='text-[5rem] my-10 font-Royal-Exq'>&</h1>
-                        <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover'  style={{backgroundImage: "url('/img/preset/A01/groom.png')"}}></div>
-                        <h1 className='font-bold text-2xl font-Royal-Exq'>Andre Taulanu</h1>
+                        <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover'  style={{backgroundImage: "url('/images/preset/A01/groom.png')"}}></div>
+                        <h1 className='font-bold text-2xl font-Royal-Exq py-6'>Andre Taulanu</h1>
                         <Image
-                            src='/img/preset/A01/separator-sparkling.svg'
+                            src='/images/preset/A01/separator-sparkling.svg'
                             width={1200}
                             height={1200}
                             className='object-cover w-[8%] my-6'
@@ -174,18 +200,18 @@ function PresA01() {
                         <h1 className='my-8'>Putri dari <br/> Bapak Budi Mulyanto <br/> Dan Ibu Pangastuti R</h1>
                         <div className='flex gap-2 text-sm items-center justify-center'>
                             <FaInstagram/>
-                            citra_la
+                            andre_t
                         </div>
                     </div>
 
                     {/* INFO ACARA */}
-                    <div className='w-full  relative bg-center bg-cover ' style={{backgroundImage: "url('/img/preset/A01/bg-section-2.jpg')"}}>
+                    <div className='w-full  relative bg-center bg-cover ' style={{backgroundImage: "url('/images/preset/A01/bg-section-2.jpg')"}}>
                         <div className='bg-gradient-to-t from-black to-black/50 via-black/80 w-full h-full  flex flex-col items-center justify-center
                                         py-20 px-12 gap-y-10 text-center'>
                             <div className='flex flex-col items-center justify-center'>
                                 <h1 className='text-2xl font-Royal-Exq'>Minggu, 24 Mei 2024</h1>
                                 <Image
-                                    src='/img/preset/A01/separator-sparkling.svg'
+                                    src='/images/preset/A01/separator-sparkling.svg'
                                     width={1200}
                                     height={1200}
                                     className='object-cover w-[20%]'
@@ -203,28 +229,96 @@ function PresA01() {
                             <div className='flex flex-col items-center justify-center'>
                                 <h1 className='text-3xl font-Royal-Exq'>Hotel Jayakarta Bandung</h1>
                                 <p>Jl. Ir. Juanda No 381A, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat</p>
-                            </div>
-
-                            <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2
-                                            hover:bg-white hover:text-black hover:scale-105 transition-all ease-out'>
-                                <FaSearchLocation/> view Location
-                            </button>
-                           
+                            </div>  
                         </div>
                     </div>
-                    <div className='w-full flex flex-col items-center justify-center'>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid" 
-                               className='w-full h-[500px]'
-                               width="600" 
-                                height="600" 
-                                style={{border:0}} 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                   
+
+                    {/* COUNTDOWN */}
+                    <Timer targetDate = {'2024-02-24T08:00:00Z'}/>
+
+                    {/* GOOGLE MAP */}
+                    <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8'>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid" 
+                                className='w-full h-[500px]'
+                                width="600" 
+                                    height="600" 
+                                    style={{border:0}} 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out'>
+                            <FaSearchLocation/> view Location
+                        </button>
                     </div>
-                    <Timer/>
+
+                    {/* YOUTUBE */}
+                    <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8 py-20'>
+                        <iframe 
+                            className='w-full'
+                            height="315" 
+                            src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
+                            title="YouTube video player" 
+                            frameborder="0" a
+                            llow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <Gallery images={images}/>
+
+                    {/* GIFT */}
+                    <div className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  
+                        style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
+                           <h1 className='text-[2.5rem] font-Royal-Exq'>Gifts</h1>
+                           <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between' 
+                                style={{backgroundImage: "url('/images/preset/A01/crdit_card.jpg')"}}>
+                               <div className='flex flex-row items-center justify-between w-full'>
+                                    <h1>Mandiri</h1>
+                                    <Image
+                                        src='/images/preset/A01/mandiri.webp'
+                                        width={1000}
+                                        height={1000}
+                                        className='w-[28%] object-contain'
+                                        alt='appstore'
+                                    />
+                               </div>
+                               <Image
+                                    src='/images/preset/A01/chip.png'
+                                    width={1000}
+                                    height={1000}
+                                    className='w-[12%] object-contain my-8'
+                                    alt='appstore'
+                                />
+                                <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
+                                <h1>Andre T</h1>
+                           </div>
+                           <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
+                            <FaRegCopy/> copy no rek
+                        </button>
+                    </div>
+
+                    {/* CLOSING */}
+                    <div className='w-full  relative'>
+                        <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end'>
+                            <p>Two souls become one, two hearts beat as one</p>
+                            <h1 className='font-bold text-6xl py-4 font-Royal-Exq'>ANDRE &<br/>CITRA</h1>
+                            <div className='flex flex-row items-end justify-start w-full'>
+                                <p className='w-1/3'>Thank You</p>
+                                <div className='w-2/3 h-[1px] bg-white'></div>
+                            </div>
+                        </div>
+                        <Image
+                            src='/images/preset/A01/bg-closing.jpg'
+                            width={1200}
+                            height={1200}
+                            className='w-full object-cover h-full'
+                            alt='appstore'
+                        />
+                   </div>
+
                 </div>
             </div>
         </div>
