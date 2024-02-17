@@ -43,7 +43,7 @@ const Timer = (props) => {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [propsTarget]);
   return (
     <div className='w-full flex flex-col items-center justify-center bg-black py-20 px-12 gap-y-8'
           style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>

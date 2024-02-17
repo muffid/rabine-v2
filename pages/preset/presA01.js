@@ -37,7 +37,7 @@ function PresA01() {
             <div className='w-full flex flex-row items-start justify-between'>
 
                 {/* COVER UNDANGAN */}
-                <div className='w-full h-screen fixed z-10 moving-up flex flex-col items-center justify-center' style={{ top: `${topPosition}px` }}>
+                <div className='w-full h-screen fixed z-20 moving-up flex flex-col items-center justify-center' style={{ top: `${topPosition}px` }}>
                     <div className='w-full h-screen relative flex items-center justify-center'>
                         <div className='flex flex-col items-center justify-end absolute bg-gradient-to-t from-black 
                                         to-transparent via-black/75 w-full h-screen top-0 pb-20'>
@@ -83,15 +83,15 @@ function PresA01() {
                 <div className='w-full md:w-1/2 lg:w-[40%] overflow-y-auto relative'>
 
                     {/* MENU NAVIGASI BAWAH */}
-                    <div className='md:hidden fixed bottom-0 z-30 w-full p-4 bg-white/70 text-black 
-                                    flex flex-row items-center justify-center gap-x-6 text-xl backdrop-blur-xl'>
+                    {/* <div className='md:hidden fixed bottom-0 z-10 w-full p-2 bg-white/70 text-black 
+                                    flex flex-row items-center justify-center gap-x-6 rounded-t-3xl text-2xl backdrop-blur-xl'>
                         <FaHeart className=" hover:text-orange-800 cursor-pointer"/>
                         <FaCalendarAlt className=" hover:text-orange-800 cursor-pointer"/>
                         <FaSearchLocation className=" hover:text-orange-800 cursor-pointer"/>
                         <FaImages className=" hover:text-orange-800 cursor-pointer"/>
                         <FaGift className=" hover:text-orange-800 cursor-pointer"/>
                         
-                    </div>
+                    </div> */}
 
                     {/* OPENING_PHOTO */}
                    <div className='w-full h-screen relative'>
