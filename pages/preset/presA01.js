@@ -62,8 +62,8 @@ function PresA01() {
                 <meta property="og:image:width" content="400" />
                 <meta property="og:image:height" content="300" />
                 <link rel="icon" href="/rbn.ico" />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+                <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+                <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
             </Head>
             <div className='w-full flex flex-row items-start justify-between'>
 
