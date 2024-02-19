@@ -279,15 +279,15 @@ function PresA01() {
                                     referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                         <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out'>
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaSearchLocation/> view Location
                         </button>
                     </div>
 
                     {/* YOUTUBE */}
-                    <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8 py-20'>
+                    <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8 py-20 '>
                         <iframe 
-                            className='w-full'
+                            className='w-full fadeUp'
                             height="315" 
                             src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
                             title="YouTube video player" 
@@ -302,8 +302,8 @@ function PresA01() {
                     {/* GIFT */}
                     <div className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  
                         style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
-                           <h1 className='text-[2.5rem] font-Royal-Exq'>Gifts</h1>
-                           <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between' 
+                           <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Gifts</h1>
+                           <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
                                 style={{backgroundImage: "url('/images/preset/A01/crdit_card.jpg')"}}>
                                <div className='flex flex-row items-center justify-between w-full'>
                                     <h1>Mandiri</h1>
@@ -348,6 +348,14 @@ function PresA01() {
                             className='w-full object-cover h-full'
                             alt='appstore'
                         />
+                   </div>
+
+                   {/* WATERMARK */}
+                   <div className='w-full bg-black flex flex-col items-center justify-center gap-y-1 text-xs text-center py-10'>
+                        <h1>made with love and passion by</h1>
+                        <h1 className='text-base font-bold'>Rabine</h1>
+                        <h1>ingin punya undangan keren seperti ini? Hubungi kami sekarang juga</h1>
+                        <h1>copyright rabine 2024</h1>
                    </div>
 
                 </div>
