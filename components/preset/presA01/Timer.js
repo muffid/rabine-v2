@@ -4,6 +4,7 @@ import { useState, useEffect,useRef} from 'react'
 import { FaRegCalendarPlus } from "react-icons/fa"
 const Timer = (props) => {
   const propsTarget = props.targetDate
+  const fadeUp = props.anim.fadeUp
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
@@ -47,8 +48,8 @@ const Timer = (props) => {
   return (
     <div className='w-full flex flex-col items-center justify-center bg-black py-20 px-12 gap-y-8'
           style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
-        <h1 className='text-[2.5rem] font-Royal-Exq'>Save The Date</h1>
-         <div className='grid grid-cols-4 gap-4'>
+        <h1 className={'text-[2.5rem] font-Royal-Exq '+fadeUp}>Save The Date</h1>
+         <div className={'grid grid-cols-4 gap-4 '+fadeUp}>
             <div className='flex flex-col items-center justify-center'>
               <h1 className='text-[2rem] font-Royal-Exq'>{timeRemaining.days}</h1>
               <p>Hari</p>
@@ -66,8 +67,7 @@ const Timer = (props) => {
               <p>Detik</p>
             </div>
           </div>
-          <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2
-                            hover:bg-white hover:text-black hover:scale-105 transition-all ease-out'>
+          <button className={'flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 hover:bg-white hover:text-black hover:scale-105 transition-all ease-out '+fadeUp}>
             <FaRegCalendarPlus/>
             simpan tanggal
           </button>
