@@ -40,6 +40,11 @@ function PresA01() {
         { src: '/images/preset/A01/gallery-4.jpg', alt: 'First' },  
     ]
 
+    const scrollToTarget = (targetId) => {
+        const targetElement = document.getElementById(targerId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
     useEffect(()=>{
         const fadeUpElements = document.querySelectorAll(".fadeUp")
         fadeUpElements.forEach((element) => {
@@ -186,6 +191,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
+                            onClick={scrollToTarget('mempelai')}
                         />
                         <Image
                             src='/images/preset/A01/wedding-bells.png'
@@ -193,6 +199,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
+                            onClick={scrollToTarget('jadwal')}
                         />
                           
                         <Image
@@ -201,6 +208,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
+                            onClick={scrollToTarget('lokasi')}
                         />
                         <Image
                             src='/images/preset/A01/photo-camera.png'
@@ -208,6 +216,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
+                            onClick={scrollToTarget('gallery')}
                         />
                         <Image
                             src='/images/preset/A01/love-letter.png'
@@ -215,6 +224,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
+                            onClick={scrollToTarget('mucapan')}
                         />
                         <Image
                             src='/images/preset/A01/wedding-gift.png'
@@ -222,6 +232,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
+                            onClick={scrollToTarget('gift')}
                         />
                             
                    </div>
@@ -314,7 +325,7 @@ function PresA01() {
                     </div>
 
                      {/* MEMPELAI */}
-                     <div className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[100px] text-center'
+                     <div id='mempelai' className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[100px] text-center'
                         style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
                         <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover fadeUp'  
 
@@ -355,7 +366,7 @@ function PresA01() {
                     </div>
 
                     {/* INFO ACARA */}
-                    <div className='w-full  relative bg-center bg-cover ' style={{backgroundImage: "url('/images/preset/A01/bg-section-2.jpg')"}}>
+                    <div id='jadwal' className='w-full  relative bg-center bg-cover ' style={{backgroundImage: "url('/images/preset/A01/bg-section-2.jpg')"}}>
                         <div className='bg-gradient-to-t from-black to-black/50 via-black/80 w-full h-full  flex flex-col items-center justify-center
                                         py-20 px-12 gap-y-10 text-center'>
                             <div className='flex flex-col items-center justify-center'>
@@ -387,7 +398,7 @@ function PresA01() {
                     <Timer targetDate = {'2024-02-24T08:00:00Z'} anim = {{fadeUp :'fadeUp'}}/>
 
                     {/* GOOGLE MAP */}
-                    <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8'>
+                    <div id='lokasi' className='w-full flex flex-col items-center justify-center bg-black gap-y-8'>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid" 
                                 className='w-full h-[500px]'
                                 width="600" 
@@ -419,7 +430,7 @@ function PresA01() {
                     <Gallery images={images}/>
 
                     {/* GIFT */}
-                    <div className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  
+                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  
                         style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
                            <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Gifts</h1>
                            <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
