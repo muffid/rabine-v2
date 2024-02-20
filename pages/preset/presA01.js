@@ -13,6 +13,7 @@ function PresA01() {
 
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
+    const [scrollTo, setScrollTo] = useState('opening')
 
     const togglePlay = () => {
         if (isPlaying) {
@@ -41,9 +42,13 @@ function PresA01() {
     ]
 
     const scrollToTarget = (targetId) => {
-        const targetElement = document.getElementById(targetId);
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+       setScrollTo(targetId)
     }
+
+    useEffect(()=>{
+        const element = document.getElementById(`${scrollTo}`)
+        element.scrollIntoView({behavior:'smooth'})
+      },[scrollTo])
 
     useEffect(()=>{
         const fadeUpElements = document.querySelectorAll(".fadeUp")
@@ -68,6 +73,8 @@ function PresA01() {
             })
         })
     },[])
+
+
   
     return (
         <div className=' w-full box-content text-white'>
@@ -191,7 +198,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
-                            onClick={scrollToTarget('mempelai')}
+                            onClick={()=>scrollToTarget('mempelai')}
                         />
                         <Image
                             src='/images/preset/A01/wedding-bells.png'
@@ -199,7 +206,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
-                            onClick={scrollToTarget('jadwal')}
+                            onClick={()=>scrollToTarget('jadwal')}
                         />
                           
                         <Image
@@ -208,7 +215,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
-                            onClick={scrollToTarget('lokasi')}
+                            onClick={()=>scrollToTarget('lokasi')}
                         />
                         <Image
                             src='/images/preset/A01/photo-camera.png'
@@ -216,7 +223,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
-                            onClick={scrollToTarget('gallery')}
+                            onClick={()=>scrollToTarget('gallery')}
                         />
                         <Image
                             src='/images/preset/A01/love-letter.png'
@@ -224,7 +231,7 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
-                            onClick={scrollToTarget('mucapan')}
+                            onClick={()=>scrollToTarget('opening')}
                         />
                         <Image
                             src='/images/preset/A01/wedding-gift.png'
@@ -232,13 +239,13 @@ function PresA01() {
                             height={500}
                             className='w-[8%] object-contain'
                             alt='appstore'
-                            onClick={scrollToTarget('gift')}
+                            onClick={()=>scrollToTarget('gift')}
                         />
                             
                    </div>
 
                     {/* OPENING_PHOTO */}
-                   <div className='w-full h-screen relative'>
+                   <div id='opening' className='w-full h-screen relative'>
                         <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end fadeUp'>
                             <p>THE WEDDING OF</p>
 
@@ -427,7 +434,7 @@ function PresA01() {
                         </iframe>
                     </div>
 
-                    <Gallery images={images}/>
+                    <Gallery id={'gallery'} images={images}/>
 
                     {/* GIFT */}
                     <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  
