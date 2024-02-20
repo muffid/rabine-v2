@@ -10,6 +10,7 @@ function ProdId({preset}) {
     const router = useRouter()
     const {presetId} = router.query
     const detailData = preset.undangan[0]
+    console.log(preset);
 
   return (
     <div className='w-full base '>
@@ -20,7 +21,12 @@ function ProdId({preset}) {
       </Head>
       <NavbarSecond />
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-        <DetailPreset idPreset={detailData.id} namePreset={detailData.title} catPreset={detailData.category} imgPreset={detailData.img} priceP={25000} tagPreset={detailData.tag}/>
+        <DetailPreset idPreset={detailData.Product_Id} 
+        namePreset={detailData.Product_Name} 
+        catPreset={detailData.Product_Category} 
+        imgPreset={detailData.Product_Img} 
+        priceP={25000}
+        slug={detailData.Product_Slug} />
      </main>
      <Footer/>
     </div>
@@ -29,20 +35,23 @@ function ProdId({preset}) {
 
 export async function getServerSideProps(context) {
 
-  const {id} = context.params
+  const { id } = context.params;
 
   //fetch detail preset by id
   const url = `${process.env.API_URL_PROD}`
-  const res = await fetch(url+`product/id/${id}`, {
+  const res = await fetch(url+`product/slug/${id}`, {
     headers: {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR' 
     }
   })
   const preset = await res.json()
+  console.log(url);
 
-  
   return { props: {preset} }
 }
+
+
+
 
 
 export default ProdId

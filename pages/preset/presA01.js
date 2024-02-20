@@ -494,7 +494,6 @@ function PresA01() {
                         <h1>ingin punya undangan keren seperti ini?<br/> Hubungi kami sekarang juga</h1>
                         <h1>copyright rabine 2024</h1>
                    </div>
-
                 </div>
             </div>
         </div>

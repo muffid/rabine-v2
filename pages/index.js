@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Features from '../components/index/Features'
 import Hero from '../components/index/Hero'
 import Navbar from '../components/index/Navbar'
-import Pricing from '../components/index/Pricing'
+// import Pricing from '../components/index/Pricing'
 import SampleProduct from '../components/index/SampleProduct'
-import fitur from'../source/dataFitur.json'
+// import fitur from'../source/dataFitur.json'
 import BlogFeed from '../components/index/BlogFeed'
 import { useRecoilState } from 'recoil'
 import { navState } from '../recoil/navState'
@@ -18,7 +18,7 @@ require('dotenv').config();
 
 
 
-function Home({fitur,dataApi,dataLatest}) {
+function Home({dataApi}) {
 
   const [menuActive,setMenuActive] = useRecoilState(navState)
   const intersect='20vw'
@@ -60,14 +60,14 @@ function Home({fitur,dataApi,dataLatest}) {
         >
           <Features/>
         </motion.div>
-        <motion.div
+        {/* <motion.div
             initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
         <Pricing id={3} fitur={fitur}/>
-        </motion.div>
+        </motion.div> */}
       </main>
       <motion.div
             initial={{ opacity: 0,y:intersect }}
@@ -109,15 +109,11 @@ export async function getServerSideProps() {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
     }
   })
-  const latest = await fetch(url+'product/latest', {
-    headers: {
-      Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
-    }
-  })
+ 
   const dataApi = await res.json()
-  const dataLatest = await latest.json()
+ 
 
-  return { props: { dataApi,fitur,dataLatest } }
+  return { props: { dataApi } }
 }
 
 export default Home;

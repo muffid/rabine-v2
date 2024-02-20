@@ -16,7 +16,7 @@ function Hero(props) {
                  gimana nyebarnya. Dengan <span className='bold text-slate-800'>rabine.id</span> kirim undangan jadi lebih simpel</p>
             </div>
            
-            <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0 mt-2'>
+            {/* <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0 mt-2'>
                 <div className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 p-3 transform duration-200 lg:px-6 lg:py-2 bg-white rounded-lg shadow-md '>
                     <Image
                         src='/img/apple.png'
@@ -44,14 +44,15 @@ function Hero(props) {
                         <h1 className=' text-slate-900 bold  text-sm lg:text-base '>Google Play</h1>
                     </div>
                 </div>
-            </div>
+            </div> */}
+             <button className=' lg:hidden inline bg-gradient-to-r from-pink-600 to-orange-500 p-3 rounded-3xl  text-white text-xs   hover:scale-105 transform duration-200 '>Order Sekarang</button>
         </div>
         <div className='w-full relative mt-8 self-end'>
             <Image
                 src='/img/mobile.png'
                 width={1000}
                 height={1000}
-                className='md:absolute -bottom-16 w-[300px] md:w-[450px] right-0 lg:-right-12'
+                className='-mb-16 md:mb-0 md:absolute -bottom-16 w-[300px] md:w-[450px] right-0 lg:-right-12'
                 alt='rabine.id'
             />
            

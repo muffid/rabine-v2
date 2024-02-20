@@ -12,7 +12,7 @@ function SingleProduct(props) {
     function viewProduct(){
         setMenuActive(5)
         router.push({
-            pathname:`/product_detail/${props.id}`
+            pathname:`/product_detail/${props.slug}`
           
         })
     }

@@ -15,8 +15,8 @@ function SampleProduct(props) {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-4'>
             {props.data.map((item)=>
                 whatCat === 'ALL' ? (
-                 <SingleProduct id={item.id} img={item.img} cat={item.category} name={item.title} key={item.title} tag={item.tag}/>
-                ): whatCat === item.category ? (<SingleProduct img={item.img} cat={item.category} name={item.title} key={item.title}  tag={item.tag}/>):''
+                 <SingleProduct id={item.Product_Id} img={item.Product_Img} cat={item.Product_Category} slug={item.Product_Slug} name={item.Product_Name} key={item.Product_Id} />
+                ): whatCat === item.Product_Category ? (<SingleProduct img={item.Product_Img} slug={item.Product_Slug} cat={item.Product_Category} name={item.Product_Name} key={item.Product_Id}  />):''
             )}
         </div>
         <button className=' hover:scale-105 transition duration-100 rounded-full text-sm bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 mt-8 py-3'>Semua Template</button>

@@ -9,10 +9,10 @@ function Features() {
         <h1 className='bold text-4xl text-center'>Fitur Undangan</h1>
         <p className='text-slate-600 text-center '>fitur yang akan kamu dapatkan agar undanganmu lebih menarik dan terlihat modern</p>
         <div className='h-1 w-24 bg-orange-300 rounded-xl'></div>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-9 mt-12'>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-9 mt-12 text-base'>
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
                
-                    <BiShareAlt className='text-5xl text-purple-800'/>
+                    <BiShareAlt className='lg:text-5xl text-purple-800'/>
                
                 <div className='flex flex-col items-center md:items-start lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Buat Nama Tamu Otomatis</h1>
@@ -22,7 +22,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
               
-                    <BsArrowsFullscreen className='text-3xl text-orange-800'/>
+                    <BsArrowsFullscreen className='lg:text-3xl text-orange-800'/>
               
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Undangan Fullscreen</h1>
@@ -32,7 +32,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
                 
-                    <BsMusicNoteBeamed className='text-3xl text-pink-800'/>
+                    <BsMusicNoteBeamed className='lg:text-3xl text-pink-800'/>
               
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2  px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Background Music</h1>
@@ -42,7 +42,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
               
-                    <BiMap className='text-3xl text-teal-800'/>
+                    <BiMap className='lg:text-3xl text-teal-800'/>
           
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Peta Lokasi</h1>
@@ -52,7 +52,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
                
-                    <HiBellAlert className='text-3xl text-blue-800'/>
+                    <HiBellAlert className='lg:text-3xl text-blue-800'/>
                
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Reminder Tanggal</h1>
@@ -62,7 +62,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
               
-                    <BiTimer className='text-3xl text-emerald-800'/>
+                    <BiTimer className='lg:text-3xl text-emerald-800'/>
                
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Hitung Mundur</h1>
@@ -72,7 +72,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
                 
-                    <BiVideo className='text-3xl text-yellow-800'/>
+                    <BiVideo className='lg:text-3xl text-yellow-800'/>
                 
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Video Player</h1>
@@ -82,7 +82,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
               
-                    <BsChatLeftDots className='text-3xl text-sky-800'/>
+                    <BsChatLeftDots className='lg:text-3xl text-sky-800'/>
               
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Ucapan Doa</h1>
@@ -92,7 +92,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
               
-                    <BsCardImage className='text-3xl text-red-800'/>
+                    <BsCardImage className='lg:text-3xl text-red-800'/>
                
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Gallery</h1>
@@ -102,7 +102,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
                
-                    <BiBookHeart className='text-3xl text-lime-800'/>
+                    <BiBookHeart className='lg:text-3xl text-lime-800'/>
               
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Love Story</h1>
@@ -112,7 +112,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
               
-                    <BiGift className='text-3xl text-purple-800'/>
+                    <BiGift className='lg:text-3xl text-purple-800'/>
               
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Kado Digital</h1>
@@ -122,7 +122,7 @@ function Features() {
 
             <div className='flex flex-col lg:flex-row lg:items-start md:items-start gap-x-2 gap-y-3 items-center'>
                 
-                    <BiUserCheck className='text-3xl text-cyan-800'/>
+                    <BiUserCheck className='lg:text-3xl text-cyan-800'/>
               
                 <div className='flex flex-col items-center md:items-start justify-center lg:items-start gap-x-3 gap-y-2 px-3 text-center md:text-left'>
                     <h1 className='bold leading-none '>Konfirmasi Kehadiran</h1>
