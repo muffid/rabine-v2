@@ -41,7 +41,7 @@ function PresA01() {
     ]
 
     const scrollToTarget = (targetId) => {
-        const targetElement = document.getElementById(targerId);
+        const targetElement = document.getElementById(targetId);
         targetElement.scrollIntoView({ behavior: 'smooth' });
     }
 
