@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import '../public/styles/animation.css'
 import ProgressBar from '@badrap/bar-of-progress'
 import Router from 'next/router'
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const progress = new ProgressBar({
   size:2,
@@ -17,7 +18,9 @@ Router.events.on('routeChangeComplete',progress.finish)
 function MyApp({ Component, pageProps }) {
   return (
     <RecoilRoot>
-      <Component {...pageProps} />
+      <ParallaxProvider>
+        <Component {...pageProps} />
+      </ParallaxProvider>
     </RecoilRoot>
   )
 }

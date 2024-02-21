@@ -42,13 +42,13 @@ function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,slug}) {
             </div>
            
             <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0 mt-2'>
-            <Link legacyBehavior href={dynamicLink}>
-                <a target="_blank" onClick={(e) => {e.preventDefault(); window.open(dynamicLink, '_blank')}} className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-4 py-3  bg-white rounded-full shadow-md '>
+          
+                <a target="_blank" onClick={(e) => {e.preventDefault(); window.open('https://rabine.vercel.app/preset/'+slug, '_blank')}} className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-4 py-3  bg-white rounded-full shadow-md '>
                    <FaEye/>
                    
                         <h1 className=' text-slate-900 text-sm '>Demo</h1>
                 </a>
-            </Link>
+         
 
                 <div className='hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-5 py-3 bg-gradient-to-r from-pink-600 to-orange-500 rounded-full shadow-md '>
                    <FaCartPlus className='text-white'/>

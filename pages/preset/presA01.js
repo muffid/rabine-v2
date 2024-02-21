@@ -7,6 +7,7 @@ import Timer from '../../components/preset/presA01/Timer'
 import Gallery from '../../components/preset/presA01/Gallery'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
         FaSearchLocation, FaRegCopy, FaPause } from "react-icons/fa"
+import { Parallax } from 'react-scroll-parallax'
 
 
 function PresA01() {
@@ -272,20 +273,25 @@ function PresA01() {
                    {/* AYAT ALQUR'AN */}
                     <div className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[200px]'
                          style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
-                         <Image
-                            src='/images/preset/A01/separator-saphire.svg'
-                                width={1200}
-                                height={1200}
-                                className='w-[5%] absolute top-10 fadeUp'
-                                alt='appstore'
-                        />
-                         <Image
-                            src='/images/preset/A01/separator-saphire.svg'
-                                width={1200}
-                                height={1200}
-                                className='w-[5%] absolute bottom-28 fadeUp'
-                                alt='appstore'
-                        />
+                        <Parallax speed={5} scale={[1, 2]} className='absolute top-20 lg:top-10 fadeUp flex flex-col items-center justify-center' >
+                            <Image
+                                src='/images/preset/A01/separator-saphire.svg'
+                                    width={500}
+                                    height={500}
+                                    className='w-[70%] lg:w-[30%]'
+                                    alt='appstore'
+                            />
+                        </Parallax>
+                        <Parallax speed={5} scale={[1, 1.4]} className='absolute bottom-36 lg:bottom-36 fadeUp flex flex-col items-center justify-center' >
+                            <Image
+                                src='/images/preset/A01/separator-saphire.svg'
+                                    width={500}
+                                    height={500}
+                                    className='w-[70%] lg:w-[30%]'
+                                    alt='appstore'
+                            />
+                        </Parallax>
+                            
                         <p className='text-center fadeUp'>
                             “Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
                             agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
@@ -437,8 +443,7 @@ function PresA01() {
                     <Gallery id={'gallery'} images={images}/>
 
                     {/* GIFT */}
-                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  
-                        style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
+                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  >
                            <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Gifts</h1>
                            <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
                                 style={{backgroundImage: "url('/images/preset/A01/crdit_card.jpg')"}}>
@@ -461,6 +466,32 @@ function PresA01() {
                                 />
                                 <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
                                 <h1>Andre T</h1>
+                           </div>
+                           <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
+                            <FaRegCopy/> copy no rek
+                        </button>
+                           <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
+                                style={{backgroundImage: "url('/images/preset/A01/crdit_card.jpg')"}}>
+                               <div className='flex flex-row items-center justify-between w-full'>
+                                    <h1>BCA</h1>
+                                    <Image
+                                        src='/images/preset/global/BCA.webp'
+                                        width={1000}
+                                        height={1000}
+                                        className='w-[28%] object-contain'
+                                        alt='appstore'
+                                    />
+                               </div>
+                               <Image
+                                    src='/images/preset/A01/chip.png'
+                                    width={1000}
+                                    height={1000}
+                                    className='w-[12%] object-contain my-8'
+                                    alt='appstore'
+                                />
+                                <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
+                                <h1>Citra ALamaku</h1>
                            </div>
                            <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
                                         hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
