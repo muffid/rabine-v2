@@ -10,7 +10,7 @@ import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram,
 import { Parallax } from 'react-scroll-parallax'
 
 
-function PresA01() {
+function PresA02() {
 
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
@@ -131,7 +131,7 @@ function PresA01() {
 
                 {/* TO DO: GAMBAR UNTUK SISI KIRI TAMPILAN PC*/}
                 <div className="hidden lg:flex bg-cover bg-center md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0" 
-                     style={{backgroundImage: "url('/images/preset/A01/bg-couple.jpg')"}}>
+                     style={{backgroundImage: "url('/images/preset/A02/TM18-18.jpg')"}}>
 
                     <div className='gap-y-4 w-full h-full bg-gradient-to-l from-black to-transparent flex flex-col justify-end items-end 
                                  py-12 px-10 relative'>
@@ -247,22 +247,19 @@ function PresA01() {
 
                     {/* OPENING_PHOTO */}
                    <div id='opening' className='w-full h-screen relative'>
-                        <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end fadeUp'>
+                        <div className='p-12 absolute top-0 bg-gradient-to-t from-black/20 to-transparent w-full h-full flex flex-col items-center justify-center fadeUp'>
                             <p>THE WEDDING OF</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className='font-bold text-6xl py-4 font-Royal-Exq'>ANDRE &<br/>CITRA</h1>
-                            <div className='flex flex-row items-end justify-start w-full'>
-
+                            <h1 className='font-bold text-6xl py-4 font-Photograph-Signature text-center'>Andre &<br/>Citra</h1>
+                        
                                 {/* TO DO: TANGGAL NIKAH*/}
-                                <p className='tracking-[0.5rem]'>24.05.2024</p> 
-                                <div className='w-full h-[1px] bg-white'></div>
-                            </div>
+                                <p className='text-center'>24 Mei 2024</p> 
                         </div>
 
                         {/* TO DO: GAMBAR OPENING*/}
                         <Image
-                            src='/images/preset/A01/couple-opening.jpg'
+                            src='/images/preset/A02/TM18-16.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover h-full'
@@ -538,4 +535,4 @@ export async function getServerSideProps() {
       }
 }
 
-export default PresA01
+export default PresA02
