@@ -31,7 +31,7 @@ const GalleryFade = ({images}) => {
         >
 
         {images.map((image,index) =>(
-            <SwiperSlide>
+            <SwiperSlide key={index}>
                 <img src={image.src}/>
             </SwiperSlide>
         ))}
