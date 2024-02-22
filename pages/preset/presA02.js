@@ -3,11 +3,11 @@ import Image from 'next/image'
 import React, { useEffect,useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useState} from 'react'
-import Timer from '../../components/preset/presA01/Timer'
-import Gallery from '../../components/preset/presA01/Gallery'
+import Timer from '../../components/preset/presA02/Timer'
+import Gallery from '../../components/preset/presA02/Gallery'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
         FaSearchLocation, FaRegCopy, FaPause } from "react-icons/fa"
-import { Parallax } from 'react-scroll-parallax'
+import GalleryFade from '../../components/preset/presA02/GalleryFade'
 
 
 function PresA02() {
@@ -36,10 +36,19 @@ function PresA02() {
 
     {/* TO DO: DATA GALLERY*/}
     const images = [
-        { src: '/images/preset/A01/gallery-1.jpg', alt: 'First' },
-        { src: '/images/preset/A01/gallery-2.jpg', alt: 'First' },
-        { src: '/images/preset/A01/gallery-3.jpg', alt: 'First' },
-        { src: '/images/preset/A01/gallery-4.jpg', alt: 'First' },  
+        { src: '/images/preset/A02/TM18-1Z.jpg', alt: 'First' },
+        { src: '/images/preset/A02/TM18-2.jpg', alt: 'First' },
+        { src: '/images/preset/A02/TM18-16.jpg', alt: 'First' },
+        { src: '/images/preset/A02/TM18-11.jpg', alt: 'First' },
+        
+    ]
+
+    const images_slide = [
+        { src: '/images/preset/A02/TM18-8.jpg', alt: 'First' },
+        { src: '/images/preset/A02/TM18-5.jpg', alt: 'First' },
+       
+        { src: '/images/preset/A02/TM18-6.jpg', alt: 'First' },
+        { src: '/images/preset/A02/TM18-7.jpg', alt: 'First' },
     ]
 
     const scrollToTarget = (targetId) => {
@@ -78,7 +87,7 @@ function PresA02() {
 
   
     return (
-        <div className=' w-full box-content text-white'>
+        <div className=' w-full box-content text-white font-Wix'>
 
             {/* TO DO: BACKDOUND MP3*/}
             <audio  loop ref={audioRef} src="/audio/wedding-cinematic.mp3" />
@@ -98,15 +107,15 @@ function PresA02() {
             <div className='w-full flex flex-row items-start justify-between'>
 
                 {/* COVER UNDANGAN */}
-                <div className='w-full h-screen fixed z-20 moving-up flex flex-col items-center justify-center' style={{ top: `${topPosition}px` }}>
-                    <div className='w-full h-screen relative flex items-center justify-center'>
+                <div className='w-full h-screen fixed z-20 moving-up flex flex-col items-start justify-start' style={{ top: `${topPosition}px` }}>
+                    <div className='w-full h-screen relative flex items-center justify-center '>
                         
-                        <div className='flex flex-col items-center justify-end absolute bg-gradient-to-t from-black 
-                                        to-transparent via-black/75 w-full h-screen top-0 pb-20'>
+                        <div className='flex flex-col items-center justify-end absolute bg-gradient-to-t 
+                                    from-[#3c3838]/50 to-transparent w-full h-screen top-0 pb-40'>
                             <h1>THE WEDDING OF</h1>
 
                             {/* TO DO: NAMA KEDUA MEMPELAI*/}
-                            <h1 className='font-bold text-5xl pb-8 font-Royal-Exq'>ANDRE & CITRA</h1>
+                            <h1 className='font-bold text-5xl pb-8 font-Photograph-Signature'>Andre & Citra</h1>
 
                             <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
                             <h1 className='py-8 font-bold'>{to}</h1>
@@ -118,7 +127,7 @@ function PresA02() {
 
                         {/* TO DO: GAMBAR UNTUK BACKGROUND OPENING*/}
                         <Image
-                            src='/images/preset/A01/bg-couple.jpg'
+                            src='/images/preset/A02/TM18-16.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover h-full'
@@ -130,10 +139,10 @@ function PresA02() {
                 {/* SISI KIRI (TAMPILAN PC) */}
 
                 {/* TO DO: GAMBAR UNTUK SISI KIRI TAMPILAN PC*/}
-                <div className="hidden lg:flex bg-cover bg-center md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0" 
+                <div className="hidden lg:flex bg-cover bg-right md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0" 
                      style={{backgroundImage: "url('/images/preset/A02/TM18-18.jpg')"}}>
 
-                    <div className='gap-y-4 w-full h-full bg-gradient-to-l from-black to-transparent flex flex-col justify-end items-end 
+                    <div className='gap-y-4 w-full h-full bg-gradient-to-l from-[#B6B5B9] to-transparent flex flex-col justify-end items-end 
                                  py-12 px-10 relative'>
                                     
                         <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
@@ -165,7 +174,7 @@ function PresA02() {
                 </div>
 
                 {/* SISI KANAN */}
-                <div className='w-full  lg:w-[40%] overflow-y-auto relative'>
+                <div className='w-full  lg:w-[40%] overflow-y-auto relative text-[#747373]'>
 
                     {/* NOW PLAYING*/}
                     <div className='lg:hidden flex flex-col items-center justify-between gap-x-4 fixed w-full
@@ -192,7 +201,7 @@ function PresA02() {
                     </div>
 
                     {/* NAVIGASI MENU BAWAH */}
-                    <div className='lg:hidden flex flex-row items-center justify-center w-full fixed z-10 bottom-0 py-4 bg-black/80 backdrop-blur-xl space-x-6 '>
+                    <div className='lg:hidden flex flex-row items-center justify-center w-full fixed z-10 bottom-0 py-4 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
                         <Image
                             src='/images/preset/A01/marriage.png'
                             width={500}
@@ -247,7 +256,7 @@ function PresA02() {
 
                     {/* OPENING_PHOTO */}
                    <div id='opening' className='w-full h-screen relative'>
-                        <div className='p-12 absolute top-0 bg-gradient-to-t from-black/20 to-transparent w-full h-full flex flex-col items-center justify-center fadeUp'>
+                        <div className='p-12 absolute top-0 bg-gradient-to-t from-black/20 to-transparent w-full h-full text-white flex flex-col items-center justify-end pb-40 fadeUp'>
                             <p>THE WEDDING OF</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
@@ -268,149 +277,121 @@ function PresA02() {
                    </div>
 
                    {/* AYAT ALQUR'AN */}
-                    <div className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[200px]'
-                         style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
-                        <Parallax speed={5} scale={[1, 2]} className='absolute top-20 lg:top-10 fadeUp flex flex-col items-center justify-center' >
-                            <Image
-                                src='/images/preset/A01/separator-saphire.svg'
-                                    width={500}
-                                    height={500}
-                                    className='w-[50%] lg:w-[30%]'
-                                    alt='appstore'
-                            />
-                        </Parallax>
-                        <Parallax speed={5} scale={[1, 1.4]} className='absolute bottom-36 lg:bottom-36 fadeUp flex flex-col items-center justify-center' >
-                            <Image
-                                src='/images/preset/A01/separator-saphire.svg'
-                                    width={500}
-                                    height={500}
-                                    className='w-[50%] lg:w-[30%]'
-                                    alt='appstore'
-                            />
-                        </Parallax>
-                            
+                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 py-[80px] bg-[#FFFBF4]'>
+                    
                         <p className='text-center fadeUp'>
                             “Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
                             agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
                             Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
                         </p>
-                        <p className='text-center text-xl py-4 fadeUp'>
+                        <p className='text-center text-lg py-4 font-bold fadeUp'>
                             (QS. Ar-Rum ayat 21)
                         </p>
                     </div>
 
                    {/* QUOTES CALON PENGANTEN*/}
-                     <div className='w-full  relative'>
-                        <div className='p-12 absolute top-0 bg-black/80 w-full h-full flex flex-col items-center justify-between'>
+                    <div className='w-full flex flex-col items-center justify-center bg-[#FFFBF4]'>
+                        <div className='w-full h-full flex flex-row items-end justify-end'>
                         
-                        {/* TO DO: ISI DATANYA*/}
-                        <Image
-                            src='/images/preset/A01/bg-couple.jpg'
-                            width={1200}
-                            height={1200}
-                            className='w-full object-cover rounded-xl -mt-28 fadeUp'
-                            alt='appstore'
-                        />
-                        <p className='text-center font-bold text-xl lg:text-2xl px-10 lg:px-16 font-Batusa fadeUp'>
-                            Love seems the swiftest but it is the slowest of all growths. No man or woman really knows what perfect 
-                            love is until they have been married a quarter of a century.
+                            {/* TO DO: ISI DATANYA*/}
+                            <Image
+                                src='/images/preset/A02/TM18-10.jpg'
+                                width={1200}
+                                height={1200}
+                                className='w-3/4 object-cover rounded-l-full  fadeUp'
+                                alt='appstore'
+                            />
+                          </div>
+                        <p className='text-center p-10 fadeUp text-sm'>
+                            We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
                         </p>
-                        <Image
-                            src='/images/preset/A01/separator-sparkling.svg'
-                            width={1200}
-                            height={1200}
-                            className='object-cover w-[8%] fadeUp'
-                            alt='appstore'
-                        />
-                        </div>
-
-                        {/* TO DO: ISI DATANYA*/}
-                        <Image
-                            src='/images/preset/A01/bg-section-1.jpg'
-                            width={1200}
-                            height={1200}
-                            className='w-full object-cover h-full'
-                            alt='appstore'
-                        />
+                        <div className='w-full h-full flex flex-row items-start justify-start'>
+                        
+                            {/* TO DO: ISI DATANYA*/}
+                            <Image
+                                src='/images/preset/A02/TM18-9.jpg'
+                                width={1200}
+                                height={1200}
+                                className='w-3/4 object-cover rounded-r-full  fadeUp'
+                                alt='appstore'
+                            />
+                      </div>
                     </div>
 
                      {/* MEMPELAI */}
-                     <div id='mempelai' className='w-full relative bg-center bg-cover flex flex-col items-center justify-center px-16 py-[100px] text-center'
-                        style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
-                        <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover fadeUp'  
-
-                        //TO DO: ISI DATANYA*/
-                        style={{backgroundImage: "url('/images/preset/A01/bride.png')"}}></div>
+                    <div id='mempelai' className='w-full relative bg-center bg-cover flex flex-col text-sm items-center justify-center 
+                                                    px-16 py-[100px] text-center bg-[#FFFBF4]'>
+                         <Image
+                                src='/images/preset/A02/TM18-1.png'
+                                width={1200}
+                                height={1200}
+                                className='w-2/4 object-cover rounded-[40px] fadeUp'
+                                alt='appstore'
+                            />
 
                         {/* TO DO: ISI DATANYA*/}
-                        <h1 className='font-bold text-2xl font-Royal-Exq py-6 fadeUp'>Citra Lestari Alamku</h1>
-                        <Image
-                            src='/images/preset/A01/separator-sparkling.svg'
-                            width={1200}
-                            height={1200}
-                            className='object-cover w-[8%] my-6 fadeUp'
-                            alt='appstore'
-                        />
-
+                        <h1 className='font-bold text-2xl font-DMSerif py-6 fadeUp text-[#3c3838]'>Citra Lestari Alamku</h1>
                         {/* TO DO: ISI DATANYA*/}
                         <h1 className='my-8 fadeUp'>Putri dari <br/> Bapak Budi Mulyanto <br/> Dan Ibu Pangastuti R</h1>
-                        <div className='flex gap-2 text-sm items-center justify-center fadeUp'>
+                        <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
                             <FaInstagram/>
                             citra_la
                         </div>
-                        <h1 className='text-[5rem] my-10 font-Royal-Exq fadeUp'>&</h1>
-                        <div className='w-[14rem] h-[16rem] rounded-t-full bg-top bg-cover fadeUp'  style={{backgroundImage: "url('/images/preset/A01/groom.png')"}}></div>
-                        <h1 className='font-bold text-2xl font-Royal-Exq py-6 fadeUp'>Andre Taulanu</h1>
-                        <Image
-                            src='/images/preset/A01/separator-sparkling.svg'
-                            width={1200}
-                            height={1200}
-                            className='object-cover w-[8%] my-6 fadeUp'
-                            alt='appstore'
-                        />
+                        <h1 className='text-[5rem] my-20 font-Royal-Exq text-[#3c3838] fadeUp'>&</h1>
+                  
+                         <Image
+                                src='/images/preset/A02/TM18-2.png'
+                                width={1200}
+                                height={1200}
+                                className='w-2/4 object-cover rounded-[40px] fadeUp'
+                                alt='appstore'
+                            />
+                        <h1 className='font-bold text-2xl font-DMSerif py-6 fadeUp text-[#3c3838]'>Andre Taulanu</h1>
                         <h1 className='my-8 fadeUp'>Putri dari <br/> Bapak Budi Mulyanto <br/> Dan Ibu Pangastuti R</h1>
-                        <div className='flex gap-2 text-sm items-center justify-center fadeUp'>
+                        <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
                             <FaInstagram/>
                             andre_t
                         </div>
                     </div>
 
                     {/* INFO ACARA */}
-                    <div id='jadwal' className='w-full  relative bg-center bg-cover ' style={{backgroundImage: "url('/images/preset/A01/bg-section-2.jpg')"}}>
-                        <div className='bg-gradient-to-t from-black to-black/50 via-black/80 w-full h-full  flex flex-col items-center justify-center
-                                        py-20 px-12 gap-y-10 text-center'>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h1 className='text-2xl font-Royal-Exq fadeUp'>Minggu, 24 Mei 2024</h1>
-                                <Image
-                                    src='/images/preset/A01/separator-sparkling.svg'
-                                    width={1200}
-                                    height={1200}
-                                    className='object-cover w-[20%] fadeUp'
-                                    alt='appstore'
-                                />
+                    <div id='jadwal' className='w-full  relative bg-center bg-cover ' 
+                        style={{backgroundImage: "url('/images/preset/A02/TM18-1Z.jpg')"}}>
+                        <div className='w-full  flex flex-col items-center bg-white/40 justify-center text-[#151313] p-8 space-y-6 '>
+                            <div className='bg-white/40 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
+                                <div className='flex flex-col items-center justify-center text-center gap-y-2'>
+                                    <h1 className='text-3xl font-DMSerif fadeUp mb-6 fadeUp'>Akad Nikah</h1>
+                                    <h1 className='text-sm fadeUp'>Minggu 10 Mei 2024</h1>
+                                    <h1 className='text-sm fadeUp'>09.00 - 11.00 WIB</h1>
+                                    <h1 className='text-xl font-DMSerif fadeUp mt-4 fadeUp'>Hotel Grand Orchard</h1>
+                                    <h1 className='text-sm fadeUp'>Gunung Sahari - Kemayoran Jakarta pusat</h1>
+                                    <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                                        <FaSearchLocation/> view Location
+                                    </button>
+                                </div>
                             </div>
-                            <div className='flex flex-col items-center justify-center fadeUp'>
-                                <h1 className='text-3xl font-Royal-Exq'>Akad Nikah</h1>
-                                <p>08.00 WIB s/d Selesai</p>
+                            <div className='bg-white/40 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
+                                <div className='flex flex-col items-center justify-center text-center gap-y-2'>
+                                    <h1 className='text-3xl font-DMSerif fadeUp mb-6 fadeUp'>Resepsi</h1>
+                                    <h1 className='text-sm fadeUp'>Minggu 10 Mei 2024</h1>
+                                    <h1 className='text-sm fadeUp'>09.00 - 11.00 WIB</h1>
+                                    <h1 className='text-xl font-DMSerif fadeUp mt-4 fadeUp'>Hotel Grand Orchard</h1>
+                                    <h1 className='text-sm fadeUp'>Gunung Sahari - Kemayoran Jakarta pusat</h1>
+                                    <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                                        <FaSearchLocation/> view Location
+                                    </button>
+                                </div>
                             </div>
-                            <div className='flex flex-col items-center justify-center fadeUp'>
-                                <h1 className='text-3xl font-Royal-Exq'>Resepsi Pernikahan</h1>
-                                <p>10.00 WIB s/d Selesai</p>
-                            </div>
-                            <div className='flex flex-col items-center justify-center fadeUp'>
-                                <h1 className='text-3xl font-Royal-Exq'>Hotel Jayakarta Bandung</h1>
-                                <p>Jl. Ir. Juanda No 381A, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat</p>
-                            </div>  
+                          
                         </div>
                     </div>
 
-                    {/* COUNTDOWN */}
-                    <Timer targetDate = {'2024-02-24T08:00:00Z'} anim = {{fadeUp :'fadeUp'}}/>
-
-                    {/* GOOGLE MAP */}
-                    <div id='lokasi' className='w-full flex flex-col items-center justify-center bg-black gap-y-8'>
+                     {/* GOOGLE MAP */}
+                     <div id='lokasi' className='w-full flex flex-col items-center justify-center gap-y-8 bg-[#FFFBF4] p-4'>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid" 
-                                className='w-full h-[500px]'
+                                className='w-full h-[500px] rounded-xl'
                                 width="600" 
                                     height="600" 
                                     style={{border:0}} 
@@ -418,32 +399,33 @@ function PresA02() {
                                     loading="lazy" 
                                     referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-                        <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
-                            <FaSearchLocation/> view Location
-                        </button>
                     </div>
 
-                    {/* YOUTUBE */}
-                    <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8 py-20 '>
-                        <iframe 
-                            className='w-full fadeUp'
-                            height="315" 
-                            src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
-                            title="YouTube video player" 
-                            frameborder="0" a
-                            llow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                    {/* COUNTDOWN */}
+                    <Timer targetDate = {'2024-02-24T08:00:00Z'} anim = {{fadeUp :'fadeUp'}}/>
 
                     <Gallery id={'gallery'} images={images}/>
 
+                    {/* YOUTUBE */}
+                    <div className='w-full flex flex-col items-center justify-center px-4  gap-y-8 py-20 bg-[#FFFBF4] '>
+                        <iframe 
+                            className='w-full fadeUp rounded-xl'
+                            height="315" 
+                            src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
+                            title="YouTube video player" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+
+                    <GalleryFade images={images_slide}/>
+
                     {/* GIFT */}
-                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  >
-                           <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Gifts</h1>
+                    <div id='gift' className='h-full  py-12 flex gap-y-8 flex-col items-center justify-center text-[#151313]'  >
+                    <h1 className='text-3xl font-DMSerif fadeUp mb-6 fadeUp'>Gift</h1>
                            <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
-                                style={{backgroundImage: "url('/images/preset/A01/crdit_card.jpg')"}}>
+                                style={{backgroundImage: "url('/images/preset/A02/card-bg.jpg')"}}>
                                <div className='flex flex-row items-center justify-between w-full'>
                                     <h1>Mandiri</h1>
                                     <Image
@@ -464,12 +446,12 @@ function PresA02() {
                                 <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
                                 <h1>Andre T</h1>
                            </div>
-                           <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
+                           <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaRegCopy/> copy no rek
                         </button>
                            <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
-                                style={{backgroundImage: "url('/images/preset/A01/crdit_card.jpg')"}}>
+                                style={{backgroundImage: "url('/images/preset/A02/card-bg.jpg')"}}>
                                <div className='flex flex-row items-center justify-between w-full'>
                                     <h1>BCA</h1>
                                     <Image
@@ -490,24 +472,24 @@ function PresA02() {
                                 <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
                                 <h1>Citra ALamaku</h1>
                            </div>
-                           <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
+                           <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaRegCopy/> copy no rek
                         </button>
                     </div>
 
                     {/* CLOSING */}
-                    <div className='w-full  relative'>
-                        <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end'>
-                            <p>Two souls become one, two hearts beat as one</p>
-                            <h1 className='font-bold text-6xl py-4 font-Royal-Exq'>ANDRE &<br/>CITRA</h1>
-                            <div className='flex flex-row items-end justify-start w-full'>
+                    <div className='w-full  relative text-center h-[500px]'>
+                        <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-center justify-end text-white'>
+                            <p className='text-sm'>Two souls become one, two hearts beat as one</p>
+                            <h1 className='font-bold text-3xl py-4 font-Photograph-Signature'>Andre & Citra</h1>
+                           
                                 <p className='w-1/3'>Thank You</p>
-                                <div className='w-2/3 h-[1px] bg-white'></div>
-                            </div>
+                           
+                            
                         </div>
                         <Image
-                            src='/images/preset/A01/bg-closing.jpg'
+                            src='/images/preset/A02/TM18-3.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover h-full'
@@ -516,7 +498,7 @@ function PresA02() {
                    </div>
 
                    {/* WATERMARK */}
-                   <div className='w-full bg-black flex flex-col items-center text-slate-400 justify-center gap-y-1 text-xs text-center pt-10 pb-20'>
+                   <div className='w-full bg-black flex flex-col items-center text-slate-400 justify-center gap-y-1 text-xs text-center pt-10 pb-20 lg:pb-10'>
                         <h1>made with love and passion by</h1>
                         <h1 className='text-base font-bold'>Rabine</h1>
                         <h1>ingin punya undangan keren seperti ini?<br/> Hubungi kami sekarang juga</h1>

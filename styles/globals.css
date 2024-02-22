@@ -58,9 +58,39 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Wix-Regular";
+  src: url('../fonts/Wix-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wix-Bold";
+  src: url('../fonts/Wix-Bold.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DMSerif";
+  src: url('../fonts/DMSerifDisplay-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
 
 .font-Batusa{
   font-family: 'Batusa' , sans-serif;
+  font-weight: 400;
+}
+.font-DMSerif{
+  font-family: 'DMSerif' , serif;
+  font-weight: 400;
+}
+.font-Wix-Bold{
+  font-family: 'Wix-Bold' , sans-serif;
+  font-weight: 700;
+}
+.font-Wix{
+  font-family: 'Wix-Regular' , sans-serif;
   font-weight: 400;
 }
 .font-Photograph-Signature{
@@ -109,3 +139,5 @@
     @apply text-transparent bg-clip-text bg-gradient-to-r from-pink-800 to-purple-700
   }
 }
+
+
