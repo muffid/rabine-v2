@@ -127,7 +127,7 @@ function PresA02() {
 
                         {/* TO DO: GAMBAR UNTUK BACKGROUND OPENING*/}
                         <Image
-                            src='/images/preset/A02/TM18-16.jpg'
+                            src='/images/preset/A02/TM18-10.jpg'
                             width={1200}
                             height={1200}
                             className='w-full object-cover h-full'
