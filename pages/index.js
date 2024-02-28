@@ -103,7 +103,7 @@ function Home({dataApi}) {
 
 export async function getServerSideProps() {
 
-  const url = `${process.env.API_URL_PROD}`
+  const url = process.env.API_URL_PROD
   const res = await fetch(url+'product/', {
     headers: {
       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'

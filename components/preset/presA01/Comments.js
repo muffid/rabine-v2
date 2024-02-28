@@ -1,0 +1,162 @@
+'use client'
+import React, { useEffect, useRef, useState } from 'react'
+import { FaReply,FaComment } from 'react-icons/fa'
+import axios from 'axios'
+
+export default function Comments({slug,url,tamu}) {
+
+    async function fetchDataComments(){
+        const data = await fetch(url+'comment/'+slug)
+        const dataJson = await data.json()
+        const topLevelComments = dataJson.comments.filter(comment => !comment.parent_Id)
+        setComments(topLevelComments)
+    }
+
+   
+    
+    
+    const [comments, setComments] = useState([])
+    const [commentToPost, setCommentToPost] = useState('')
+    const [replyToPost, setReplyToPost ] = useState('')
+    const [replyingTo, setReplyingTo] = useState(null)
+    const [namaTamu, setNamaTamu] = useState(tamu)
+    const inputReplyRef = useRef(null)
+   
+   
+    
+      const handleChangeTamu = (event) => {
+        setNamaTamu(event.target.value)
+      }
+
+      const handleChange = (event) => {
+        setCommentToPost(event.target.value);
+      }
+
+      const handleChangeReply = (event) => {
+        setReplyToPost(event.target.value);
+      }
+
+      const handleBatalReply = () => {
+        setReplyToPost('')
+        setReplyingTo('')
+      }
+
+      function postComment() {
+        const postData = {
+            userName: namaTamu,
+            page: slug,
+            parent:'',
+            content:commentToPost,
+        }
+        axios.post(url+'postComment', postData)
+        .then(response => {
+            if(response.status == 200){
+                fetchDataComments()
+                setCommentToPost('')
+            }else{
+                alert('gagal mengirim ucapan')
+            }
+        })
+        .catch(error => {
+            alert('fail')
+        })
+
+      }
+
+      function postReply() {
+        const postData = {
+            userName: namaTamu,
+            page: slug,
+            parent:replyingTo,
+            content:replyToPost,
+        }
+        axios.post(url+'postReply', postData)
+        .then(response => {
+            if(response.status == 200){
+                fetchDataComments()
+                setReplyToPost('')
+                setReplyingTo('')
+            }else{
+                alert('gagal mengirim ucapan')
+            }
+        })
+        .catch(error => {
+            alert('fail')
+        })
+
+      }
+
+    const handleReplyClick = (commentId) => {
+      setReplyingTo(commentId)
+      setReplyToPost('')
+    }
+
+    useEffect(()=>{
+        fetchDataComments()
+    },[comments])
+
+    useEffect(() => {
+      
+        if (replyingTo !== null && inputReplyRef.current) {
+          inputReplyRef.current.focus()
+        }
+      }, [replyingTo])
+    return (
+        <div className='w-full  bg-black p-6 flex flex-col items-center gap-y-2 px-8'>
+            <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Kirim Ucapan</h1>
+            <h1 className='text-sm text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
+            <input type="text" 
+                value={namaTamu}
+                onChange={handleChangeTamu}
+                className='border-[1px] border-slate-700 text-slate-200 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
+            <textarea
+                    onChange={handleChange}
+                    value={commentToPost}
+                    className="border-[1px] border-slate-700 bg-transparent outline-none focus:border-slate-700 text-sm mt-2 w-full p-6 rounded" // Menambahkan border rounded
+                    placeholder={'Kirim Ucapan Dan Doa Terbaik Anda'}
+                    rows={3} // Menentukan jumlah baris
+                    />
+                    <button onClick={()=>postComment()} className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 my-6
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
+                            <FaComment/> Kirim
+                    </button>
+            <div className='w-full flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
+                {comments.map(comment => (
+                    <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start  bg-slate-900/30 text-slate-400 rounded-lg py-4 px-8'>
+                        <div className='flex flex-row items-start justify-center gap-x-1'><p className='font-bold font-Batusa text-slate-100'>{comment.Comment_User}</p></div>
+                        <p className='text-slate-200'>{comment.Comment_Content}</p>
+                        <div className='flex flex-row items-start justify-center gap-x-1 text-xs text-slate-500'>
+                            <h1 className=''>{comment.Comment_Time}</h1>
+                            <h1>-</h1>
+                            <div className='flex flex-row space-x-1 font-bold cursor-pointer items-center' onClick={() => handleReplyClick(comment.Comment_Id)}><FaReply/> <h1>Balas</h1></div>
+                        </div>
+                        {replyingTo === comment.Comment_Id && ( 
+                    <>
+                        <input
+                            ref={inputReplyRef}
+                            onChange={handleChangeReply}
+                            value={replyToPost}
+                            className="border-b-[1px] border-slate-700 text-slate-500 bg-transparent outline-none focus:border-slate-600 text-xs mt-2 w-full p-2"
+                            placeholder={'balas ucapan'}
+                        />
+                        <div className='flex flex-row items-center justify-end w-full p-4 space-x-4'>
+                            <h1 className='font-bold text-xs cursor-pointer' onClick={()=>postReply()}>Balas</h1>
+                            <h1 className=' text-xs cursor-pointer' onClick={()=>handleBatalReply()}>Batal</h1>
+                        </div>
+                    </>
+                )}
+                        {comment.replies && comment.replies.map(reply => (
+                            <div key={reply.Comment_Id} className='flex flex-col items-start justify-start ml-8 mt-3'>
+                                <p className='font-bold font-Batusa text-slate-200'>{reply.Comment_User}</p>
+                                <div className='flex flex-row items-start justify-center gap-x-1 text-xs text-slate-500'>
+                                    <h1 className=''>{reply.Comment_Time}</h1>
+                                </div>
+                                <p className='text-slate-200'>{reply.Comment_Content}</p>
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+}

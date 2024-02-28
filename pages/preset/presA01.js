@@ -5,16 +5,21 @@ import { useRouter } from 'next/router'
 import { useState} from 'react'
 import Timer from '../../components/preset/presA01/Timer'
 import Gallery from '../../components/preset/presA01/Gallery'
+import Comments from '../../components/preset/presA01/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
         FaSearchLocation, FaRegCopy, FaPause } from "react-icons/fa"
 import { Parallax } from 'react-scroll-parallax'
 
 
 
-function PresA01() {
+
+function PresA01({url}) {
+
+   
 
     const dataWeding = {
        META : {
+            slug : "presA01",
             title : "momenku - preview tema presA01",
             description : "momenku - preview tema presA01",
             thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
@@ -93,12 +98,16 @@ function PresA01() {
        setScrollTo(targetId)
     }
 
+
     useEffect(()=>{
         const element = document.getElementById(`${scrollTo}`)
         element.scrollIntoView({behavior:'smooth'})
       },[scrollTo])
 
+  
+
     useEffect(()=>{
+      
         const fadeUpElements = document.querySelectorAll(".fadeUp")
         fadeUpElements.forEach((element) => {
             console.log("looped")
@@ -124,13 +133,11 @@ function PresA01() {
 
     return (
         <div className=' w-full box-content text-white'>
-
             {/* TO DO: BACKDOUND MP3*/}
             <audio  loop ref={audioRef} src={dataWeding.content.audio} />
             <Head>
                 {/* TO DO: TITLE PERNIKAHAN*/}
                 <title>{dataWeding.META.title}</title>
-
                 <meta name="description" content={dataWeding.META.description} />
                 <meta property="og:image" content="" />
                 <meta property="og:image:width" content="400" />
@@ -139,6 +146,17 @@ function PresA01() {
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
                 <script async src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                <style>{`
+                        ::-webkit-scrollbar {
+                            width: 8px; /* Lebar scrollbar */
+                          }
+                          ::-webkit-scrollbar-thumb {
+                            background-color: #333333; /* Warna thumb scrollbar */
+                            border-radius: 6px; /* Sudut melengkung */
+                          }
+                      
+                    `}
+                </style>
             </Head>
             <div className='w-full flex flex-row items-start justify-between'>
 
@@ -463,7 +481,7 @@ function PresA01() {
                                 width="600" 
                                     height="600" 
                                     style={{border:0}} 
-                                    allowfullscreen="" 
+                                    allowFullScreen="" 
                                     loading="lazy" 
                                     referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
@@ -477,14 +495,16 @@ function PresA01() {
                     <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8 py-20 '>
                         <iframe 
                             className='w-full fadeUp'
-                            height="315" 
-                            src={dataWeding.content.yt_frame} 
-                            title="YouTube video player" 
-                            frameborder="0" a
-                            llow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
+                            height ="315" 
+                            src ={dataWeding.content.yt_frame} 
+                            title ="YouTube video player" 
+                            allowFullScreen ="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                           >
                         </iframe>
                     </div>
+
+                    {/* COMMENTS */}
+                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
                     <Gallery id={'gallery'} images={imagesGallery}/>
 
@@ -577,11 +597,8 @@ function PresA01() {
     )
 }
 export async function getServerSideProps() {
-    return {
-        props: {
-          data: null, 
-        },
-      }
+    const url = process.env.API_URL_PROD
+    return { props: {url} }
 }
 
 export default PresA01

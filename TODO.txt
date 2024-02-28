@@ -1,4 +1,4 @@
-1. Implement comment and reply
+1. Implement comment and reply - DONE
 2. set up official email
 3. set up google drive
 4. refactoring code

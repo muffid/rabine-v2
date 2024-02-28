@@ -5,12 +5,13 @@ import { useRouter } from 'next/router'
 import { useState} from 'react'
 import Timer from '../../components/preset/presA02/Timer'
 import Gallery from '../../components/preset/presA02/Gallery'
+import Comments from '../../components/preset/presA02/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
         FaSearchLocation, FaRegCopy, FaPause } from "react-icons/fa"
 import GalleryFade from '../../components/preset/presA02/GalleryFade'
 
 
-function PresA02() {
+function PresA02({url}) {
 
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
@@ -103,6 +104,16 @@ function PresA02() {
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
                 <script async src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                <style>{`
+                        ::-webkit-scrollbar {
+                            width: 8px; /* Lebar scrollbar */
+                          }
+                          ::-webkit-scrollbar-thumb {
+                            background-color: #333333; /* Warna thumb scrollbar */
+                            border-radius: 6px; /* Sudut melengkung */
+                          }
+                    `}
+                </style>
             </Head>
             <div className='w-full flex flex-row items-start justify-between'>
 
@@ -395,9 +406,9 @@ function PresA02() {
                                 width="600" 
                                     height="600" 
                                     style={{border:0}} 
-                                    allowfullscreen="" 
+                                    allowFullScreen="" 
                                     loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade">
+                                    referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
 
@@ -413,11 +424,13 @@ function PresA02() {
                             height="315" 
                             src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
                             title="YouTube video player" 
-                            frameBorder="0" 
+                          
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowFullScreen>
                         </iframe>
                     </div>
+
+                    <Comments slug={'presA02'} url={url} tamu={to}/>
 
                     <GalleryFade images={images_slide}/>
 
@@ -510,11 +523,8 @@ function PresA02() {
     )
 }
 export async function getServerSideProps() {
-    return {
-        props: {
-          data: null, 
-        },
-      }
+    const url = process.env.API_URL_PROD
+    return { props: {url} }
 }
 
 export default PresA02
