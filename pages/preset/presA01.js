@@ -154,6 +154,7 @@ function PresA01({url}) {
                             background-color: #333333; /* Warna thumb scrollbar */
                             border-radius: 6px; /* Sudut melengkung */
                           }
+                      
                     `}
                 </style>
             </Head>
@@ -480,7 +481,7 @@ function PresA01({url}) {
                                 width="600" 
                                     height="600" 
                                     style={{border:0}} 
-                                    allowfullscreen="" 
+                                    allowFullScreen="" 
                                     loading="lazy" 
                                     referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
@@ -494,17 +495,16 @@ function PresA01({url}) {
                     <div className='w-full flex flex-col items-center justify-center bg-black gap-y-8 py-20 '>
                         <iframe 
                             className='w-full fadeUp'
-                            height="315" 
-                            src={dataWeding.content.yt_frame} 
-                            title="YouTube video player" 
-                            frameborder="0" a
-                            llow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
+                            height ="315" 
+                            src ={dataWeding.content.yt_frame} 
+                            title ="YouTube video player" 
+                            allowFullScreen ="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                           >
                         </iframe>
                     </div>
 
                     {/* COMMENTS */}
-                    <Comments slug={dataWeding.META.slug} url={url}/>
+                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
                     <Gallery id={'gallery'} images={imagesGallery}/>
 
