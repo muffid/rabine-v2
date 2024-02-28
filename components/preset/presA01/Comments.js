@@ -122,7 +122,7 @@ export default function Comments({slug,url,tamu}) {
                     </button>
             <div className='w-full flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
                 {comments.map(comment => (
-                    <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start  bg-slate-900/30 text-slate-400 rounded-lg py-4 px-8'>
+                    <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start  bg-slate-900/50 text-slate-400 rounded-lg py-4 px-8'>
                         <div className='flex flex-row items-start justify-center gap-x-1'><p className='font-bold font-Batusa text-slate-100'>{comment.Comment_User}</p></div>
                         <p className='text-slate-200'>{comment.Comment_Content}</p>
                         <div className='flex flex-row items-start justify-center gap-x-1 text-xs text-slate-500'>
