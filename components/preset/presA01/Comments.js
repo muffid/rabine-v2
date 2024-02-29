@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import { FaReply,FaComment } from 'react-icons/fa'
+import { FaReply,FaComment, FaUserAlt } from 'react-icons/fa'
 import axios from 'axios'
 
 export default function Comments({slug,url,tamu}) {
@@ -23,7 +23,7 @@ export default function Comments({slug,url,tamu}) {
     const inputReplyRef = useRef(null)
    
    
-    
+ 
       const handleChangeTamu = (event) => {
         setNamaTamu(event.target.value)
       }
@@ -42,8 +42,11 @@ export default function Comments({slug,url,tamu}) {
       }
 
       function postComment() {
+        let namaToPost
+        namaTamu == '' ? namaToPost = 'Anonim' : namaToPost = namaTamu 
+        console.log(namaToPost);
         const postData = {
-            userName: namaTamu,
+            userName: namaToPost,
             page: slug,
             parent:'',
             content:commentToPost,
@@ -63,9 +66,13 @@ export default function Comments({slug,url,tamu}) {
 
       }
 
+
       function postReply() {
+        let namaToPost
+        namaTamu == '' ? namaToPost = 'Anonim' : namaToPost = namaTamu 
+        console.log(namaToPost);
         const postData = {
-            userName: namaTamu,
+            userName: namaToPost,
             page: slug,
             parent:replyingTo,
             content:replyToPost,
@@ -122,37 +129,53 @@ export default function Comments({slug,url,tamu}) {
                     </button>
             <div className='w-full flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
                 {comments.map(comment => (
-                    <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start  bg-slate-900/50 text-slate-400 rounded-lg py-4 px-8'>
-                        <div className='flex flex-row items-start justify-center gap-x-1'><p className='font-bold font-Batusa text-slate-100'>{comment.Comment_User}</p></div>
-                        <p className='text-slate-200'>{comment.Comment_Content}</p>
-                        <div className='flex flex-row items-start justify-center gap-x-1 text-xs text-slate-500'>
-                            <h1 className=''>{comment.Comment_Time}</h1>
-                            <h1>-</h1>
-                            <div className='flex flex-row space-x-1 font-bold cursor-pointer items-center' onClick={() => handleReplyClick(comment.Comment_Id)}><FaReply/> <h1>Balas</h1></div>
+                    <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start space-y-4 bg-slate-900/90 text-slate-400 rounded-lg py-4 px-8'>
+                        <div className='flex flex-row items-start gap-x-3'>
+                            <FaUserAlt/>
+                            <div className='flex-col items-start justify-start'>
+                                <div className='flex flex-row items-start  '><p className='font-bold font-Batusa text-yellow-200'>{comment.Comment_User}</p></div>
+                                <p className='text-slate-200'>{comment.Comment_Content}</p>
+                                <div className='flex flex-row items-start justify-start gap-x-2 text-xs text-slate-500'>
+                                    <h1 className=''>{comment.Comment_Time}</h1>
+                                    <h1>-</h1>
+                                    <div className='flex flex-row space-x-1 font-bold cursor-pointer items-center' onClick={() => handleReplyClick(comment.Comment_Id)}><FaReply/> <h1>Balas</h1></div>
+                                </div>
+                            </div>
                         </div>
+                      
+                       
                         {replyingTo === comment.Comment_Id && ( 
                     <>
                         <input
                             ref={inputReplyRef}
                             onChange={handleChangeReply}
                             value={replyToPost}
-                            className="border-b-[1px] border-slate-700 text-slate-500 bg-transparent outline-none focus:border-slate-600 text-xs mt-2 w-full p-2"
+                            className="border-b-[1px] border-slate-700 text-slate-200 bg-transparent outline-none focus:border-slate-600 text-sm w-4/5 p-2 ml-10"
                             placeholder={'balas ucapan'}
                         />
-                        <div className='flex flex-row items-center justify-end w-full p-4 space-x-4'>
+                        <div className='flex flex-row items-center justify-end w-full space-x-4'>
                             <h1 className='font-bold text-xs cursor-pointer' onClick={()=>postReply()}>Balas</h1>
                             <h1 className=' text-xs cursor-pointer' onClick={()=>handleBatalReply()}>Batal</h1>
                         </div>
                     </>
                 )}
                         {comment.replies && comment.replies.map(reply => (
-                            <div key={reply.Comment_Id} className='flex flex-col items-start justify-start ml-8 mt-3'>
-                                <p className='font-bold font-Batusa text-slate-200'>{reply.Comment_User}</p>
+                             <div key={reply.Comment_Id} className='flex flex-row items-start gap-x-3 ml-10 mt-3'>
+                             <FaUserAlt/>
+                             <div className='flex-col items-start '>
+                             <div  className='flex flex-col items-start justify-start '>
+                                <p className='font-bold font-Batusa text-yellow-200'>{reply.Comment_User}</p>
                                 <div className='flex flex-row items-start justify-center gap-x-1 text-xs text-slate-500'>
                                     <h1 className=''>{reply.Comment_Time}</h1>
                                 </div>
                                 <p className='text-slate-200'>{reply.Comment_Content}</p>
                             </div>
+                                 
+                                 
+                             </div>
+                         </div>
+
+                          
                         ))}
                     </div>
                 ))}

@@ -7,15 +7,14 @@ import Timer from '../../components/preset/presA01/Timer'
 import Gallery from '../../components/preset/presA01/Gallery'
 import Comments from '../../components/preset/presA01/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
-        FaSearchLocation, FaRegCopy, FaPause } from "react-icons/fa"
+        FaSearchLocation, FaRegCopy, FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
 import { Parallax } from 'react-scroll-parallax'
+import Watermark from '../../components/preset/globals/Watermark'
 
 
 
 
 function PresA01({url}) {
-
-   
 
     const dataWeding = {
        META : {
@@ -255,57 +254,13 @@ function PresA01({url}) {
                     </div>
 
                     {/* NAVIGASI MENU BAWAH */}
-                    <div className='lg:hidden flex flex-row items-center justify-center w-full fixed z-10 bottom-0 py-4 bg-black/80 backdrop-blur-xl space-x-6 '>
-                        <Image
-                            src='/images/preset/A01/marriage.png'
-                            width={500}
-                            height={500}
-                            className='w-[8%] object-contain'
-                            alt='appstore'
-                            onClick={()=>scrollToTarget('mempelai')}
-                        />
-                        <Image
-                            src='/images/preset/A01/wedding-bells.png'
-                            width={500}
-                            height={500}
-                            className='w-[8%] object-contain'
-                            alt='appstore'
-                            onClick={()=>scrollToTarget('jadwal')}
-                        />
-                          
-                        <Image
-                            src='/images/preset/A01/gps.png'
-                            width={500}
-                            height={500}
-                            className='w-[8%] object-contain'
-                            alt='appstore'
-                            onClick={()=>scrollToTarget('lokasi')}
-                        />
-                        <Image
-                            src='/images/preset/A01/photo-camera.png'
-                            width={500}
-                            height={500}
-                            className='w-[8%] object-contain'
-                            alt='appstore'
-                            onClick={()=>scrollToTarget('gallery')}
-                        />
-                        <Image
-                            src='/images/preset/A01/love-letter.png'
-                            width={500}
-                            height={500}
-                            className='w-[8%] object-contain'
-                            alt='appstore'
-                            onClick={()=>scrollToTarget('opening')}
-                        />
-                        <Image
-                            src='/images/preset/A01/wedding-gift.png'
-                            width={500}
-                            height={500}
-                            className='w-[8%] object-contain'
-                            alt='appstore'
-                            onClick={()=>scrollToTarget('gift')}
-                        />
-                            
+                    <div className='lg:hidden flex flex-row text-white text-xl items-center justify-center w-full fixed z-10 bottom-0 py-6 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
+                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('mempelai')}><FaHeart/> <h1 className='text-xs'>couple</h1></div>
+                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs'>Tanggal</h1></div>
+                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('lokasi')}><FaMapMarked/> <h1 className='text-xs'>Map</h1></div>
+                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaCamera/> <h1 className='text-xs'>Galery</h1></div>
+                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
+                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gift')}><FaGifts/> <h1 className='text-xs'>Hadiah</h1></div>    
                    </div>
 
                     {/* OPENING_PHOTO */}
@@ -585,12 +540,7 @@ function PresA01({url}) {
                    </div>
 
                    {/* WATERMARK */}
-                   <div className='w-full bg-black flex flex-col items-center text-slate-400 justify-center gap-y-1 text-xs text-center pt-10 pb-20'>
-                        <h1>made with love and passion by</h1>
-                        <h1 className='text-base font-bold'>Rabine</h1>
-                        <h1>ingin punya undangan keren seperti ini?<br/> Hubungi kami sekarang juga</h1>
-                        <h1>copyright rabine 2024</h1>
-                   </div>
+                   <Watermark/>
                 </div>
             </div>
         </div>
