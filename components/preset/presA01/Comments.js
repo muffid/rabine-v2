@@ -100,7 +100,7 @@ export default function Comments({slug,url,tamu}) {
 
     useEffect(()=>{
         fetchDataComments()
-    },[comments])
+    },[])
 
     useEffect(() => {
       
