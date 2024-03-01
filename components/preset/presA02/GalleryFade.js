@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -32,7 +33,13 @@ const GalleryFade = ({images}) => {
 
         {images.map((image,index) =>(
             <SwiperSlide key={index}>
-                <img src={image.src}/>
+                  <Image
+                            src={image.src}
+                            width={1200}
+                            height={1200}
+                            className='w-full object-cover h-full'
+                            alt='appstore'
+                        />
             </SwiperSlide>
         ))}
       </Swiper>

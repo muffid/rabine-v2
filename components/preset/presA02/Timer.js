@@ -1,10 +1,12 @@
 'use client'
 import React from 'react'
+import Image from 'next/image'
 import { useState, useEffect,useRef} from 'react'
 import { FaCalendarAlt, FaRegCalendarPlus } from "react-icons/fa"
 const Timer = (props) => {
   const propsTarget = props.targetDate
   const fadeUp = props.anim.fadeUp
+  const bgImage = props.bgImage
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
@@ -46,8 +48,14 @@ const Timer = (props) => {
     return () => clearInterval(intervalId);
   }, [propsTarget]);
   return (
-    <div className='w-full flex flex-col items-center justify-center bg-cover bg-center py-20 px-12 gap-y-8 text-[#151313]'
-    style={{backgroundImage: "url('/images/preset/A02/card-bg.jpg')"}}>
+    <div className='w-full flex flex-col items-center justify-center bg-cover bg-center py-20 px-12 gap-y-8 text-[#3c3838] relative'>
+        <Image
+          src={bgImage}
+          fill
+          style={{objectFit:"cover"}}
+          className='absolute'
+          sizes="100vw"
+        />
         <h1 className={'text-3xl font-DMSerif '+fadeUp}>Save The Date</h1>
          <div className={'grid grid-cols-4 gap-8 '+fadeUp}>
             <div className='flex flex-col items-center justify-center'>

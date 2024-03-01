@@ -100,7 +100,7 @@ export default function Comments({slug,url,tamu}) {
 
     useEffect(()=>{
         fetchDataComments()
-    },[comments])
+    },[])
 
     useEffect(() => {
       
@@ -109,13 +109,13 @@ export default function Comments({slug,url,tamu}) {
         }
       }, [replyingTo])
     return (
-        <div className='w-full  bg-black p-6 flex flex-col items-center gap-y-2 px-8'>
-            <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Kirim Ucapan</h1>
+        <div className='w-full bg-[#FFFBF4] p-6 flex flex-col items-center gap-y-2 px-8 text-[#3c3838]'>
+            <h1 className='text-[2.5rem] font-DMSerif fadeUp'>Kirim Ucapan</h1>
             <h1 className='text-sm text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
                 value={namaTamu}
                 onChange={handleChangeTamu}
-                className='border-[1px] border-slate-700 text-slate-200 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
+                className='border-[1px] border-slate-700 text-slate-900 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
             <textarea
                     onChange={handleChange}
                     value={commentToPost}
@@ -123,19 +123,19 @@ export default function Comments({slug,url,tamu}) {
                     placeholder={'Kirim Ucapan Dan Doa Terbaik Anda'}
                     rows={3} // Menentukan jumlah baris
                     />
-                    <button onClick={()=>postComment()} className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 my-6
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
+                    <button onClick={()=>postComment()} className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg gap-2 border bg-[#151313]  px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out'>
                             <FaComment/> Kirim
                     </button>
             <div className='w-full flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
                 {comments.map(comment => (
-                    <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start space-y-4 bg-slate-900/90 text-slate-400 rounded-lg py-4 px-8'>
-                        <div className='flex flex-row items-start gap-x-3'>
+                    <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start space-y-4 bg-[#e3e1a9]/40 text-slate-900 rounded-lg py-4 px-8'>
+                        <div className='flex flex-row items-start gap-x-3 text-[#574629]'>
                             <FaUserAlt/>
                             <div className='flex-col items-start justify-start'>
-                                <div className='flex flex-row items-start  '><p className='font-bold font-Batusa text-yellow-200'>{comment.Comment_User}</p></div>
-                                <p className='text-slate-200'>{comment.Comment_Content}</p>
-                                <div className='flex flex-row items-start justify-start gap-x-2 text-xs text-slate-500'>
+                                <div className='flex flex-row items-start  '><p className='font-bold font-DMSerif text-[#574629]'>{comment.Comment_User}</p></div>
+                                <p className='text-slate-700'>{comment.Comment_Content}</p>
+                                <div className='flex flex-row items-start justify-start gap-x-2 text-xs text-slate-600'>
                                     <h1 className=''>{comment.Comment_Time}</h1>
                                     <h1>-</h1>
                                     <div className='flex flex-row space-x-1 font-bold cursor-pointer items-center' onClick={() => handleReplyClick(comment.Comment_Id)}><FaReply/> <h1>Balas</h1></div>
@@ -148,7 +148,7 @@ export default function Comments({slug,url,tamu}) {
                             ref={inputReplyRef}
                             onChange={handleChangeReply}
                             value={replyToPost}
-                            className="border-b-[1px] border-slate-700 text-slate-200 bg-transparent outline-none focus:border-slate-600 text-sm w-4/5 p-2 ml-10"
+                            className="border-b-[1px] border-slate-700 text-slate-700 bg-transparent outline-none focus:border-slate-600 text-sm w-4/5 p-2 ml-10"
                             placeholder={'balas ucapan'}
                         />
                         <div className='flex flex-row items-center justify-end w-full space-x-4'>
@@ -162,11 +162,11 @@ export default function Comments({slug,url,tamu}) {
                              <FaUserAlt/>
                              <div className='flex-col items-start '>
                              <div  className='flex flex-col items-start justify-start '>
-                                <p className='font-bold font-Batusa text-yellow-200'>{reply.Comment_User}</p>
+                                <p className='font-bold font-DMSerif text-[#574629]'>{reply.Comment_User}</p>
                                 <div className='flex flex-row items-start justify-center gap-x-1 text-xs text-slate-500'>
                                     <h1 className=''>{reply.Comment_Time}</h1>
                                 </div>
-                                <p className='text-slate-200'>{reply.Comment_Content}</p>
+                                <p className='text-slate-700'>{reply.Comment_Content}</p>
                             </div>
                                  
                                  

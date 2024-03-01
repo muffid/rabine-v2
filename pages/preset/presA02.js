@@ -14,6 +14,8 @@ import Watermark from '../../components/preset/globals/Watermark'
 
 function PresA02({url}) {
 
+    const gDrive = "https://drive.usercontent.google.com/download?id="
+    const gDriveAuth ="&authuser=0"
     const dataWeding = {
         META : {
              slug : "presA02",
@@ -28,8 +30,8 @@ function PresA02({url}) {
              bride_name : "Citra", 
              groom_sure_name : "Andre Taulanu",
              bride_sure_name : "Citra Lestari Alamku",
-             groom_pic : "/images/preset/A02/TM18-2.png", 
-             bride_pic : '/images/preset/A02/TM18-1.png', 
+             groom_pic : gDrive+"14xE0FzWKm9ZTTok7lRGCTmhHTYL834Y-"+gDriveAuth, 
+             bride_pic : gDrive+'1G3tQ5T_yjEruo97Cx5xr8T90ZqY6JeHO'+gDriveAuth, 
              groom_father : "Budi Mulyanto", // Hanya nama dan Gelar
              groom_mother : "Rasmitha Sari", // Hanya nama dan Gelar
              bride_father : "Doni Tata", // Hanya nama dan Gelar
@@ -52,13 +54,13 @@ function PresA02({url}) {
              venue_address : "Jl. Ir. Juanda No 381A, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat",
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-             bg_opening : '/images/preset/A02/TM18-10.jpg',
-             bg_first_section :'/images/preset/A02/TM18-16.jpg',
-             bg_jadwal : "url('/images/preset/A02/TM18-1Z.jpg')",
-             img_left :  "url('/images/preset/A02/TM18-18.jpg')",
-             img_quote_1 : '/images/preset/A02/TM18-10.jpg',
-             img_quote_2 : '/images/preset/A02/TM18-9.jpg',
-             img_closing : '/images/preset/A02/TM18-3.jpg',
+             bg_opening : gDrive+'1Ashrm9adEFN5vtRks7eX4dERxw4bHUGO'+gDriveAuth,
+             bg_first_section :gDrive+'1RGBYTlMThTvVwetz0TGPPgYsioW2JYgv'+gDriveAuth,
+             bg_jadwal : gDrive+"1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM"+gDriveAuth,
+             img_left :  gDrive+"1r6f_u6BKfelteJ9-nEz3FEU_N-PLZMNW"+gDriveAuth,
+             img_quote_1 : gDrive+'1Ashrm9adEFN5vtRks7eX4dERxw4bHUGO'+gDriveAuth,
+             img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
+             img_closing : gDrive+'137P5NNInljaNuOBmsxVy20QNDS4of3Cq'+gDriveAuth,
          }
      } 
  
@@ -85,21 +87,23 @@ function PresA02({url}) {
         setTopPosition(topPosition - 1000)
         togglePlay()
     }
-
-    {/* TO DO: DATA GALLERY*/}
+   
+    
     const images = [
-        { src: '/images/preset/A02/TM18-1Z.jpg', alt: 'First' },
-        { src: '/images/preset/A02/TM18-2.jpg', alt: 'First' },
-        { src: '/images/preset/A02/TM18-16.jpg', alt: 'First' },
-        { src: '/images/preset/A02/TM18-11.jpg', alt: 'First' },
+  
+        { src: gDrive+'1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1CP7_p7yXSi5lZwrcxqwwGP3U7Y4dPKuO'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1ULN-Ck6-fQU5-TqKd0xaiEw7eQuFWOa5'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1RGBYTlMThTvVwetz0TGPPgYsioW2JYgv'+gDriveAuth, alt: 'presA02' },
         
     ]
 
     const images_slide = [
-        { src: '/images/preset/A02/TM18-8.jpg', alt: 'First' },
-        { src: '/images/preset/A02/TM18-5.jpg', alt: 'First' },
-        { src: '/images/preset/A02/TM18-6.jpg', alt: 'First' },
-        { src: '/images/preset/A02/TM18-7.jpg', alt: 'First' },
+      
+        { src: gDrive+'1sIEbaQgOIBa-DKMMcsKAKEIovneSVfUv'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1CbsyFobRZDRX69JnWnY1PHTZCURVQv0s'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'17IFCKRubmu1ZX10NqYIkblpbaeWHpgjo'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1yz8XuZmJOWV8mSedIS9RnrcnJ4hfW5nH'+gDriveAuth, alt: 'presA02' },
     ]
 
     const scrollToTarget = (targetId) => {
@@ -200,11 +204,19 @@ function PresA02({url}) {
                 {/* SISI KIRI (TAMPILAN PC) */}
 
                 {/* TO DO: GAMBAR UNTUK SISI KIRI TAMPILAN PC*/}
-                <div className="hidden lg:flex bg-cover bg-right md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0" 
-                     style={{backgroundImage: dataWeding.content.img_left }}>
-
-                    <div className='gap-y-4 w-full h-full bg-gradient-to-l from-[#B6B5B9] to-transparent flex flex-col justify-end items-end 
-                                 py-12 px-10 relative'>
+                <div className="hidden lg:flex bg-cover bg-right md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0">
+                    
+                    <div className='gap-y-4 w-full h-full flex flex-col justify-end items-end 
+                                 relative'>
+                        <Image
+                                src={dataWeding.content.img_left}
+                                fill
+                                style={{objectFit:"cover"}}
+                                className='absolute '
+                                sizes="100vw"
+                            />    
+                            <div className='gap-y-4 p-8 w-full h-full bg-gradient-to-l from-[#B6B5B9] to-transparent flex flex-col justify-end items-end 
+                                 relative'>
                                     
                         <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
                         <h1>scroll ke bawah</h1>
@@ -232,6 +244,10 @@ function PresA02({url}) {
                             <h1 className='text-3xl font-bold text-right font-Batusa'>The Wedding Of {dataWeding.content.couple}</h1>
                         </div>
                     </div>
+
+                    </div>
+
+                
                 </div>
 
                 {/* SISI KANAN */}
@@ -372,9 +388,15 @@ function PresA02({url}) {
                     </div>
 
                     {/* INFO ACARA */}
-                    <div id='jadwal' className='w-full  relative bg-center bg-cover ' 
-                        style={{backgroundImage: dataWeding.content.bg_jadwal}}>
-                        <div className='w-full  flex flex-col items-center bg-white/40 justify-center text-[#151313] p-8 space-y-6 '>
+                    <div id='jadwal' className='w-full  relative'>
+                        <Image
+                            src={dataWeding.content.bg_jadwal}
+                            fill
+                            style={{objectFit:"cover"}}
+                            className='asolute'
+                            sizes="100vw"
+                        />
+                        <div className='w-full  flex flex-col items-center justify-center text-[#3c3838] p-8 space-y-6 '>
                             <div className='bg-white/40 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
                                 <div className='flex flex-col items-center justify-center text-center gap-y-2'>
                                     <h1 className='text-3xl font-DMSerif fadeUp mb-6 fadeUp'>Akad Nikah</h1>
@@ -419,7 +441,7 @@ function PresA02({url}) {
                     </div>
 
                     {/* COUNTDOWN */}
-                    <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}}/>
+                    <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}} bgImage={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}/>
 
                     <Gallery id={'gallery'} images={images}/>
 
@@ -441,60 +463,44 @@ function PresA02({url}) {
                     <GalleryFade images={images_slide}/>
 
                     {/* GIFT */}
-                    <div id='gift' className='h-full  py-12 flex gap-y-8 flex-col items-center justify-center text-[#151313]'  >
-                    <h1 className='text-3xl font-DMSerif fadeUp mb-6 fadeUp'>Gift</h1>
-                           <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
-                                style={{backgroundImage: "url('/images/preset/A02/card-bg.jpg')"}}>
-                               <div className='flex flex-row items-center justify-between w-full'>
-                                    <h1>Mandiri</h1>
-                                    <Image
-                                        src='/images/preset/A01/mandiri.webp'
+                    <div id='gift' className='h-full bg-[#FFFBF4] py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
+                           <h1 className='text-[2.5rem] font-DMSerif'>Gifts</h1>
+                           <div className=' relative rounded-lg'>
+                                <Image
+                                    src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
+                                    fill
+                                    style={{objectFit:"cover"}}
+                                    className='absolute top-0 rounded-lg'
+                                    sizes="100%"
+                                />
+                                <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
+                                    <div className='flex flex-row items-center justify-between w-full'>
+                                
+                                        <h1>Mandiri</h1>
+                                        <Image
+                                            src={gDrive+'1LLO7ya96NFvEOqeIgdOHJC5u7BlEy5uT'+gDriveAuth}
+                                            width={1000}
+                                            height={1000}
+                                            className='w-[28%] object-contain'
+                                            alt='appstore'
+                                        />
+                                </div>
+                                <Image
+                                        src={gDrive+'1nNGXHHDge0MH1p8_9TO_8V6_ABWW4Ldk'+gDriveAuth}
                                         width={1000}
                                         height={1000}
-                                        className='w-[28%] object-contain'
+                                        className='w-[12%] object-contain my-8'
                                         alt='appstore'
                                     />
-                               </div>
-                               <Image
-                                    src='/images/preset/A01/chip.png'
-                                    width={1000}
-                                    height={1000}
-                                    className='w-[12%] object-contain my-8'
-                                    alt='appstore'
-                                />
-                                <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
-                                <h1>Andre T</h1>
+                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
+                                    <h1>Andre T</h1>
+                                </div>  
                            </div>
                            <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
                                         hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaRegCopy/> copy no rek
                         </button>
-                           <div className='w-[400px] flex rounded-lg p-8 bg-cover bg-center flex-col items-start justify-between fadeUp' 
-                                style={{backgroundImage: "url('/images/preset/A02/card-bg.jpg')"}}>
-                               <div className='flex flex-row items-center justify-between w-full'>
-                                    <h1>BCA</h1>
-                                    <Image
-                                        src='/images/preset/global/BCA.webp'
-                                        width={1000}
-                                        height={1000}
-                                        className='w-[28%] object-contain'
-                                        alt='appstore'
-                                    />
-                               </div>
-                               <Image
-                                    src='/images/preset/A01/chip.png'
-                                    width={1000}
-                                    height={1000}
-                                    className='w-[12%] object-contain my-8'
-                                    alt='appstore'
-                                />
-                                <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
-                                <h1>Citra ALamaku</h1>
-                           </div>
-                           <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
-                            <FaRegCopy/> copy no rek
-                        </button>
+                     
                     </div>
 
                     {/* CLOSING */}

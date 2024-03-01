@@ -444,7 +444,7 @@ function PresA01({url}) {
                     </div>
 
                     {/* INFO ACARA */}
-                    <div id='jadwal' className='w-full  relative bg-center bg-cover '>
+                    <div id='jadwal' className='w-full relative '>
                         
                         <Image
                             src={dataWeding.content.bg_resepsi}
