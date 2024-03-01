@@ -18,7 +18,7 @@ export default function Gallery({images,id}) {
  
 
   return (
-    <div id={id} className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  style={{backgroundImage: "url('/images/preset/A01/Template-1-Marble.webp')"}}>
+    <div id={id} className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'>
       <h1 className='text-[2.5rem] font-Royal-Exq'>Our Moments</h1>
       <div className='container'>
         <Swiper

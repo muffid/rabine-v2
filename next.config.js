@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['drive.usercontent.google.com'], 
+    dangerouslyAllowSVG: true,
+    domains: ['drive.usercontent.google.com'],
   },
 }
 
