@@ -14,9 +14,10 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectFade, Navigation, Autoplay, } from 'swiper/modules';
 
-const GalleryFade = ({images}) => {
+const GalleryFade = ({images,anim}) => {
+  const fadeUp = anim.fadeUp
   return (
-    <div className='w-full'>
+    <div className={'w-full '+fadeUp}>
          <Swiper
             spaceBetween={30}
             effect={'fade'}

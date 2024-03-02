@@ -54,8 +54,8 @@ function PresA02({url}) {
              venue_address : "Jl. Ir. Juanda No 381A, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat",
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-             bg_opening : gDrive+'1Ashrm9adEFN5vtRks7eX4dERxw4bHUGO'+gDriveAuth,
-             bg_first_section :gDrive+'1r6f_u6BKfelteJ9-nEz3FEU_N-PLZMNW'+gDriveAuth,
+             bg_opening : gDrive+'1CbsyFobRZDRX69JnWnY1PHTZCURVQv0s'+gDriveAuth,
+             bg_first_section :gDrive+'1RGBYTlMThTvVwetz0TGPPgYsioW2JYgv'+gDriveAuth,
              bg_mempelai : gDrive+"1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM"+gDriveAuth,
              bg_accent : gDrive+"1ww8ylxfitcTgM-0uX5GcVVOC_1-PoF1Q"+gDriveAuth,
              img_left :  gDrive+"1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz"+gDriveAuth,
@@ -173,7 +173,7 @@ function PresA02({url}) {
             <div className='w-full flex flex-row items-start justify-between'>
 
                 {/* COVER UNDANGAN */}
-                <div className='w-full h-screen fixed z-20 moving-up flex flex-col items-start justify-start' style={{ top: `${topPosition}px` }}>
+                <div className='w-full h-screen fixed z-30 moving-up flex flex-col items-start justify-start' style={{ top: `${topPosition}px` }}>
                     <div className='w-full h-screen relative flex items-center justify-center '>
                         
                         <div className='flex flex-col items-center justify-end absolute bg-gradient-to-t 
@@ -273,7 +273,7 @@ function PresA02({url}) {
                                 <h1 className='font-bold'>{isPlaying ? 'Now Playing' : 'Paused'}</h1>
 
                                 {/* TO DO: JUDUL LAGU*/}
-                                <h1>Romantic Love - Alex P.</h1>
+                                <h1>{dataWeding.content.song_title}</h1>
                             </div>
                         </div>                    
                     </div>
@@ -284,7 +284,7 @@ function PresA02({url}) {
                             <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs'>Tanggal</h1></div>
                             <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('lokasi')}><FaMapMarked/> <h1 className='text-xs'>Map</h1></div>
                             <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaCamera/> <h1 className='text-xs'>Galery</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
+                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('doa')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
                             <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gift')}><FaGifts/> <h1 className='text-xs'>Hadiah</h1></div>    
                    </div>
 
@@ -305,7 +305,7 @@ function PresA02({url}) {
                             src={dataWeding.content.bg_first_section}
                             width={1200}
                             height={1200}
-                            className='w-full object-right left-4 object-cover h-full inset-12'
+                            className='w-full lg:object-right left-4 object-cover h-full inset-12'
                             alt='appstore'
                         />
                    </div>
@@ -317,7 +317,7 @@ function PresA02({url}) {
                             src={gDrive+'1R6BXggwE1GRqXKrcdM65MGL7OCi8hEwL'+gDriveAuth}
                             width={1200}
                             height={1200}
-                            className='w-[10%] object-cover'
+                            className='w-[10%] object-cover fadeUp'
                             alt='appstore'
                         />
                         <p className='text-center fadeUp'>
@@ -331,7 +331,7 @@ function PresA02({url}) {
                     </div>
 
                    {/* QUOTES CALON PENGANTEN*/}
-                    <div className=' flex flex-col items-center justify-center bg-white px-12'>
+                    <div className=' flex flex-col items-center justify-center bg-white px-12 fadeUp'>
                        
                       
                             <Image
@@ -343,7 +343,7 @@ function PresA02({url}) {
                             />
 
                             
-                            <p className='text-center fadeUp text-sm px-20 my-12'>
+                            <p className='text-center fadeUp text-sm px-12 lg:px-20 my-12 fadeUp'>
                                 We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
                             </p>
                          
@@ -351,7 +351,7 @@ function PresA02({url}) {
 
                      {/* MEMPELAI */}
                     <div id='mempelai' className='w-full relative bg-center bg-cover flex flex-col text-sm items-center justify-between
-                                                      text-center bg-white overflow-hidden px-4 py-16'>
+                                                      text-center bg-white overflow-hidden px-4 py-28 fadeUp'>
                        
                             <Image
                                 src = {dataWeding.content.bg_mempelai}
@@ -361,12 +361,12 @@ function PresA02({url}) {
                                 alt='appstore'
                             />
                             <div className='absolute top-0 w-full h-full  bg-white/70 flex'></div>
-                            <div className='relative flex flex-col items-center justify-center max-w-[200px] max-h-[200px]  rounded-full'>
+                            <div className='relative flex flex-col items-center justify-center max-w-[400px] max-h-[400px] fadeUp rounded-full'>
                                 <Image
                                         src = {dataWeding.content.bride_pic}
                                         width={1200}
                                         height={1200}
-                                        className='w-[150px] h-[150px] object-cover rounded-full'
+                                        className='w-[230px] h-[230px] object-cover rounded-full fadeUp'
                                         alt='appstore'
                                 />
                                 <Image
@@ -384,12 +384,12 @@ function PresA02({url}) {
                                 {dataWeding.content.bride_ig_account}
                             </div>
                             <h1 className='text-5xl my-10 font-Photograph-Signature text-[#3c3838] fadeUp'>&</h1>
-                            <div className='relative flex flex-col items-center justify-center max-w-[200px] max-h-[200px] mt-4 rounded-full'>
+                            <div className='relative flex flex-col items-center justify-center max-w-[400px] max-h-[400px] mt-4 rounded-full'>
                                 <Image
                                         src = {dataWeding.content.groom_pic}
                                         width={1200}
                                         height={1200}
-                                        className='w-[150px] h-[150px] object-cover rounded-full'
+                                        className='w-[230px] h-[230px] object-cover rounded-full fadeUp'
                                         alt='appstore'
                                 />
                                 <Image
@@ -417,36 +417,36 @@ function PresA02({url}) {
                             className='asolute -z-10'
                             sizes="100vw"
                         />
-                       <div class="flex w-full h-full flex-row rounded-xl bg-white/70">
+                       <div class="flex w-full h-full flex-row rounded-xl bg-white/70 fadeUp">
                         <div class="text-center text-white bg-[#1b1919] w-1/5 flex rounded-l-xl items-center justify-center text-nowrap">
-                            <h1 className='transform -rotate-90  font-bold lg:text-2xl '>AKAD NIKAH</h1>
+                            <h1 className='transform -rotate-90  font-bold lg:text-2xl fadeUp '>AKAD NIKAH</h1>
                         </div>
                         <div class="flex-1 flex flex-col items-start w-4/5 justify-center text-[#3c3838] py-4 px-8">
-                            <h1 className='text-lg font-bold'>Minggu</h1>
-                            <h1 className='text-3xl  font-bold mt-1'>22 April</h1>
-                            <h1 className='text-3xl font-bold mb-1'>2024</h1>
-                            <h1 className='text-base  text-slate-600'>08.00 - 11.00 WIB</h1>
-                            <h1 className=' mt-6 text-slate-600 text-sm'>jl. Raya Gajah Mungkur No 07 Kepanjen Malang</h1>
+                            <h1 className='text-lg font-bold fadeUp'>{dataWeding.content.day}</h1>
+                            <h1 className='text-3xl  font-bold mt-1 fadeUp'>{dataWeding.content.date} {dataWeding.content.month_name}</h1>
+                            <h1 className='text-3xl font-bold mb-1 fadeUp'>{dataWeding.content.year}</h1>
+                            <h1 className='text-base  text-slate-600 fadeUp'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
+                            <h1 className=' mt-6 text-slate-600 text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
                            
                         </div>
                         </div>
-                       <div class="flex w-full h-full flex-row rounded-xl bg-white/70">
+                       <div class="flex w-full h-full flex-row rounded-xl bg-white/70 fadeUp">
                        
                         <div class="flex-1 flex flex-col items-start w-full justify-center text-[#3c3838] py-4 px-8">
-                            <h1 className='text-lg font-bold'>Minggu</h1>
-                            <h1 className='text-3xl  font-bold mt-1'>22 April</h1>
-                            <h1 className='text-3xl font-bold mb-1'>2024</h1>
-                            <h1 className='text-base  text-slate-600'>08.00 - 11.00 WIB</h1>
-                            <h1 className=' mt-6 text-slate-600 text-sm'>jl. Raya Gajah Mungkur No 07 Kepanjen Malang</h1>
+                        <h1 className='text-lg font-bold fadeUp'>{dataWeding.content.day}</h1>
+                            <h1 className='text-3xl  font-bold mt-1 fadeUp'>{dataWeding.content.date} {dataWeding.content.month_name}</h1>
+                            <h1 className='text-3xl font-bold mb-1 fadeUp'>{dataWeding.content.year}</h1>
+                            <h1 className='text-base  text-slate-600 fadeUp'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
+                            <h1 className=' mt-6 text-slate-600 text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
                         </div>
                         <div class="text-center text-white bg-[#1b1919]  flex rounded-r-xl items-center justify-center text-nowrap">
-                            <h1 className='transform -rotate-90  font-bold text-2xl '>RESEPSI</h1>
+                            <h1 className='transform -rotate-90  font-bold text-2xl fadeUp'>RESEPSI</h1>
                         </div>
                         </div>
                     </div>
 
                      {/* GOOGLE MAP */}
-                     <div id='lokasi' className='w-full flex flex-col items-center justify-center gap-y-8 bg-white p-4'>
+                     <div id='lokasi' className='w-full flex flex-col items-center justify-center gap-y-8 bg-white p-4 fadeUp'>
                         <iframe src={dataWeding.content.gmap_frame}
                                 className='w-full h-[300px] rounded-xl'
                                 width="600" 
@@ -461,10 +461,10 @@ function PresA02({url}) {
                     {/* COUNTDOWN */}
                     <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}} bgImage={dataWeding.content.bg_accent}/>
 
-                    <Gallery id={'gallery'} images={images}/>
+                    <Gallery id={'gallery'} images={images} anim={{fadeUp:'fadeUp'}}/>
 
                     {/* YOUTUBE */}
-                    <div className='w-full flex flex-col items-center justify-center px-4  gap-y-8 py-20 bg-white '>
+                    <div className='w-full flex flex-col items-center justify-center px-4  gap-y-8 py-20 bg-white fadeUp'>
                         <iframe 
                             className='w-full fadeUp rounded-xl'
                             height="315" 
@@ -478,7 +478,7 @@ function PresA02({url}) {
 
                     <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
-                    <GalleryFade images={images_slide}/>
+                    <GalleryFade images={images_slide} anim={{fadeUp:'fadeUp'}}/>
 
                     {/* GIFT */}
                     <div id='gift' className='h-full bg-white py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
@@ -488,7 +488,7 @@ function PresA02({url}) {
                                     src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
                                     fill
                                     style={{objectFit:"cover"}}
-                                    className='absolute top-0 rounded-lg'
+                                    className='absolute top-0 rounded-lg fadeUp'
                                     sizes="100%"
                                 />
                                 <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>

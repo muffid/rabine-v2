@@ -13,12 +13,12 @@ import 'swiper/css/free-mode'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 
-export default function Gallery({images,id}) {
+export default function Gallery({images,id,anim}) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
- 
+  const fadeUp = anim.fadeUp
 
   return (
-    <div id={id} className='w-full flex flex-col items-center justify-center bg-white p-4  gap-y-8 text-[#151313]'>
+    <div id={id} className={'w-full flex flex-col items-center justify-center bg-white p-4  gap-y-8 text-[#151313] '+fadeUp}>
  
       <div className='container'>
         {/* Thumbnail */}
