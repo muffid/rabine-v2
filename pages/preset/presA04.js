@@ -12,15 +12,15 @@ import GalleryFade from '../../components/preset/presA02/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 
 
-function PresA03({url}) {
+function PresA04({url}) {
 
     const gDrive = "https://drive.usercontent.google.com/download?id="
     const gDriveAuth ="&authuser=0"
     const dataWeding = {
         META : {
-             slug : "presA03",
-             title : "momenku - preview tema presA02",
-             description : "momenku - preview tema presA02",
+             slug : "presA04",
+             title : "momenku - preview tema presA04",
+             description : "momenku - preview tema presA04",
              thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
          },
          content : {
@@ -30,8 +30,8 @@ function PresA03({url}) {
              bride_name : "Citra", 
              groom_sure_name : "Andre Taulanu",
              bride_sure_name : "Citra Lestari Alamku",
-             groom_pic : gDrive+"14xE0FzWKm9ZTTok7lRGCTmhHTYL834Y-"+gDriveAuth, 
-             bride_pic : gDrive+'1G3tQ5T_yjEruo97Cx5xr8T90ZqY6JeHO'+gDriveAuth, 
+             groom_pic : gDrive+"1MZTClDs_1eazheglC-lp3hIjEyd5u1E7"+gDriveAuth, 
+             bride_pic : gDrive+'15JjCXFbVwa_GDR8-OJ8MT53C1oxkfxqy'+gDriveAuth, 
              groom_father : "Budi Mulyanto", // Hanya nama dan Gelar
              groom_mother : "Rasmitha Sari", // Hanya nama dan Gelar
              bride_father : "Doni Tata", // Hanya nama dan Gelar
@@ -55,11 +55,11 @@ function PresA03({url}) {
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
              bg_opening : gDrive+'1CbsyFobRZDRX69JnWnY1PHTZCURVQv0s'+gDriveAuth,
-             bg_first_section :gDrive+'1RGBYTlMThTvVwetz0TGPPgYsioW2JYgv'+gDriveAuth,
+             bg_first_section :gDrive+'1r76ksTfcpB6bfiu0WrLDC_wCG7DHikqP'+gDriveAuth,
              bg_mempelai : gDrive+"1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM"+gDriveAuth,
              bg_accent : gDrive+"1ww8ylxfitcTgM-0uX5GcVVOC_1-PoF1Q"+gDriveAuth,
-             img_left :  gDrive+"1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz"+gDriveAuth,
-             img_quote_1 : gDrive+'1Ashrm9adEFN5vtRks7eX4dERxw4bHUGO'+gDriveAuth,
+             img_left :  gDrive+"1BIlJn4ttO1ZRKNqcGLHvWDsGzXpj5JL4"+gDriveAuth,
+             img_quote_1 : gDrive+'1yl2NLtG52YRfgEPa5Ck4x6RXxO_O9Ywv'+gDriveAuth,
              img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
              img_closing : gDrive+'137P5NNInljaNuOBmsxVy20QNDS4of3Cq'+gDriveAuth,
          }
@@ -211,14 +211,15 @@ function PresA03({url}) {
                                  relative'>
                         <Image
                                 src={dataWeding.content.img_left}
-                                fill
-                                style={{objectFit:"cover"}}
-                                className='absolute '
-                                sizes="100vw"
+                               
+                                // style={{objectFit:"cover"}}
+                                className='absolute w-full object-cover h-full'
+                                width={1200}
+                                height={2200}
                             />    
                             <div className='gap-y-4 p-8 w-full h-full flex flex-col justify-end items-end 
                                  relative'>
-                                    
+                                     
                         <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
                         <h1>scroll ke bawah</h1>
                         <div className='w-full flex flex-row items-center justify-between'>
@@ -253,6 +254,7 @@ function PresA03({url}) {
 
                 {/* SISI KANAN */}
                 <div className='w-full  lg:w-[40%] overflow-y-auto relative text-[#2a2112]'>
+
 
                     {/* NOW PLAYING*/}
                     <div className='lg:hidden flex flex-col items-center justify-between gap-x-4 fixed w-full
@@ -310,238 +312,254 @@ function PresA03({url}) {
                         />
                    </div>
 
-                   {/* AYAT ALQUR'AN */}
-                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 py-[80px] bg-white'>
+                    {/* BACKGROUND IMAGE */}
+                   <div className='w-full px-6 flex flex-col items-center gap-y-5 relative '>
+                    <Image
+                        src={dataWeding.content.bg_first_section}
+                        width={1200}
+                        height={1200}
+                        className='w-full lg:w-[40%] object-cover min-h-screen max-h-screen top-0 fixed z-0'
+                        alt='appstore'
+                    />
+                 
+                 
+                    {/* AYAT ALQUR'AN */}
+                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 py-[80px] bg-gradient-to-b from-white/90 to-white/20
+                                    backdrop-blur-xl rounded-3xl overflow-hidden'>
                     
-                        <Image
-                            src={gDrive+'1R6BXggwE1GRqXKrcdM65MGL7OCi8hEwL'+gDriveAuth}
-                            width={1200}
-                            height={1200}
-                            className='w-[10%] object-cover fadeUp'
-                            alt='appstore'
-                        />
-                        <p className='text-center fadeUp'>
-                            “Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
-                            agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
-                            Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
-                        </p>
-                        <p className='text-center text-lg py-4 font-bold fadeUp'>
-                            (QS. Ar-Rum ayat 21)
-                        </p>
+
+                    <Image
+                        src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
+                        width={1200}
+                        height={1200}
+                        className='w-full rounded-3xl absolute -top-20 left-0 object-contain'
+                        alt='appstore'
+                    />
+                    <Image
+                        src={gDrive+'1R6BXggwE1GRqXKrcdM65MGL7OCi8hEwL'+gDriveAuth}
+                        width={1200}
+                        height={1200}
+                        className='w-[10%] object-cover fadeUp'
+                        alt='appstore'
+                    />
+                    <p className='text-center fadeUp mt-10'>
+                        “Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
+                        agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
+                        Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
+                    </p>
+                    <p className='text-center text-lg pt-4 pb-20 font-bold fadeUp'>
+                        (QS. Ar-Rum ayat 21)
+                    </p>
+
+                    <Image
+                        src={dataWeding.content.img_quote_1}
+                        width={1200}
+                        height={1200}
+                        className='w-full object-cover fadeUp rounded-xl'
+                        alt='appstore'
+                    />
+                    <p className='text-center fadeUp text-sm px-12 lg:px-20 my-12 fadeUp'>
+                        We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
+                    </p>
                     </div>
 
-                   {/* QUOTES CALON PENGANTEN*/}
-                    <div className=' flex flex-col items-center justify-center bg-white px-12 fadeUp'>
-                       
-                      
-                            <Image
-                                src={dataWeding.content.img_quote_2}
-                                width={1200}
-                                height={1200}
-                                className='w-full object-cover fadeUp rounded-xl'
-                                alt='appstore'
-                            />
-
+                    {/* MEMPELAI BRIDE*/}
+                    <div id='mempelai' className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 pt-[80px] pb-[200px] bg-gradient-to-b to-white/90 from-white/20
+                                            backdrop-blur-xl rounded-3xl overflow-hidden text-center '>
                             
-                            <p className='text-center fadeUp text-sm px-12 lg:px-20 my-12 fadeUp'>
-                                We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
-                            </p>
-                         
-                    </div>
-
-                     {/* MEMPELAI */}
-                    <div id='mempelai' className='w-full relative bg-center bg-cover flex flex-col text-sm items-center justify-between
-                                                      text-center bg-white overflow-hidden px-4 py-28 fadeUp'>
-                       
                             <Image
-                                src = {dataWeding.content.bg_mempelai}
+                                src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
                                 width={1200}
                                 height={1200}
-                                className='w-full h-full object-cover absolute  top-0'
+                                className='w-full rounded-3xl absolute -bottom-32 left-0 object-contain transform rotate-180 '
                                 alt='appstore'
                             />
-                            <div className='absolute top-0 w-full h-full  bg-white/70 flex'></div>
-                            <div className='relative flex flex-col items-center justify-center max-w-[400px] max-h-[400px] fadeUp rounded-full'>
-                                <Image
-                                        src = {dataWeding.content.bride_pic}
-                                        width={1200}
-                                        height={1200}
-                                        className='w-[230px] h-[230px] object-cover rounded-full fadeUp'
-                                        alt='appstore'
-                                />
-                                <Image
-                                        src = {gDrive+'1AlSSJoYq0dJvMtEMb9UkhhHjuA9hGEoT'+gDriveAuth}
-                                        width={1200}
-                                        height={1200}
-                                        className='w-[40%] absolute object-cover bottom-0 right-0'
-                                        alt='appstore'
-                                />
-                            </div>
-                            <h1 className='font-bold text-[2.7rem] font-Photograph-Signature py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
+
+                            <Image
+                                src = {dataWeding.content.bride_pic}
+                                width={1200}
+                                height={1200}
+                                className='w-[200px] h-[200px] object-cover rounded-full fadeUp'
+                                alt='appstore'
+                            />
+                            <h1 className='font-bold text-3xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
                             <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
                             <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
                                 <FaInstagram/>
                                 {dataWeding.content.bride_ig_account}
                             </div>
-                            <h1 className='text-5xl my-10 font-Photograph-Signature text-[#3c3838] fadeUp'>&</h1>
-                            <div className='relative flex flex-col items-center justify-center max-w-[400px] max-h-[400px] mt-4 rounded-full'>
-                                <Image
-                                        src = {dataWeding.content.groom_pic}
-                                        width={1200}
-                                        height={1200}
-                                        className='w-[230px] h-[230px] object-cover rounded-full fadeUp'
-                                        alt='appstore'
-                                />
-                                <Image
-                                        src = {gDrive+'1AlSSJoYq0dJvMtEMb9UkhhHjuA9hGEoT'+gDriveAuth}
-                                        width={1200}
-                                        height={1200}
-                                        className='w-[40%] absolute object-cover bottom-0 right-0'
-                                        alt='appstore'
-                                />
-                            </div>
-                            <h1 className='font-bold text-[2.7rem] font-Photograph-Signature py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
+                        </div>
+
+                    {/* MEMPELAI GROOM*/}
+                    <div id='' className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 pt-[200px] pb-[80px] bg-gradient-to-b to-white/90 from-white/60
+                                            backdrop-blur-xl rounded-3xl overflow-hidden text-center '>
+                            
+                            <Image
+                                src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
+                                width={1200}
+                                height={1200}
+                                className='w-full rounded-3xl absolute -top-32 left-0 object-contain  '
+                                alt='appstore'
+                            />
+
+                            <Image
+                                src = {dataWeding.content.groom_pic}
+                                width={1200}
+                                height={1200}
+                                className='w-[200px] h-[200px] object-cover rounded-full fadeUp'
+                                alt='appstore'
+                            />
+                            <h1 className='font-bold text-3xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
                             <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan {dataWeding.content.groom_mother}</h1>
                             <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
                                 <FaInstagram/>
                                 {dataWeding.content.groom_ig_account}
                             </div>
-                    </div>
+                        </div>
 
                     {/* INFO ACARA */}
-                    <div id='jadwal' className='w-full h-full relative px-12 flex flex-col items-center justify-center gap-y-6 py-12'>
+                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 space-y-8 py-[100px] bg-gradient-to-b from-white/90 via-white/80 to-white/20
+                                    backdrop-blur-xl rounded-3xl overflow-hidden'>
                         <Image
-                            src={dataWeding.content.bg_accent}
-                            fill
-                            style={{objectFit:"cover"}}
-                            className='asolute -z-10'
-                            sizes="100vw"
-                        />
-                       <div className="flex w-full h-full flex-row rounded-xl bg-white/70 fadeUp">
-                        <div className="text-center text-white bg-[#1b1919] w-1/5 flex rounded-l-xl items-center justify-center text-nowrap">
-                            <h1 className='transform -rotate-90  font-bold lg:text-2xl fadeUp '>AKAD NIKAH</h1>
-                        </div>
-                        <div className="flex-1 flex flex-col items-start w-4/5 justify-center text-[#3c3838] py-4 px-8">
-                            <h1 className='text-lg font-bold fadeUp'>{dataWeding.content.day}</h1>
-                            <h1 className='text-3xl  font-bold mt-1 fadeUp'>{dataWeding.content.date} {dataWeding.content.month_name}</h1>
-                            <h1 className='text-3xl font-bold mb-1 fadeUp'>{dataWeding.content.year}</h1>
-                            <h1 className='text-base  text-slate-600 fadeUp'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
-                            <h1 className=' mt-6 text-slate-600 text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
-                           
-                        </div>
-                        </div>
-                       <div className="flex w-full h-full flex-row rounded-xl bg-white/70 fadeUp">
-                       
-                        <div className="flex-1 flex flex-col items-start w-full justify-center text-[#3c3838] py-4 px-8">
-                        <h1 className='text-lg font-bold fadeUp'>{dataWeding.content.day}</h1>
-                            <h1 className='text-3xl  font-bold mt-1 fadeUp'>{dataWeding.content.date} {dataWeding.content.month_name}</h1>
-                            <h1 className='text-3xl font-bold mb-1 fadeUp'>{dataWeding.content.year}</h1>
-                            <h1 className='text-base  text-slate-600 fadeUp'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
-                            <h1 className=' mt-6 text-slate-600 text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
-                        </div>
-                        <div className="text-center text-white bg-[#1b1919]  flex rounded-r-xl items-center justify-center text-nowrap">
-                            <h1 className='transform -rotate-90  font-bold text-2xl fadeUp'>RESEPSI</h1>
-                        </div>
-                        </div>
-                    </div>
-
-                     {/* GOOGLE MAP */}
-                     <div id='lokasi' className='w-full flex flex-col items-center justify-center gap-y-8 bg-white p-4 fadeUp'>
-                        <iframe src={dataWeding.content.gmap_frame}
-                                className='w-full h-[300px] rounded-xl'
-                                width="600" 
-                                    height="600" 
-                                    style={{border:0}} 
-                                    allowFullScreen="" 
-                                    loading="lazy" 
-                                    referrerPolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-
-                    {/* COUNTDOWN */}
-                    <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}} bgImage={dataWeding.content.bg_accent}/>
-
-                    <Gallery id={'gallery'} images={images} anim={{fadeUp:'fadeUp'}}/>
-
-                    {/* YOUTUBE */}
-                    <div className='w-full flex flex-col items-center justify-center px-4  gap-y-8 py-20 bg-white fadeUp'>
-                        <iframe 
-                            className='w-full fadeUp rounded-xl'
-                            height="315" 
-                            src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
-                            title="YouTube video player" 
-                          
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowFullScreen>
-                        </iframe>
-                    </div>
-
-                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
-
-                    <GalleryFade images={images_slide} anim={{fadeUp:'fadeUp'}}/>
-
-                    {/* GIFT */}
-                    <div id='gift' className='h-full bg-white py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
-                           <h1 className='text-[2.5rem] '>Gifts</h1>
-                           <div className=' relative rounded-lg'>
-                                <Image
-                                    src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
-                                    fill
-                                    style={{objectFit:"cover"}}
-                                    className='absolute top-0 rounded-lg fadeUp'
-                                    sizes="100%"
-                                />
-                                <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
-                                    <div className='flex flex-row items-center justify-between w-full'>
-                                
-                                        <h1>Mandiri</h1>
-                                        <Image
-                                            src={gDrive+'1LLO7ya96NFvEOqeIgdOHJC5u7BlEy5uT'+gDriveAuth}
-                                            width={1000}
-                                            height={1000}
-                                            className='w-[28%] object-contain'
-                                            alt='appstore'
-                                        />
-                                </div>
-                                <Image
-                                        src={gDrive+'1nNGXHHDge0MH1p8_9TO_8V6_ABWW4Ldk'+gDriveAuth}
-                                        width={1000}
-                                        height={1000}
-                                        className='w-[12%] object-contain my-8'
-                                        alt='appstore'
-                                    />
-                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
-                                    <h1>Andre T</h1>
-                                </div>  
-                           </div>
-                           <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
-                            <FaRegCopy/> copy no rek
-                        </button>
-                     
-                    </div>
-
-                    {/* CLOSING */}
-                    <div className='w-full  relative text-center h-[500px]'>
-                        <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
-                            <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                            <h1 className='font-bold text-3xl py-4 font-Photograph-Signature'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
-                           
-                                <p className='w-1/3'>Thank You</p>
-                           
-                            
-                        </div>
-                        <Image
-                            src={dataWeding.content.img_closing}
+                            src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
                             width={1200}
                             height={1200}
-                            className='w-full object-cover h-full'
+                            className='w-full rounded-3xl absolute -top-40 left-0 object-contain'
                             alt='appstore'
                         />
+                        <div className='flex flex-col items-center gap-y-4'>
+                          <div className='flex flex-row items-center'>
+                            <h1 className='transform -rotate-90 font-bold text-lg'>AKAD NIKAH</h1>
+                            <div className='flex flex-col items-start gap-y-6'>
+                                <h1 className='font-bold text-lg px-4 py-1 text-white bg-red-800 rounded-full'>{dataWeding.content.day}</h1>
+                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.date}  {dataWeding.content.month_name}</h1>
+                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.year}</h1>
+                                <h1 className='font-extrabold text-lg'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
+                            </div>
+                          </div>
+                          <div className='flex flex-row items-center mt-8 space-x-4'>
+                            <h1 className='transform -rotate-90 font-bold text-lg p-2'>RESEPSI</h1>
+                            <div className='flex flex-col items-start gap-y-6'>
+                            <h1 className='font-bold text-lg px-4 py-1 text-white bg-red-800 rounded-full'>{dataWeding.content.day}</h1>
+                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.date}  {dataWeding.content.month_name}</h1>
+                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.year}</h1>
+                                <h1 className='font-extrabold text-lg'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    {/* GOOGLE MAP */}
+                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-8 space-y-8 py-[80px] bg-gradient-to-b from-white/90 via-white/80 to-white/40
+                                    backdrop-blur-xl rounded-3xl overflow-hidden'>
+                        <Image
+                            src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
+                            width={1200}
+                            height={1200}
+                            className='w-full rounded-3xl absolute -top-40 left-0 object-contain'
+                            alt='appstore'
+                        />
+
+                        <iframe src={dataWeding.content.gmap_frame}
+                            className='w-full h-[300px] rounded-xl'
+                            width="600" 
+                            height="600" 
+                            style={{border:0}} 
+                            allowFullScreen="" 
+                            loading="lazy" 
+                            referrerPolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                    </div>
+
+              
+                {/* COUNTDOWN */}
+                <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}} bgImage={dataWeding.content.bg_accent}/>
+
+                <Gallery id={'gallery'} images={images} anim={{fadeUp:'fadeUp'}}/>
+
+                {/* YOUTUBE */}
+                <div className='w-full flex flex-col items-center justify-center px-4  gap-y-8 py-20 bg-white fadeUp'>
+                    <iframe 
+                        className='w-full fadeUp rounded-xl'
+                        height="315" 
+                        src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
+                        title="YouTube video player" 
+                      
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen>
+                    </iframe>
+                </div>
+
+                <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+
+                <GalleryFade images={images_slide} anim={{fadeUp:'fadeUp'}}/>
+
+                {/* GIFT */}
+                <div id='gift' className='h-full bg-white py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
+                       <h1 className='text-[2.5rem] '>Gifts</h1>
+                       <div className=' relative rounded-lg'>
+                            <Image
+                                src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
+                                fill
+                                style={{objectFit:"cover"}}
+                                className='absolute top-0 rounded-lg fadeUp'
+                                sizes="100%"
+                            />
+                            <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
+                                <div className='flex flex-row items-center justify-between w-full'>
+                            
+                                    <h1>Mandiri</h1>
+                                    <Image
+                                        src={gDrive+'1LLO7ya96NFvEOqeIgdOHJC5u7BlEy5uT'+gDriveAuth}
+                                        width={1000}
+                                        height={1000}
+                                        className='w-[28%] object-contain'
+                                        alt='appstore'
+                                    />
+                            </div>
+                            <Image
+                                    src={gDrive+'1nNGXHHDge0MH1p8_9TO_8V6_ABWW4Ldk'+gDriveAuth}
+                                    width={1000}
+                                    height={1000}
+                                    className='w-[12%] object-contain my-8'
+                                    alt='appstore'
+                                />
+                                <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
+                                <h1>Andre T</h1>
+                            </div>  
+                       </div>
+                       <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                    hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                        <FaRegCopy/> copy no rek
+                    </button>
+                 
+                </div>
+
+                {/* CLOSING */}
+                <div className='w-full  relative text-center h-[500px]'>
+                    <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
+                        <p className='text-sm'>Two souls become one, two hearts beat as one</p>
+                        <h1 className='font-bold text-3xl py-4 font-Photograph-Signature'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                       
+                            <p className='w-1/3'>Thank You</p>
+                       
+                        
+                    </div>
+                    <Image
+                        src={dataWeding.content.img_closing}
+                        width={1200}
+                        height={1200}
+                        className='w-full object-cover h-full'
+                        alt='appstore'
+                    />
+               </div>
+
+               {/* WATERMARK */}
+                <Watermark/>
                    </div>
 
-                   {/* WATERMARK */}
-                    <Watermark/>
+                 
                 </div>
             </div>
         </div>
@@ -552,4 +570,4 @@ export async function getServerSideProps() {
     return { props: {url} }
 }
 
-export default PresA03
+export default PresA04
