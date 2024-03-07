@@ -3,12 +3,11 @@ import Image from 'next/image'
 import React, { useEffect,useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useState} from 'react'
-import Timer from '../../components/preset/presA03/Timer'
-import Gallery from '../../components/preset/presA03/Gallery'
-import Comments from '../../components/preset/presA03/Comments'
+import Timer from '../../components/preset/presA04/Timer'
+import Comments from '../../components/preset/presA04/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
         FaSearchLocation, FaRegCopy, FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
-import GalleryFade from '../../components/preset/presA02/GalleryFade'
+import GalleryFade from '../../components/preset/presA04/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 
 
@@ -61,7 +60,7 @@ function PresA04({url}) {
              img_left :  gDrive+"1BIlJn4ttO1ZRKNqcGLHvWDsGzXpj5JL4"+gDriveAuth,
              img_quote_1 : gDrive+'1yl2NLtG52YRfgEPa5Ck4x6RXxO_O9Ywv'+gDriveAuth,
              img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
-             img_closing : gDrive+'137P5NNInljaNuOBmsxVy20QNDS4of3Cq'+gDriveAuth,
+             img_closing : gDrive+'1LjnDmiZ0kfVftFEDIbxLQ-abXJyc7lgJ'+gDriveAuth,
          }
      } 
  
@@ -90,21 +89,15 @@ function PresA04({url}) {
     }
    
     
-    const images = [
   
-        { src: gDrive+'1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1CP7_p7yXSi5lZwrcxqwwGP3U7Y4dPKuO'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1ULN-Ck6-fQU5-TqKd0xaiEw7eQuFWOa5'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1RGBYTlMThTvVwetz0TGPPgYsioW2JYgv'+gDriveAuth, alt: 'presA02' },
-        
-    ]
 
-    const images_slide = [
-      
-        { src: gDrive+'1sIEbaQgOIBa-DKMMcsKAKEIovneSVfUv'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1CbsyFobRZDRX69JnWnY1PHTZCURVQv0s'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'17IFCKRubmu1ZX10NqYIkblpbaeWHpgjo'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1yz8XuZmJOWV8mSedIS9RnrcnJ4hfW5nH'+gDriveAuth, alt: 'presA02' },
+    const imagesGallery = [
+        { src: gDrive+'1yl2NLtG52YRfgEPa5Ck4x6RXxO_O9Ywv'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1F591xH3VnWFLkpAYPLe6pV4sqTddlLdi'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1G-fXgITm8fpJ-7ysJAepbq83JU0LilMN'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1LjnDmiZ0kfVftFEDIbxLQ-abXJyc7lgJ'+gDriveAuth, alt: 'presA02' },
+     
+        // tambhakan lagi kalau masih ada....
     ]
 
     const scrollToTarget = (targetId) => {
@@ -291,8 +284,8 @@ function PresA04({url}) {
                    </div>
 
                     {/* OPENING_PHOTO */}
-                   <div id='opening' className='w-full h-screen relative'>
-                        <div className=' absolute top-0 bg-gradient-to-t from-white via-white/20 to-transparent w-full h-full flex flex-col items-center justify-start pt-20 fadeUp'>
+                   <div id='opening' className='w-full h-screen text-white relative'>
+                        <div className=' absolute top-0  w-full h-full flex flex-col items-center justify-end pb-20 fadeUp'>
                             <p>The Wedding Of</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
@@ -313,173 +306,170 @@ function PresA04({url}) {
                    </div>
 
                     {/* BACKGROUND IMAGE */}
-                   <div className='w-full px-6 flex flex-col items-center gap-y-5 relative '>
+                   <div className='w-full  flex flex-col items-center  relative '>
                     <Image
                         src={dataWeding.content.bg_first_section}
                         width={1200}
                         height={1200}
-                        className='w-full lg:w-[40%] object-cover min-h-screen max-h-screen top-0 fixed z-0'
+                        className='w-full lg:w-[40%] object-cover min-h-screen max-h-screen top-0 fixed -z-10'
                         alt='appstore'
                     />
                  
                  
-                    {/* AYAT ALQUR'AN */}
-                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 py-[80px] bg-gradient-to-b from-white/90 to-white/20
-                                    backdrop-blur-xl rounded-3xl overflow-hidden'>
-                    
-
-                    <Image
-                        src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
-                        width={1200}
-                        height={1200}
-                        className='w-full rounded-3xl absolute -top-20 left-0 object-contain'
-                        alt='appstore'
-                    />
-                    <Image
-                        src={gDrive+'1R6BXggwE1GRqXKrcdM65MGL7OCi8hEwL'+gDriveAuth}
-                        width={1200}
-                        height={1200}
-                        className='w-[10%] object-cover fadeUp'
-                        alt='appstore'
-                    />
-                    <p className='text-center fadeUp mt-10'>
-                        “Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
-                        agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
-                        Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
-                    </p>
-                    <p className='text-center text-lg pt-4 pb-20 font-bold fadeUp'>
-                        (QS. Ar-Rum ayat 21)
-                    </p>
-
-                    <Image
-                        src={dataWeding.content.img_quote_1}
-                        width={1200}
-                        height={1200}
-                        className='w-full object-cover fadeUp rounded-xl'
-                        alt='appstore'
-                    />
-                    <p className='text-center fadeUp text-sm px-12 lg:px-20 my-12 fadeUp'>
-                        We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
-                    </p>
-                    </div>
-
-                    {/* MEMPELAI BRIDE*/}
-                    <div id='mempelai' className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 pt-[80px] pb-[200px] bg-gradient-to-b to-white/90 from-white/20
-                                            backdrop-blur-xl rounded-3xl overflow-hidden text-center '>
-                            
-                            <Image
-                                src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
-                                width={1200}
-                                height={1200}
-                                className='w-full rounded-3xl absolute -bottom-32 left-0 object-contain transform rotate-180 '
-                                alt='appstore'
-                            />
-
-                            <Image
-                                src = {dataWeding.content.bride_pic}
-                                width={1200}
-                                height={1200}
-                                className='w-[200px] h-[200px] object-cover rounded-full fadeUp'
-                                alt='appstore'
-                            />
-                            <h1 className='font-bold text-3xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
-                            <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
-                            <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
-                                <FaInstagram/>
-                                {dataWeding.content.bride_ig_account}
-                            </div>
-                        </div>
-
-                    {/* MEMPELAI GROOM*/}
-                    <div id='' className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 pt-[200px] pb-[80px] bg-gradient-to-b to-white/90 from-white/60
-                                            backdrop-blur-xl rounded-3xl overflow-hidden text-center '>
-                            
-                            <Image
-                                src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
-                                width={1200}
-                                height={1200}
-                                className='w-full rounded-3xl absolute -top-32 left-0 object-contain  '
-                                alt='appstore'
-                            />
-
-                            <Image
-                                src = {dataWeding.content.groom_pic}
-                                width={1200}
-                                height={1200}
-                                className='w-[200px] h-[200px] object-cover rounded-full fadeUp'
-                                alt='appstore'
-                            />
-                            <h1 className='font-bold text-3xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
-                            <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan {dataWeding.content.groom_mother}</h1>
-                            <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
-                                <FaInstagram/>
-                                {dataWeding.content.groom_ig_account}
-                            </div>
-                        </div>
-
-                    {/* INFO ACARA */}
-                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 space-y-8 py-[100px] bg-gradient-to-b from-white/90 via-white/80 to-white/20
-                                    backdrop-blur-xl rounded-3xl overflow-hidden'>
-                        <Image
-                            src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
-                            width={1200}
-                            height={1200}
-                            className='w-full rounded-3xl absolute -top-40 left-0 object-contain'
-                            alt='appstore'
-                        />
-                        <div className='flex flex-col items-center gap-y-4'>
-                          <div className='flex flex-row items-center'>
-                            <h1 className='transform -rotate-90 font-bold text-lg'>AKAD NIKAH</h1>
-                            <div className='flex flex-col items-start gap-y-6'>
-                                <h1 className='font-bold text-lg px-4 py-1 text-white bg-red-800 rounded-full'>{dataWeding.content.day}</h1>
-                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.date}  {dataWeding.content.month_name}</h1>
-                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.year}</h1>
-                                <h1 className='font-extrabold text-lg'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
-                            </div>
-                          </div>
-                          <div className='flex flex-row items-center mt-8 space-x-4'>
-                            <h1 className='transform -rotate-90 font-bold text-lg p-2'>RESEPSI</h1>
-                            <div className='flex flex-col items-start gap-y-6'>
-                            <h1 className='font-bold text-lg px-4 py-1 text-white bg-red-800 rounded-full'>{dataWeding.content.day}</h1>
-                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.date}  {dataWeding.content.month_name}</h1>
-                                <h1 className='font-extrabold text-[40px]'>{dataWeding.content.year}</h1>
-                                <h1 className='font-extrabold text-lg'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-
-                    {/* GOOGLE MAP */}
-                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-8 space-y-8 py-[80px] bg-gradient-to-b from-white/90 via-white/80 to-white/40
-                                    backdrop-blur-xl rounded-3xl overflow-hidden'>
-                        <Image
-                            src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
-                            width={1200}
-                            height={1200}
-                            className='w-full rounded-3xl absolute -top-40 left-0 object-contain'
-                            alt='appstore'
-                        />
-
-                        <iframe src={dataWeding.content.gmap_frame}
-                            className='w-full h-[300px] rounded-xl'
-                            width="600" 
-                            height="600" 
-                            style={{border:0}} 
-                            allowFullScreen="" 
-                            loading="lazy" 
-                            referrerPolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        {/* AYAT ALQUR'AN */}
+                        <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 py-[80px] bg-white/75
+                                        backdrop-blur-xl  overflow-hidden'>
                         
+
+                        <Image
+                            src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
+                            width={1200}
+                            height={1200}
+                            className='w-full  absolute -top-40 left-0 object-contain'
+                            alt='appstore'
+                        />
+                        <Image
+                            src={gDrive+'1R6BXggwE1GRqXKrcdM65MGL7OCi8hEwL'+gDriveAuth}
+                            width={1200}
+                            height={1200}
+                            className='w-[10%] object-cover fadeUp'
+                            alt='appstore'
+                        />
+                        <p className='text-center fadeUp mt-10'>
+                            “Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
+                            agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
+                            Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
+                        </p>
+                        <p className='text-center text-lg pt-4 pb-20 font-bold fadeUp'>
+                            (QS. Ar-Rum ayat 21)
+                        </p>
+
+                        <Image
+                            src={dataWeding.content.img_quote_1}
+                            width={1200}
+                            height={1200}
+                            className='w-full object-cover fadeUp rounded-br-3xl rounded-tl-3xl rounded-bl rounded-tr'
+                            alt='appstore'
+                        />
+                        <p className='text-center fadeUp text-sm px-12 lg:px-20 my-12 fadeUp'>
+                            We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
+                        </p>
+                        </div>
+                        {/* MEMPELAI BRIDE*/}
+                        <div id='mempelai' className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 py-[40px] bg-white/75
+                                                backdrop-blur-xl overflow-hidden text-center '>
+                                
+                                <Image
+                                    src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
+                                    width={1200}
+                                    height={1200}
+                                    className='w-1/2 absolute -top-20 right-0 object-contain transform rotate-90 scale-x-[-1]'
+                                    alt='appstore'
+                                />
+
+                                <Image
+                                    src = {dataWeding.content.bride_pic}
+                                    width={1200}
+                                    height={1200}
+                                    className='w-[140px] h-[140px] object-cover rounded-full fadeUp p-3  bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
+                                    alt='appstore'
+                                />
+                                <h1 className='font-bold text-3xl px-[80px] py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
+                                <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
+                                <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
+                                    <FaInstagram/>
+                                    {dataWeding.content.bride_ig_account}
+                                </div>
+                            </div>
+                        {/* MEMPELAI GROOM*/}
+                        <div id='' className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 py-[40px] bg-white/75
+                                                backdrop-blur-xl  overflow-hidden text-center bg'>
+                                <Image
+                                    src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
+                                    width={1200}
+                                    height={1200}
+                                    className='w-1/2 absolute -bottom-20 left-0 object-contain transform rotate-90 scale-y-[-1] '
+                                    alt='appstore'
+                                />
+                                <Image
+                                    src = {dataWeding.content.groom_pic}
+                                    width={1200}
+                                    height={1200}
+                                    className='w-[140px] h-[140px] object-cover rounded-full fadeUp  p-3 bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
+                                    alt='appstore'
+                                />
+                                <h1 className='font-bold text-3xl px-[80px] py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
+                                <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan {dataWeding.content.groom_mother}</h1>
+                                <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
+                                    <FaInstagram/>
+                                    {dataWeding.content.groom_ig_account}
+                                </div>
+                            </div>
+
+                        {/* INFO ACARA */}
+                        <div id='jadwal' className='w-full  relative'>
+                       
+                        <div className='w-full  flex flex-col items-center justify-center text-[#3c3838] p-8 space-y-6 '>
+                            <div className='bg-white/70 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
+                                <div className='flex flex-col items-center justify-center text-center gap-y-2'>
+                                    <h1 className='text-3xl  fadeUp mb-6 fadeUp'>Akad Nikah</h1>
+                                    <h1 className='text-sm fadeUp'>{dataWeding.content.day} {dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
+                                    <h1 className='text-sm fadeUp'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
+                                    <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue}</h1>
+                                    <h1 className='text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
+                                    <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                                        <FaSearchLocation/> view Location
+                                    </button>
+                                </div>
+                            </div>
+                            <div className='bg-white/70 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
+                                <div className='flex flex-col items-center justify-center text-center gap-y-2'>
+                                    <h1 className='text-3xl  fadeUp mb-6 fadeUp'>Resepsi</h1>
+                                    <h1 className='text-sm fadeUp'>{dataWeding.content.day} {dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
+                                    <h1 className='text-sm fadeUp'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
+                                    <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue} </h1>
+                                    <h1 className='text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
+                                    <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                                        <FaSearchLocation/> view Location
+                                    </button>
+                                </div>
+                            </div>
+                          
+                        </div>
                     </div>
+
+                        {/* GOOGLE MAP */}
+                        <div className='w-full relative text-sm flex flex-col items-center justify-center px-8 space-y-8 py-[80px] bg-white/90 backdrop-blur-xl overflow-hidden'>
+                            {/* <Image
+                                src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
+                                width={1200}
+                                height={1200}
+                                className='w-full  absolute -top-40 left-0 object-contain'
+                                alt='appstore'
+                            /> */}
+
+                            <iframe src={dataWeding.content.gmap_frame}
+                                className='w-full h-[300px] rounded-xl'
+                                width="600" 
+                                height="600" 
+                                style={{border:0}} 
+                                allowFullScreen="" 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            
+                        </div>
 
               
                 {/* COUNTDOWN */}
-                <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}} bgImage={dataWeding.content.bg_accent}/>
+                <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}} bgImage={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}/>
 
-                <Gallery id={'gallery'} images={images} anim={{fadeUp:'fadeUp'}}/>
+                {/* <Gallery id={'gallery'} images={images} anim={{fadeUp:'fadeUp'}}/> */}
 
                 {/* YOUTUBE */}
-                <div className='w-full flex flex-col items-center justify-center px-4  gap-y-8 py-20 bg-white fadeUp'>
+                <div className='w-full flex flex-col items-center justify-center px-4  gap-y-8 py-20 bg-white/90 backdrop-blur-xl '>
                     <iframe 
                         className='w-full fadeUp rounded-xl'
                         height="315" 
@@ -493,10 +483,10 @@ function PresA04({url}) {
 
                 <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
-                <GalleryFade images={images_slide} anim={{fadeUp:'fadeUp'}}/>
+                <GalleryFade images={imagesGallery} anim={{fadeUp:'fadeUp'}}/>
 
                 {/* GIFT */}
-                <div id='gift' className='h-full bg-white py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
+                <div id='gift' className='h-full w-full bg-white/90 backdrop-blur-xl py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center'  >
                        <h1 className='text-[2.5rem] '>Gifts</h1>
                        <div className=' relative rounded-lg'>
                             <Image
