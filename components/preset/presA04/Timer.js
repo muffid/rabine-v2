@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
+import { cinzel } from '../../globals/Fonts'
 import { useState, useEffect,useRef} from 'react'
 import { FaCalendarAlt, FaRegCalendarPlus } from "react-icons/fa"
 const Timer = (props) => {
@@ -56,7 +56,7 @@ const Timer = (props) => {
             className='w-full rounded-3xl absolute -top-40 left-0 object-contain'
             alt='appstore'
         /> */}
-        <h1 className='text-xl'>SAVE THE DATE</h1>
+        <h1 className={'text-3xl '+cinzel.className}>SAVE THE DATE</h1>
      
          <div className={'grid grid-cols-2 gap-8 z-10 '+fadeUp}>
             <div className='flex flex-col items-center justify-center bg-white px-4 py-2 rounded-xl shadow-xl'>

@@ -9,6 +9,7 @@ import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram,
         FaSearchLocation, FaRegCopy, FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
 import GalleryFade from '../../components/preset/presA04/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
+import {cinzel,damion} from '../../components/globals/Fonts'
 
 
 function PresA04({url}) {
@@ -87,9 +88,6 @@ function PresA04({url}) {
         setTopPosition(topPosition - 1000)
         togglePlay()
     }
-   
-    
-  
 
     const imagesGallery = [
         { src: gDrive+'1yl2NLtG52YRfgEPa5Ck4x6RXxO_O9Ywv'+gDriveAuth, alt: 'presA02' },
@@ -133,8 +131,6 @@ function PresA04({url}) {
         })
     },[])
 
-
-  
     return (
         <div className=' w-full box-content text-white font-Wix'>
 
@@ -174,7 +170,7 @@ function PresA04({url}) {
                             <h1>THE WEDDING OF</h1>
 
                             {/* TO DO: NAMA KEDUA MEMPELAI*/}
-                            <h1 className='font-bold text-5xl pb-8 font-Photograph-Signature'>{dataWeding.content.couple}</h1>
+                            <h1 className={'font-bold text-5xl pb-8 '+damion.className}>{dataWeding.content.couple}</h1>
 
                             <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
                             <h1 className='py-8 font-bold'>{to}</h1>
@@ -286,13 +282,13 @@ function PresA04({url}) {
                     {/* OPENING_PHOTO */}
                    <div id='opening' className='w-full h-screen text-white relative'>
                         <div className=' absolute top-0  w-full h-full flex flex-col items-center justify-end pb-20 fadeUp'>
-                            <p>The Wedding Of</p>
+                            <p className={cinzel.className}>The Wedding Of</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className='font-bold text-6xl pt-4 pb-8 font-Photograph-Signature text-center'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                            <h1 className={' text-6xl pt-4 pb-8  text-center '+damion.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                         
                                 {/* TO DO: TANGGAL NIKAH*/}
-                                <p className='text-center'>{dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</p> 
+                                <p className={'text-center '+cinzel.className}>{dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</p> 
                         </div>
 
                         {/* TO DO: GAMBAR OPENING*/}
@@ -340,7 +336,7 @@ function PresA04({url}) {
                             agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
                             Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
                         </p>
-                        <p className='text-center text-lg pt-4 pb-20 font-bold fadeUp'>
+                        <p className={'text-center text-lg pt-4 pb-20 font-bold fadeUp '+cinzel.className}>
                             (QS. Ar-Rum ayat 21)
                         </p>
 
@@ -371,10 +367,10 @@ function PresA04({url}) {
                                     src = {dataWeding.content.bride_pic}
                                     width={1200}
                                     height={1200}
-                                    className='w-[140px] h-[140px] object-cover rounded-full fadeUp p-3  bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
+                                    className='w-[160px] h-[160px] object-cover rounded-full fadeUp p-3  bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
-                                <h1 className='font-bold text-3xl px-[80px] py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
+                                <h1 className={'text-5xl px-[60px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.bride_sure_name}</h1>
                                 <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
                                     <FaInstagram/>
@@ -395,10 +391,10 @@ function PresA04({url}) {
                                     src = {dataWeding.content.groom_pic}
                                     width={1200}
                                     height={1200}
-                                    className='w-[140px] h-[140px] object-cover rounded-full fadeUp  p-3 bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
+                                    className='w-[160px] h-[160px] object-cover rounded-full fadeUp  p-3 bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
-                                <h1 className='font-bold text-3xl px-[80px] py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
+                                <h1 className={'text-5xl px-[60px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.groom_sure_name}</h1>
                                 <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan {dataWeding.content.groom_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
                                     <FaInstagram/>
@@ -412,7 +408,7 @@ function PresA04({url}) {
                         <div className='w-full  flex flex-col items-center justify-center text-[#3c3838] p-8 space-y-6 '>
                             <div className='bg-white/70 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
                                 <div className='flex flex-col items-center justify-center text-center gap-y-2'>
-                                    <h1 className='text-3xl  fadeUp mb-6 fadeUp'>Akad Nikah</h1>
+                                    <h1 className={'text-3xl  fadeUp mb-6 fadeUp '+cinzel.className}>Akad Nikah</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.day} {dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
                                     <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue}</h1>
@@ -425,7 +421,7 @@ function PresA04({url}) {
                             </div>
                             <div className='bg-white/70 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
                                 <div className='flex flex-col items-center justify-center text-center gap-y-2'>
-                                    <h1 className='text-3xl  fadeUp mb-6 fadeUp'>Resepsi</h1>
+                                    <h1 className={'text-3xl  fadeUp mb-6 fadeUp '+cinzel.className}>Resepsi</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.day} {dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
                                     <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue} </h1>
@@ -487,7 +483,7 @@ function PresA04({url}) {
 
                 {/* GIFT */}
                 <div id='gift' className='h-full w-full bg-white/90 backdrop-blur-xl py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center'  >
-                       <h1 className='text-[2.5rem] '>Gifts</h1>
+                       <h1 className={'text-[2.5rem] '+cinzel.className}>Gifts</h1>
                        <div className=' relative rounded-lg'>
                             <Image
                                 src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
@@ -530,7 +526,7 @@ function PresA04({url}) {
                 <div className='w-full  relative text-center h-[500px]'>
                     <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
                         <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                        <h1 className='font-bold text-3xl py-4 font-Photograph-Signature'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                        <h1 className={'font-bold text-5xl py-4 '+damion.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                        
                             <p className='w-1/3'>Thank You</p>
                        
