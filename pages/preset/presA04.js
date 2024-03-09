@@ -370,7 +370,7 @@ function PresA04({url}) {
                                     className='w-[160px] h-[160px] object-cover rounded-full fadeUp p-3  bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
-                                <h1 className={'text-5xl px-[60px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.bride_sure_name}</h1>
+                                <h1 className={'text-5xl px-[40px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.bride_sure_name}</h1>
                                 <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
                                     <FaInstagram/>
@@ -394,7 +394,7 @@ function PresA04({url}) {
                                     className='w-[160px] h-[160px] object-cover rounded-full fadeUp  p-3 bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
-                                <h1 className={'text-5xl px-[60px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.groom_sure_name}</h1>
+                                <h1 className={'text-5xl px-[40px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.groom_sure_name}</h1>
                                 <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan {dataWeding.content.groom_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
                                     <FaInstagram/>
@@ -483,7 +483,7 @@ function PresA04({url}) {
 
                 {/* GIFT */}
                 <div id='gift' className='h-full w-full bg-white/90 backdrop-blur-xl py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center'  >
-                       <h1 className={'text-[2.5rem] '+cinzel.className}>Gifts</h1>
+                       <h1 className={'text-3xl '+cinzel.className}>Gifts</h1>
                        <div className=' relative rounded-lg'>
                             <Image
                                 src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}

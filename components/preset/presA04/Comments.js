@@ -111,7 +111,7 @@ export default function Comments({slug,url,tamu}) {
       }, [replyingTo])
     return (
         <div id='doa' className='w-full bg-white/90 backdrop-blur-xl p-6 flex flex-col items-center gap-y-2 px-8 text-[#3c3838]'>
-            <h1 className={'text-[2.5rem] fadeUp '+cinzel.className}>Kirim Ucapan</h1>
+            <h1 className={'text-3xl fadeUp '+cinzel.className}>Kirim Ucapan</h1>
             <h1 className='text-sm text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
                 value={namaTamu}

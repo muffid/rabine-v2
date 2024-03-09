@@ -6,10 +6,11 @@ import { useState} from 'react'
 import Timer from '../../components/preset/presA03/Timer'
 import Gallery from '../../components/preset/presA03/Gallery'
 import Comments from '../../components/preset/presA03/Comments'
-import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
-        FaSearchLocation, FaRegCopy, FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
+import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, FaRegCopy, 
+    FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
 import GalleryFade from '../../components/preset/presA02/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
+import { stalemate,forum } from '../../components/globals/Fonts'
 
 
 function PresA03({url}) {
@@ -143,7 +144,7 @@ function PresA03({url}) {
 
   
     return (
-        <div className=' w-full box-content text-white font-Wix'>
+        <div className={ ' w-full box-content text-white '+forum.className}>
 
             {/* TO DO: BACKDOUND MP3*/}
             <audio  loop ref={audioRef} src="/audio/wedding-cinematic.mp3" />
@@ -181,7 +182,7 @@ function PresA03({url}) {
                             <h1>THE WEDDING OF</h1>
 
                             {/* TO DO: NAMA KEDUA MEMPELAI*/}
-                            <h1 className='font-bold text-5xl pb-8 font-Photograph-Signature'>{dataWeding.content.couple}</h1>
+                            <h1 className={' text-6xl py-8 '+stalemate.className}>{dataWeding.content.couple}</h1>
 
                             <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
                             <h1 className='py-8 font-bold'>{to}</h1>
@@ -291,13 +292,13 @@ function PresA03({url}) {
                     {/* OPENING_PHOTO */}
                    <div id='opening' className='w-full h-screen relative'>
                         <div className=' absolute top-0 bg-gradient-to-t from-white via-white/20 to-transparent w-full h-full flex flex-col items-center justify-start pt-20 fadeUp'>
-                            <p>The Wedding Of</p>
+                            <p className={forum.className}>The Wedding Of</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className='font-bold text-6xl pt-4 pb-8 font-Photograph-Signature text-center'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                            <h1 className={'text-6xl pt-4 pb-8  text-center '+stalemate.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                         
                                 {/* TO DO: TANGGAL NIKAH*/}
-                                <p className='text-center'>{dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</p> 
+                                <p className={ 'text-center '+forum.className}>{dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</p> 
                         </div>
 
                         {/* TO DO: GAMBAR OPENING*/}
@@ -325,7 +326,7 @@ function PresA03({url}) {
                             agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. 
                             Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
                         </p>
-                        <p className='text-center text-lg py-4 font-bold fadeUp'>
+                        <p className={'text-center text-lg py-4 font-bold fadeUp '+forum.className}>
                             (QS. Ar-Rum ayat 21)
                         </p>
                     </div>
@@ -366,7 +367,7 @@ function PresA03({url}) {
                                         src = {dataWeding.content.bride_pic}
                                         width={1200}
                                         height={1200}
-                                        className='w-[230px] h-[230px] object-cover rounded-full fadeUp'
+                                        className='w-[160px] h-[160px] object-cover rounded-full fadeUp'
                                         alt='appstore'
                                 />
                                 <Image
@@ -377,7 +378,7 @@ function PresA03({url}) {
                                         alt='appstore'
                                 />
                             </div>
-                            <h1 className='font-bold text-[2.7rem] font-Photograph-Signature py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
+                            <h1 className={' text-6xl px-[60px] py-6 fadeUp text-[#3c3838] '+stalemate.className}>{dataWeding.content.bride_sure_name}</h1>
                             <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
                             <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
                                 <FaInstagram/>
@@ -389,7 +390,7 @@ function PresA03({url}) {
                                         src = {dataWeding.content.groom_pic}
                                         width={1200}
                                         height={1200}
-                                        className='w-[230px] h-[230px] object-cover rounded-full fadeUp'
+                                        className='w-[160px] h-[160px] object-cover rounded-full fadeUp'
                                         alt='appstore'
                                 />
                                 <Image
@@ -400,7 +401,7 @@ function PresA03({url}) {
                                         alt='appstore'
                                 />
                             </div>
-                            <h1 className='font-bold text-[2.7rem] font-Photograph-Signature py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
+                            <h1 className={' text-6xl px-[60px] py-6 fadeUp text-[#3c3838] '+stalemate.className}>{dataWeding.content.groom_sure_name}</h1>
                             <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan {dataWeding.content.groom_mother}</h1>
                             <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
                                 <FaInstagram/>
@@ -409,7 +410,7 @@ function PresA03({url}) {
                     </div>
 
                     {/* INFO ACARA */}
-                    <div id='jadwal' className='w-full h-full relative px-12 flex flex-col items-center justify-center gap-y-6 py-12'>
+                    <div id='jadwal' className={'w-full h-full relative px-12 flex flex-col items-center justify-center gap-y-6 py-12 '+forum.className}>
                         <Image
                             src={dataWeding.content.bg_accent}
                             fill
@@ -525,7 +526,7 @@ function PresA03({url}) {
                     <div className='w-full  relative text-center h-[500px]'>
                         <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
                             <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                            <h1 className='font-bold text-3xl py-4 font-Photograph-Signature'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                            <h1 className={'font-bold text-6xl py-4 '+stalemate.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                            
                                 <p className='w-1/3'>Thank You</p>
                            

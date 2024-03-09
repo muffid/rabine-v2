@@ -1,4 +1,4 @@
-import { Cinzel_Decorative, Damion } from 'next/font/google'
+import { Cinzel_Decorative, Damion, Stalemate, Forum } from 'next/font/google'
  
 const cinzel = Cinzel_Decorative({
  weight:['400','700','900'],
@@ -12,4 +12,16 @@ const damion = Damion({
   display: 'swap',
 })
 
-export {cinzel,damion}
+const stalemate = Stalemate({
+ weight:['400'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const forum = Forum({
+ weight:['400'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+export {cinzel,damion,stalemate,forum}
