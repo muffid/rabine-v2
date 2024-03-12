@@ -542,7 +542,7 @@ function PresA01({url}) {
 
                     {/* CLOSING */}
                     <div className='w-full  relative'>
-                        <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end z-10'>
+                        <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end z-[5]'>
                             <p >Two souls become one, two hearts beat as one</p>
                             <h1 className='font-bold text-6xl py-4 font-Royal-Exq capitalize'>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
                             <div className='flex flex-row items-end justify-start w-full'>
