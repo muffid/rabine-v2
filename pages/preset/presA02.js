@@ -7,9 +7,10 @@ import Timer from '../../components/preset/presA02/Timer'
 import Gallery from '../../components/preset/presA02/Gallery'
 import Comments from '../../components/preset/presA02/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
-        FaSearchLocation, FaRegCopy, FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
+        FaSearchLocation, FaRegCopy, FaPause } from "react-icons/fa"
 import GalleryFade from '../../components/preset/presA02/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
+import Navigasi from '../../components/preset/globals/Navigasi'
 
 
 function PresA02({url}) {
@@ -61,6 +62,7 @@ function PresA02({url}) {
              img_quote_1 : gDrive+'1Ashrm9adEFN5vtRks7eX4dERxw4bHUGO'+gDriveAuth,
              img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
              img_closing : gDrive+'137P5NNInljaNuOBmsxVy20QNDS4of3Cq'+gDriveAuth,
+             btn_couple : gDrive+'1h8uZYbOlJmeqFi7BbMjCylr22828r3K4'+gDriveAuth
          }
      } 
  
@@ -68,7 +70,7 @@ function PresA02({url}) {
     const dateCountDown = dataWeding.content.year+'-'+dataWeding.content.month+'-'+dataWeding.content.date+'T'+dataWeding.content.start_akad.substring(0, 5)+':00Z'
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
-    const [scrollTo, setScrollTo] = useState('opening')
+  
 
     const togglePlay = () => {
         if (isPlaying) {
@@ -106,14 +108,9 @@ function PresA02({url}) {
         { src: gDrive+'1yz8XuZmJOWV8mSedIS9RnrcnJ4hfW5nH'+gDriveAuth, alt: 'presA02' },
     ]
 
-    const scrollToTarget = (targetId) => {
-       setScrollTo(targetId)
-    }
 
-    useEffect(()=>{
-        const element = document.getElementById(`${scrollTo}`)
-        element.scrollIntoView({behavior:'smooth'})
-      },[scrollTo])
+
+   
 
     useEffect(()=>{
         const fadeUpElements = document.querySelectorAll(".fadeUp")
@@ -278,15 +275,7 @@ function PresA02({url}) {
                     </div>
 
                     {/* NAVIGASI MENU BAWAH */}
-                    <div className='lg:hidden flex flex-row text-white text-xl items-center justify-center w-full fixed z-10 bottom-0 py-6 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('mempelai')}><FaHeart/> <h1 className='text-xs'>couple</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs'>Tanggal</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('lokasi')}><FaMapMarked/> <h1 className='text-xs'>Map</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaCamera/> <h1 className='text-xs'>Galery</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gift')}><FaGifts/> <h1 className='text-xs'>Hadiah</h1></div>    
-                   </div>
-
+                   <Navigasi imgThumb={dataWeding.content.btn_couple}/>
                     {/* OPENING_PHOTO */}
                    <div id='opening' className='w-full h-screen relative'>
                         <div className='p-12 absolute top-0 bg-gradient-to-t from-black/20 to-transparent w-full h-full text-white flex flex-col items-center justify-end pb-40 fadeUp'>
@@ -458,7 +447,7 @@ function PresA02({url}) {
                         </iframe>
                     </div>
 
-                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+                    {/* <Comments slug={dataWeding.META.slug} url={url} tamu={to}/> */}
 
                     <GalleryFade images={images_slide}/>
 

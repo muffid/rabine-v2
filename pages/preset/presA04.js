@@ -6,10 +6,11 @@ import { useState} from 'react'
 import Timer from '../../components/preset/presA04/Timer'
 import Comments from '../../components/preset/presA04/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
-        FaSearchLocation, FaRegCopy, FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
+        FaSearchLocation, FaRegCopy, FaPause} from "react-icons/fa"
 import GalleryFade from '../../components/preset/presA04/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 import {cinzel,damion} from '../../components/globals/Fonts'
+import Navigasi from '../../components/preset/globals/Navigasi'
 
 
 function PresA04({url}) {
@@ -54,7 +55,7 @@ function PresA04({url}) {
              venue_address : "Jl. Ir. Juanda No 381A, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat",
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-             bg_opening : gDrive+'1CbsyFobRZDRX69JnWnY1PHTZCURVQv0s'+gDriveAuth,
+             bg_opening : gDrive+'1yl2NLtG52YRfgEPa5Ck4x6RXxO_O9Ywv'+gDriveAuth,
              bg_first_section :gDrive+'1r76ksTfcpB6bfiu0WrLDC_wCG7DHikqP'+gDriveAuth,
              bg_mempelai : gDrive+"1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM"+gDriveAuth,
              bg_accent : gDrive+"1ww8ylxfitcTgM-0uX5GcVVOC_1-PoF1Q"+gDriveAuth,
@@ -62,6 +63,7 @@ function PresA04({url}) {
              img_quote_1 : gDrive+'1yl2NLtG52YRfgEPa5Ck4x6RXxO_O9Ywv'+gDriveAuth,
              img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
              img_closing : gDrive+'1LjnDmiZ0kfVftFEDIbxLQ-abXJyc7lgJ'+gDriveAuth,
+             btn_couple : gDrive+'1NYfTS8Z7q3836NKvKWazfdZcDrsgn0j3'+gDriveAuth,
          }
      } 
  
@@ -69,7 +71,7 @@ function PresA04({url}) {
     const dateCountDown = dataWeding.content.year+'-'+dataWeding.content.month+'-'+dataWeding.content.date+'T'+dataWeding.content.start_akad.substring(0, 5)+':00Z'
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
-    const [scrollTo, setScrollTo] = useState('opening')
+
 
     const togglePlay = () => {
         if (isPlaying) {
@@ -98,14 +100,6 @@ function PresA04({url}) {
         // tambhakan lagi kalau masih ada....
     ]
 
-    const scrollToTarget = (targetId) => {
-       setScrollTo(targetId)
-    }
-
-    useEffect(()=>{
-        const element = document.getElementById(`${scrollTo}`)
-        element.scrollIntoView({behavior:'smooth'})
-      },[scrollTo])
 
     useEffect(()=>{
         const fadeUpElements = document.querySelectorAll(".fadeUp")
@@ -270,14 +264,7 @@ function PresA04({url}) {
                     </div>
 
                     {/* NAVIGASI MENU BAWAH */}
-                    <div className='lg:hidden flex flex-row text-white text-xl items-center justify-center w-full fixed z-20 bottom-0 py-6 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('mempelai')}><FaHeart/> <h1 className='text-xs'>couple</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs'>Tanggal</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('lokasi')}><FaMapMarked/> <h1 className='text-xs'>Map</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaCamera/> <h1 className='text-xs'>Galery</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('doa')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gift')}><FaGifts/> <h1 className='text-xs'>Hadiah</h1></div>    
-                   </div>
+                   <Navigasi imgThumb={dataWeding.content.btn_couple}/>
 
                     {/* OPENING_PHOTO */}
                    <div id='opening' className='w-full h-screen text-white relative'>
@@ -370,7 +357,7 @@ function PresA04({url}) {
                                     className='w-[160px] h-[160px] object-cover rounded-full fadeUp p-3  bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
-                                <h1 className={'text-5xl px-[40px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.bride_sure_name}</h1>
+                                <h1 className={'text-5xl px-[30px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.bride_sure_name}</h1>
                                 <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
                                     <FaInstagram/>
@@ -394,7 +381,7 @@ function PresA04({url}) {
                                     className='w-[160px] h-[160px] object-cover rounded-full fadeUp  p-3 bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
-                                <h1 className={'text-5xl px-[40px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.groom_sure_name}</h1>
+                                <h1 className={'text-5xl px-[30px] py-6 fadeUp text-[#3c3838] '+damion.className}>{dataWeding.content.groom_sure_name}</h1>
                                 <h1 className='my-2 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan {dataWeding.content.groom_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#884D30] rounded-full'>
                                     <FaInstagram/>
@@ -437,7 +424,7 @@ function PresA04({url}) {
                     </div>
 
                         {/* GOOGLE MAP */}
-                        <div className='w-full relative text-sm flex flex-col items-center justify-center px-8 space-y-8 py-[80px] bg-white/90 backdrop-blur-xl overflow-hidden'>
+                        <div id='lokasi' className='w-full relative text-sm flex flex-col items-center justify-center px-8 space-y-8 py-[80px] bg-white/90 backdrop-blur-xl overflow-hidden'>
                             {/* <Image
                                 src={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}
                                 width={1200}
@@ -469,17 +456,17 @@ function PresA04({url}) {
                     <iframe 
                         className='w-full fadeUp rounded-xl'
                         height="315" 
-                        src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO" 
+                        src="https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO?autoplay=1" 
                         title="YouTube video player" 
-                      
+                    
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowFullScreen>
+                       >
                     </iframe>
                 </div>
 
-                <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+                {/* <Comments slug={dataWeding.META.slug} url={url} tamu={to}/> */}
 
-                <GalleryFade images={imagesGallery} anim={{fadeUp:'fadeUp'}}/>
+                <GalleryFade images={imagesGallery} anim={{fadeUp:'fadeUp'}} id="gallery5tg "/>
 
                 {/* GIFT */}
                 <div id='gift' className='h-full w-full bg-white/90 backdrop-blur-xl py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center'  >

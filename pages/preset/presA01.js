@@ -7,9 +7,10 @@ import Timer from '../../components/preset/presA01/Timer'
 import Gallery from '../../components/preset/presA01/Gallery'
 import Comments from '../../components/preset/presA01/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
-        FaSearchLocation, FaRegCopy, FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
+        FaSearchLocation, FaRegCopy, FaPause } from "react-icons/fa"
 import { Parallax } from 'react-scroll-parallax'
 import Watermark from '../../components/preset/globals/Watermark'
+import Navigasi from '../../components/preset/globals/Navigasi'
 
 
 
@@ -61,7 +62,8 @@ function PresA01({url}) {
             img_left :  gDrive+"1MEs2yPZirA-7xNaP_1v8GXUpbWBQqP_M"+gDriveAuth,
             img_quote : gDrive+"1MEs2yPZirA-7xNaP_1v8GXUpbWBQqP_M"+gDriveAuth,
             img_closing : gDrive+'1Du7GKLv0R3xpQbyrKmWRWO4S_v707LVG'+gDriveAuth,
-            bg_resepsi : gDrive+"1S1z6FeSnHJLlaWqpI7Yiz0w0X3e-Hw9W"+gDriveAuth
+            bg_resepsi : gDrive+"1S1z6FeSnHJLlaWqpI7Yiz0w0X3e-Hw9W"+gDriveAuth,
+            btn_couple : gDrive+'16NSBeIdM2CEBpljlPUcwmkw2j1c7t0ul'+gDriveAuth
             
         }
     } 
@@ -79,7 +81,7 @@ function PresA01({url}) {
     const dateCountDown = dataWeding.content.year+'-'+dataWeding.content.month+'-'+dataWeding.content.date+'T'+dataWeding.content.start_akad.substring(0, 5)+':00Z'
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
-    const [scrollTo, setScrollTo] = useState('opening')
+
 
     const togglePlay = () => {
         if (isPlaying) {
@@ -98,18 +100,6 @@ function PresA01({url}) {
         setTopPosition(topPosition - 1000)
         togglePlay()
     }
-
-    const scrollToTarget = (targetId) => {
-       setScrollTo(targetId)
-    }
-
-
-    useEffect(()=>{
-        const element = document.getElementById(`${scrollTo}`)
-        element.scrollIntoView({behavior:'smooth'})
-      },[scrollTo])
-
-  
 
     useEffect(()=>{
       
@@ -273,15 +263,7 @@ function PresA01({url}) {
                     </div>
 
                     {/* NAVIGASI MENU BAWAH */}
-                    <div className='lg:hidden flex flex-row text-white text-xl items-center justify-center w-full fixed z-10 bottom-0 py-6 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('mempelai')}><FaHeart/> <h1 className='text-xs'>couple</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs'>Tanggal</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('lokasi')}><FaMapMarked/> <h1 className='text-xs'>Map</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaCamera/> <h1 className='text-xs'>Galery</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gift')}><FaGifts/> <h1 className='text-xs'>Hadiah</h1></div>    
-                   </div>
-
+                    <Navigasi imgThumb={dataWeding.content.btn_couple}/>
                     {/* OPENING_PHOTO */}
                    <div id='opening' className='w-full h-screen relative'>
                         <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end fadeUp'>
@@ -513,7 +495,7 @@ function PresA01({url}) {
                     </div>
 
                     {/* COMMENTS */}
-                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+                    {/* <Comments slug={dataWeding.META.slug} url={url} tamu={to}/> */}
 
                     <Gallery id={'gallery'} images={imagesGallery}/>
 

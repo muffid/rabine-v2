@@ -7,10 +7,11 @@ import Timer from '../../components/preset/presA03/Timer'
 import Gallery from '../../components/preset/presA03/Gallery'
 import Comments from '../../components/preset/presA03/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, FaRegCopy, 
-    FaPause, FaHeart, FaCalendarAlt, FaMapMarked, FaCamera, FaComment, FaGifts } from "react-icons/fa"
+    FaPause } from "react-icons/fa"
 import GalleryFade from '../../components/preset/presA02/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 import { stalemate,forum } from '../../components/globals/Fonts'
+import Navigasi from '../../components/preset/globals/Navigasi'
 
 
 function PresA03({url}) {
@@ -31,8 +32,8 @@ function PresA03({url}) {
              bride_name : "Citra", 
              groom_sure_name : "Andre Taulanu",
              bride_sure_name : "Citra Lestari Alamku",
-             groom_pic : gDrive+"14xE0FzWKm9ZTTok7lRGCTmhHTYL834Y-"+gDriveAuth, 
-             bride_pic : gDrive+'1G3tQ5T_yjEruo97Cx5xr8T90ZqY6JeHO'+gDriveAuth, 
+             groom_pic : gDrive+"1-0DYY-u_CD11ZV92C0PPG76bp9HbhfWj"+gDriveAuth, 
+             bride_pic : gDrive+'1LzBKATYO2mfK2t1h3d_1lTrQO4NT-3I7'+gDriveAuth, 
              groom_father : "Budi Mulyanto", // Hanya nama dan Gelar
              groom_mother : "Rasmitha Sari", // Hanya nama dan Gelar
              bride_father : "Doni Tata", // Hanya nama dan Gelar
@@ -55,14 +56,15 @@ function PresA03({url}) {
              venue_address : "Jl. Ir. Juanda No 381A, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat",
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-             bg_opening : gDrive+'1CbsyFobRZDRX69JnWnY1PHTZCURVQv0s'+gDriveAuth,
-             bg_first_section :gDrive+'1RGBYTlMThTvVwetz0TGPPgYsioW2JYgv'+gDriveAuth,
-             bg_mempelai : gDrive+"1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM"+gDriveAuth,
+             bg_opening : gDrive+'1cRIeqypwvE-KJEnmnUpgLKcPG6a3bKxc'+gDriveAuth,
+             bg_first_section :gDrive+'1jRjSoToWaKO708DmXGtix5-FW94o2Hpm'+gDriveAuth,
+             bg_mempelai : gDrive+"12UZ2FwiWHBnLwygxmUzPxlLs5MdVdLby"+gDriveAuth,
              bg_accent : gDrive+"1ww8ylxfitcTgM-0uX5GcVVOC_1-PoF1Q"+gDriveAuth,
-             img_left :  gDrive+"1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz"+gDriveAuth,
-             img_quote_1 : gDrive+'1Ashrm9adEFN5vtRks7eX4dERxw4bHUGO'+gDriveAuth,
-             img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
-             img_closing : gDrive+'137P5NNInljaNuOBmsxVy20QNDS4of3Cq'+gDriveAuth,
+             img_left :  gDrive+"1cRIeqypwvE-KJEnmnUpgLKcPG6a3bKxc"+gDriveAuth,
+             img_quote_1 : gDrive+'1OdtzeKV_3PwVKwJTj7mOjbZJkTC2m1rq'+gDriveAuth,
+             img_quote_2 : gDrive+'1OdtzeKV_3PwVKwJTj7mOjbZJkTC2m1rq'+gDriveAuth,
+             img_closing : gDrive+'12UZ2FwiWHBnLwygxmUzPxlLs5MdVdLby'+gDriveAuth,
+             btn_couple : gDrive+'1soqjBmsv1LOlPCKQyvVn5dOcVzz4KxOt'+gDriveAuth,
          }
      } 
  
@@ -70,7 +72,7 @@ function PresA03({url}) {
     const dateCountDown = dataWeding.content.year+'-'+dataWeding.content.month+'-'+dataWeding.content.date+'T'+dataWeding.content.start_akad.substring(0, 5)+':00Z'
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
-    const [scrollTo, setScrollTo] = useState('opening')
+   
 
     const togglePlay = () => {
         if (isPlaying) {
@@ -93,29 +95,24 @@ function PresA03({url}) {
     
     const images = [
   
-        { src: gDrive+'1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1CP7_p7yXSi5lZwrcxqwwGP3U7Y4dPKuO'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1ULN-Ck6-fQU5-TqKd0xaiEw7eQuFWOa5'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1RGBYTlMThTvVwetz0TGPPgYsioW2JYgv'+gDriveAuth, alt: 'presA02' },
+      
+        { src: gDrive+'12UZ2FwiWHBnLwygxmUzPxlLs5MdVdLby'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1E8dEYOeEYu34x726q7kKbY8l-6ERpfxP'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1OdtzeKV_3PwVKwJTj7mOjbZJkTC2m1rq'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1Smwjxyra6kYRD52lg8N4uuo5vea-IHht'+gDriveAuth, alt: 'presA02' },
         
     ]
 
     const images_slide = [
       
-        { src: gDrive+'1sIEbaQgOIBa-DKMMcsKAKEIovneSVfUv'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1CbsyFobRZDRX69JnWnY1PHTZCURVQv0s'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'17IFCKRubmu1ZX10NqYIkblpbaeWHpgjo'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1yz8XuZmJOWV8mSedIS9RnrcnJ4hfW5nH'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'12UZ2FwiWHBnLwygxmUzPxlLs5MdVdLby'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1E8dEYOeEYu34x726q7kKbY8l-6ERpfxP'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1OdtzeKV_3PwVKwJTj7mOjbZJkTC2m1rq'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1Smwjxyra6kYRD52lg8N4uuo5vea-IHht'+gDriveAuth, alt: 'presA02' },
     ]
 
-    const scrollToTarget = (targetId) => {
-       setScrollTo(targetId)
-    }
 
-    useEffect(()=>{
-        const element = document.getElementById(`${scrollTo}`)
-        element.scrollIntoView({behavior:'smooth'})
-      },[scrollTo])
+
 
     useEffect(()=>{
         const fadeUpElements = document.querySelectorAll(".fadeUp")
@@ -243,7 +240,7 @@ function PresA03({url}) {
                                 </div>
                             </div>
                             {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className='text-3xl font-bold text-right font-Batusa'>The Wedding Of {dataWeding.content.couple}</h1>
+                            <h1 className='text-3xl font-bold text-right '>The Wedding Of {dataWeding.content.couple}</h1>
                         </div>
                     </div>
 
@@ -280,18 +277,11 @@ function PresA03({url}) {
                     </div>
 
                     {/* NAVIGASI MENU BAWAH */}
-                    <div className='lg:hidden flex flex-row text-white text-xl items-center justify-center w-full fixed z-20 bottom-0 py-6 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('mempelai')}><FaHeart/> <h1 className='text-xs'>couple</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs'>Tanggal</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('lokasi')}><FaMapMarked/> <h1 className='text-xs'>Map</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaCamera/> <h1 className='text-xs'>Galery</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('doa')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
-                            <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gift')}><FaGifts/> <h1 className='text-xs'>Hadiah</h1></div>    
-                   </div>
-
+                    <Navigasi imgThumb={dataWeding.content.btn_couple}/>
                     {/* OPENING_PHOTO */}
+
                    <div id='opening' className='w-full h-screen relative'>
-                        <div className=' absolute top-0 bg-gradient-to-t from-white via-white/20 to-transparent w-full h-full flex flex-col items-center justify-start pt-20 fadeUp'>
+                        <div className=' absolute top-0 bg-gradient-to-t from-white via-white/10 to-transparent w-full h-full flex flex-col items-center justify-start pt-20 fadeUp'>
                             <p className={forum.className}>The Wedding Of</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
@@ -354,13 +344,13 @@ function PresA03({url}) {
                     <div id='mempelai' className='w-full relative bg-center bg-cover flex flex-col text-sm items-center justify-between
                                                       text-center bg-white overflow-hidden px-4 py-28 fadeUp'>
                        
-                            <Image
+                            {/* <Image
                                 src = {dataWeding.content.bg_mempelai}
                                 width={1200}
                                 height={1200}
-                                className='w-full h-full object-cover absolute  top-0'
+                                className='w-full h-full object-contain absolute  top-0'
                                 alt='appstore'
-                            />
+                            /> */}
                             <div className='absolute top-0 w-full h-full  bg-white/70 flex'></div>
                             <div className='relative flex flex-col items-center justify-center max-w-[400px] max-h-[400px] fadeUp rounded-full'>
                                 <Image
@@ -477,7 +467,7 @@ function PresA03({url}) {
                         </iframe>
                     </div>
 
-                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+                    {/* <Comments slug={dataWeding.META.slug} url={url} tamu={to}/> */}
 
                     <GalleryFade images={images_slide} anim={{fadeUp:'fadeUp'}}/>
 
@@ -523,14 +513,14 @@ function PresA03({url}) {
                     </div>
 
                     {/* CLOSING */}
-                    <div className='w-full  relative text-center h-[500px]'>
-                        <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
-                            <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                            <h1 className={'font-bold text-6xl py-4 '+stalemate.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
-                           
+                    <div className='w-full  relative text-white'>
+                        <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end z-[5]'>
+                            <p >Two souls become one, two hearts beat as one</p>
+                            <h1 className={' text-6xl py-4  capitalize '+stalemate.className}>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
+                            <div className='flex flex-row items-end justify-start w-full'>
                                 <p className='w-1/3'>Thank You</p>
-                           
-                            
+                                <div className='w-2/3 h-[1px] bg-white'></div>
+                            </div>
                         </div>
                         <Image
                             src={dataWeding.content.img_closing}
