@@ -269,7 +269,7 @@ function PresA05({url}) {
 
                     {/* OPENING_PHOTO */}
                     <div id='opening' className='w-full h-screen relative'>
-                        <div className='p-12 absolute top-0 bg-gradient-to-t from-[#1D1E18] to-transparent via-[#1D1E18]/80 w-full h-full  flex flex-col items-center justify-end pb-40 fadeUp'>
+                        <div className='p-12 absolute bottom-0 bg-[#1D1E18] w-full h-1/3  flex flex-col items-center justify-end rounded-t-3xl'>
                             <p>THE WEDDING OF</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
@@ -327,9 +327,16 @@ function PresA05({url}) {
                             className='w-full object-cover fadeUp rounded-br-3xl rounded-tl-3xl rounded-bl rounded-tr pt-8'
                             alt='appstore'
                         />
-                        <p className='text-center fadeUp text-sm px-12 lg:px-20 fadeUp'>
+                        <p className='text-center fadeUp text-sm my-8 px-12 lg:px-20 fadeUp'>
                             We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
                         </p>
+                        <Image
+                            src={gDrive+'1oh-k5jkDJ0dnIhEyccf4fb21h2tmO3bu'+gDriveAuth}
+                            width={1200}
+                            height={1200}
+                            className='w-[10%] object-cover fadeUp'
+                            alt='appstore'
+                        />
                         </div>
 
                         {/* MEMPELAI*/}
@@ -337,14 +344,14 @@ function PresA05({url}) {
                           <h1 className='text-3xl'>Calon Mempelai</h1>
                           <div className='w-full pl-16'>
                             <div className='rounded-3xl pr-8  py-8 bg-[#A88C60] flex flex-col items-end gap-y-2 text-[#1D1E18] w-full relative'>
-                                <h1 className='text-3xl text-right pl-8 font-bold'>{dataWeding.content.bride_sure_name}</h1>
+                                <h1 className='text-3xl text-right pl-20 font-bold'>{dataWeding.content.bride_sure_name}</h1>
                                 <h1 className='font-bold text-sm py-2'>putri dari</h1>
                                 <h1 className='text-lg text-right w-1/2'>{dataWeding.content.bride_father} dan {dataWeding.content.bride_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
                                     <FaInstagram/>
                                     {dataWeding.content.bride_ig_account}
                                 </div>
-                                <div className='absolute -left-20 w-[170px] h-[200px] rounded-3xl bottom-0'>
+                                <div className='absolute -left-20 w-[170px] h-[200px] rounded-3xl bottom-8 flex'>
                                     <Image
                                         src={dataWeding.content.bride_pic}
                                         width={1200}
@@ -364,14 +371,14 @@ function PresA05({url}) {
                         />
                           <div className='w-full pr-16'>
                             <div className='rounded-3xl pl-8  py-8 bg-[#A88C60] flex flex-col items-start gap-y-2 text-[#1D1E18] w-full relative'>
-                                <h1 className='text-3xl text-left pr-8 font-bold'>{dataWeding.content.groom_sure_name}</h1>
+                                <h1 className='text-3xl text-left pr-20 font-bold'>{dataWeding.content.groom_sure_name}</h1>
                                 <h1 className='font-bold text-sm py-2'>putri dari</h1>
                                 <h1 className='text-lg text-left w-1/2'>{dataWeding.content.groom_father} dan {dataWeding.content.groom_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
                                     <FaInstagram/>
                                     {dataWeding.content.groom_ig_account}
                                 </div>
-                                <div className='absolute -right-20 w-[170px] h-[200px] rounded-3xl bottom-0'>
+                                <div className='absolute -right-20 w-[170px] h-[200px] rounded-3xl bottom-8 flex'>
                                     <Image
                                         src={dataWeding.content.groom_pic}
                                         width={1200}
@@ -470,11 +477,11 @@ function PresA05({url}) {
                 <GalleryFade images={imagesGallery} anim={{fadeUp:'fadeUp'}} id="gallery"/>
 
                 {/* GIFT */}
-                <div id='gift' className='h-full w-full backdrop-blur-xl py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center'  >
+                <div id='gift' className='h-full w-full backdrop-blur-xl py-12 flex gap-y-8 text-[#A88C60] flex-col items-center justify-center'  >
                        <h1 className={'text-3xl '+forum.className}>Gifts</h1>
                        <div className=' relative rounded-lg'>
                             <Image
-                                src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
+                                src={gDrive+"1Yflvx20k1sJFZCLcNAoOMIA3lHs_FeED"+gDriveAuth}
                                 fill
                                 style={{objectFit:"cover"}}
                                 className='absolute top-0 rounded-lg fadeUp'
