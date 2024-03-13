@@ -331,12 +331,13 @@ function PresA05({url}) {
                             We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.
                         </p>
                         </div>
+
                         {/* MEMPELAI*/}
                         <div className='w-full  p-8 flex flex-col items-center gap-y-4'>
                           <h1 className='text-3xl'>Calon Mempelai</h1>
-                          <div className='w-full pl-28'>
-                            <div className='rounded-3xl pr-12  py-8 bg-[#A88C60] flex flex-col items-end gap-y-2 text-[#1D1E18] w-full relative'>
-                                <h1 className='text-3xl text-right pl-12 font-bold'>{dataWeding.content.bride_sure_name}</h1>
+                          <div className='w-full pl-16'>
+                            <div className='rounded-3xl pr-8  py-8 bg-[#A88C60] flex flex-col items-end gap-y-2 text-[#1D1E18] w-full relative'>
+                                <h1 className='text-3xl text-right pl-8 font-bold'>{dataWeding.content.bride_sure_name}</h1>
                                 <h1 className='font-bold text-sm py-2'>putri dari</h1>
                                 <h1 className='text-lg text-right w-1/2'>{dataWeding.content.bride_father} dan {dataWeding.content.bride_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
@@ -361,9 +362,9 @@ function PresA05({url}) {
                             className='w-[16%] object-cover fadeUp py-12'
                             alt='appstore'
                         />
-                          <div className='w-full pr-28'>
-                            <div className='rounded-3xl pl-12  py-8 bg-[#A88C60] flex flex-col items-start gap-y-2 text-[#1D1E18] w-full relative'>
-                                <h1 className='text-3xl text-left pr-12 font-bold'>{dataWeding.content.groom_sure_name}</h1>
+                          <div className='w-full pr-16'>
+                            <div className='rounded-3xl pl-8  py-8 bg-[#A88C60] flex flex-col items-start gap-y-2 text-[#1D1E18] w-full relative'>
+                                <h1 className='text-3xl text-left pr-8 font-bold'>{dataWeding.content.groom_sure_name}</h1>
                                 <h1 className='font-bold text-sm py-2'>putri dari</h1>
                                 <h1 className='text-lg text-left w-1/2'>{dataWeding.content.groom_father} dan {dataWeding.content.groom_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
