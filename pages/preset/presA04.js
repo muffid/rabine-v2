@@ -126,7 +126,7 @@ function PresA04({url}) {
     },[])
 
     return (
-        <div className=' w-full box-content text-white font-Wix'>
+        <div className={'w-full box-content text-white '+forum.className}>
 
             {/* TO DO: BACKDOUND MP3*/}
             <audio  loop ref={audioRef} src="/audio/wedding-cinematic.mp3" />
