@@ -109,7 +109,7 @@ export default function Comments({slug,url,tamu}) {
         }
       }, [replyingTo])
     return (
-        <div className='w-full  bg-black p-6 flex flex-col items-center gap-y-2 px-8'>
+        <div id="doa" className='w-full  bg-black p-6 flex flex-col items-center gap-y-2 px-8'>
             <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Kirim Ucapan</h1>
             <h1 className='text-sm text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
