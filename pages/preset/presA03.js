@@ -467,7 +467,7 @@ function PresA03({url}) {
                         </iframe>
                     </div>
 
-                    {/* <Comments slug={dataWeding.META.slug} url={url} tamu={to}/> */}
+                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
                     <GalleryFade images={images_slide} anim={{fadeUp:'fadeUp'}}/>
 

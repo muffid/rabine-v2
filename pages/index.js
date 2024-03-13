@@ -84,7 +84,7 @@ function Home({dataApi}) {
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
-        {/* <SampleProduct data={dataApi.undangan} id={5}/> */}
+        <SampleProduct data={dataApi.undangan} id={5}/>
         <h1 id='5'>product</h1>
         </motion.div>
       </main>

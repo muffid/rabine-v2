@@ -495,7 +495,7 @@ function PresA01({url}) {
                     </div>
 
                     {/* COMMENTS */}
-                    {/* <Comments slug={dataWeding.META.slug} url={url} tamu={to}/> */}
+                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
                     <Gallery id={'gallery'} images={imagesGallery}/>
 
