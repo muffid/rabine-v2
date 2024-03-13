@@ -333,7 +333,7 @@ function PresA05({url}) {
                         </div>
 
                         {/* MEMPELAI*/}
-                        <div className='w-full  p-8 flex flex-col items-center gap-y-4'>
+                        <div id='mempelai' className='w-full  p-8 flex flex-col items-center gap-y-4'>
                           <h1 className='text-3xl'>Calon Mempelai</h1>
                           <div className='w-full pl-16'>
                             <div className='rounded-3xl pr-8  py-8 bg-[#A88C60] flex flex-col items-end gap-y-2 text-[#1D1E18] w-full relative'>
@@ -344,7 +344,7 @@ function PresA05({url}) {
                                     <FaInstagram/>
                                     {dataWeding.content.bride_ig_account}
                                 </div>
-                                <div className='absolute -left-20 w-[170px] h-[300px] rounded-3xl bottom-2'>
+                                <div className='absolute -left-20 w-[170px] h-[200px] rounded-3xl bottom-0'>
                                     <Image
                                         src={dataWeding.content.bride_pic}
                                         width={1200}
@@ -371,7 +371,7 @@ function PresA05({url}) {
                                     <FaInstagram/>
                                     {dataWeding.content.groom_ig_account}
                                 </div>
-                                <div className='absolute -right-20 w-[170px] h-[300px] rounded-3xl bottom-2'>
+                                <div className='absolute -right-20 w-[170px] h-[200px] rounded-3xl bottom-0'>
                                     <Image
                                         src={dataWeding.content.groom_pic}
                                         width={1200}
