@@ -3,14 +3,15 @@ import Image from 'next/image'
 import React, { useEffect,useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useState} from 'react'
-import Timer from '../../components/preset/presA04/Timer'
-import Comments from '../../components/preset/presA04/Comments'
+import Timer from '../../components/preset/presA05/Timer'
+import Comments from '../../components/preset/presA05/Comments'
 import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
         FaSearchLocation, FaRegCopy, FaPause} from "react-icons/fa"
-import GalleryFade from '../../components/preset/presA04/GalleryFade'
+import GalleryFade from '../../components/preset/presA05/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 import {forum,cinzel} from '../../components/globals/Fonts'
 import Navigasi from '../../components/preset/globals/Navigasi'
+import SlideOpening from '../../components/preset/presA05/SlideOpening'
 
 
 function PresA05({url}) {
@@ -56,13 +57,13 @@ function PresA05({url}) {
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
              bg_opening : gDrive+'1o9iMW0KQpS1S6C3Nk_fSJ3DekeatPrgF'+gDriveAuth,
-             bg_first_section :gDrive+'12KuZGvK4lEKs26URr_9l2yIurUB6qkOp'+gDriveAuth,
+             bg_first_section :gDrive+'1o9iMW0KQpS1S6C3Nk_fSJ3DekeatPrgF'+gDriveAuth,
              bg_mempelai : gDrive+"1r5O0BYZwUwpTs-VMkCRQVljiSjPh3uIM"+gDriveAuth,
              bg_accent : gDrive+"1ww8ylxfitcTgM-0uX5GcVVOC_1-PoF1Q"+gDriveAuth,
              img_left :  gDrive+"1o9iMW0KQpS1S6C3Nk_fSJ3DekeatPrgF"+gDriveAuth,
              img_quote_1 : gDrive+'1-0AgcWuTunO2JIh6kk92VF24FbLcm9Yf'+gDriveAuth,
              img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
-             img_closing : gDrive+'1LjnDmiZ0kfVftFEDIbxLQ-abXJyc7lgJ'+gDriveAuth,
+             img_closing : gDrive+'1-0AgcWuTunO2JIh6kk92VF24FbLcm9Yf'+gDriveAuth,
              btn_couple : gDrive+'1jz16FWI7lLqji5At-6gUEidJgVkVQjD_'+gDriveAuth,
              bg_jadwal : gDrive+'1rPLGZNWLp3NthfLgdrIyUSkNlVu4CcBk'+gDriveAuth
          }
@@ -93,10 +94,10 @@ function PresA05({url}) {
     }
 
     const imagesGallery = [
-        { src: gDrive+'1yl2NLtG52YRfgEPa5Ck4x6RXxO_O9Ywv'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1F591xH3VnWFLkpAYPLe6pV4sqTddlLdi'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1G-fXgITm8fpJ-7ysJAepbq83JU0LilMN'+gDriveAuth, alt: 'presA02' },
-        { src: gDrive+'1LjnDmiZ0kfVftFEDIbxLQ-abXJyc7lgJ'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1o9iMW0KQpS1S6C3Nk_fSJ3DekeatPrgF'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1-0AgcWuTunO2JIh6kk92VF24FbLcm9Yf'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'12KuZGvK4lEKs26URr_9l2yIurUB6qkOp'+gDriveAuth, alt: 'presA02' },
+        { src: gDrive+'1rPLGZNWLp3NthfLgdrIyUSkNlVu4CcBk'+gDriveAuth, alt: 'presA02' },
      
         // tambhakan lagi kalau masih ada....
     ]
@@ -165,7 +166,7 @@ function PresA05({url}) {
                             <h1>THE WEDDING OF</h1>
 
                             {/* TO DO: NAMA KEDUA MEMPELAI*/}
-                            <h1 className={' text-5xl pb-8 '+cinzel.className}>{dataWeding.content.couple}</h1>
+                            <h1 className={' text-3xl pb-8 '+cinzel.className}>{dataWeding.content.couple}</h1>
 
                             <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
                             <h1 className='py-8 font-bold'>{to}</h1>
@@ -269,8 +270,8 @@ function PresA05({url}) {
 
                     {/* OPENING_PHOTO */}
                     <div id='opening' className='w-full h-screen relative'>
-                        <div className='p-12 absolute bottom-0 bg-[#1D1E18] w-full h-1/3  flex flex-col items-center justify-end rounded-t-3xl'>
-                            <p>THE WEDDING OF</p>
+                        <div className='py-6 absolute bottom-0 bg-[#1D1E18] w-full  flex flex-col items-center justify-end'>
+                            <p className='-mt-12 py-4 px-6 rounded-full bg-[#1D1E18]'>THE WEDDING OF</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
                             <h1 className='text-6xl py-4  text-center'>{dataWeding.content.groom_name} &<br/>{dataWeding.content.bride_name}</h1>
@@ -287,6 +288,7 @@ function PresA05({url}) {
                             className='w-full object-cover h-full'
                             alt='appstore'
                         />
+                        {/* <SlideOpening images={}/> */}
                    </div>
 
                     {/* BACKGROUND IMAGE */}
@@ -295,7 +297,7 @@ function PresA05({url}) {
                         {/* AYAT ALQUR'AN */}
                         <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 py-[80px] 
                                         backdrop-blur-xl  overflow-hidden'>
-               
+                                            
                         <Image
                             src={gDrive+'1oh-k5jkDJ0dnIhEyccf4fb21h2tmO3bu'+gDriveAuth}
                             width={1200}
@@ -371,7 +373,7 @@ function PresA05({url}) {
                         />
                           <div className='w-full pr-16'>
                             <div className='rounded-3xl pl-8  py-8 bg-[#A88C60] flex flex-col items-start gap-y-2 text-[#1D1E18] w-full relative'>
-                                <h1 className='text-3xl text-left pr-20 font-bold'>{dataWeding.content.groom_sure_name}</h1>
+                                <h1 className='text-3xl text-left pr-24 font-bold'>{dataWeding.content.groom_sure_name}</h1>
                                 <h1 className='font-bold text-sm py-2'>putri dari</h1>
                                 <h1 className='text-lg text-left w-1/2'>{dataWeding.content.groom_father} dan {dataWeding.content.groom_mother}</h1>
                                 <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
@@ -409,7 +411,7 @@ function PresA05({url}) {
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
                                     <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue}</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
-                                    <button className='fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                    <button className='fadeUp flex flex-row items-center text-white justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
                                         hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                                         <FaSearchLocation/> view Location
                                     </button>
@@ -421,7 +423,7 @@ function PresA05({url}) {
                                     <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue}</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
                                     <button className='fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                                        hover:bg-white hover:text-black text-white hover:scale-105 transition-all ease-out fadeUp'>
                                         <FaSearchLocation/> view Location
                                     </button>
                                 </div>
@@ -521,7 +523,7 @@ function PresA05({url}) {
                 <div className='w-full  relative text-center h-[500px]'>
                     <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
                         <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                        <h1 className={' text-5xl py-4 '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                        <h1 className={' text-3xl py-4 '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                        
                             <p className='w-1/3'>Thank You</p>
                        
