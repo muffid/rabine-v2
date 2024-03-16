@@ -52,14 +52,14 @@ const Timer = (props) => {
     return () => clearInterval(intervalId);
   }, [propsTarget]);
   return (
-    <div className='w-full flex flex-col overflow-hidden items-center text-[#A88C60] bg-[#1D1E18] backdrop-blur-xl justify-center bg-cover bg-center py-20 px-12 gap-y-8  relative'>
-        {/* <Image
-            src={bgImage}
+    <div className='w-full flex flex-col overflow-hidden items-center text-[#A88C60] bg-[#1D1E18] backdrop-blur-xl justify-center py-20 px-12 gap-y-8  relative'>
+        <Image
+            src={gDrive+'1pq1EcVQECszcfhVmBgqmZ8W-zEV-lc5c'+gDriveAuth}
             width={1200}
             height={1200}
-            className='w-full rounded-3xl absolute -top-40 left-0 object-contain'
+            className='w-full rounded-3xl absolute -top-40 left-0 object-contain opacity-10'
             alt='appstore'
-        /> */}
+        />
      
      
          <div className={'flex flex-row items-center z-10 w-full h-full space-x-5 '+fadeUp}>

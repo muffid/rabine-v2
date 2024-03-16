@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaReply,FaComment, FaUserAlt } from 'react-icons/fa'
 import axios from 'axios'
+import Image from 'next/image'
 
 export default function Comments({slug,url,tamu}) {
 
@@ -14,7 +15,8 @@ export default function Comments({slug,url,tamu}) {
 
    
     
-    
+    const gDrive = "https://drive.usercontent.google.com/download?id="
+    const gDriveAuth ="&authuser=0"
     const [comments, setComments] = useState([])
     const [commentToPost, setCommentToPost] = useState('')
     const [replyToPost, setReplyToPost ] = useState('')
@@ -109,7 +111,16 @@ export default function Comments({slug,url,tamu}) {
         }
       }, [replyingTo])
     return (
-        <div id="doa" className='w-full text-[#A88C60] bg-[#1D1E18] p-6 flex flex-col items-center gap-y-2 px-8'>
+        <div id="doa" className='w-full text-[#A88C60] bg-[#1D1E18] p-6 flex flex-col items-center gap-y-2 px-8 relative'>
+            <div className='absolute top-0 w-full h-full opacity-[0.1]'>
+                                <Image
+                                    src={gDrive+'1pq1EcVQECszcfhVmBgqmZ8W-zEV-lc5c'+gDriveAuth}
+                                    width={1200}
+                                    height={1200}
+                                    className='h-full object-cover fadeUp'
+                                    alt='appstore'
+                                />
+                            </div>
             <h1 className='text-3xl  fadeUp'>Kirim Ucapan</h1>
             <h1 className=' text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 

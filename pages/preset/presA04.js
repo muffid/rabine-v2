@@ -164,7 +164,7 @@ function PresA04({url}) {
                             <h1>THE WEDDING OF</h1>
 
                             {/* TO DO: NAMA KEDUA MEMPELAI*/}
-                            <h1 className={' text-5xl pb-8 '+cinzel.className}>{dataWeding.content.couple}</h1>
+                            <h1 className={' text-3xl pb-8 '+cinzel.className}>{dataWeding.content.couple}</h1>
 
                             <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
                             <h1 className='py-8 font-bold'>{to}</h1>
@@ -272,7 +272,7 @@ function PresA04({url}) {
                             <p className={forum.className}>The Wedding Of</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className={' text-5xl pt-4 pb-8  text-center '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                            <h1 className={' text-5xl pt-4 pb-8  text-center px-12 '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                         
                                 {/* TO DO: TANGGAL NIKAH*/}
                                 <p className={'text-center '+forum.className}>{dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</p> 

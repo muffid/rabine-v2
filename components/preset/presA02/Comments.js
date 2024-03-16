@@ -110,7 +110,7 @@ export default function Comments({slug,url,tamu}) {
       }, [replyingTo])
     return (
         <div id='doa' className='w-full bg-[#FFFBF4] p-6 flex flex-col items-center gap-y-2 px-8 text-[#3c3838]'>
-            <h1 className='text-[2.5rem] font-DMSerif fadeUp'>Kirim Ucapan</h1>
+            <h1 className='text-[2.5rem] fadeUp'>Kirim Ucapan</h1>
             <h1 className='text-sm text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
                 value={namaTamu}
@@ -133,7 +133,7 @@ export default function Comments({slug,url,tamu}) {
                         <div className='flex flex-row items-start gap-x-3 text-[#574629]'>
                             <FaUserAlt/>
                             <div className='flex-col items-start justify-start'>
-                                <div className='flex flex-row items-start  '><p className='font-bold font-DMSerif text-[#574629]'>{comment.Comment_User}</p></div>
+                                <div className='flex flex-row items-start  '><p className='font-bold  text-[#574629]'>{comment.Comment_User}</p></div>
                                 <p className='text-slate-700'>{comment.Comment_Content}</p>
                                 <div className='flex flex-row items-start justify-start gap-x-2 text-xs text-slate-600'>
                                     <h1 className=''>{comment.Comment_Time}</h1>
@@ -162,7 +162,7 @@ export default function Comments({slug,url,tamu}) {
                              <FaUserAlt/>
                              <div className='flex-col items-start '>
                              <div  className='flex flex-col items-start justify-start '>
-                                <p className='font-bold font-DMSerif text-[#574629]'>{reply.Comment_User}</p>
+                                <p className='font-bold  text-[#574629]'>{reply.Comment_User}</p>
                                 <div className='flex flex-row items-start justify-center gap-x-1 text-xs text-slate-500'>
                                     <h1 className=''>{reply.Comment_Time}</h1>
                                 </div>

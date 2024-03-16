@@ -11,6 +11,7 @@ import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram,
 import GalleryFade from '../../components/preset/presA02/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 import Navigasi from '../../components/preset/globals/Navigasi'
+import { forum } from '../../components/globals/Fonts'
 
 
 function PresA02({url}) {
@@ -139,7 +140,7 @@ function PresA02({url}) {
 
   
     return (
-        <div className=' w-full box-content text-white font-Wix'>
+        <div className={'w-full box-content text-white '+forum.className}>
 
             {/* TO DO: BACKDOUND MP3*/}
             <audio  loop ref={audioRef} src="/audio/wedding-cinematic.mp3" />
@@ -248,7 +249,7 @@ function PresA02({url}) {
                 </div>
 
                 {/* SISI KANAN */}
-                <div className='w-full  lg:w-[40%] overflow-y-auto relative text-[#747373]'>
+                <div className='w-full  lg:w-[40%] overflow-y-auto relative text-[#747373] bg-[#FFFBF4]'>
 
                     {/* NOW PLAYING*/}
                     <div className='lg:hidden flex flex-col items-center justify-between gap-x-4 fixed w-full
@@ -352,7 +353,7 @@ function PresA02({url}) {
                             />
 
                         {/* TO DO: ISI DATANYA*/}
-                        <h1 className='font-bold text-2xl font-DMSerif py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
+                        <h1 className='font-bold text-2xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
                         {/* TO DO: ISI DATANYA*/}
                         <h1 className='my-8 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
                         <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
@@ -368,7 +369,7 @@ function PresA02({url}) {
                                 className='w-2/4 object-cover rounded-[40px] fadeUp'
                                 alt='appstore'
                             />
-                        <h1 className='font-bold text-2xl font-DMSerif py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
+                        <h1 className='font-bold text-2xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
                         <h1 className='my-8 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan Ibu {dataWeding.content.groom_mother}</h1>
                         <div className='flex gap-2 text-sm items-center justify-center fadeUp text-[#3c3838]'>
                             <FaInstagram/>
@@ -388,10 +389,10 @@ function PresA02({url}) {
                         <div className='w-full  flex flex-col items-center justify-center text-[#3c3838] p-8 space-y-6 '>
                             <div className='bg-white/40 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
                                 <div className='flex flex-col items-center justify-center text-center gap-y-2'>
-                                    <h1 className='text-3xl font-DMSerif fadeUp mb-6 fadeUp'>Akad Nikah</h1>
+                                    <h1 className='text-3xl  fadeUp mb-6 fadeUp'>Akad Nikah</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.day} {dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
-                                    <h1 className='text-xl font-DMSerif fadeUp mt-4 fadeUp'>{dataWeding.content.venue}</h1>
+                                    <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue}</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
                                     <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
                                         hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
@@ -401,10 +402,10 @@ function PresA02({url}) {
                             </div>
                             <div className='bg-white/40 rounded-xl p-8 space-y-4 shadow-xl backdrop-blur-sm fadeUp'>
                                 <div className='flex flex-col items-center justify-center text-center gap-y-2'>
-                                    <h1 className='text-3xl font-DMSerif fadeUp mb-6 fadeUp'>Resepsi</h1>
+                                    <h1 className='text-3xl  fadeUp mb-6 fadeUp'>Resepsi</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.day} {dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
-                                    <h1 className='text-xl font-DMSerif fadeUp mt-4 fadeUp'>{dataWeding.content.venue} </h1>
+                                    <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue} </h1>
                                     <h1 className='text-sm fadeUp'>{dataWeding.content.venue_address}</h1>
                                     <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
                                         hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
@@ -453,7 +454,7 @@ function PresA02({url}) {
 
                     {/* GIFT */}
                     <div id='gift' className='h-full bg-[#FFFBF4] py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
-                           <h1 className='text-[2.5rem] font-DMSerif'>Gifts</h1>
+                           <h1 className='text-[2.5rem] '>Gifts</h1>
                            <div className=' relative rounded-lg'>
                                 <Image
                                     src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}

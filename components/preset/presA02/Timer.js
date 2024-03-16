@@ -49,29 +49,29 @@ const Timer = (props) => {
   }, [propsTarget]);
   return (
     <div className='w-full flex flex-col items-center justify-center bg-cover bg-center py-20 px-12 gap-y-8 text-[#3c3838] relative'>
-        <Image
+        {/* <Image
           src={bgImage}
           fill
           style={{objectFit:"cover"}}
           className='absolute'
           sizes="100vw"
-        />
-        <h1 className={'text-3xl font-DMSerif '+fadeUp}>Save The Date</h1>
+        /> */}
+        <h1 className={'text-3xl  '+fadeUp}>Save The Date</h1>
          <div className={'grid grid-cols-4 gap-8 '+fadeUp}>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl font-DMSerif'>{timeRemaining.days}</h1>
+              <h1 className='text-3xl '>{timeRemaining.days}</h1>
               <p>Hari</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl font-DMSerif'>{timeRemaining.hours}</h1>
+              <h1 className='text-3xl '>{timeRemaining.hours}</h1>
               <p>Jam</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl font-DMSerif'>{timeRemaining.minutes}</h1>
+              <h1 className='text-3xl '>{timeRemaining.minutes}</h1>
               <p>Menit</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
-              <h1 className='text-3xl font-DMSerif'>{timeRemaining.seconds}</h1>
+              <h1 className='text-3xl '>{timeRemaining.seconds}</h1>
               <p>Detik</p>
             </div>
           </div>
