@@ -19,8 +19,8 @@ export default function Gallery({images,id}) {
 
   return (
     <div id={id} className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'>
-      <h1 className='text-[2.5rem] font-Royal-Exq'>Our Moments</h1>
-      <div className='container'>
+      <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Our Moments</h1>
+      <div className='container fadeUp'>
         <Swiper
           loop={true}
           spaceBetween={10}
@@ -64,7 +64,7 @@ export default function Gallery({images,id}) {
           }}
           watchSlidesProgress={true}
           modules={[Autoplay,Navigation, Thumbs]}
-          className='thumbs mt-3 h-32 w-full rounded-lg'
+          className='thumbs mt-3 h-32 w-full rounded-lg fadeUp'
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>

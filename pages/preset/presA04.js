@@ -102,10 +102,33 @@ function PresA04({url}) {
 
 
     useEffect(()=>{
-        const fadeUpElements = document.querySelectorAll(".fadeUp")
-        fadeUpElements.forEach((element) => {
-            console.log("looped")
 
+        const fadeZoomIn = document.querySelectorAll(".fadeZoom")
+        const fadeUpElements = document.querySelectorAll(".fadeUp")
+
+        fadeZoomIn.forEach((element)=>{
+            gsap.set(element,{
+                scale : 0.5,
+                y:80,
+                opacity : 0
+            })
+
+            ScrollTrigger.create({
+                trigger: element,
+                start: "top 90%", 
+                toggleActions: "play", 
+                animation: gsap.to(element, {
+                    y:0,
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1, 
+                    ease: "power2.out",
+                }),
+            });
+        })
+
+        fadeUpElements.forEach((element) => {
+          
             gsap.set(element, {
                 y: 80, 
                 opacity: 0, 
@@ -354,7 +377,7 @@ function PresA04({url}) {
                                     src = {dataWeding.content.bride_pic}
                                     width={1200}
                                     height={1200}
-                                    className='w-[160px] h-[160px] object-cover rounded-full fadeUp p-3  bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
+                                    className='w-[160px] h-[160px] object-cover rounded-full p-3 fadeZoom bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
                                 <h1 className={'text-3xl px-[30px] py-6 fadeUp text-[#3c3838] '+cinzel.className}>{dataWeding.content.bride_sure_name}</h1>
@@ -378,7 +401,7 @@ function PresA04({url}) {
                                     src = {dataWeding.content.groom_pic}
                                     width={1200}
                                     height={1200}
-                                    className='w-[160px] h-[160px] object-cover rounded-full fadeUp  p-3 bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
+                                    className='w-[160px] h-[160px] object-cover rounded-full fadeZoom  p-3 bg-gradient-to-br from-[#DFD4CC] to-white shadow-xl'
                                     alt='appstore'
                                 />
                                 <h1 className={'text-3xl px-[30px] py-6 fadeUp text-[#3c3838] '+cinzel.className}>{dataWeding.content.groom_sure_name}</h1>
@@ -511,11 +534,11 @@ function PresA04({url}) {
 
                 {/* CLOSING */}
                 <div className='w-full  relative text-center h-[500px]'>
-                    <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
-                        <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                        <h1 className={' text-5xl py-4 '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                    <div className='fadeUp p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
+                        <p className='text-sm fadeUp'>Two souls become one, two hearts beat as one</p>
+                        <h1 className={' text-3xl py-4 fadeUp'+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                        
-                            <p className='w-1/3'>Thank You</p>
+                            <p className='w-1/3 fadeUp'>Thank You</p>
                        
                         
                     </div>

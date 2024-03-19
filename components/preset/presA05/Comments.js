@@ -112,7 +112,7 @@ export default function Comments({slug,url,tamu}) {
       }, [replyingTo])
     return (
         <div id="doa" className='w-full text-[#A88C60] bg-[#1D1E18] p-6 flex flex-col items-center gap-y-2 px-8 relative'>
-            <div className='absolute top-0 w-full h-full opacity-[0.1]'>
+            <div className='fadeUp absolute top-0 w-full h-full opacity-[0.1]'>
                                 <Image
                                     src={gDrive+'1pq1EcVQECszcfhVmBgqmZ8W-zEV-lc5c'+gDriveAuth}
                                     width={1200}
@@ -122,23 +122,23 @@ export default function Comments({slug,url,tamu}) {
                                 />
                             </div>
             <h1 className='text-3xl  fadeUp'>Kirim Ucapan</h1>
-            <h1 className=' text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
+            <h1 className=' text-center fadeUp '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
                 value={namaTamu}
                 onChange={handleChangeTamu}
-                className='border-[1px] border-slate-700 text-slate-200 bg-transparent outline-none focus:border-slate-600  mt-2 w-full p-2' />
+                className='border-[1px] fadeUp border-slate-700 text-slate-200 bg-transparent outline-none focus:border-slate-600  mt-2 w-full p-2' />
             <textarea
                     onChange={handleChange}
                     value={commentToPost}
-                    className="border-[1px] border-slate-700 bg-transparent outline-none focus:border-slate-700  mt-2 w-full p-6 rounded" // Menambahkan border rounded
+                    className="border-[1px] fadeUp border-slate-700 bg-transparent outline-none focus:border-slate-700  mt-2 w-full p-6 rounded" // Menambahkan border rounded
                     placeholder={'Kirim Ucapan Dan Doa Terbaik Anda'}
                     rows={3} // Menentukan jumlah baris
                     />
                     <button onClick={()=>postComment()} className='fadeUp flex flex-row items-center justify-center  rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
-                                        hover:bg-white hover:text-black text-white hover:scale-105 transition-all ease-out'>
+                                        hover:bg-white fadeUp hover:text-black text-white hover:scale-105 transition-all ease-out'>
                             <FaComment/> Kirim
                     </button>
-            <div className='w-full flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black  max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
+            <div className='w-full fadeUp flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black  max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
                 {comments.map(comment => (
                     <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start space-y-4 bg-black/30 text-slate-400 rounded-lg py-4 px-8'>
                         <div className='flex flex-row items-start gap-x-3'>

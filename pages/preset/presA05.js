@@ -358,13 +358,13 @@ function PresA05({url}) {
                                     alt='appstore'
                                 />
                             </div>
-                          <h1 className='text-3xl'>Calon Mempelai</h1>
+                          <h1 className='text-3xl fadeUp'>Calon Mempelai</h1>
                           <div className='w-full pl-28'>
-                            <div className='rounded-3xl pr-8  py-4 bg-[#A88C60] flex flex-col items-end  text-[#1D1E18] w-full relative'>
-                                <h1 className='text-3xl text-right pl-20 font-bold'>{dataWeding.content.bride_sure_name}</h1>
-                                <h1 className='font-bold text-sm mt-4'>putri dari</h1>
-                                <h1 className='text-lg text-right w-1/2 mb-4 leading-tight'>{dataWeding.content.bride_father} dan {dataWeding.content.bride_mother}</h1>
-                                <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
+                            <div className='rounded-3xl pr-8 fadeUp py-4 bg-[#A88C60] flex flex-col items-end  text-[#1D1E18] w-full relative'>
+                                <h1 className='text-3xl text-right pl-20 font-bold fadeUp'>{dataWeding.content.bride_sure_name}</h1>
+                                <h1 className='font-bold text-sm mt-4 fadeUp'>putri dari</h1>
+                                <h1 className='text-lg text-right w-1/2 mb-4 leading-tight fadeUp'>{dataWeding.content.bride_father} dan {dataWeding.content.bride_mother}</h1>
+                                <div className='fadeUp cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
                                     <FaInstagram/>
                                     {dataWeding.content.bride_ig_account}
                                 </div>
@@ -373,7 +373,7 @@ function PresA05({url}) {
                                         src={dataWeding.content.bride_pic}
                                         width={1200}
                                         height={1200}
-                                        className='w-full object-cover rounded-3xl shadow-xl'
+                                        className='fadeUp w-full object-cover rounded-3xl shadow-xl'
                                         alt='appstore'
                                     />
                                 </div>
@@ -387,11 +387,11 @@ function PresA05({url}) {
                             alt='appstore'
                         />
                           <div className='w-full pr-28'>
-                            <div className='rounded-3xl pl-8  py-4 bg-[#A88C60] flex flex-col items-start  text-[#1D1E18] w-full relative'>
-                                <h1 className='text-3xl text-left pr-20 font-bold'>{dataWeding.content.groom_sure_name}</h1>
-                                <h1 className='font-bold text-sm mt-4'>putra dari</h1>
-                                <h1 className='text-lg text-left leading-tight mb-4 w-1/2'>{dataWeding.content.groom_father} dan {dataWeding.content.groom_mother}</h1>
-                                <div className='cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
+                            <div className='rounded-3xl pl-8 fadeUp  py-4 bg-[#A88C60] flex flex-col items-start  text-[#1D1E18] w-full relative'>
+                                <h1 className='text-3xl text-left pr-20 font-bold fadeUp'>{dataWeding.content.groom_sure_name}</h1>
+                                <h1 className='font-bold text-sm mt-4 fadeUp'>putra dari</h1>
+                                <h1 className='fadeUp text-lg text-left leading-tight mb-4 w-1/2'>{dataWeding.content.groom_father} dan {dataWeding.content.groom_mother}</h1>
+                                <div className=' fadeUp cursor-pointer transform hover:scale-110 transition ease-out duration-300 flex gap-2 text-sm items-center justify-center fadeUp text-white px-4 py-2 bg-[#1D1E18] rounded-full'>
                                     <FaInstagram/>
                                     {dataWeding.content.groom_ig_account}
                                 </div>
@@ -400,7 +400,7 @@ function PresA05({url}) {
                                         src={dataWeding.content.groom_pic}
                                         width={1200}
                                         height={1200}
-                                        className='w-full object-cover rounded-3xl shadow-xl'
+                                        className='w-full object-cover rounded-3xl shadow-xl fadeUp'
                                         alt='appstore'
                                     />
                                 </div>
@@ -456,7 +456,7 @@ function PresA05({url}) {
                             />
 
                             <iframe src={dataWeding.content.gmap_frame}
-                                className='w-full h-[300px] rounded-xl'
+                                className='w-full h-[300px] rounded-xl fadeUp'
                                 width="600" 
                                 height="600" 
                                 style={{border:0}} 
@@ -533,11 +533,11 @@ function PresA05({url}) {
 
                 {/* CLOSING */}
                 <div className='w-full  relative text-center h-[500px]'>
-                    <div className='p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
-                        <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                        <h1 className={' text-3xl py-4 '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                    <div className='fadeUp p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
+                        <p className='text-sm fadeUp'>Two souls become one, two hearts beat as one</p>
+                        <h1 className={' text-3xl py-4 fadeUp '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                        
-                            <p className='w-1/3'>Thank You</p>
+                            <p className='w-1/3 fadeUp'>Thank You</p>
                        
                         
                     </div>

@@ -20,7 +20,7 @@ export default function Gallery({images,id}) {
   return (
     <div id={id} className='w-full flex flex-col items-center justify-center bg-[#FFFBF4] p-4  gap-y-8 text-[#151313]'>
  
-      <div className='container'>
+      <div className='container fadeUp'>
         {/* Thumbnail */}
         <Swiper
           onSwiper={setThumbsSwiper}

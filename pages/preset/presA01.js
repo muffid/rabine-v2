@@ -500,9 +500,9 @@ function PresA01({url}) {
                     <Gallery id={'gallery'} images={imagesGallery}/>
 
                     {/* GIFT */}
-                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center fadeUp'  >
-                           <h1 className='text-[2.5rem] font-Royal-Exq'>Gifts</h1>
-                           <div className=' relative rounded-lg'>
+                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  >
+                           <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Gifts</h1>
+                           <div className=' relative rounded-lg fadeUp'>
                                 <Image
                                     src={gDrive+"1Yflvx20k1sJFZCLcNAoOMIA3lHs_FeED"+gDriveAuth}
                                     fill
@@ -534,7 +534,7 @@ function PresA01({url}) {
                                 </div>  
                            </div>
                            <button className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out text-sm'>
+                                        hover:bg-white hover:text-black fadeUp hover:scale-105 transition-all ease-out text-sm'>
                             <FaRegCopy/> copy no rek
                         </button>
                      
@@ -543,9 +543,9 @@ function PresA01({url}) {
                     {/* CLOSING */}
                     <div className='w-full  relative'>
                         <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end z-[5]'>
-                            <p >Two souls become one, two hearts beat as one</p>
-                            <h1 className='font-bold text-6xl py-4 font-Royal-Exq capitalize'>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
-                            <div className='flex flex-row items-end justify-start w-full'>
+                            <p className='fadeUp'>Two souls become one, two hearts beat as one</p>
+                            <h1 className='fadeUp font-bold text-6xl py-4 font-Royal-Exq capitalize'>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
+                            <div className='fadeUp flex flex-row items-end justify-start w-full '>
                                 <p className='w-1/3'>Thank You</p>
                                 <div className='w-2/3 h-[1px] bg-white'></div>
                             </div>

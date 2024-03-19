@@ -20,7 +20,7 @@ export default function GalleryFade({images,id}) {
   return (
     <div id={id} className='h-full w-full backdrop-blur-xl py-12 flex gap-y-8 flex-col items-center justify-center px-4 '>
      
-      <div className='container'>
+      <div className='container fadeUp'>
         <Swiper
           loop={true}
           spaceBetween={10}
@@ -34,7 +34,7 @@ export default function GalleryFade({images,id}) {
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
           }}
           modules={[Autoplay,Navigation, Thumbs]}
-          className='h-96 w-full rounded-lg'
+          className='h-96 w-full rounded-lg fadeUp'
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
@@ -64,7 +64,7 @@ export default function GalleryFade({images,id}) {
           }}
           watchSlidesProgress={true}
           modules={[Autoplay,Navigation, Thumbs]}
-          className='thumbs mt-3 h-32 w-full rounded-lg'
+          className='thumbs mt-3 h-32 w-full rounded-lg fadeUp'
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>

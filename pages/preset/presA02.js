@@ -454,8 +454,8 @@ function PresA02({url}) {
 
                     {/* GIFT */}
                     <div id='gift' className='h-full bg-[#FFFBF4] py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
-                           <h1 className='text-[2.5rem] '>Gifts</h1>
-                           <div className=' relative rounded-lg'>
+                           <h1 className='text-[2.5rem] fadeUp '>Gifts</h1>
+                           <div className=' relative rounded-lg fadeUp'>
                                 <Image
                                     src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
                                     fill
@@ -496,10 +496,10 @@ function PresA02({url}) {
                     {/* CLOSING */}
                     <div className='w-full  relative text-center h-[500px]'>
                         <div className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-center justify-end text-white'>
-                            <p className='text-sm'>Two souls become one, two hearts beat as one</p>
-                            <h1 className='font-bold text-3xl py-4 font-Photograph-Signature'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                            <p className='text-sm fadeUp'>Two souls become one, two hearts beat as one</p>
+                            <h1 className='fadeUp font-bold text-3xl py-4 font-Photograph-Signature'>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
                            
-                                <p className='w-1/3'>Thank You</p>
+                                <p className='fadeUp w-1/3'>Thank You</p>
                            
                             
                         </div>

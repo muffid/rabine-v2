@@ -112,23 +112,23 @@ export default function Comments({slug,url,tamu}) {
     return (
         <div id='doa' className='w-full bg-white/90 backdrop-blur-xl p-6 flex flex-col items-center gap-y-2 px-8 text-[#3c3838]'>
             <h1 className={'text-3xl fadeUp '+cinzel.className}>Kirim Ucapan</h1>
-            <h1 className='text-sm text-center '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
+            <h1 className='text-sm text-center fadeUp'>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
                 value={namaTamu}
                 onChange={handleChangeTamu}
-                className='border-[1px] border-slate-700 text-slate-900 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
+                className='border-[1px] fadeUp border-slate-700 text-slate-900 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
             <textarea
                     onChange={handleChange}
                     value={commentToPost}
-                    className="border-[1px] border-slate-700 bg-transparent outline-none focus:border-slate-700 text-sm mt-2 w-full p-6 rounded" // Menambahkan border rounded
+                    className="border-[1px] fadeUp border-slate-700 bg-transparent outline-none focus:border-slate-700 text-sm mt-2 w-full p-6 rounded" // Menambahkan border rounded
                     placeholder={'Kirim Ucapan Dan Doa Terbaik Anda'}
                     rows={3} // Menentukan jumlah baris
                     />
                     <button onClick={()=>postComment()} className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg gap-2 border bg-[#151313]  px-3 py-2 mt-8
-                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out'>
+                                        hover:bg-white fadeUp hover:text-black hover:scale-105 transition-all ease-out'>
                             <FaComment/> Kirim
                     </button>
-            <div className='w-full flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
+            <div className='fadeUp w-full flex flex-col items-center justify-start space-y-3  rounded-xl p-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
                 {comments.map(comment => (
                     <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start space-y-4 bg-[#DED0B7]/60 text-slate-900 rounded-lg py-4 px-8'>
                         <div className='flex flex-row items-start gap-x-3 text-[#574629]'>
