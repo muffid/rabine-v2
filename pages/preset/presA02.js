@@ -21,8 +21,8 @@ function PresA02({url}) {
     const dataWeding = {
         META : {
              slug : "presA02",
-             title : "momenku - preview tema presA02",
-             description : "momenku - preview tema presA02",
+             title : "rabine.id - preview tema presA02",
+             description : "rabine.id - preview tema presA02",
              thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
          },
          content : {

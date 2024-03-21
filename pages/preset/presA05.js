@@ -21,8 +21,8 @@ function PresA05({url}) {
     const dataWeding = {
         META : {
              slug : "presA05",
-             title : "momenku - preview tema presA05",
-             description : "momenku - preview tema presA05",
+             title : "rabine.id - preview tema presA05",
+             description : "rabine.id - preview tema presA05",
              thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
          },
          content : {
@@ -94,12 +94,13 @@ function PresA05({url}) {
     }
 
     const imagesGallery = [
+
         { src: gDrive+'1o9iMW0KQpS1S6C3Nk_fSJ3DekeatPrgF'+gDriveAuth, alt: 'presA02' },
         { src: gDrive+'1-0AgcWuTunO2JIh6kk92VF24FbLcm9Yf'+gDriveAuth, alt: 'presA02' },
         { src: gDrive+'12KuZGvK4lEKs26URr_9l2yIurUB6qkOp'+gDriveAuth, alt: 'presA02' },
         { src: gDrive+'1rPLGZNWLp3NthfLgdrIyUSkNlVu4CcBk'+gDriveAuth, alt: 'presA02' },
      
-        // tambhakan lagi kalau masih ada....
+        // tambhakan lagi kalau masih ada...
     ]
 
 
@@ -202,45 +203,39 @@ function PresA05({url}) {
                                 width={1200}
                                 height={2200}
                             />    
-                            <div className='gap-y-4 p-8 w-full h-full flex flex-col justify-end items-end 
+                        <div className='gap-y-4 p-8 w-full h-full flex flex-col justify-end items-end 
                                  relative'>
-                                     
-                        <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
-                        <h1>scroll ke bawah</h1>
-                        <div className='w-full flex flex-row items-center justify-between'>
-                            <div onClick={togglePlay} className='flex flex-row items-start cursor-pointer justify-between text-white gap-x-4'>
-                                {isPlaying ? <dotlottie-player src="https://lottie.host/33f853c2-3ac1-4ca2-a738-c642fbdf8f62/5MK6jbaDeb.json" 
-                                    background="transparent" 
-                                    speed="1" 
-                                    style={{width: 40+'px', height: 40+'px'}} 
-                                    loop 
-                                    autoplay>
-                                </dotlottie-player> 
-                                : 
-                                <div className='w-[40px] h-[40px]  text-yellow-500 flex flex-col items-center justify-center'>
-                                    <FaPause/>
-                                </div>}
-                                <div className='flex flex-col items-start justify-center text-xs '>
-                                    <h1 className='font-bold'>{isPlaying ? 'Now Playing' : 'Paused'}</h1>
+                                        
+                            <FaAngleDoubleDown className='scroll-me font-bold text-xl '/>
+                            <h1>scroll ke bawah</h1>
+                            <div className='w-full flex flex-row items-center justify-between'>
+                                <div onClick={togglePlay} className='flex flex-row items-start cursor-pointer justify-between text-white gap-x-4'>
+                                    {isPlaying ? <dotlottie-player src="https://lottie.host/33f853c2-3ac1-4ca2-a738-c642fbdf8f62/5MK6jbaDeb.json" 
+                                        background="transparent" 
+                                        speed="1" 
+                                        style={{width: 40+'px', height: 40+'px'}} 
+                                        loop 
+                                        autoplay>
+                                    </dotlottie-player> 
+                                    : 
+                                    <div className='w-[40px] h-[40px]  text-yellow-500 flex flex-col items-center justify-center'>
+                                        <FaPause/>
+                                    </div>}
+                                    <div className='flex flex-col items-start justify-center text-xs '>
+                                        <h1 className='font-bold'>{isPlaying ? 'Now Playing' : 'Paused'}</h1>
 
-                                    {/* TO DO: JUDUL LAGU*/}
-                                    <h1>Romantic Love - Alex P.</h1>
+                                        {/* TO DO: JUDUL LAGU*/}
+                                        <h1>Romantic Love - Alex P.</h1>
+                                    </div>
                                 </div>
+                                {/* TO DO: NAMA MEMPELAI*/}
+                                <h1 className='text-3xl font-bold text-right font-Batusa'>The Wedding Of {dataWeding.content.couple}</h1>
                             </div>
-                            {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className='text-3xl font-bold text-right font-Batusa'>The Wedding Of {dataWeding.content.couple}</h1>
                         </div>
                     </div>
-
-                    </div>
-
-                
                 </div>
-
                 {/* SISI KANAN */}
                 <div className='w-full  lg:w-[40%] overflow-y-auto relative text-[#A88C60] bg-[#1D1E18]'>
-
-
                     {/* NOW PLAYING*/}
                     <div className='lg:hidden flex flex-col items-center justify-between gap-x-4 fixed w-full
                                      top-4 z-20 '>
@@ -264,22 +259,17 @@ function PresA05({url}) {
                             </div>
                         </div>                    
                     </div>
-
                     {/* NAVIGASI MENU BAWAH */}
                    <Navigasi imgThumb={dataWeding.content.btn_couple}/>
-
                     {/* OPENING_PHOTO */}
                     <div id='opening' className='w-full h-screen relative'>
                         <div className='p-12 absolute top-8 text-white w-full  flex flex-col items-center justify-end rounded-t-3xl'>
                             <p>THE WEDDING OF</p>
-
                             {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className='text-6xl py-4  text-center'>{dataWeding.content.groom_name} &<br/>{dataWeding.content.bride_name}</h1>
-                        
+                            <h1 className='text-6xl py-4  text-center'>{dataWeding.content.groom_name} &<br/>{dataWeding.content.bride_name}</h1>                        
                                 {/* TO DO: TANGGAL NIKAH*/}
                                 <p className='text-center'>{dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</p> 
                         </div>
-
                         {/* TO DO: GAMBAR OPENING*/}
                         <Image
                             src={dataWeding.content.bg_first_section}
@@ -289,9 +279,7 @@ function PresA05({url}) {
                             alt='appstore'
                         />
                    </div>
-
                    <div className='w-full  flex flex-col items-center  relative '>
-                   
                         {/* AYAT ALQUR'AN */}
                         <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 gap-y-4 pt-[80px]  
                                         overflow-hidden pb-[20px]'>
@@ -304,7 +292,6 @@ function PresA05({url}) {
                                     alt='appstore'
                                 />
                             </div>
-                        
                             <Image
                                 src={gDrive+'1oh-k5jkDJ0dnIhEyccf4fb21h2tmO3bu'+gDriveAuth}
                                 width={1200}
@@ -320,7 +307,6 @@ function PresA05({url}) {
                             <p className={'text-center text-lg py-4 font-bold fadeUp '+forum.className}>
                                 (QS. Ar-Rum ayat 21)
                             </p>
-
                             <Image
                                 src={gDrive+'1oh-k5jkDJ0dnIhEyccf4fb21h2tmO3bu'+gDriveAuth}
                                 width={1200}
@@ -328,7 +314,6 @@ function PresA05({url}) {
                                 className='w-[16%] object-cover fadeUp'
                                 alt='appstore'
                             />
-
                             <Image
                                 src={dataWeding.content.img_quote_1}
                                 width={1200}
@@ -406,9 +391,7 @@ function PresA05({url}) {
                                 </div>
                             </div>
                           </div>
-                         
                         </div>
-
                         {/* INFO ACARA */}
                         <div id='jadwal' className='w-full  relative'>
                         <Image
@@ -466,13 +449,9 @@ function PresA05({url}) {
                             </iframe>
                             
                         </div>
-
-              
                 {/* COUNTDOWN */}
                 <Timer targetDate = {dateCountDown} anim = {{fadeUp :'fadeUp'}} bgImage={gDrive+'1y5p-ROyWz65Vk6lIc8_tk6NHLYDIMA9R'+gDriveAuth}/>
-
                 {/* <Gallery id={'gallery'} images={images} anim={{fadeUp:'fadeUp'}}/> */}
-
                 {/* YOUTUBE */}
                 <div className='w-full flex flex-col items-center justify-center  gap-y-8  backdrop-blur-xl '>
                     <iframe 
@@ -536,10 +515,7 @@ function PresA05({url}) {
                     <div className='fadeUp p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
                         <p className='text-sm fadeUp'>Two souls become one, two hearts beat as one</p>
                         <h1 className={' text-3xl py-4 fadeUp '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
-                       
-                            <p className='w-1/3 fadeUp'>Thank You</p>
-                       
-                        
+                        <p className='w-1/3 fadeUp'>Thank You</p>
                     </div>
                     <Image
                         src={dataWeding.content.img_closing}
@@ -549,12 +525,9 @@ function PresA05({url}) {
                         alt='appstore'
                     />
                </div>
-
                {/* WATERMARK */}
                 <Watermark/>
                    </div>
-
-                 
                 </div>
             </div>
         </div>

@@ -22,8 +22,8 @@ function PresA01({url}) {
     const dataWeding = {
        META : {
             slug : "presA01",
-            title : "momenku - preview tema presA01",
-            description : "momenku - preview tema presA01",
+            title : "rabine.id - preview tema presA01",
+            description : "rabine.id - preview tema presA01",
             thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
         },
         content : {
@@ -70,10 +70,10 @@ function PresA01({url}) {
 
     const imagesGallery = [
 
-        { src: gDrive+'1hivOEsRJBRYmrheh94InA7ACZhbef3vP'+gDriveAuth, alt: 'momenku' },
-        { src: gDrive+'1cZupWQkVhmerqhXqyaw_jNK0vakU_lnC'+gDriveAuth, alt: 'momenku' },
-        { src: gDrive+'1gJteV-muM7nhLZUQSi70ddbLkaUX_wdE'+gDriveAuth, alt: 'momenku' },
-        { src: gDrive+'1DXGy80sDvpGTXwX_TPl9VFS_yo8LrJMM'+gDriveAuth, alt: 'momenku' },
+        { src: gDrive+'1hivOEsRJBRYmrheh94InA7ACZhbef3vP'+gDriveAuth, alt: 'rabine.id' },
+        { src: gDrive+'1cZupWQkVhmerqhXqyaw_jNK0vakU_lnC'+gDriveAuth, alt: 'rabine.id' },
+        { src: gDrive+'1gJteV-muM7nhLZUQSi70ddbLkaUX_wdE'+gDriveAuth, alt: 'rabine.id' },
+        { src: gDrive+'1DXGy80sDvpGTXwX_TPl9VFS_yo8LrJMM'+gDriveAuth, alt: 'rabine.id' },
      
         // tambhakan lagi kalau masih ada....
     ]

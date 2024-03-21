@@ -20,8 +20,8 @@ function PresA04({url}) {
     const dataWeding = {
         META : {
              slug : "presA04",
-             title : "momenku - preview tema presA04",
-             description : "momenku - preview tema presA04",
+             title : "rabine.id - preview tema presA04",
+             description : "rabine.id - preview tema presA04",
              thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
          },
          content : {
