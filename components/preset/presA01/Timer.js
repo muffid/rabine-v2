@@ -7,12 +7,17 @@ const Timer = (props) => {
   const propsTarget = props.targetDate
   const fadeUp = props.anim.fadeUp
   const bgImage = props.bgImage
+  const url = props.url
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
   });
+
+ const saveDate = () => {
+  window.open(url, '_blank');
+  }
 
   useEffect(() => {
     const targetDate = new Date(propsTarget);
@@ -75,7 +80,7 @@ const Timer = (props) => {
               <p>Detik</p>
             </div>
           </div>
-          <button className={'flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 hover:bg-white hover:text-black hover:scale-105 transition-all ease-out '+fadeUp}>
+          <button onClick={saveDate} className={'flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 hover:bg-white hover:text-black hover:scale-105 transition-all ease-out '+fadeUp}>
             <FaRegCalendarPlus/>
             simpan tanggal
           </button>
