@@ -133,8 +133,9 @@ function PresA01({url}) {
             <Head>
                 {/* TO DO: TITLE PERNIKAHAN*/}
                 <title>{dataWeding.META.title}</title>
+
                 <meta name="description" content={dataWeding.META.description} />
-                <meta property="og:image" content="" />
+                <meta property="og:image" content="http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg" />
                 <meta property="og:image:width" content="400" />
                 <meta property="og:image:height" content="300" />
                 <link rel="icon" href="/rbn.ico" />
@@ -149,7 +150,6 @@ function PresA01({url}) {
                             background-color: #333333; /* Warna thumb scrollbar */
                             border-radius: 6px; /* Sudut melengkung */
                           }
-                      
                     `}
                 </style>
             </Head>
