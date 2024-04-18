@@ -52,7 +52,7 @@ function PresA01({url}) {
             start_akad : "07:30 WIB", // format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
             end_akad : "selesai",
             start_resepsi : "11:00 WIB",// format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
-            end_resepsi : "Selesai",
+            end_resepsi : "11.30 WIB",
             venue : "Gedung Kodim Tuban",
             venue_address : "Jl. Dr. Wahidin Sudirohusodo No 800, Sidorejo Kec. Tuban Kab. Tuban Jawa Timur 62315",
             gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.9204491704136!2d112.044862!3d-6.9001173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77980005ae899d%3A0x4ef4d64fdc8818be!2sKomando%20Distrik%20Militer%200811!5e0!3m2!1sid!2sid!4v1713354070849!5m2!1sid!2sid",
@@ -364,7 +364,7 @@ function PresA01({url}) {
                             />
 
                             {/* TO DO: ISI DATANYA*/}
-                            <h1 className='my-8 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan Ibu {dataWeding.content.bride_mother}</h1>
+                            <h1 className='my-8 fadeUp'>Putra dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan Ibu {dataWeding.content.bride_mother}</h1>
                             <div className='flex gap-2 text-sm items-center justify-center fadeUp'>
                                 <FaInstagram/>
                             {dataWeding.content.bride_ig_account}
@@ -476,7 +476,7 @@ function PresA01({url}) {
                     <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
                     {/* <Gallery id={'gallery'} images={imagesGallery}/> */}
-                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  >
+                    {/* <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  >
                            <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Gifts</h1>
                            <div className=' relative rounded-lg fadeUp'>
                                 <Image
@@ -514,12 +514,12 @@ function PresA01({url}) {
                             <FaRegCopy/> copy no rek
                         </button>
                      
-                    </div>
+                    </div> */}
            
                 
 
                     {/* CLOSING */}
-                    <div className='w-full  relative' >
+                    <div className='w-full  relative' id='gift'>
                         <div id='gallery' className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end z-[5]'>
                             <p >Two souls become one, two hearts beat as one</p>
                             <h1 className='font-bold text-6xl py-4 font-Royal-Exq capitalize'>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
