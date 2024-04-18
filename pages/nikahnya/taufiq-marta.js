@@ -27,8 +27,8 @@ function PresA01({url}) {
             thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
         },
         content : {
-            audio : "/audio/wedding-cinematic.mp3",
-            song_title : "Romantic Love - Charles P",
+            audio : "/audio/Karolina.mp3",
+            song_title : "Sore - Karolina",
             groom_name: "Taufiq",
             bride_name : "Marta", 
             groom_sure_name : "Muhamad Ahmad Taufiq Api Gadi, M.Pd",
@@ -476,12 +476,50 @@ function PresA01({url}) {
                     <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
                     {/* <Gallery id={'gallery'} images={imagesGallery}/> */}
-
+                    <div id='gift' className='h-full  bg-black py-12 flex gap-y-8 flex-col items-center justify-center'  >
+                           <h1 className='text-[2.5rem] font-Royal-Exq fadeUp'>Gifts</h1>
+                           <div className=' relative rounded-lg fadeUp'>
+                                <Image
+                                    src={gDrive+"1Yflvx20k1sJFZCLcNAoOMIA3lHs_FeED"+gDriveAuth}
+                                    fill
+                                    style={{objectFit:"cover"}}
+                                    className='absolute top-0 rounded-lg'
+                                    sizes="100%"
+                                />
+                                <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
+                                    <div className='flex flex-row items-center justify-between w-full'>
+                                
+                                        <h1>BNI</h1>
+                                        <Image
+                                            src={gDrive+'1h9fv-w1E974Sp24ec3DqB8fCg5e55OX6'+gDriveAuth}
+                                            width={1000}
+                                            height={1000}
+                                            className='w-[28%] object-contain'
+                                            alt='appstore'
+                                        />
+                                </div>
+                                <Image
+                                        src={gDrive+'1nNGXHHDge0MH1p8_9TO_8V6_ABWW4Ldk'+gDriveAuth}
+                                        width={1000}
+                                        height={1000}
+                                        className='w-[12%] object-contain my-8'
+                                        alt='appstore'
+                                    />
+                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>0367555025</h1>
+                                    <h1>{dataWeding.content.groom_sure_name}</h1>
+                                </div>  
+                           </div>
+                           <button onClick={()=>{navigator.clipboard.writeText('0367555025')}} className='flex flex-row items-center justify-center gap-2 border border-white px-5 py-2 mt-4
+                                        hover:bg-white hover:text-black fadeUp hover:scale-105 transition-all ease-out text-sm'>
+                            <FaRegCopy/> copy no rek
+                        </button>
+                     
+                    </div>
            
                 
 
                     {/* CLOSING */}
-                    <div className='w-full  relative' id='gift'>
+                    <div className='w-full  relative' >
                         <div id='gallery' className='p-12 absolute top-0 bg-black/40 w-full h-full flex flex-col items-start justify-end z-[5]'>
                             <p >Two souls become one, two hearts beat as one</p>
                             <h1 className='font-bold text-6xl py-4 font-Royal-Exq capitalize'>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
