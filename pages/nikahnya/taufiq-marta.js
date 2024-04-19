@@ -364,7 +364,7 @@ function PresA01({url}) {
                             />
 
                             {/* TO DO: ISI DATANYA*/}
-                            <h1 className='my-8 fadeUp'>Putra dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan Ibu {dataWeding.content.bride_mother}</h1>
+                            <h1 className='my-8 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan Ibu {dataWeding.content.bride_mother}</h1>
                             <div className='flex gap-2 text-sm items-center justify-center fadeUp'>
                                 <FaInstagram/>
                             {dataWeding.content.bride_ig_account}
@@ -387,7 +387,7 @@ function PresA01({url}) {
                                 className='object-cover w-[8%] my-6 fadeUp'
                                 alt='appstore'
                             />
-                            <h1 className='my-8 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan Ibu {dataWeding.content.groom_mother}</h1>
+                            <h1 className='my-8 fadeUp'>Putra dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan Ibu {dataWeding.content.groom_mother}</h1>
                             <div className='flex gap-2 text-sm items-center justify-center fadeUp'>
                                 <FaInstagram/>
                                 {dataWeding.content.groom_ig_account}
