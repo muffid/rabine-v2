@@ -28,8 +28,7 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 3002
           script: |
-            cd ~/apps/ga-ci-cd-nodejs
-            git pull origin master
+            cd /home/rabine.id/public_html
+            git pull origin main
             git status
-            npm install --only=prod
-            pm2 restart YoutubeApp
+            pm2 restart public_html
