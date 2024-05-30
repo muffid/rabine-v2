@@ -33,6 +33,4 @@ jobs:
             git status
             source ~/.bashrc
             nvm use v20.14.0
-            npm update
-            npm run build
 
