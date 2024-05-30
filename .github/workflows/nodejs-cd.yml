@@ -26,7 +26,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
-          port: 9311
+          port: 22
           script: |
             cd /home/rabine.id/public_html
             git pull origin main
