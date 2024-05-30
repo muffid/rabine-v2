@@ -31,4 +31,4 @@ jobs:
             cd /home/rabine.id/public_html
             git pull origin main
             git status
-            pm2 restart public_html
+          
