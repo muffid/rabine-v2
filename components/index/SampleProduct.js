@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import SingleProduct from '../globals/SingleProduct'
+import { useRouter } from 'next/router'
 
 function SampleProduct(props) {
    const [whatCat,setWhatCat] = useState('ALL')
+   const router= useRouter()
 
   return (
     <div id={`content${props.id}`} className='flex flex-col items-center gap-y-4 px-6'>
@@ -19,7 +21,10 @@ function SampleProduct(props) {
                 ): whatCat === item.Product_Category ? (<SingleProduct img={item.Product_Img} slug={item.Product_Slug} cat={item.Product_Category} name={item.Product_Name} key={item.Product_Id}  />):''
             )}
         </div>
-        <button className=' hover:scale-105 transition duration-100 rounded-full text-sm bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 mt-8 py-3'>Semua Template</button>
+        <button onClick={()=>{  router.push({
+            pathname:`/halaman_iku`
+          
+        })}} className=' hover:scale-105 transition duration-100 rounded-full text-sm bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 mt-8 py-3'>Semua Template</button>
     </div>
   )
 }
