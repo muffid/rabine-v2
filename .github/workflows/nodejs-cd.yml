@@ -30,4 +30,4 @@ jobs:
           script: |
             cd public_html/rabine-v2
             git pull origin main
-            npm run build
+            npm -v
