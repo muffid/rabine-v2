@@ -185,13 +185,9 @@ export default function Comments({slug,url,tamu}) {
                                     <h1 className=''>{reply.Comment_Time}</h1>
                                 </div>
                                 <p className='text-slate-200'>{reply.Comment_Content}</p>
-                            </div>
-                                 
-                                 
+                            </div>  
                              </div>
                          </div>
-
-                          
                         ))}
                     </div>
                 ))}
