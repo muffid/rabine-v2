@@ -11,14 +11,15 @@ import { navState } from '../recoil/navState'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Footer from '../components/globals/Footer'
-import axios from 'axios';
 require('dotenv').config();
+import { graphQLClient } from "../lib/graphql-client"
+import { GET_PRODUCTS } from "../lib/product-queries"
 
 
 
 
 
-function Home({dataApi}) {
+function Home({products}) {
 
   const [menuActive,setMenuActive] = useRecoilState(navState)
   const intersect='20vw'
@@ -44,14 +45,6 @@ function Home({dataApi}) {
             <Hero id={1} />
         </div>
       
-        {/* <motion.div
-            initial={{ opacity: 0,y:intersect }}
-            whileInView={{ opacity: 1,y:0 }}
-            viewport={{ once: true }}
-            transition={{duration:duration,ease:style}}
-          >
-          <Beralih id={2}/>
-        </motion.div> */}
         <motion.div
             initial={{ opacity: 0,y:intersect }}
             whileInView={{ opacity: 1,y:0 }}
@@ -84,7 +77,7 @@ function Home({dataApi}) {
             viewport={{ once: true }}
             transition={{duration:duration,ease:style}}
         >
-        <SampleProduct data={dataApi.undangan} id={5}/>
+        <SampleProduct data={products} id={5}/>
         <h1 id='5'>product</h1>
         </motion.div>
       </main>
@@ -102,19 +95,25 @@ function Home({dataApi}) {
 }
 
 
-export async function getServerSideProps() {
+// export async function getServerSideProps() {
 
-  const url = process.env.API_URL_PROD
-  const res = await fetch(url+'product/', {
-    headers: {
-      Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
-    }
-  })
- 
-  const dataApi = await res.json()
- 
+//   const url = process.env.API_URL_PROD
+//   const res = await fetch(url+'product/', {
+//     headers: {
+//       Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR'
+//     }
+//   })
+//   const dataApi = await res.json()
+//   return { props: { dataApi } }
+// }
 
-  return { props: { dataApi } }
+export async function getStaticProps() {
+  const data = await graphQLClient.request(GET_PRODUCTS);
+  return {
+    props: {
+      products: data.presets,
+    },
+  };
 }
 
 export default Home;

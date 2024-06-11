@@ -21,7 +21,7 @@ function SingleProduct(props) {
    <div className='flex flex-col items-center justify-start  p-2 mt-4 ' onClick={()=>viewProduct()}>
         <div className='flex flex-col items-start  bg-white border rounded-2xl hover:shadow-xl cursor-pointer hover:scale-105 transform transition '>
             <Image
-                src={'/img/'+props.img}
+                src={props.img}
                 width={400}
                 height={400}
                 className='rounded-t-2xl w-full '
