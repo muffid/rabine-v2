@@ -202,6 +202,7 @@ function PresA05({url}) {
                                 className='absolute w-full object-cover h-full'
                                 width={1200}
                                 height={2200}
+                                alt='rabine.id'
                             />    
                         <div className='gap-y-4 p-8 w-full h-full flex flex-col justify-end items-end 
                                  relative'>
@@ -400,6 +401,7 @@ function PresA05({url}) {
                             style={{objectFit:"cover"}}
                             className='asolute'
                             sizes="100vw"
+                            alt='rabine.id'
                         />
                         <div className='w-full  flex flex-col items-center justify-center space-y-6 '>
                             <div className='bg-[#1D1E18]/40  w-full space-y-4 shadow-xl backdrop-blur-sm fadeUp flex flex-col items-center justify-between'>
@@ -479,6 +481,7 @@ function PresA05({url}) {
                                 style={{objectFit:"cover"}}
                                 className='absolute top-0 rounded-lg fadeUp'
                                 sizes="100%"
+                                alt='rabine.id'
                             />
                             <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
                                 <div className='flex flex-row items-center justify-between w-full'>

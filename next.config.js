@@ -4,7 +4,15 @@ const nextConfig = {
   // reactStrictMode: true,
   images: {
     dangerouslyAllowSVG: true,
-    domains: ['drive.usercontent.google.com'],
+    remotePatterns:[
+      {
+        protocol: 'https',
+        hostname: 'drive.usercontent.google.com',
+        port: '',
+        pathname: '/**',
+      },
+    ]
+   
   },
 }
 

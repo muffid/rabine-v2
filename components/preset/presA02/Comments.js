@@ -1,26 +1,34 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 import { FaReply,FaComment, FaUserAlt } from 'react-icons/fa'
 import axios from 'axios'
 
 export default function Comments({slug,url,tamu}) {
 
-    async function fetchDataComments(){
-        const data = await fetch(url+'comment/'+slug)
-        const dataJson = await data.json()
-        const topLevelComments = dataJson.comments.filter(comment => !comment.parent_Id)
-        setComments(topLevelComments)
-    }
 
-   
-    
-    
     const [comments, setComments] = useState([])
     const [commentToPost, setCommentToPost] = useState('')
     const [replyToPost, setReplyToPost ] = useState('')
     const [replyingTo, setReplyingTo] = useState(null)
     const [namaTamu, setNamaTamu] = useState(tamu)
     const inputReplyRef = useRef(null)
+
+    const fetchDataComments = useCallback(async () => {
+        try {
+          const data = await fetch(url + 'comment/' + slug);
+          const dataJson = await data.json();
+          const topLevelComments = dataJson.comments.filter(
+            (comment) => !comment.parent_Id
+          );
+          setComments(topLevelComments);
+        } catch (error) {
+          console.error('Error fetching comments:', error);
+        }
+      }, [url, slug]); // Tambahkan url dan slug ke dalam dependency array
+    
+      useEffect(() => {
+        fetchDataComments();
+      }, [fetchDataComments]);
    
    
  
@@ -98,9 +106,6 @@ export default function Comments({slug,url,tamu}) {
       setReplyToPost('')
     }
 
-    useEffect(()=>{
-        fetchDataComments()
-    },[])
 
     useEffect(() => {
       

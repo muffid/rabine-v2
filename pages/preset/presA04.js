@@ -222,6 +222,7 @@ function PresA04({url}) {
                                 className='absolute w-full object-cover h-full'
                                 width={1200}
                                 height={2200}
+                                alt='rabine.id'
                             />    
                             <div className='gap-y-4 p-8 w-full h-full flex flex-col justify-end items-end 
                                  relative'>
@@ -501,6 +502,7 @@ function PresA04({url}) {
                                 style={{objectFit:"cover"}}
                                 className='absolute top-0 rounded-lg fadeUp'
                                 sizes="100%"
+                                alt='rabine.id'
                             />
                             <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
                                 <div className='flex flex-row items-center justify-between w-full'>

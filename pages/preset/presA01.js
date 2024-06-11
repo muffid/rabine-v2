@@ -200,6 +200,7 @@ function PresA01({url}) {
                                 style={{objectFit:"cover"}}
                                 className='absolute'
                                 sizes="100vw"
+                                alt='rabine.id'
                             />
 
                         <div className=' flex flex-col justify-end items-end 
@@ -297,6 +298,7 @@ function PresA01({url}) {
                             style={{objectFit:"cover"}}
                             className='absolute top-0 '
                             sizes="100vw"
+                            alt='rabine.id'
                         />
                         <Parallax speed={8} scale={[1, 2]} className='absolute top-20 lg:top-40 fadeUp flex flex-col items-center justify-center' >
                             <Image
@@ -372,6 +374,7 @@ function PresA01({url}) {
                                     style={{objectFit:"cover"}}
                                     className='absolute'
                                     sizes="100vw"
+                                    alt='rabine.id'
                             />
                             <div className='w-[14rem] h-[16rem] rounded-t-full relative fadeUp bg-slate-600'>
                             <Image
@@ -380,6 +383,7 @@ function PresA01({url}) {
                                     style={{objectFit:"cover"}}
                                     className='absolute top-0 rounded-t-full'
                                     sizes="100vw"
+                                    alt='rabine.id'
                                 />
                             </div>
 
@@ -407,6 +411,7 @@ function PresA01({url}) {
                                     style={{objectFit:"cover"}}
                                     className='absolute top-0 rounded-t-full'
                                     sizes="100vw"
+                                    alt='rabine.id'
                                 />
                             </div>
                             <h1 className='font-bold text-2xl font-Royal-Exq py-6 fadeUp'>{dataWeding.content.groom_sure_name}</h1>
@@ -434,6 +439,7 @@ function PresA01({url}) {
                             style={{objectFit:"cover"}}
                             className='asolute'
                             sizes="100vw"
+                            alt='rabine.id'
                         />
                         <div className='absolute bg-gradient-to-t from-black to-black/50 via-black/80 w-full h-full flex items-center justify-center'></div>
                         <div className='w-full h-full  flex flex-col items-center justify-center py-20 px-12 gap-y-10 text-center'>
@@ -509,6 +515,7 @@ function PresA01({url}) {
                                     style={{objectFit:"cover"}}
                                     className='absolute top-0 rounded-lg'
                                     sizes="100%"
+                                    alt='rabine.id'
                                 />
                                 <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
                                     <div className='flex flex-row items-center justify-between w-full'>
