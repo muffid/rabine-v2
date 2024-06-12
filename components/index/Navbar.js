@@ -18,8 +18,8 @@ function Navbar() {
         <motion.div
             initial={{x:'100vw'}}
             animate={{x: isOpen ? 0 : '100vw'}}
-            transition={{duration:0.3,ease:'easeOut'}}
-            className='drawer absolute  h-[100vh] w-[280px]  top-0 z-50 right-0 md:hidden '>
+            transition={{duration:0.3,ease:'backInOut'}}
+            className='drawer absolute  h-[100vh] w-[100vw]  top-0 z-50 right-0 md:hidden '>
             <div className='bg-gradient-to-r from-pink-600 to-orange-500 w-full p-6 flex flex-row items-center justify-end text-sm gap-x-2 pr-18'>
                 <p className='text-white mr-24 bold text-base'>rabine.id</p>
                 <p className='text-white ' onClick={()=>setIsOpen(false)}>Close</p>

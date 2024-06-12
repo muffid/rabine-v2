@@ -25,10 +25,10 @@ function SampleProduct(props) {
                     ): whatCat === item.category ? ( <SingleProduct key={item.id} id={item.id} img={item.image.url} cat={item.category} slug={item.slug} name={item.productName}/>):''
                 )}
             </div>
-            <button onClick={()=>{  router.push({
+            {/* <button onClick={()=>{  router.push({
                 pathname:`/halaman_iku`
             
-            })}} className=' hover:scale-105 transition duration-100 rounded-full text-sm bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 mt-8 py-3'>Semua Template</button>
+            })}} className=' hover:scale-105 transition duration-100 rounded-full text-sm bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 mt-8 py-3'>Semua Template</button> */}
         </div>
   )
 }

@@ -6,7 +6,15 @@ import Link from 'next/link';
 
 function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,slug}) {
     const router= useRouter()
-    const dynamicLink = '/preset/'+slug;
+    const dynamicLink = '/preset/'+slug
+
+    const sendMessageToWhatsApp = () => {
+        const phoneNumber = '+62 878-4686-7493'
+        const message = 'Halo, saya ingin order preset undangan online dengan kode '+slug
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${encodeURIComponent(phoneNumber)}&text=${encodeURIComponent(message)}`
+        window.open(whatsappURL, '_blank')
+      }
+      
    
   return (
     <div className='mt-[110px] grid grid-cols-1 md:grid-cols-2 md:items-start lg:items-center justify-between gap-x-8 rounded-3xl border bg-slate-50 border-slate-200  md:px-6  md:py-4 gap-y-8 relative'>
@@ -50,7 +58,7 @@ function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,slug}) {
                 </a>
          
 
-                <div className='hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-5 py-3 bg-gradient-to-r from-pink-600 to-orange-500 rounded-full shadow-md '>
+                <div onClick={sendMessageToWhatsApp} className='hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-5 py-3 bg-gradient-to-r from-pink-600 to-orange-500 rounded-full shadow-md '>
                    <FaCartPlus className='text-white'/>
                     <h1 className=' text-white text-sm  '>Order</h1>
                 </div>
