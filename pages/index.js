@@ -107,7 +107,7 @@ function Home({products}) {
 //   return { props: { dataApi } }
 // }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await graphQLClient.request(GET_PRODUCTS);
   return {
     props: {
