@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Footer from '../components/globals/Footer'
 require('dotenv').config();
-import { graphQLClient } from "../lib/graphql-client"
+import { graphQLClient,endpoint } from "../lib/graphql-client"
 import { GET_PRODUCTS } from "../lib/product-queries"
 
 

@@ -13,10 +13,10 @@ function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,slug}) {
         
         <div className='w-full relative md:mt-8 p-8 rounded-t-3xl bg-white'>
             <Image
-                src={'/img/'+imgPreset}
+                src={imgPreset}
                 width={1000}
                 height={1000}
-                className='rounded-xl shadow-xl'
+                className='rounded-xl shadow-xl  lg:w-[70%]'
                 alt='mobile-rabine'
             />
               {catPreset=== 'premium' ? (<div className='absolute bg-white shadow-lg flex items-center justify-center rounded top-6 right-6 text-lg  p-2 text-yellow-400'>

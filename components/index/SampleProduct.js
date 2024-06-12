@@ -22,7 +22,7 @@ function SampleProduct(props) {
                 {arrProducts.map((item)=>
                     whatCat === 'ALL' ? (
                     <SingleProduct key={item.id} id={item.id} img={item.image.url} cat={item.category} slug={item.slug} name={item.productName}  />
-                    ): whatCat === item.Product_Category ? ( <SingleProduct key={item.id} id={item.id} img={item.image.url} cat={item.category} slug={item.slug} name={item.productName}/>):''
+                    ): whatCat === item.category ? ( <SingleProduct key={item.id} id={item.id} img={item.image.url} cat={item.category} slug={item.slug} name={item.productName}/>):''
                 )}
             </div>
             <button onClick={()=>{  router.push({
