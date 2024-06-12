@@ -43,6 +43,8 @@ function Home({products}) {
         statusMessage='Available' // Optional
         placeholder='Write here...' // Optional
         allowEsc={true} // Optional
+        notificationDelay={8}
+        notification={true}
         // Explore all available props below
       />
       <Head>
