@@ -4,15 +4,18 @@ import Head from 'next/head'
 import NavbarSecond from '../../components/globals/NavbarSecond'
 import Footer from '../../components/globals/Footer'
 import DetailPreset from '../../components/product_detail/DetailPreset'
+import { GET_PRODUCTS,GET_PRODUCTS_BY_ID } from '../../lib/product-queries'
+import { graphQLClient } from '../../lib/graphql-client'
 
-function ProdId({preset}) {
+function ProdId({products}) {
 
     const router = useRouter()
     const {presetId} = router.query
-    const detailData = preset.undangan[0]
-    console.log(preset);
+    const detailData = products[0]
+    console.log(detailData);
 
   return (
+
     <div className='w-full base '>
       <Head>
         <title>Rabine.id - Lihat Preset Desain</title>
@@ -21,12 +24,12 @@ function ProdId({preset}) {
       </Head>
       <NavbarSecond />
       <main className='w-full mx-auto px-6 md:px-12 max-w-[1200px]'>
-        <DetailPreset idPreset={detailData.Product_Id} 
-        namePreset={detailData.Product_Name} 
-        catPreset={detailData.Product_Category} 
-        imgPreset={detailData.Product_Img} 
-        priceP={25000}
-        slug={detailData.Product_Slug} />
+        <DetailPreset idPreset={detailData.id} 
+        namePreset={detailData.productName} 
+        catPreset={detailData.category} 
+        imgPreset={detailData.image.url} 
+        priceP={detailData.price}
+        slug={detailData.slug} />
      </main>
      <Footer/>
     </div>
@@ -38,16 +41,22 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
 
   //fetch detail preset by id
-  const url = `${process.env.API_URL_PROD}`
-  const res = await fetch(url+`product/slug/${id}`, {
-    headers: {
-      Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR' 
-    }
-  })
-  const preset = await res.json()
-  console.log(url);
+  // const url = `${process.env.API_URL_PROD}`
+  // const res = await fetch(url+`product/slug/${id}`, {
+  //   headers: {
+  //     Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR' 
+  //   }
+  // })
+  // const preset = await res.json()
+  // console.log(url);
 
-  return { props: {preset} }
+  const data = await graphQLClient.request(GET_PRODUCTS_BY_ID(id));
+
+  return {
+    props: {
+      products: data.presets,
+    },
+  };
 }
 
 
