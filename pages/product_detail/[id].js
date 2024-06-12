@@ -39,17 +39,6 @@ function ProdId({products}) {
 export async function getServerSideProps(context) {
 
   const { id } = context.params;
-
-  //fetch detail preset by id
-  // const url = `${process.env.API_URL_PROD}`
-  // const res = await fetch(url+`product/slug/${id}`, {
-  //   headers: {
-  //     Authorization: 'Bearer XXUiop67RTfr45GTJU90CFR' 
-  //   }
-  // })
-  // const preset = await res.json()
-  // console.log(url);
-
   const data = await graphQLClient.request(GET_PRODUCTS_BY_ID(id));
 
   return {
