@@ -44,10 +44,10 @@ function NavbarSecond() {
                         <BiHomeCircle/>
                     </div>
 
-                    <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>{setIsOpen(false);setMenuActive(3);goToHome()}}>
+                    {/* <div className='flex flex-row items-center gap-x-5  rounded-xl'onClick={()=>{setIsOpen(false);setMenuActive(3);goToHome()}}>
                         <p>Harga</p>
                         <BiInfoCircle/>
-                    </div>
+                    </div> */}
                     <div className='flex flex-row items-center gap-x-5  rounded-xl' onClick={()=>{setIsOpen(false);setMenuActive(5);goToHome()}}>
                         <p>Template</p>
                         <BiEnvelopeOpen/>
@@ -85,10 +85,10 @@ function NavbarSecond() {
                     </div>
 
              
-                    <div className=' cursor-pointer relative'>
+                    {/* <div className=' cursor-pointer relative'>
                         <p onMouseEnter={()=>setHoverMenu(3)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(3);goToHome()}}>Harga</p>
                         <div className={hoverMenu===3 || menuActive===3 ? 'visible'+' absolute -bottom-2 h-[0.2rem] w-6  bg-orange-600 rounded-xl duration-300' : 'invisible'}></div>
-                    </div>
+                    </div> */}
 
                     <div className=' cursor-pointer relative'>
                         <p onMouseEnter={()=>setHoverMenu(5)} onMouseLeave={()=>setHoverMenu(0)} onClick={()=>{setMenuActive(5);goToHome()}}>Template</p>

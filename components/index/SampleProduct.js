@@ -6,9 +6,6 @@ function SampleProduct(props) {
     const [whatCat,setWhatCat] = useState('ALL')
     const router= useRouter()
     const arrProducts = props.data
-    useEffect(()=>{
-        console.log(props.data[0].image.url)
-    },[])
     return (
     
         <div id={`content${props.id}`} className='flex flex-col items-center gap-y-4 px-6'>
