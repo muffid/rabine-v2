@@ -60,6 +60,7 @@ const Timer = (props) => {
           style={{objectFit:"cover"}}
           className='absolute'
           sizes="100vw"
+          alt='rabine.id'
         />
         <h1 className={'text-[2.5rem] font-Royal-Exq '+fadeUp}>Save The Date</h1>
          <div className={'grid grid-cols-4 gap-4 '+fadeUp}>
