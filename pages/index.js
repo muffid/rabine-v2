@@ -14,7 +14,7 @@ import Footer from '../components/globals/Footer'
 require('dotenv').config();
 import { graphQLClient,endpoint } from '../lib/graphql-client'
 import { GET_PRODUCTS } from '../lib/product-queries'
-import { FloatingWhatsApp } from '@carlos8a/react-whatsapp-floating-button';
+import FloatingChat from '../components/globals/Floating-Chat'
 
 
 
@@ -35,21 +35,21 @@ function Home({products}) {
 
   return (
     <div className='w-full base bg-gradient-to-b from-purple-50/50 to-blue-50'>
-       <FloatingWhatsApp
-        phoneNumber='+62 878-4686-7493' // Required
-        accountName='Muffid Mahnun' // Optional
-        avatar='https://i.ibb.co.com/wLpTx9t/IMG-0013-GREEN.jpg' // Optional
-        initialMessageByServer='Hi, Apa yang bisa dibantu?' // Optional
-        statusMessage='Available' // Optional
-        placeholder='Write here...' // Optional
-        allowEsc={true} // Optional
-        notificationDelay={8}
-        notification={true}
-        // Explore all available props below
+
+      <FloatingChat phoneNumber='+62 878-4686-7493' // Required
+                    accountName='Muffid Mahnun' // Optional
+                    avatar='https://i.ibb.co.com/wLpTx9t/IMG-0013-GREEN.jpg' // Optional
+                    initialMessageByServer='Hi, Apa yang bisa dibantu?' // Optional
+                    statusMessage='Available' // Optional
+                    placeholder='Write here...' // Optional
+                    allowEsc={true} // Optional
+                    notificationDelay={8}
+                    notification={true}
       />
+      
       <Head>
         <title>Rabine.id - Undangan Pernikahan Online | Modern & Elegant Design</title>
-        <meta charset='utf-8'/>
+        <meta charSet='utf-8'/>
         <meta name='description' content='Rabine.id - Undangan Pernikahan Online | Modern & Elegant Design' />
         <meta name='viewport' content='width=device-width, initial-scale=1'/>
         <meta name='description' content='Sebar Undangan jadi makin gampang, segampang tinggal klik. yuk, ganti undangan kertasmu ke undangan digital'  />
