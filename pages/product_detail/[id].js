@@ -28,7 +28,8 @@ function ProdId({products}) {
         namePreset={detailData.productName} 
         catPreset={detailData.category} 
         imgPreset={detailData.image.url} 
-        priceP={detailData.price}
+        // priceP={detailData.price}
+        priceP={100000}
         slug={detailData.slug} />
      </main>
      <Footer/>
