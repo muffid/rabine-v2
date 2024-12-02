@@ -29,7 +29,7 @@ jobs:
           port: 9316
           script: |
             source ~/.bashrc
-            cd /home/rabine.id/public_html
+            cd /home/rabine.id/public_html/
             git pull origin main
             # npm install
             npm run build
