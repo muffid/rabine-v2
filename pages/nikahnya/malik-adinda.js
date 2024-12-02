@@ -20,9 +20,9 @@ function PresA02({url}) {
     const gDriveAuth ="&authuser=0"
     const dataWeding = {
         META : {
-             slug : "presA02",
-             title : "rabine.id - preview tema presA02",
-             description : "rabine.id - preview tema presA02",
+             slug : "malik-adinda",
+             title : "rabine.id - malik-adinda",
+             description : "rabine.id - malik-adinda",
              thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
          },
          content : {
