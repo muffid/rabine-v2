@@ -28,7 +28,7 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 9316
           script: |
-            # source ~/.bashrc
+            source ~/.bashrc
             cd /home/rabine.id/public_html
             git pull origin main
             # npm install
