@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Sender (){
-    const url = "https://rabine.vercel.app/nikahnya/"
+    const url = "https://rabine.id/nikahnya/"
     const defaultTeksUndangan = `Kepada Yth.
 Bapak/Ibu/Saudara/i
 [Tamu]
@@ -114,7 +114,7 @@ ____________________`;
           type="submit"
           className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-200"
         >
-          Kirim
+          Salin Text
         </button>
         <ToastContainer
         position="top-right"
