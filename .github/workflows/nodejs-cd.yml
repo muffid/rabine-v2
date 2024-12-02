@@ -30,6 +30,7 @@ jobs:
           script: |
             source ~/.bashrc
             cd /home/rabine.id/public_html/
+            git stash
             git pull origin main
             # npm install
             npm run build
