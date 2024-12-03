@@ -149,9 +149,9 @@ function PresA02({url}) {
                 <title>{dataWeding.META.title}</title>
 
                 <meta name="description" content={dataWeding.META.description} />
-                <meta property="og:image" content="http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg" />
+                <meta property="og:image" content={ gDrive+"1Luk7XcsNJUj4uyC65xrGRThbIS9jWwIy"+gDriveAuth} />
                 <meta property="og:image:width" content="400" />
-                <meta property="og:image:height" content="300" />
+                <meta property="og:image:height" content="400" />
                 <link rel="icon" href="/rbn.ico" />
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
