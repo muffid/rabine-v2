@@ -11,7 +11,7 @@ function Sender (){
    
   
     const defaultTeksUndangan = `Kepada Yth.
-Bapak/Ibu/Saudara/i
+Bapak/Ibu/Saudara/ix
 [Tamu]
 _____________________
 
