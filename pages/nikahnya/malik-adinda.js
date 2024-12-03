@@ -63,7 +63,7 @@ function PresA02({url}) {
              img_quote_1 : gDrive+'1Ashrm9adEFN5vtRks7eX4dERxw4bHUGO'+gDriveAuth,
              img_quote_2 : gDrive+'1PgDiDGdBXvrouzBWMyPfM7a8jR_jpOtz'+gDriveAuth,
              img_closing : gDrive+'1AopmaDSkFGZk_Qqgm1FdQ0sRpSuWVVXP'+gDriveAuth,
-             btn_couple : gDrive+'1h8uZYbOlJmeqFi7BbMjCylr22828r3K4'+gDriveAuth
+             btn_couple : gDrive+'1fMBLmfYcQScla9xh1RbzKN_1NyMO98tC'+gDriveAuth
          }
      } 
  
