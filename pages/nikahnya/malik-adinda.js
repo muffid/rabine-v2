@@ -12,6 +12,8 @@ import GalleryFade from '../../components/preset/presA02/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 import Navigasi from '../../components/preset/globals/Navigasi'
 import { forum } from '../../components/globals/Fonts'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function PresA02({url}) {
@@ -54,6 +56,8 @@ function PresA02({url}) {
              end_resepsi : "Selesai",
              venue : "",
              venue_address : " Jl. ABS Prawirodirjo Rt.03/Rw.04, Kelurahan Penarukan, Kecamatan Kepanjen, Kabupaten Malang",
+             rekening : "639201019634534",
+             an : "Adinda Cahya Budiyanti",
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.6577630106453!2d112.57790879999999!3d-8.1362803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789f005f10e1f9%3A0x4fc0a9ae226d4bfc!2sMusholla%20Wasilatun%20Najjah!5e0!3m2!1sid!2sid!4v1733205362101!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
              bg_opening : gDrive+'1AopmaDSkFGZk_Qqgm1FdQ0sRpSuWVVXP'+gDriveAuth,
@@ -443,13 +447,27 @@ function PresA02({url}) {
                                         className='w-[12%] object-contain my-8'
                                         alt='appstore'
                                     />
-                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
-                                    <h1>Adinda Cahya Budiyanti</h1>
+                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>{dataWeding.content.rekening}</h1>
+                                    <h1>{dataWeding.content.an}</h1>
                                 </div>  
                            </div>
-                           <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                           <button onClick={()=>{
+                                        navigator.clipboard.writeText(dataWeding.content.rekening)
+                                         toast.success('berhasil menyalin text', {
+                                            position: "top-right",
+                                            autoClose: 3000, // Durasi tampilan toast dalam milidetik
+                                            hideProgressBar: false,
+                                            closeOnClick: true,
+                                            pauseOnHover: true,
+                                            draggable: true,
+                                            progress: undefined,
+                                            theme:'light'
+                                          });
+                                        }
+                                    } 
+                                    className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
                                         hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
-                            <FaRegCopy/> salin no rekening
+                                    <FaRegCopy/> salin no rekening
                         </button>
                      
                     </div>
@@ -477,6 +495,19 @@ function PresA02({url}) {
                     <Watermark/>
                 </div>
             </div>
+            <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        
+      />
+
         </div>
     )
 }
