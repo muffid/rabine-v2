@@ -34,16 +34,16 @@ function PresA02({url}) {
              bride_sure_name : "Adinda Cahya Budiyanti",
              groom_pic : gDrive+"1gYCfNFThE7B9oiRZS3t_bp4oOn5hrTzG"+gDriveAuth, 
              bride_pic : gDrive+'1xrlQ112Pk859HxlnwQbBPOpFDsXz5ZYM'+gDriveAuth, 
-             groom_father : "alm Saiman", // Hanya nama dan Gelar
+             groom_father : "Saiman", // Hanya nama dan Gelar
              groom_mother : "Lamsiyah", // Hanya nama dan Gelar
              bride_father : "Bambang Budi Sujianto", // Hanya nama dan Gelar
-             bride_mother : "almh malikah",// Hanya nama dan Gelar
+             bride_mother : "malikah",// Hanya nama dan Gelar
              groom_ig_account : "Andre_T",
              bride_ig_account : "Citra_T",
              groom_ig_url : "",
              bride_ig_url : "",
              couple : "Malik & Adinda",
-             day : "Minggu",
+             day : "Jum'at",
              date : "13", // Gunakan 01, 02, 03 dst untuk tanggal kurang dari 10
              month : "12", // Gunakan 01, 02, 03 dst untuk bulan kurang dari 10
              month_name : "Desember",
@@ -301,7 +301,7 @@ function PresA02({url}) {
                    </div>
 
                    {/* AYAT ALQUR'AN */}
-                    <div id='gift' className='w-full relative text-sm flex flex-col items-center justify-center px-16 py-[80px] bg-[#FFFBF4]'>
+                    <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 py-[80px] bg-[#FFFBF4]'>
                     
                         <p className='text-center fadeUp'>
                             “Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
@@ -329,7 +329,7 @@ function PresA02({url}) {
                         {/* TO DO: ISI DATANYA*/}
                         <h1 className='font-bold text-2xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.bride_sure_name}</h1>
                         {/* TO DO: ISI DATANYA*/}
-                        <h1 className='my-4 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan {dataWeding.content.bride_mother}</h1>
+                        <h1 className='my-4 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.bride_father} <br/> Dan Almh. Ibu {dataWeding.content.bride_mother}</h1>
                        
                         <h1 className='text-[5rem] my-20 font-Royal-Exq text-[#3c3838] fadeUp'>&</h1>
                   
@@ -341,7 +341,7 @@ function PresA02({url}) {
                                 alt='appstore'
                             />
                         <h1 className='font-bold text-2xl  py-6 fadeUp text-[#3c3838]'>{dataWeding.content.groom_sure_name}</h1>
-                        <h1 className='my-4 fadeUp'>Putri dari <br/> Bapak {dataWeding.content.groom_father} <br/> Dan Ibu {dataWeding.content.groom_mother}</h1>
+                        <h1 className='my-4 fadeUp'>Putra dari <br/> Alm. Bapak {dataWeding.content.groom_father} <br/> Dan Ibu {dataWeding.content.groom_mother}</h1>
                        
                     </div>
 
@@ -410,12 +410,49 @@ function PresA02({url}) {
                         bgImage={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
                         url={"https://calendar.google.com/calendar/u/0/r/eventedit?text=Wedding+"+dataWeding.content.groom_name+"+%26+"+dataWeding.content.bride_name+"&dates="+dataWeding.content.year+dataWeding.content.month+dataWeding.content.date+"T120000Z/"+dataWeding.content.year+dataWeding.content.month+dataWeding.content.date+"T120000Z&pli=1"} 
                     />
-
-
-
-                
-
                     <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+              
+                    {/* GIFT */}
+                    <div id='gift' className='h-full bg-[#FFFBF4] py-12 flex gap-y-8 text-[#3c3838] flex-col items-center justify-center fadeUp'  >
+                           <h1 className='text-[2.5rem] fadeUp '>Kirim Hadiah</h1>
+                           <div className=' relative rounded-lg fadeUp'>
+                                <Image
+                                    src={gDrive+"1GRzih9dezee_XEFl2X-F9lMKpxkTfEM6"+gDriveAuth}
+                                    fill
+                                    style={{objectFit:"cover"}}
+                                    className='absolute top-0 rounded-lg'
+                                    sizes="100%"
+                                    alt='rabine.id'
+                                />
+                                <div className='w-[400px] flex  p-8  flex-col items-start justify-between fadeUp'>
+                                    <div className='flex flex-row items-center justify-between w-full'>
+                                
+                                        <h1>Bank BRI</h1>
+                                        <Image
+                                            src='/img/BRI.png'
+                                            width={1000}
+                                            height={1000}
+                                            className='w-[20%] object-contain'
+                                            alt='appstore'
+                                        />
+                                </div>
+                                <Image
+                                        src={gDrive+'1nNGXHHDge0MH1p8_9TO_8V6_ABWW4Ldk'+gDriveAuth}
+                                        width={1000}
+                                        height={1000}
+                                        className='w-[12%] object-contain my-8'
+                                        alt='appstore'
+                                    />
+                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>647387374648</h1>
+                                    <h1>Adinda Cahya Budiyanti</h1>
+                                </div>  
+                           </div>
+                           <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                                        hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                            <FaRegCopy/> salin no rekening
+                        </button>
+                     
+                    </div>
 
                     {/* CLOSING */}
                     <div className='w-full  relative text-center h-[500px]'>
