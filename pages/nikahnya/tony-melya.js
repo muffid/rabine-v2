@@ -22,9 +22,9 @@ function PresA04({url}) {
     const dataWeding = {
         META : {
              slug : "tony-melya",
-             title : "The Wedding Of Tony & Melya",
-             description : "The Wedding Of Tony & Melya",
-             thumbnail : gDrive+"1ddqvisAIqhHRBgncMpBfOtIYNQ1iaTk9"+gDriveAuth
+             title : "The Wedding Of Melya & Tony",
+             description : "The Wedding Of Melya & Tony",
+             thumbnail : gDrive+"1xUkNBC5WR8oAMcc4aidmG9_Y_MuZsglR"+gDriveAuth
          },
          content : {
              audio : "/audio/wedding-cinematic.mp3",
@@ -43,7 +43,7 @@ function PresA04({url}) {
              bride_ig_account : "Citra_T",
              groom_ig_url : "",
              bride_ig_url : "",
-             couple : "Tony & Melya",
+             couple : "Melya & Tony",
              day : "Rabu",
              date : "15", // Gunakan 01, 02, 03 dst untuk tanggal kurang dari 10
              month : "01", // Gunakan 01, 02, 03 dst untuk bulan kurang dari 10
@@ -55,7 +55,7 @@ function PresA04({url}) {
              end_resepsi : "16:00 WIB",
              venue : "Nikieco Mentok & Ayam pedas",
              venue_address : "Jln National III ,Rt 3 No.203, Slorok, Jatikerto, Kromengan, Malang Regency, East Java 65165",
-             gmap_frame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15799.40307219353!2d112.5761332!3d-8.1166731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789fe408c2880b%3A0x60b0af7bd09faf32!2snadhirdecal!5e0!3m2!1sid!2sid!4v1708078149410!5m2!1sid!2sid",
+             gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.618178066384!2d112.52921289999999!3d-8.1402959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789f2df3eb113f%3A0x38a79c12fe8d4bb1!2sNIKI%20ECO%20MENTOK%20%26%20AYAM%20PEDAS!5e0!3m2!1sid!2sid!4v1735883826012!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
              rekening : "639201019634534",
              an : "Adinda Cahya Budiyanti",
@@ -299,7 +299,7 @@ function PresA04({url}) {
                             <p className={forum.className+" text-lg" }>The Wedding Of</p>
 
                             {/* TO DO: NAMA MEMPELAI*/}
-                            <h1 className={' text-5xl p-4  text-center px-12 '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                            <h1 className={' text-5xl p-4  text-center px-12 '+cinzel.className}>{dataWeding.content.bride_name} & {dataWeding.content.groom_name}</h1>
                         
                                 {/* TO DO: TANGGAL NIKAH*/}
                                 <p className={'text-center text-lg '+forum.className}>{dataWeding.content.date} {dataWeding.content.month_name} {dataWeding.content.year}</p> 
@@ -468,7 +468,7 @@ function PresA04({url}) {
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade">
                             </iframe>
-                            <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+                            <button  onClick={()=>{ window.open("https://maps.app.goo.gl/5zBJFeLg2aN8NJKt8", '_blank');}} className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
                                         hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                                         <FaSearchLocation/> view Location
                             </button>
@@ -561,7 +561,7 @@ function PresA04({url}) {
                 <div className='w-full  relative text-center h-[500px]'>
                     <div className='fadeUp p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
                         <p className='text-sm fadeUp'>Two souls become one, two hearts beat as one</p>
-                        <h1 className={'fadeUp text-3xl py-4 fadeUp'+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                        <h1 className={'fadeUp text-3xl py-4 fadeUp'+cinzel.className}>{dataWeding.content.bride_name} & {dataWeding.content.groom_name}</h1>
                        
                             <p className='w-1/3 fadeUp'>Thank You</p>
                        
