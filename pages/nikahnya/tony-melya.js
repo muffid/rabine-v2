@@ -53,7 +53,7 @@ function PresA04({url}) {
              end_akad : "selesai",
              start_resepsi : "11:00 WIB",// format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
              end_resepsi : "16:00 WIB",
-             venue : "NIKIECO MENTOK & AYAM PEDAS",
+             venue : "NIKI ECO MENTOK & AYAM PEDAS",
              venue_address : "Jln National III ,Rt 3 No.203, Slorok, Jatikerto, Kromengan, Malang Regency, East Java 65165",
              gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.618178066384!2d112.52921289999999!3d-8.1402959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789f2df3eb113f%3A0x38a79c12fe8d4bb1!2sNIKI%20ECO%20MENTOK%20%26%20AYAM%20PEDAS!5e0!3m2!1sid!2sid!4v1735883826012!5m2!1sid!2sid",
              yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
