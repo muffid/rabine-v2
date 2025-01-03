@@ -136,7 +136,9 @@ export default function Comments({slug,url,tamu}) {
                 {comments.map(comment => (
                     <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start space-y-4 bg-[#DED0B7]/60 text-slate-900 rounded-lg py-4 px-8'>
                         <div className='flex flex-row items-start gap-x-3 text-[#574629]'>
-                            <FaUserAlt/>
+                        <div className='w-[5%]'>
+                              <FaUserAlt className='text-md'/>
+                            </div>
                             <div className='flex-col items-start justify-start'>
                                 <div className='flex flex-row items-start  '><p className='font-bold  text-[#574629]'>{comment.Comment_User}</p></div>
                                 <p className='text-slate-700'>{comment.Comment_Content}</p>
@@ -164,7 +166,9 @@ export default function Comments({slug,url,tamu}) {
                 )}
                         {comment.replies && comment.replies.map(reply => (
                              <div key={reply.Comment_Id} className='flex flex-row text-[#574629] items-start gap-x-3 ml-10 mt-3'>
-                             <FaUserAlt/>
+                             <div className='w-[5%]'>
+                              <FaUserAlt className='text-sm'/>
+                            </div>
                              <div className='flex-col items-start '>
                              <div  className='flex flex-col items-start justify-start '>
                                 <p className='font-bold  text-[#574629]'>{reply.Comment_User}</p>
