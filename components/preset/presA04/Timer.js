@@ -7,13 +7,16 @@ const Timer = (props) => {
   const propsTarget = props.targetDate
   const fadeUp = props.anim.fadeUp
   const bgImage = props.bgImage
+  const url = props.url
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
   });
-
+  const saveDate = () => {
+    window.open(url, '_blank');
+  }
   useEffect(() => {
     const targetDate = new Date(propsTarget);
     const intervalId = setInterval(() => {
@@ -76,7 +79,7 @@ const Timer = (props) => {
               <p className='text-sm'>Detik</p>
             </div>
           </div>
-          <button className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
+          <button onClick={saveDate} className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-[#151313] border-white px-3 py-2 mt-8
                               hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
             <FaCalendarAlt/> Buat Pengingat
           </button>
