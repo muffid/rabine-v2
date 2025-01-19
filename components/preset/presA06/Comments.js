@@ -114,17 +114,17 @@ export default function Comments({slug,url,tamu}) {
         }
       }, [replyingTo])
     return (
-        <div id="doa" className={poppins.className+' w-full mt-6 bg-white p-6 flex flex-col items-center gap-y-2 px-8 text-slate-800'}>
+        <div id="doa" className={poppins.className+' w-full mt-6 bg-white p-4 flex flex-col items-center gap-y-2 px-8 text-slate-800'}>
             <h1 className='text-2xl  fadeUp'>KIRIM UCAPAN</h1>
             <h1 className='text-sm text-center fadeUp'>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
                 value={namaTamu}
                 onChange={handleChangeTamu}
-                className='border-[1px] border-slate-700 fadeUp text-slate-800 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
+                className='border-[1px] rounded-xl border-slate-400 fadeUp text-slate-800 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
             <textarea
                     onChange={handleChange}
                     value={commentToPost}
-                    className="border-[1px] border-slate-700 bg-transparent outline-none fadeUp focus:border-slate-700 text-sm mt-2 w-full p-6 rounded" // Menambahkan border rounded
+                    className="border-[1px] rounded-xl border-slate-400 border-slate-700 bg-transparent outline-none fadeUp focus:border-slate-700 text-sm mt-2 w-full p-6 rounded" // Menambahkan border rounded
                     placeholder={'Kirim Ucapan Dan Doa Terbaik Anda'}
                     rows={3} // Menentukan jumlah baris
                     />
@@ -132,7 +132,7 @@ export default function Comments({slug,url,tamu}) {
                             hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaComment/> Kirim
                     </button>
-            <div className='w-full flex flex-col items-center justify-start space-y-3 fadeUp rounded-xl p-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
+            <div className='w-full flex flex-col items-center justify-start space-y-3 fadeUp rounded-xl mt-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>
                 {comments.map(comment => (
                     <div key={comment.Comment_Id} className='w-full flex flex-col items-start justify-start space-y-4 bg-slate-900/90 text-slate-400 rounded-lg py-4 px-8'>
                         <div className='flex flex-row items-start gap-x-3'>

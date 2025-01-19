@@ -31,7 +31,7 @@ function PresA06({url}) {
         },
         content : {
             audio : "/audio/a-million-dreams.mp3",
-            song_title : "A Million Dreams - The Greatest Snowman",
+            song_title : "A Million Dreams - OST. TGS",
             groom_name: "Lukman",
             bride_name : "Shiva'", 
             groom_sure_name : "Lukman Hakim",
@@ -69,7 +69,7 @@ function PresA06({url}) {
             img_quote : gDrive+"1MEs2yPZirA-7xNaP_1v8GXUpbWBQqP_M"+gDriveAuth,
             img_closing : gDrive+'1VE1_J9THDCSncF-4odcZQWz943gJiAyZ'+gDriveAuth,
             bg_resepsi : gDrive+"1S1z6FeSnHJLlaWqpI7Yiz0w0X3e-Hw9W"+gDriveAuth,
-            btn_couple : gDrive+'16NSBeIdM2CEBpljlPUcwmkw2j1c7t0ul'+gDriveAuth
+            btn_couple : gDrive+'1YO4CA52CpDcEfkJPzCll3ZvL-kxfLSnx'+gDriveAuth
             
         }
     } 
@@ -141,7 +141,7 @@ function PresA06({url}) {
                 <title>{dataWeding.META.title}</title>
                 <meta name="description" content={dataWeding.META.description} />
                 <meta property="og:image" content={dataWeding.META.thumbnail} />
-                <meta property="og:image:width" content="400" />
+                <meta property="og:image:width" content="400" /> 
                 <meta property="og:image:height" content="300" />
                 <link rel="icon" href="/rbn.ico" />
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -165,7 +165,7 @@ function PresA06({url}) {
                 <div className='text-white w-full h-screen fixed z-20 moving-up flex flex-col items-center justify-center' style={{ top: `${topPosition}px` }}>
                     <div className={'w-full h-screen relative flex items-center justify-center '+poppins.className}>
                         
-                        <div className='flex flex-col items-center justify-end absolute bg-[#94A7C0] w-full h-screen top-0 pb-12'>
+                        <div className='flex flex-col items-center justify-center absolute bg-[#94A7C0] w-full h-screen top-0 pb-12'>
                             <h1>THE WEDDING OF</h1>
 
                             <Image
@@ -313,13 +313,13 @@ function PresA06({url}) {
                             src={dataWeding.content.bg_first_section}
                             width={1200}
                             height={1200}
-                            className=''
+                            className='h-screen object-cover'
                             alt='appstore'
                         />
                     </div>
 
                    {/* AYAT ALQUR'AN */}
-                    <div className='w-full  flex flex-col items-center justify-center px-16 pt-[100px]'>
+                    <div className='w-full  flex flex-col items-center justify-center px-8 pt-[100px]'>
                        
                             <Image
                                 src={gDrive+'1z5bNCMzS7a2RkKow-y-6Zgc_ac6R-dXz'+gDriveAuth}
@@ -329,7 +329,7 @@ function PresA06({url}) {
                                 alt='appstore'
                             />
                         <h1 className='font-bold text-sm text-center my-6 fadeUp'>Assalamualaikum Warahmatullahi Wabarakatuh</h1>
-                        <p className='text-center fadeUp text-sm px-8'>
+                        <p className='text-center fadeUp text-sm px-1'>
                             Dengan memohon rahmat dan ridho Allah Subhanahu Wata&apos;ala. Insya Allah kami akan menyelanggarakan acara pernikahan.
                         </p>
                      
@@ -353,7 +353,7 @@ function PresA06({url}) {
                                 src={dataWeding.content.groom_pic}
                                 fill
                                 style={{objectFit:"cover"}}
-                                className='absolute top-0 rounded-full'
+                                className='absolute top-0 rounded-full shadow-xl shadow-slate-300'
                                 sizes="100vw"
                                 alt='rabine.id'
                             />
@@ -370,7 +370,7 @@ function PresA06({url}) {
                                     src={dataWeding.content.bride_pic}
                                     fill
                                     style={{objectFit:"cover"}}
-                                    className='absolute top-0 rounded-full '
+                                    className='absolute top-0 rounded-full shadow-xl shadow-slate-300'
                                     sizes="100vw"
                                     alt='rabine.id'
                                 />
@@ -385,7 +385,7 @@ function PresA06({url}) {
                     </div>
 
                     {/* INFO ACARA */}
-                    <div id='jadwal' className='w-full flex flex-col items-center justify-center gap-y-1 p-8 h-full'>
+                    <div id='jadwal' className='w-full flex flex-col items-center justify-center gap-y-1 p-4 h-full'>
                         <h1 className='text-2xl my-4 fadeUp'>AKAD NIKAH</h1>
                         <h1 className='font-bold fadeUp'>{dataWeding.content.day_akad} {dataWeding.content.date_akad} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
                         <h1 className='text-sm fadeUp'>Di rumah mempelai wanita</h1>
@@ -435,7 +435,7 @@ function PresA06({url}) {
                             </div>
                         </div>
                         <h1 className='text-sm  fadeUp mt-6'>{dataWeding.content.venue}</h1>
-                        <h1 className='text-sm font-bold text-center px-20 fadeUp mt-2'>{dataWeding.content.venue_address}</h1>
+                        <h1 className='text-sm font-bold text-center px-8 fadeUp mt-2'>{dataWeding.content.venue_address}</h1>
                         <Image
                             src={gDrive+'12Te_CeejjrkCniXutJ0AOOdBXOZL2LF0'+gDriveAuth}
                             width={1200}
@@ -532,7 +532,7 @@ function PresA06({url}) {
                         tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
                         <br/>(QS. Ar-Ruum : 21)
                         </p>
-                        <p className='font-bold text-sm fadeUp'>Wassalamu’alaikum warahmatullahi wabarakatuh</p>
+                        <p className='font-bold text-sm fadeUp text-center'>Wassalamu’alaikum warahmatullahi wabarakatuh</p>
                         <p className='text-sm text-center fadeUp'>Kami yang berbahagia</p>
                         <div className='flex flex-row w-full px-8  items-center justify-center space-x-4 fadeUp'>
                             <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.groom_name}</h1>
@@ -549,7 +549,7 @@ function PresA06({url}) {
                     </div>
 
                     {/* GIFT */}
-                    <div id='gift' className='h-full  bg-white py-2 flex gap-y-2 flex-col items-center justify-center mb-8'  >
+                    <div id='gift' className='h-full w-full  bg-white p-8 flex gap-y-2 flex-col items-center justify-center mb-8'  >
                            <h1 className='text-2xl  fadeUp'>KIRIM HADIAH</h1>
                            <div className=' relative rounded-lg fadeUp bg-slate-700'>
                                 <Image
@@ -560,7 +560,7 @@ function PresA06({url}) {
                                     sizes="100%"
                                     alt='rabine.id'
                                 />
-                                <div className='w-[400px] flex  p-4  flex-col items-start justify-between fadeUp'>
+                                <div className='w-[350px] flex  p-4  flex-col items-start justify-between fadeUp'>
                                     <div className='flex flex-row items-center justify-between w-full'>
                                         <h1>BCA</h1>
                                         <Image
@@ -605,7 +605,7 @@ function PresA06({url}) {
                     {/* CLOSING */}
                     <div className='w-full  relative fadeUp'>
                         <div className='p-12 absolute top-0 bg-black/65 w-full h-full flex flex-col items-start justify-end z-[5] text-white/60'>
-                            <p className=' text-xs mt-10'>kami yang berbahagia</p>
+                            {/* <p className=' text-xs mt-10'>kami yang berbahagia</p> */}
                             <h1 className=' font-bold text-5xl py-4 font-Jimmy capitalize'>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
                             <div className=' flex flex-row items-end justify-start w-full '>
                                 <p className='w-1/3 text-xs'>Thank You</p>
