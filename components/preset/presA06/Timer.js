@@ -53,7 +53,7 @@ const Timer = (props) => {
     return () => clearInterval(intervalId);
   }, [propsTarget]);
   return (
-    <div className='w-full flex flex-col items-center justify-center bg-cover bg-center py-6 px-12 gap-y-8 text-slate-800 relative'>
+    <div className='w-full flex flex-col items-center justify-center bg-cover bg-center mb-8 px-12 gap-y-8 text-slate-800 relative'>
         {/* <Image
           src={bgImage}
           fill
