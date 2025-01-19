@@ -330,7 +330,7 @@ function PresA06({url}) {
                             />
                         <h1 className='font-bold text-sm text-center my-6 fadeUp'>Assalamualaikum Warahmatullahi Wabarakatuh</h1>
                         <p className='text-center fadeUp text-sm px-8'>
-                            Dengan memohon rahmat dan ridho Allah Subhanahu Wata'ala. Insya Allah kami akan menyelanggarakan acara pernikahan.
+                            Dengan memohon rahmat dan ridho Allah Subhanahu Wata&apos;ala. Insya Allah kami akan menyelanggarakan acara pernikahan.
                         </p>
                      
                     </div>
