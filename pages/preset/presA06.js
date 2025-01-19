@@ -140,7 +140,7 @@ function PresA06({url}) {
                 {/* TO DO: TITLE PERNIKAHAN*/}
                 <title>{dataWeding.META.title}</title>
                 <meta name="description" content={dataWeding.META.description} />
-                <meta property="og:image" content={dataWeding.META.description} />
+                <meta property="og:image" content={dataWeding.META.thumbnail} />
                 <meta property="og:image:width" content="400" />
                 <meta property="og:image:height" content="300" />
                 <link rel="icon" href="/rbn.ico" />
