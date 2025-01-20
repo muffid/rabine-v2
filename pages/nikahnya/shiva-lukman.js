@@ -592,7 +592,7 @@ function PresA06({url}) {
                                         alt='appstore'
                                     />
                                     <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>167701003772509</h1>
-                                    <h1>ANIS SHIVA 'ULIA DEWI</h1>
+                                    <h1>ANIS SHIVA &apos;ULIA DEWI</h1>
                                 </div>  
                            </div>
                            <button onClick={()=>{
