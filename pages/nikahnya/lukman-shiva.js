@@ -27,7 +27,7 @@ function PresA06({url}) {
             slug : "lukman-shiva",
             title : "The Wedding Of Lukman & Shiva",
             description : "The Wedding Of Lukman & Shiva",
-            thumbnail : gDrive+"17nIqouNXeebfZ828jTuXmoSESZkB8fEq"+gDriveAuth
+            thumbnail : gDrive+"1vdS9gqHDh0maBkL2CN7DtQoyCBO7Z8II"+gDriveAuth
         },
         content : {
             audio : "/audio/a-million-dreams.mp3",
