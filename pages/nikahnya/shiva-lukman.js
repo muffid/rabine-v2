@@ -40,8 +40,8 @@ function PresA06({url}) {
             bride_pic : gDrive+"1SHiBNYRpS_9GpkEAdma6o7h0HfE_4Qnt"+gDriveAuth, 
             groom_father : "Tuwiri", // Hanya nama dan Gelar
             groom_mother : "Asmiati", // Hanya nama dan Gelar
-            bride_father : "H. Mashuri", // Hanya nama dan Gelar
-            bride_mother : "Hj. Kasemi Nur Mufidah",// Hanya nama dan Gelar
+            bride_father : "Mashuri", // Hanya nama dan Gelar
+            bride_mother : "Kasemi Nur Mufidah",// Hanya nama dan Gelar
             groom_ig_account : "lukim_me",
             bride_ig_account : "anisshiva",
             groom_ig_url : "https://www.instagram.com/lukim_me?igsh=MjMzb3BmNXdnaGxk",
@@ -49,19 +49,19 @@ function PresA06({url}) {
             couple : "Shiva' & Lukman",
             day_akad : "Minggu",
             date_akad : "26",
-            day : "Senin",
-            date : "27", // Gunakan 01, 02, 03 dst untuk tanggal kurang dari 10
+            day : "Minggu",
+            date : "26", // Gunakan 01, 02, 03 dst untuk tanggal kurang dari 10
             month : "01", // Gunakan 01, 02, 03 dst untuk bulan kurang dari 10
             month_name : "januari",
             year : "2025",
             start_akad : "08:00 WIB", // format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
             end_akad : "selesai",
-            start_resepsi : "10:00 WIB",// format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
+            start_resepsi : "13:00 WIB",// format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
             end_resepsi : "Selesai",
-            venue_akad : "Rumah Mempelai Wanita",
-            venue_akad_address : "Jl. Raya Karangpandan RT.17 RW.04 Kec. Pakisaji Kab. Malang",
-            venue : "Rumah Mempelai Pria",
-            venue_address : "Jl. Raya Gangsiran Tlekung RT.06 RW.03, Kec. Junrejo, Kota Batu. (Rumah Bapak Tuwiri)",
+            venue_akad : "Masjid Darul Arqam",
+            venue_akad_address : "Pakisaji",
+            venue : "",
+            venue_address : "Ruko Kav D Jl. Raya Karangpandan RT.17 RW.04 Kec. Pakisaji Kab. Malang",
             gmap_frame : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3950.2461724028904!2d112.59000197500805!3d-8.076356691951753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDQnMzQuOSJTIDExMsKwMzUnMzMuMyJF!5e0!3m2!1sen!2sid!4v1737377330476!5m2!1sen!2sid",
             yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
             bg_opening : gDrive+"1L84bt9ttCfXCyB-DAjTnOH3c58k-uuAv"+gDriveAuth,
@@ -392,8 +392,8 @@ function PresA06({url}) {
                     <div id='jadwal' className='w-full flex flex-col items-center justify-center gap-y-1 p-4 h-full'>
                         <h1 className='text-2xl my-4 fadeUp'>AKAD NIKAH</h1>
                         <h1 className='font-bold fadeUp'>{dataWeding.content.day_akad} {dataWeding.content.date_akad} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
-                        <h1 className='text-sm fadeUp'>Di {dataWeding.content.venue_akad}</h1>
-                        <h1 className='text-sm font-bold text-center mx-auto fadeUp mt-2'>{dataWeding.content.venue_akad_address}</h1>
+                        <h1 className='text-sm fadeUp'>08:30 - 09:30 WIB Di {dataWeding.content.venue_akad}</h1>
+                        <h1 className='text-sm font-bold text-center mx-auto fadeUp '>{dataWeding.content.venue_akad_address}</h1>
                         <h1 className='text-2xl my-4 fadeUp'>RESEPSI</h1>
                         <div className='flex flex-row items-center justify-between w-full h-full'>
                             {/* Kiri */}
@@ -407,7 +407,7 @@ function PresA06({url}) {
                                 />
                             </div>
                             {/* Tengah */}
-                            <div className='flex flex-col items-center justify-center gap-y-1 w-[40%] h-full'>
+                            <div className='flex flex-col items-center justify-center  w-[40%] h-full'>
                                 <Image
                                     src={gDrive+'1mEylQXHy5x9qU1CIImF64OSsEezhtEZH'+gDriveAuth}
                                     width={1200}
@@ -421,7 +421,7 @@ function PresA06({url}) {
                                     src={gDrive+'1fwpDUgEi32ls6UjyPC6kTQwBLpSMnsg3'+gDriveAuth}
                                     width={1200}
                                     height={1200}
-                                    className='w-[40px] object-cover mt-4 fadeUp'
+                                    className='w-[40px] object-cover mt-8 fadeUp'
                                     alt='appstore'
                                 />
                                 <h1 className='text-sm fadeUp py-2'>{dataWeding.content.start_resepsi+" - "+dataWeding.content.end_resepsi}</h1>
@@ -447,7 +447,7 @@ function PresA06({url}) {
                                     alt='appstore'
                                 />
                         <h1 className='text-sm  fadeUp mt-2'>{dataWeding.content.venue}</h1>
-                        <h1 className='text-sm font-bold text-center px-8 fadeUp mt-2'>{dataWeding.content.venue_address}</h1>
+                        <h1 className='text-sm font-bold text-center px-8 fadeUp'>{dataWeding.content.venue_address}</h1>
                         <Image
                             src={gDrive+'12Te_CeejjrkCniXutJ0AOOdBXOZL2LF0'+gDriveAuth}
                             width={1200}
@@ -486,7 +486,7 @@ function PresA06({url}) {
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
-                        <button onClick={()=>{ window.open("https://maps.app.goo.gl/NYob44FN1uY1zE8N8https://maps.app.goo.gl/NYob44FN1uY1zE8N8", '_blank');}} 
+                        <button onClick={()=>{ window.open("https://maps.app.goo.gl/3AHAwBjtAcjCT8BG6", '_blank');}} 
                             className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border bg-[#A6756E] border-white px-4 py-2 mt-8
                             hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaSearchLocation/> Lihat Goolge Map

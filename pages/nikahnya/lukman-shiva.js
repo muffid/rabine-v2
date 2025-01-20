@@ -40,8 +40,8 @@ function PresA06({url}) {
             bride_pic : gDrive+"1SHiBNYRpS_9GpkEAdma6o7h0HfE_4Qnt"+gDriveAuth, 
             groom_father : "Tuwiri", // Hanya nama dan Gelar
             groom_mother : "Asmiati", // Hanya nama dan Gelar
-            bride_father : "H. Mashuri", // Hanya nama dan Gelar
-            bride_mother : "Hj. Kasemi Nur Mufidah",// Hanya nama dan Gelar
+            bride_father : "Mashuri", // Hanya nama dan Gelar
+            bride_mother : "Kasemi Nur Mufidah",// Hanya nama dan Gelar
             groom_ig_account : "lukim_me",
             bride_ig_account : "anisshiva",
             groom_ig_url : "https://www.instagram.com/lukim_me?igsh=MjMzb3BmNXdnaGxk",
@@ -389,7 +389,7 @@ function PresA06({url}) {
                     {/* INFO ACARA */}
                     <div id='jadwal' className='w-full flex flex-col items-center justify-center gap-y-1 p-4 h-full'>
                         <h1 className='text-2xl my-4 fadeUp'>AKAD NIKAH</h1>
-                        <h1 className='font-bold fadeUp'>{dataWeding.content.day_akad} {dataWeding.content.date_akad} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
+                        <h1 className=' text-xs fadeUp'>{dataWeding.content.day_akad} {dataWeding.content.date_akad} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
                         <h1 className='text-sm fadeUp'>Di rumah mempelai wanita</h1>
                         <h1 className='text-2xl my-4 fadeUp'>RESEPSI</h1>
                         <div className='flex flex-row items-center justify-between w-full h-full'>
@@ -413,7 +413,7 @@ function PresA06({url}) {
                                     alt='appstore'
                                 />
                                 <h1 className='font-bold fadeUp'>{dataWeding.content.day}</h1>
-                                <h1 className='text-sm fadeUp'>{dataWeding.content.date+" "+dataWeding.content.month_name+" "+dataWeding.content.year}</h1>
+                                <h1 className='text-lg font-bold fadeUp'>{dataWeding.content.date+" "+dataWeding.content.month_name+" "+dataWeding.content.year}</h1>
                                 <Image
                                     src={gDrive+'19HEu0Ka4OiKaQcRs9WKrtFrUYtVKWqpc'+gDriveAuth}
                                     width={1200}
@@ -421,7 +421,7 @@ function PresA06({url}) {
                                     className='w-[40px] object-cover mt-4 fadeUp'
                                     alt='appstore'
                                 />
-                                <h1 className='text-sm fadeUp'>{dataWeding.content.start_resepsi+" - "+dataWeding.content.end_resepsi}</h1>
+                                <h1 className='text-sm fadeUp '>{dataWeding.content.start_resepsi+" - "+dataWeding.content.end_resepsi}</h1>
                                 {/* <h1 className='font-bold text-sm text-center'>{dataWeding.content.venue}</h1>
                                 <h1 className='text-sm text-center'>{dataWeding.content.venue_address}</h1> */}
 
