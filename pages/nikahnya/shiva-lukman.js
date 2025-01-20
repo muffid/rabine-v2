@@ -548,7 +548,7 @@ function PresA06({url}) {
                         <p className='font-bold text-sm fadeUp text-center'>Wassalamu’alaikum warahmatullahi wabarakatuh</p>
                         <p className='text-sm text-center fadeUp'>Kami yang berbahagia</p>
                         <div className='flex flex-row w-full px-8  items-center justify-center space-x-4 fadeUp'>
-                            <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.groom_name}</h1>
+                            <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.bride_name}</h1>
                             <Image
                                     src={gDrive+'1ET44MDqv5ktF4K4oJZWxrSG-sW1ILLGa'+gDriveAuth}
                                     width={1200}
@@ -556,7 +556,7 @@ function PresA06({url}) {
                                     className='w-[50px]'
                                     alt='appstore'
                             />
-                            <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.bride_name}</h1>
+                            <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.groom_name}</h1>
                         </div>
 
                     </div>
