@@ -8,6 +8,7 @@ const Timer = (props) => {
   const fadeUp = props.anim.fadeUp
   const bgImage = props.bgImage
   const url = props.url
+  const bgColor = props.bgColor
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
@@ -80,8 +81,7 @@ const Timer = (props) => {
               <p className='text-sm'>Detik</p>
             </div>
           </div>
-          <button onClick={saveDate} className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border bg-[#94A7C0] border-white px-4 py-2 mt-4
-                              hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+          <button onClick={saveDate} className={bgColor+' text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border border-white px-4 py-2 mt-4 hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'}>
             <FaCalendarAlt/> Buat Pengingat
           </button>
       </div>

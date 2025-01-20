@@ -4,7 +4,7 @@ import { FaReply,FaComment, FaUserAlt } from 'react-icons/fa'
 import axios from 'axios'
 import { poppins } from '../../globals/Fonts'
 
-export default function Comments({slug,url,tamu}) {
+export default function Comments({slug,url,tamu,bgColor}) {
 
     const [comments, setComments] = useState([])
     const [commentToPost, setCommentToPost] = useState('')
@@ -12,6 +12,7 @@ export default function Comments({slug,url,tamu}) {
     const [replyingTo, setReplyingTo] = useState(null)
     const [namaTamu, setNamaTamu] = useState(tamu)
     const inputReplyRef = useRef(null)
+  
    
    
     const fetchDataComments = useCallback(async () => {
@@ -128,8 +129,7 @@ export default function Comments({slug,url,tamu}) {
                     placeholder={'Kirim Ucapan Dan Doa Terbaik Anda'}
                     rows={3} // Menentukan jumlah baris
                     />
-                    <button onClick={()=>postComment()} className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border bg-[#94A7C0] border-white px-4 py-2 mt-8
-                            hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
+                    <button onClick={()=>postComment()} className={bgColor+' text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border border-white px-4 py-2 mt-8 hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'}>
                             <FaComment/> Kirim
                     </button>
             <div className='w-full flex flex-col items-center justify-start space-y-3 fadeUp rounded-xl mt-4 text-black text-sm max-h-[600px] lg:max-h-[700px] overflow-y-scroll'>

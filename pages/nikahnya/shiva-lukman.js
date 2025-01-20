@@ -24,9 +24,9 @@ function PresA06({url}) {
     const gDriveAuth ="&authuser=0"
     const dataWeding = {
        META : {
-            slug : "blossom",
-            title : "rabine.id - preview tema blossom",
-            description : "rabine.id - preview tema blossom",
+            slug : "shiva-lukman",
+            title : "The Wedding Of Shiva - Lukman | Rabine.id",
+            description : "The Wedding Of Shiva - Lukman | Rabine.id",
             thumbnail : gDrive+"17nIqouNXeebfZ828jTuXmoSESZkB8fEq"+gDriveAuth
         },
         content : {
@@ -46,7 +46,7 @@ function PresA06({url}) {
             bride_ig_account : "anisshiva",
             groom_ig_url : "https://www.instagram.com/lukim_me?igsh=MjMzb3BmNXdnaGxk",
             bride_ig_url : "https://www.instagram.com/anissshiva?igsh=MTExbGNqZjkxeGl3dQ==",
-            couple : "Lukman & Shiva'",
+            couple : "Shiva' & Lukman",
             day_akad : "Minggu",
             date_akad : "26",
             day : "Senin",
@@ -58,12 +58,14 @@ function PresA06({url}) {
             end_akad : "selesai",
             start_resepsi : "10:00 WIB",// format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
             end_resepsi : "Selesai",
+            venue_akad : "Rumah Mempelai Wanita",
+            venue_akad_address : "Jl. Raya Karangpandan RT.17 RW.04 Kec. Pakisaji Kab. Malang",
             venue : "Rumah Mempelai Pria",
             venue_address : "Jl. Raya Gangsiran Tlekung RT.06 RW.03, Kec. Junrejo, Kota Batu. (Rumah Bapak Tuwiri)",
-            gmap_frame : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3951.8173868308677!2d112.54380507500633!3d-7.914135992109214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTQnNTAuOSJTIDExMsKwMzInNDcuMCJF!5e0!3m2!1sid!2sid!4v1737282084011!5m2!1sid!2sid",
+            gmap_frame : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3950.2461724028904!2d112.59000197500805!3d-8.076356691951753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDQnMzQuOSJTIDExMsKwMzUnMzMuMyJF!5e0!3m2!1sen!2sid!4v1737377330476!5m2!1sen!2sid",
             yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-            bg_opening : gDrive+"1TfoPDqLrxbQtL_wB51atmCw48reJY4q7"+gDriveAuth,
-            d_day_img : gDrive+"1CrWm-uG8hFz2oUkslZUo_LXWVFo40xfB"+gDriveAuth,
+            bg_opening : gDrive+"1L84bt9ttCfXCyB-DAjTnOH3c58k-uuAv"+gDriveAuth,
+            d_day_img : gDrive+"14J1HQkyemP8t2yvRzsMnF0r6g269rxkx"+gDriveAuth,
             bg_first_section :gDrive+"1O8st55kZ_awaF8-_WhWZhWrC9V9oBSEJ"+gDriveAuth,
             img_left :  gDrive+"1tVKwN9AkG2Qhx-arInM4879DDfW7mqYI"+gDriveAuth,
             img_quote : gDrive+"1MEs2yPZirA-7xNaP_1v8GXUpbWBQqP_M"+gDriveAuth,
@@ -84,7 +86,7 @@ function PresA06({url}) {
         // tambhakan lagi kalau masih ada....
     ]
 
-    const dateCountDown = dataWeding.content.year+'-'+dataWeding.content.month+'-'+dataWeding.content.date+'T'+dataWeding.content.start_resepsi.substring(0, 5)+':00Z'
+    const dateCountDown = dataWeding.content.year+'-'+dataWeding.content.month+'-'+dataWeding.content.date_akad+'T'+dataWeding.content.start_akad.substring(0, 5)+':00Z'
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(false)
 
@@ -165,7 +167,7 @@ function PresA06({url}) {
                 <div className='text-white w-full h-screen fixed z-20 moving-up flex flex-col items-center justify-center' style={{ top: `${topPosition}px` }}>
                     <div className={'w-full h-screen relative flex items-center justify-center '+poppins.className}>
                         
-                        <div className='flex flex-col items-center justify-center absolute bg-[#94A7C0] w-full h-screen top-0 pb-12'>
+                        <div className='flex flex-col items-center justify-center absolute bg-[#A6756E] w-full h-screen top-0 pb-12'>
                             <h1>THE WEDDING OF</h1>
 
                             <Image
@@ -290,15 +292,15 @@ function PresA06({url}) {
                     <div id='opening' className='w-full h-screen xl:h-full relative'>
                         <div className='p-12 absolute w-full flex flex-col items-center justify-start h-full fadeUp text-white'>
                             <div className='flex flex-row w-full px-8 py-8 items-center justify-center space-x-4'>
-                                <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.groom_name}</h1>
+                                <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy text-[#A6756E]'>{dataWeding.content.bride_name}</h1>
                                 <Image
-                                    src={gDrive+'1EvdQqqxudyR2zMnmA4zx5jl5mlLsaROd'+gDriveAuth}
+                                    src={gDrive+'1ET44MDqv5ktF4K4oJZWxrSG-sW1ILLGa'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[50px]'
                                     alt='appstore'
                                 />
-                                 <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.bride_name}</h1>
+                                 <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy text-[#A6756E]'>{dataWeding.content.groom_name}</h1>
                             </div>
                             <Image
                                 src={gDrive+'12Te_CeejjrkCniXutJ0AOOdBXOZL2LF0'+gDriveAuth}
@@ -322,7 +324,7 @@ function PresA06({url}) {
                     <div className='w-full  flex flex-col items-center justify-center px-8 pt-[100px]'>
                        
                             <Image
-                                src={gDrive+'1z5bNCMzS7a2RkKow-y-6Zgc_ac6R-dXz'+gDriveAuth}
+                                src={gDrive+'1NykzfOSaA31pwPaM8H66DMAhkzKptQYr'+gDriveAuth}
                                 width={1200}
                                 height={1200}
                                 className='w-[200px] object-cover fadeUp'
@@ -338,15 +340,33 @@ function PresA06({url}) {
                      {/* MEMPELAI */}
                      <div id='mempelai' className='w-full relative '>
                         <Image
-                            src={gDrive+'1FpsbsRgATXP8lXNdk232QDf8GKmVeGc-'+gDriveAuth}
+                            src={gDrive+'1FXTN6S5L0dT5QT0qVk6Ms6kAn2MzVqmh'+gDriveAuth}
                             width={1200}
                             height={1200}
-                            className='absolute bottom-0 w-[100%] h-[40%] fadeUp'
+                            className='absolute bottom-0 w-[100%] h-[40%] fadeUp opacity-75'
                             alt='appstore'
                         />
                         <div className='flex flex-col items-center justify-center px-4 py-[80px] text-center '>
-                           
                           
+                        
+                            <div className='w-[10rem] h-[10rem] rounded-full relative fadeUp bg-slate-600'>
+                            <Image
+                                    src={dataWeding.content.bride_pic}
+                                    fill
+                                    style={{objectFit:"cover"}}
+                                    className='absolute top-0 rounded-full shadow-xl shadow-slate-300'
+                                    sizes="100vw"
+                                    alt='rabine.id'
+                                />
+                            </div>
+                            <h1 className='font-bold text-5xl font-Jimmy my-4 fadeUp'>{dataWeding.content.bride_sure_name}</h1>
+                            <h1 className=' fadeUp text-sm my-2'>Putri pertama dari  Bapak {dataWeding.content.bride_father} <br/> Dan Ibu {dataWeding.content.bride_mother}</h1>
+                            <div onClick={()=>{ window.open(dataWeding.content.bride_ig_url, '_blank');}}
+                            className='cursor-pointer flex gap-2 text-sm items-center justify-center fadeUp bg-[#A6756E] text-white px-3 py-2 rounded-full'>
+                            <FaInstagram/>
+                            {dataWeding.content.bride_ig_account}
+                            </div>
+                            <h1 className='text-[5rem] my-8 font-Jimmy fadeUp'>&</h1>
 
                             <div className='w-[10rem] h-[10rem] rounded-full relative fadeUp bg-slate-600'>
                             <Image
@@ -361,27 +381,9 @@ function PresA06({url}) {
                             <h1 className='font-bold text-5xl font-Jimmy my-4 fadeUp'>{dataWeding.content.groom_sure_name}</h1>
                             <h1 className=' fadeUp text-sm my-2'>Putra terakhir dari  Bapak {dataWeding.content.groom_father} <br/> Dan Ibu {dataWeding.content.groom_mother}</h1>
                             <div onClick={()=>{ window.open(dataWeding.content.groom_ig_url, '_blank');}}
-                            className='cursor-pointer flex gap-2 text-sm items-center justify-center fadeUp bg-[#94A7C0] text-white px-3 py-2 rounded-full'>
+                            className='cursor-pointer flex gap-2 text-sm items-center justify-center fadeUp bg-[#A6756E] text-white px-3 py-2 rounded-full'>
                             <FaInstagram/>
                             {dataWeding.content.groom_ig_account}
-                            </div>
-                            <h1 className='text-[5rem] my-8 font-Jimmy fadeUp'>&</h1>
-                            <div className='w-[10rem] h-[10rem] rounded-full relative fadeUp bg-slate-600'>
-                            <Image
-                                    src={dataWeding.content.bride_pic}
-                                    fill
-                                    style={{objectFit:"cover"}}
-                                    className='absolute top-0 rounded-full shadow-xl shadow-slate-300'
-                                    sizes="100vw"
-                                    alt='rabine.id'
-                                />
-                            </div>
-                            <h1 className='font-bold text-5xl font-Jimmy my-4 fadeUp'>{dataWeding.content.bride_sure_name}</h1>
-                            <h1 className=' fadeUp text-sm my-2'>Putri pertama dari  Bapak {dataWeding.content.bride_father} <br/> Dan Ibu {dataWeding.content.bride_mother}</h1>
-                            <div onClick={()=>{ window.open(dataWeding.content.bride_ig_url, '_blank');}}
-                            className='cursor-pointer flex gap-2 text-sm items-center justify-center fadeUp bg-[#94A7C0] text-white px-3 py-2 rounded-full'>
-                            <FaInstagram/>
-                            {dataWeding.content.bride_ig_account}
                             </div>
                         </div>
                     </div>
@@ -390,7 +392,8 @@ function PresA06({url}) {
                     <div id='jadwal' className='w-full flex flex-col items-center justify-center gap-y-1 p-4 h-full'>
                         <h1 className='text-2xl my-4 fadeUp'>AKAD NIKAH</h1>
                         <h1 className='font-bold fadeUp'>{dataWeding.content.day_akad} {dataWeding.content.date_akad} {dataWeding.content.month_name} {dataWeding.content.year}</h1>
-                        <h1 className='text-sm fadeUp'>Di rumah mempelai wanita</h1>
+                        <h1 className='text-sm fadeUp'>Di {dataWeding.content.venue_akad}</h1>
+                        <h1 className='text-sm font-bold text-center mx-auto fadeUp mt-2'>{dataWeding.content.venue_akad_address}</h1>
                         <h1 className='text-2xl my-4 fadeUp'>RESEPSI</h1>
                         <div className='flex flex-row items-center justify-between w-full h-full'>
                             {/* Kiri */}
@@ -406,7 +409,7 @@ function PresA06({url}) {
                             {/* Tengah */}
                             <div className='flex flex-col items-center justify-center gap-y-1 w-[40%] h-full'>
                                 <Image
-                                    src={gDrive+'1gFTzYEu89cSkeQ7no42IyXYl9ToFlTQG'+gDriveAuth}
+                                    src={gDrive+'1mEylQXHy5x9qU1CIImF64OSsEezhtEZH'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[40px] object-cover fadeUp'
@@ -415,16 +418,15 @@ function PresA06({url}) {
                                 <h1 className='font-bold fadeUp'>{dataWeding.content.day}</h1>
                                 <h1 className='text-sm fadeUp'>{dataWeding.content.date+" "+dataWeding.content.month_name+" "+dataWeding.content.year}</h1>
                                 <Image
-                                    src={gDrive+'19HEu0Ka4OiKaQcRs9WKrtFrUYtVKWqpc'+gDriveAuth}
+                                    src={gDrive+'1fwpDUgEi32ls6UjyPC6kTQwBLpSMnsg3'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[40px] object-cover mt-4 fadeUp'
                                     alt='appstore'
                                 />
-                                <h1 className='text-sm fadeUp'>{dataWeding.content.start_resepsi+" - "+dataWeding.content.end_resepsi}</h1>
+                                <h1 className='text-sm fadeUp py-2'>{dataWeding.content.start_resepsi+" - "+dataWeding.content.end_resepsi}</h1>
                                 {/* <h1 className='font-bold text-sm text-center'>{dataWeding.content.venue}</h1>
                                 <h1 className='text-sm text-center'>{dataWeding.content.venue_address}</h1> */}
-
                             </div>
                             {/* Kanan */}
                             <div className='w-[30%]  flex flex-row justify-center h-full'>
@@ -437,13 +439,13 @@ function PresA06({url}) {
                                 />
                             </div>
                         </div>
-                         <Image
-                                                            src={gDrive+'1kifOG251yQEacxOScpAINg0Yzo3A3t98'+gDriveAuth}
-                                                            width={1200}
-                                                            height={1200}
-                                                            className='w-[30px] object-cover mt-2 fadeUp'
-                                                            alt='appstore'
-                                                        />
+                        <Image
+                                    src={gDrive+'1ouiMGNfTeQmFNRhBAYF5yV3Fs6QDidi-'+gDriveAuth}
+                                    width={1200}
+                                    height={1200}
+                                    className='w-[30px] object-cover mt-2 fadeUp'
+                                    alt='appstore'
+                                />
                         <h1 className='text-sm  fadeUp mt-2'>{dataWeding.content.venue}</h1>
                         <h1 className='text-sm font-bold text-center px-8 fadeUp mt-2'>{dataWeding.content.venue_address}</h1>
                         <Image
@@ -458,6 +460,7 @@ function PresA06({url}) {
 
                     {/* COUNTDOWN */}
                     <Timer 
+                        bgColor = "bg-[#A6756E]"
                         targetDate = {dateCountDown} 
                         anim = {{fadeUp :'fadeUp'}} 
                         bgImage={gDrive+"1MukZKf0VNVYuITleAokyLjNcSKXjODr5"+gDriveAuth}
@@ -483,8 +486,8 @@ function PresA06({url}) {
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
-                        <button onClick={()=>{ window.open("https://maps.app.goo.gl/M3Ud8cAyoDMXUbD1A", '_blank');}} 
-                            className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border bg-[#94A7C0] border-white px-4 py-2 mt-8
+                        <button onClick={()=>{ window.open("https://maps.app.goo.gl/NYob44FN1uY1zE8N8https://maps.app.goo.gl/NYob44FN1uY1zE8N8", '_blank');}} 
+                            className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border bg-[#A6756E] border-white px-4 py-2 mt-8
                             hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaSearchLocation/> Lihat Goolge Map
                         </button>
@@ -503,11 +506,11 @@ function PresA06({url}) {
                     </div> */}
 
                     {/* COMMENTS */}
-                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+                    <Comments slug={dataWeding.META.slug} url={url} tamu={to} bgColor={"bg-[#A6756E]"}/>
 
                     <div className='flex flex-col space-y-4 relative'>
                     <Image
-                            src={gDrive+'1FpsbsRgATXP8lXNdk232QDf8GKmVeGc-'+gDriveAuth}
+                            src={gDrive+'1FXTN6S5L0dT5QT0qVk6Ms6kAn2MzVqmh'+gDriveAuth}
                             width={1200}
                             height={1200}
                             className='absolute bottom-0 w-[100%] h-[50%] fadeUp'
@@ -547,7 +550,7 @@ function PresA06({url}) {
                         <div className='flex flex-row w-full px-8  items-center justify-center space-x-4 fadeUp'>
                             <h1 className='text-[2.5rem] xl:text-[3.5rem] font-Jimmy'>{dataWeding.content.groom_name}</h1>
                             <Image
-                                    src={gDrive+'1EvdQqqxudyR2zMnmA4zx5jl5mlLsaROd'+gDriveAuth}
+                                    src={gDrive+'1ET44MDqv5ktF4K4oJZWxrSG-sW1ILLGa'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[50px]'
@@ -572,12 +575,12 @@ function PresA06({url}) {
                                 />
                                 <div className='w-[350px] flex  p-4  flex-col items-start justify-between fadeUp'>
                                     <div className='flex flex-row items-center justify-between w-full'>
-                                        <h1>BCA</h1>
+                                        <h1>BRI</h1>
                                         <Image
-                                            src={gDrive+'1P-fPHKz6OSn90aHFV1wNIaxF0vnxDbuw'+gDriveAuth}
+                                            src={gDrive+'1HLlyQ3xICfcga3kqmtQCp6hGS8_yInVg'+gDriveAuth}
                                             width={1000}
                                             height={1000}
-                                            className='w-[28%] object-contain'
+                                            className='w-[20%] object-contain'
                                             alt='appstore'
                                         />
                                     </div>
@@ -588,12 +591,12 @@ function PresA06({url}) {
                                         className='w-[12%] object-contain my-4'
                                         alt='appstore'
                                     />
-                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>1231082340</h1>
-                                    <h1>LUKMAN HAKIM</h1>
+                                    <h1 className=' text-[1rem] text-center tracking-wider font-GameCube mb-4'>167701003772509</h1>
+                                    <h1>ANIS SHIVA 'ULIA DEWI</h1>
                                 </div>  
                            </div>
                            <button onClick={()=>{
-                                 navigator.clipboard.writeText("1231082340")
+                                 navigator.clipboard.writeText("167701003772509")
                                  toast.success('berhasil menyalin text', {
                                     position: "top-right",
                                     autoClose: 3000, // Durasi tampilan toast dalam milidetik
@@ -605,7 +608,7 @@ function PresA06({url}) {
                                     theme:'light'
                                  });
                             }}
-                            className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border bg-[#94A7C0] border-white px-4 py-2 mt-8
+                            className='text-white fadeUp flex flex-row items-center justify-center text-sm rounded-full gap-2 border bg-[#A6756E] border-white px-4 py-2 mt-8
                             hover:bg-white hover:text-black hover:scale-105 transition-all ease-out fadeUp'>
                             <FaRegCopy/> copy no rek
                         </button>
@@ -616,7 +619,7 @@ function PresA06({url}) {
                     <div className='w-full  relative fadeUp'>
                         <div className='p-12 absolute top-0 bg-black/65 w-full h-full flex flex-col items-start justify-end z-[5] text-white/60'>
                             {/* <p className=' text-xs mt-10'>kami yang berbahagia</p> */}
-                            <h1 className=' font-bold text-5xl py-4 font-Jimmy capitalize'>{dataWeding.content.groom_name} <br/>{dataWeding.content.bride_name}</h1>
+                            <h1 className=' font-bold text-5xl py-4 font-Jimmy capitalize'>{dataWeding.content.bride_name} <br/>{dataWeding.content.groom_name}</h1>
                             <div className=' flex flex-row items-end justify-start w-full '>
                                 <p className='w-1/3 text-xs'>Thank You</p>
                                 <div className='w-2/3 h-[0.5px] bg-white/40'></div>
