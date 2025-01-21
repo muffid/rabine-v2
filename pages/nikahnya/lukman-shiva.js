@@ -503,7 +503,7 @@ function PresA06({url}) {
                     </div> */}
 
                     {/* COMMENTS */}
-                    <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
+                    <Comments slug={dataWeding.META.slug} url={url} tamu={to} bgColor={'bg-[#94A7C0]'}/>
 
                     <div className='flex flex-col space-y-4 relative'>
                     <Image
