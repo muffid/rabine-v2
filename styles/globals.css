@@ -4,6 +4,12 @@
 
 
 @font-face {
+  font-family: "Jimmy";
+  src: url('../fonts/JimmyScript-Rg.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "Satoshi";
   src: url('../fonts/Satoshi-Regular.otf');
   font-weight: 400;
@@ -77,6 +83,11 @@
   font-style: normal;
 }
 
+.font-Jimmy{
+  font-family: 'Jimmy',sans-serif;
+  font-weight: 400;
+}
+
 .font-Batusa{
   font-family: 'Batusa' , sans-serif;
   font-weight: 400;
@@ -131,6 +142,7 @@
 .swiper-slide{
   margin-bottom: 60px;
 }
+
 
 
 

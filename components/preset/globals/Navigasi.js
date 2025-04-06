@@ -13,7 +13,7 @@ const Navigasi = ({imgThumb}) => {
         element.scrollIntoView({behavior:'smooth'})
       },[scrollTo])
   return (
-    <div className='lg:hidden flex flex-row text-white text-xl items-center justify-center w-full fixed z-10 bottom-0 py-6 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
+    <div className='lg:hidden flex flex-row text-white text-xl items-center justify-center w-full fixed z-10 bottom-0 px-2 py-3 bg-[#3c3838]/50 backdrop-blur-xl space-x-6 '>
       <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('mempelai')}>
           <Image
             src={imgThumb}
@@ -23,7 +23,7 @@ const Navigasi = ({imgThumb}) => {
             alt='appstore'
           />
       </div>
-      <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs'>Tanggal</h1></div>
+      <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('jadwal')}><FaCalendarAlt/> <h1 className='text-xs font-light'>Tanggal</h1></div>
       <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('lokasi')}><FaMapMarked/> <h1 className='text-xs'>Map</h1></div>
       <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('gallery')}><FaCamera/> <h1 className='text-xs'>Galery</h1></div>
       <div className='flex flex-col items-center gap-y-1' onClick={()=>scrollToTarget('doa')}><FaComment/> <h1 className='text-xs'>Doa</h1></div>
