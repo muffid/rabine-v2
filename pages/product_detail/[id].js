@@ -1,13 +1,18 @@
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import NavbarSecond from '../../components/globals/NavbarSecond'
 import Footer from '../../components/globals/Footer'
+require('dotenv').config()
 import DetailPreset from '../../components/product_detail/DetailPreset'
 import { GET_PRODUCTS,GET_PRODUCTS_BY_ID } from '../../lib/product-queries'
 import { graphQLClient } from '../../lib/graphql-client'
 
-function ProdId({products}) {
+function ProdId({products,mainUrl}) {
+
+  useEffect(()=>{
+    console.log(mainUrl);
+  },[])
 
     const router = useRouter()
     const {presetId} = router.query
@@ -30,7 +35,8 @@ function ProdId({products}) {
         imgPreset={detailData.image.url} 
         // priceP={detailData.price}
         priceP={100000}
-        slug={detailData.slug} />
+        slug={detailData.slug} 
+        url={mainUrl}/>
      </main>
      <Footer/>
     </div>
@@ -41,10 +47,12 @@ export async function getServerSideProps(context) {
 
   const { id } = context.params;
   const data = await graphQLClient.request(GET_PRODUCTS_BY_ID(id));
+  const url = process.env.WEB_URL
 
   return {
     props: {
       products: data.presets,
+      mainUrl : url
     },
   };
 }

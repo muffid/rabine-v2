@@ -4,7 +4,7 @@ import { FaEye,FaCartPlus, FaStar } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 
-function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,slug}) {
+function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,slug,url}) {
     const router= useRouter()
     const dynamicLink = '/preset/'+slug
 
@@ -51,7 +51,7 @@ function DetailPreset({idPreset,namePreset,catPreset,imgPreset,priceP,slug}) {
            
             <div className='flex flex-row gap-x-4 lg:gap-x-6 items-center flex-shrink-0 mt-2'>
           
-                <a target="_blank" onClick={(e) => {e.preventDefault(); window.open('https://rabine.id/preset/'+slug+'?to=Tamu', '_blank')}} className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-4 py-3  bg-white rounded-full shadow-md '>
+                <a target="_blank" onClick={(e) => {e.preventDefault(); window.open(url+'preset/'+slug+'?to=Tamu', '_blank')}} className=' hover:scale-110 hover:shadow-xl cursor-pointer flex flex-row items-center gap-x-4 transform duration-200 px-4 py-3  bg-white rounded-full shadow-md '>
                    <FaEye/>
                    
                         <h1 className=' text-slate-900 text-sm '>Demo</h1>
