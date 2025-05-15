@@ -71,7 +71,7 @@ function Suryonanda({url,main_web_url}) {
             img_quote : gDrive+"1MEs2yPZirA-7xNaP_1v8GXUpbWBQqP_M"+gDriveAuth,
             img_closing : gDrive+'1VE1_J9THDCSncF-4odcZQWz943gJiAyZ'+gDriveAuth,
             bg_resepsi : gDrive+"1S1z6FeSnHJLlaWqpI7Yiz0w0X3e-Hw9W"+gDriveAuth,
-            btn_couple : gDrive+'1YO4CA52CpDcEfkJPzCll3ZvL-kxfLSnx'+gDriveAuth
+            btn_couple : gDrive+"1DZ0CqwJ6XOi4SnKKPBulSw6K3NG_Znbn"+gDriveAuth
             
         }
     } 
