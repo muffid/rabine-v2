@@ -20,7 +20,7 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 
 
-function Suryonanda({url}) {
+function Suryonanda({url,main_web_url}) {
 
     const gDrive = "https://drive.usercontent.google.com/download?id="
     const gDriveAuth ="&authuser=0"
@@ -29,7 +29,7 @@ function Suryonanda({url}) {
             slug : "suryo-nanda",
             title : "The Wedding Of Suryo & Nanda",
             description : "The Wedding Of Suryo & Nanda",
-            thumbnail : gDrive+"1vdS9gqHDh0maBkL2CN7DtQoyCBO7Z8II"+gDriveAuth
+            thumbnail : gDrive+"1JwcZJTmExbvHzJ2dgMWRHfsoU-sylSbT"+gDriveAuth
         },
         content : {
             audio : "/audio/a-million-dreams.mp3",
@@ -38,16 +38,16 @@ function Suryonanda({url}) {
             bride_name : "Nanda", 
             groom_sure_name : "Muhammad Suryo Alam",
             bride_sure_name : "Ananda Aulia Frialisty",
-            groom_pic : gDrive+"1gcBdqYyPq656OHPB-ynWzCxSiR7CrQG-"+gDriveAuth, 
-            bride_pic : gDrive+"1SHiBNYRpS_9GpkEAdma6o7h0HfE_4Qnt"+gDriveAuth, 
+            groom_pic : gDrive+"1I_uQZq2AflB9Dy6s9p82vlqn3aXxB-Vs"+gDriveAuth, 
+            bride_pic : gDrive+"1ggQhiykksJxpxxKHPBiKoSYVi5SlNP9E"+gDriveAuth, 
             groom_father : "Nurul Huda", // Hanya nama dan Gelar
             groom_mother : "Mila Kholifah", // Hanya nama dan Gelar
             bride_father : "Supriyanto", // Hanya nama dan Gelar
             bride_mother : "Yuni Siswati",// Hanya nama dan Gelar
             groom_ig_account : "@yafi.a",
             bride_ig_account : "@nanda.af12",
-            groom_ig_url : "https://www.instagram.com/lukim_me?igsh=MjMzb3BmNXdnaGxk",
-            bride_ig_url : "https://www.instagram.com/anissshiva?igsh=MTExbGNqZjkxeGl3dQ==",
+            groom_ig_url : "https://www.instagram.com/yafi.a?igsh=ZXpxMHdvcHM4Y2F5",
+            bride_ig_url : "https://www.instagram.com/nanda.af12?igsh=OXJwOWhnb2w1b2pu",
             couple : "Suryo & Nanda'",
             day_akad : "Selasa",
             date_akad : "17",
@@ -64,7 +64,7 @@ function Suryonanda({url}) {
             venue_address : "Bakalankrajan, Kec. Sukun, Kota Malang",
             gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8991301608385!2d112.6119557!3d-8.009338199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789d516ecc29f9%3A0xca0b83612d2423ef!2sWarung%20Tengah%20Sawah%20%2F%20WTS!5e0!3m2!1sid!2sid!4v1747186117569!5m2!1sid!2sid",
             yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-            bg_opening : gDrive+"1TfoPDqLrxbQtL_wB51atmCw48reJY4q7"+gDriveAuth,
+            bg_opening : gDrive+"1ZpGEMqfVm0Hdjj-oGG57NR1HZ1oCcfUk"+gDriveAuth,
             d_day_img : gDrive+"1CrWm-uG8hFz2oUkslZUo_LXWVFo40xfB"+gDriveAuth,
             bg_first_section :gDrive+"10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh"+gDriveAuth,
             img_left :  gDrive+"10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh"+gDriveAuth,
@@ -166,46 +166,37 @@ function Suryonanda({url}) {
 
                 {/* COVER UNDANGAN */}
                 <div className='text-white w-full h-screen fixed z-20 moving-up flex flex-col items-center justify-center' style={{ top: `${topPosition}px` }}>
-                    <div className={'w-full h-screen relative flex items-center justify-center '+poppins.className}>
+                    <div className={'w-full h-screen relative flex items-center bg-[#222831] justify-center '+poppins.className}>
+                    <Image
+                            src={dataWeding.content.bg_opening}
+                            width={1200}
+                            height={1200}
+                            className='w-full xl:w-[700px] object-cover h-full opacity-50'
+                            alt='appstore'
+                        />
+                    <div className='flex flex-col items-center justify-between absolute  w-full h-screen top-0 py-12'>
+                          
+                                <h1 className='text-4xl font-Coralis tracking-wider'>17.06.2025</h1>
                         
-                        <div className='flex flex-col items-center justify-center absolute bg-[#94A7C0] w-full h-screen top-0 pb-12'>
-                            <h1>THE WEDDING OF</h1>
-
-                            <Image
-                                src={dataWeding.content.bg_opening}
-                                width={1200}
-                                height={1200}
-                                className='w-[250px] object-cover my-4'
-                                alt='appstore'
-                            />
-
-                            <Image
-                                src={dataWeding.content.d_day_img}
-                                width={1200}
-                                height={1200}
-                                className='w-[300px] object-cover mb-10'
-                                alt='appstore'
-                            />
-
-                            {/* TO DO: NAMA KEDUA MEMPELAI*/}
-                            {/* <h1 className='font-bold text-5xl pb-8 font-Royal-Exq'>{dataWeding.content.couple}</h1> */}
-
-                            <p className='text-sm'>Kepada Yth. Bapak/Ibu/Saudara(i)</p>
+                          <div className='flex flex-col items-center mt-32'>
+                               <h1>The Wedding Of</h1>
+                               <h1 className='text-4xl font-Coralis tracking-wider'>{dataWeding.content.groom_name}</h1>
+                               <h1 className='text-4xl font-Andrew'>&</h1>
+                               <h1 className='text-4xl font-Coralis tracking-wider'>{dataWeding.content.bride_name}</h1>
+                          </div>
+                          <div className='flex flex-col items-center'>
+                          <p className='text-sm text-center'>Kepada Yth.<br></br> Bapak/Ibu/Saudara(i)</p>
                             <h1 className='py-4 font-bold'>{to}</h1>
                             <button className='text-sm flex flex-row items-center justify-center gap-2 blink bg-white rounded-full
                                             text-black px-5 py-2 hover:bg-yellow-100' onClick={moveUp}>
                                <FaRegEnvelopeOpen/> Buka Undangan
                             </button>
+                          </div>
+                           
                         </div>
 
                         {/* TO DO: GAMBAR UNTUK BACKGROUND OPENING*/}
-                        {/* <Image
-                            src={dataWeding.content.bg_opening}
-                            width={1200}
-                            height={1200}
-                            className='w-full object-cover h-full'
-                            alt='appstore'
-                        /> */}
+                        
                     </div>
                 </div>
 
@@ -338,8 +329,8 @@ function Suryonanda({url}) {
                    {/* AYAT ALQUR'AN */}
                     <div className='w-full h-full flex flex-col items-center justify-center relative py-8 bg-[#222831] px-10 text-white'>
                         <p className='text-center fadeUp text-sm px-1'>
-                          Dan diantara tanda-tanda kekuasaan-Nya ialah Ia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa 
-                          tentram kepadanya
+                          &quot; Dan diantara tanda-tanda kekuasaan-Nya ialah Ia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa 
+                          tentram kepadanya &quot;
                         </p>
                         <p className='text-center fadeUp text-xs px-1 my-8'>
                             Ar Rum : 21
@@ -475,15 +466,15 @@ function Suryonanda({url}) {
                     {/* COMMENTS */}
                     <Comments slug={dataWeding.META.slug} url={url} tamu={to} bgColor={'bg-[#94A7C0]'}/>
 
-                   <div className='w-full h-full relative bg-cover flex flex-col gap-3 items-center bg-[#222831]  px-10 text-white overflow-hidden py-8'>
+                   <div className='w-full h-full relative  flex flex-col gap-3 items-center bg-[#222831] overflow-hidden px-10 text-white  py-8'>
                         <Image
                             src={gDrive+'1_T9JKkTOqUBtiA135qAWrNyx44sKv92V'+gDriveAuth}
                             fill
-                            className='absolute opacity-10 object-cover scale-110 z-0'
+                            className='absolute opacity-10 object-cover scale-110 '
                             alt='rabine.id'
                         />
                         <h1 className='text-white text-4xl font-Coralis tracking-wider fadeUp my-8'>Gallery</h1>
-                        <div className='w-full flex flex-row items-start justify-between gap-3'>
+                        <div className='w-full flex flex-row items-start justify-between gap-3 z-10'>
                             <div className='w-full flex flex-col gap-3'>
                                <Zoom>
                                 <Image
@@ -524,8 +515,8 @@ function Suryonanda({url}) {
                                     />
                                 </Zoom>
                             </div>
-                        </div>
-                        <div className='w-full  bg-red-300 rounded-lg'>
+                        </div> 
+                        <div className='w-full  bg-red-300 rounded-lg z-10'>
                               <Zoom>
                                 <Image
                                         src={imagesGallery[3].src}
@@ -553,16 +544,16 @@ function Suryonanda({url}) {
                             </div>
                         </div>
                         <Image
-                            src={dataWeding.content.img_closing}
+                            src={imagesGallery[4].src}
                             width={1200}
                             height={1200}
-                            className='w-full object-cover h-full '
+                            className='w-full object-cover object-top h-[500px] '
                             alt='appstore'
                         />
                    </div>
 
                    {/* WATERMARK */}
-                   <Watermark/>
+                   <Watermark url={main_web_url}/>
                 </div>
             </div>
               <ToastContainer
@@ -581,7 +572,8 @@ function Suryonanda({url}) {
 }
 export async function getServerSideProps() {
     const url = process.env.API_URL_PROD
-    return { props: {url} }
+    const main_web_url = process.env.WEB_URL
+    return { props: {url,main_web_url} }
 }
 
 export default Suryonanda
