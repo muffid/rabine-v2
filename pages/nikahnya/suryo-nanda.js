@@ -174,7 +174,7 @@ function Suryonanda({url,main_web_url}) {
                             className='w-full xl:w-[700px] object-cover h-full opacity-50'
                             alt='appstore'
                         />
-                        <div className='flex flex-col items-center justify-between absolute  w-full h-screen top-0 py-12'>
+                        <div className='flex flex-col items-center justify-center absolute  w-full h-screen top-0 py-12'>
                           
                             <h1 className='text-4xl font-Coralis tracking-wider'>17.06.2025</h1>
                         
@@ -188,7 +188,7 @@ function Suryonanda({url,main_web_url}) {
                                 <p className='text-sm text-center'>Kepada Yth.<br></br> Bapak/Ibu/Saudara(i)</p>
                                 <h1 className='py-4 font-bold'>{to}</h1>
                                 <button className='text-sm flex flex-row items-center justify-center gap-2 blink bg-white rounded-full
-                                                text-black px-5 py-2 mb-10 hover:bg-yellow-100' onClick={moveUp}>
+                                                text-black px-5 py-2 hover:bg-yellow-100' onClick={moveUp}>
                                 <FaRegEnvelopeOpen/> Buka Undangan
                                 </button>
                             </div>
@@ -480,7 +480,7 @@ function Suryonanda({url,main_web_url}) {
                                         src={imagesGallery[0].src}
                                             width={1200}
                                             height={1200}
-                                            className='w-full h-[170px] object-top  object-cover rounded-lg'
+                                            className='w-full h-[170px] object-top  object-cover rounded-lg fadeUp'
                                             alt='appstore'
                                     />
                                 </Zoom>
@@ -489,7 +489,7 @@ function Suryonanda({url,main_web_url}) {
                                         src={imagesGallery[1].src}
                                             width={1200}
                                             height={1200}
-                                            className='w-full h-[250px] object-top  object-cover rounded-lg'
+                                            className='w-full h-[250px] object-top  object-cover rounded-lg fadeUp'
                                             alt='appstore'
                                     />
                                 </Zoom>
@@ -500,7 +500,7 @@ function Suryonanda({url,main_web_url}) {
                                         src={imagesGallery[2].src}
                                             width={1200}
                                             height={1200}
-                                            className='w-full h-[250px] object-top  object-cover rounded-lg'
+                                            className='w-full h-[250px] object-top  object-cover rounded-lg fadeUp'
                                             alt='appstore'
                                     />
                                 </Zoom>
@@ -509,7 +509,7 @@ function Suryonanda({url,main_web_url}) {
                                         src={imagesGallery[3].src}
                                             width={1200}
                                             height={1200}
-                                            className='w-full h-[170px] object-top  object-cover rounded-lg'
+                                            className='w-full h-[170px] object-top  object-cover rounded-lg fadeUp'
                                             alt='appstore'
                                     />
                                 </Zoom>
@@ -521,7 +521,7 @@ function Suryonanda({url,main_web_url}) {
                                         src={imagesGallery[3].src}
                                             width={1200}
                                             height={1200}
-                                            className='w-full h-[170px]   object-cover rounded-lg'
+                                            className='w-full h-[170px]   object-cover rounded-lg '
                                             alt='appstore'
                                     />
                                 </Zoom>
