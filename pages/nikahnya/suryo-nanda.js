@@ -167,32 +167,31 @@ function Suryonanda({url,main_web_url}) {
                 {/* COVER UNDANGAN */}
                 <div className='text-white w-full h-screen fixed z-20 moving-up flex flex-col items-center justify-center' style={{ top: `${topPosition}px` }}>
                     <div className={'w-full h-screen relative flex items-center bg-[#222831] justify-center '+poppins.className}>
-                    <Image
+                        <Image
                             src={dataWeding.content.bg_opening}
                             width={1200}
                             height={1200}
                             className='w-full xl:w-[700px] object-cover h-full opacity-50'
                             alt='appstore'
                         />
-                    <div className='flex flex-col items-center justify-between absolute  w-full h-screen top-0 py-12'>
+                        <div className='flex flex-col items-center justify-between absolute  w-full h-screen top-0 py-12'>
                           
-                                <h1 className='text-4xl font-Coralis tracking-wider'>17.06.2025</h1>
+                            <h1 className='text-4xl font-Coralis tracking-wider'>17.06.2025</h1>
                         
-                          <div className='flex flex-col items-center mt-32'>
-                               <h1>The Wedding Of</h1>
-                               <h1 className='text-4xl font-Coralis tracking-wider'>{dataWeding.content.groom_name}</h1>
-                               <h1 className='text-4xl font-Andrew'>&</h1>
-                               <h1 className='text-4xl font-Coralis tracking-wider'>{dataWeding.content.bride_name}</h1>
-                          </div>
-                          <div className='flex flex-col items-center'>
-                          <p className='text-sm text-center'>Kepada Yth.<br></br> Bapak/Ibu/Saudara(i)</p>
-                            <h1 className='py-4 font-bold'>{to}</h1>
-                            <button className='text-sm flex flex-row items-center justify-center gap-2 blink bg-white rounded-full
-                                            text-black px-5 py-2 hover:bg-yellow-100' onClick={moveUp}>
-                               <FaRegEnvelopeOpen/> Buka Undangan
-                            </button>
-                          </div>
-                           
+                            <div className='flex flex-col items-center mt-32'>
+                                <h1>The Wedding Of</h1>
+                                <h1 className='text-4xl font-Coralis tracking-wider'>{dataWeding.content.groom_name}</h1>
+                                <h1 className='text-4xl font-Andrew'>&</h1>
+                                <h1 className='text-4xl font-Coralis tracking-wider'>{dataWeding.content.bride_name}</h1>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                                <p className='text-sm text-center'>Kepada Yth.<br></br> Bapak/Ibu/Saudara(i)</p>
+                                <h1 className='py-4 font-bold'>{to}</h1>
+                                <button className='text-sm flex flex-row items-center justify-center gap-2 blink bg-white rounded-full
+                                                text-black px-5 py-2 mb-10 hover:bg-yellow-100' onClick={moveUp}>
+                                <FaRegEnvelopeOpen/> Buka Undangan
+                                </button>
+                            </div>
                         </div>
 
                         {/* TO DO: GAMBAR UNTUK BACKGROUND OPENING*/}
@@ -474,7 +473,7 @@ function Suryonanda({url,main_web_url}) {
                             alt='rabine.id'
                         />
                         <h1 className='text-white text-4xl font-Coralis tracking-wider fadeUp my-8'>Gallery</h1>
-                        <div className='w-full flex flex-row items-start justify-between gap-3 z-10'>
+                        <div className='w-full flex flex-row items-start justify-between gap-3 z-[9]'>
                             <div className='w-full flex flex-col gap-3'>
                                <Zoom>
                                 <Image
@@ -516,7 +515,7 @@ function Suryonanda({url,main_web_url}) {
                                 </Zoom>
                             </div>
                         </div> 
-                        <div className='w-full  bg-red-300 rounded-lg z-10'>
+                        <div className='w-full  bg-red-300 rounded-lg z-[9]'>
                               <Zoom>
                                 <Image
                                         src={imagesGallery[3].src}
