@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Andrew";
+  src: url('../fonts/AndrewElegantRegular-mLDmm.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Coralis";
+  src: url('../fonts/Coraliselegant-gxZ7E.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "Jimmy";
@@ -81,6 +94,17 @@
   src: url('../fonts/DMSerifDisplay-Regular.ttf');
   font-weight: 400;
   font-style: normal;
+}
+
+
+.font-Andrew{
+  font-family: 'Andrew',sans-serif;
+  font-weight: 400;
+}
+
+.font-Coralis{
+  font-family: 'Coralis',sans-serif;
+  font-weight: 400;
 }
 
 .font-Jimmy{
