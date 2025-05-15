@@ -338,8 +338,8 @@ function Suryonanda({url}) {
                    {/* AYAT ALQUR'AN */}
                     <div className='w-full h-full flex flex-col items-center justify-center relative py-8 bg-[#222831] px-10 text-white'>
                         <p className='text-center fadeUp text-sm px-1'>
-                          "Dan diantara tanda-tanda kekuasaan-Nya ialah Ia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa 
-                          tentram kepadanya "
+                          Dan diantara tanda-tanda kekuasaan-Nya ialah Ia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa 
+                          tentram kepadanya
                         </p>
                         <p className='text-center fadeUp text-xs px-1 my-8'>
                             Ar Rum : 21
