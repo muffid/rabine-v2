@@ -13,7 +13,6 @@ import GalleryFade from '../../components/preset/presA05/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
 import {cinzel,inter} from '../../components/globals/Fonts'
 import Navigasi from '../../components/preset/globals/Navigasi'
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -30,8 +29,8 @@ function PresA05({url}) {
              thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
          },
          content : {
-             audio : "/audio/wedding-cinematic.mp3",
-             song_title : "Romantic Love - Charles P",
+             audio : "/audio/Daniel_BP.mp3",
+             song_title : "Best Part - Daniel C.",
              groom_name: "James",
              bride_name : "Melati", 
              groom_sure_name : "Muhammad Andrian",
@@ -136,7 +135,7 @@ function PresA05({url}) {
         <div className={'w-full box-content text-white '+inter.className}>
 
             {/* TO DO: BACKDOUND MP3*/}
-            <audio  loop ref={audioRef} src="/audio/wedding-cinematic.mp3" />
+            <audio  loop ref={audioRef} src="/audio/Daniel_BP.mp3" />
             <Head>
                 {/* TO DO: TITLE PERNIKAHAN*/}
                 <title>{dataWeding.META.title}</title>

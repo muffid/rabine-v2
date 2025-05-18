@@ -1,4 +1,4 @@
-export default function Watermark({url="https://rabine-id.vercel.app/"}){
+export default function Watermark({url="https://rabine.id/"}){
     return(
         <div className='w-full bg-black flex flex-col items-center text-slate-400 justify-center gap-y-1 text-xs text-center pt-10 pb-32 lg:pb-10'>
             <h1>made with love and passion by</h1>
