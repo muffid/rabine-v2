@@ -5,16 +5,15 @@ import { useRouter } from 'next/router'
 import { useState} from 'react'
 import Timer from '../../components/preset/cust-james/Timer'
 import Comments from '../../components/preset/cust-james/Comments'
-import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaInstagram, 
-        FaSearchLocation, FaRegCopy, FaPause} from "react-icons/fa"
+import { FaAngleDoubleDown,FaRegEnvelopeOpen, FaRegCopy, FaPause} from "react-icons/fa"
 import { HiOutlineLocationMarker } from "react-icons/hi"
 import { LuClock10 } from "react-icons/lu";
 import { FiCalendar } from "react-icons/fi";
 import GalleryFade from '../../components/preset/presA05/GalleryFade'
 import Watermark from '../../components/preset/globals/Watermark'
-import {forum,cinzel,inter} from '../../components/globals/Fonts'
+import {cinzel,inter} from '../../components/globals/Fonts'
 import Navigasi from '../../components/preset/globals/Navigasi'
-import SlideOpening from '../../components/preset/presA05/SlideOpening'
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -169,7 +168,7 @@ function PresA05({url}) {
                         
                         <div className='flex flex-col items-center justify-end absolute bg-gradient-to-t 
                                     from-[#3c3838]/50 to-transparent w-full h-screen top-0 pb-40'>
-                            <h1 className='text-sm'>THE WEDDING OF</h1>
+                            <h1 className='text-sm my-4'>THE WEDDING OF</h1>
 
                             {/* TO DO: NAMA KEDUA MEMPELAI*/}
                             <h1 className=' text-3xl pb-8 font-Andrew uppercase'>{dataWeding.content.couple}</h1>
@@ -415,7 +414,7 @@ function PresA05({url}) {
                                         <LuClock10 className='text-sm'/>
                                             <h1 className='text-sm fadeUp'>{dataWeding.content.start_akad} - {dataWeding.content.end_akad}</h1>
                                         </div>
-                                        <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue} {dataWeding.content.venue_address}</h1>
+                                        <h1 className=' text-left  fadeUp mt-4 fadeUp'>{dataWeding.content.venue} {dataWeding.content.venue_address}</h1>
                                         <h1 className='text-sm fadeUp'></h1>
                                         <button  onClick={()=>{ window.open("https://maps.app.goo.gl/1DFbPtKTbT1Efwm59", '_blank');}} className='fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-white  px-3 py-2 mt-8
                                              text-black '>
@@ -441,7 +440,7 @@ function PresA05({url}) {
                                             <h1 className='text-sm fadeUp'>{dataWeding.content.start_resepsi} - {dataWeding.content.end_resepsi}</h1>
                                             <LuClock10 className='text-sm'/>
                                         </div>
-                                        <h1 className='text-xl  fadeUp mt-4 fadeUp'>{dataWeding.content.venue} {dataWeding.content.venue_address}</h1>
+                                        <h1 className=' text-right  fadeUp mt-4 fadeUp'>{dataWeding.content.venue} {dataWeding.content.venue_address}</h1>
                                         <h1 className='text-sm fadeUp'></h1>
                                         <button  onClick={()=>{ window.open("https://maps.app.goo.gl/1DFbPtKTbT1Efwm59", '_blank');}} className='fadeUp flex flex-row items-center justify-center text-sm rounded-lg  gap-2 border bg-white  px-3 py-2 mt-8 text-black'>
                                             <HiOutlineLocationMarker/> Lihat Lokasi
@@ -591,7 +590,7 @@ function PresA05({url}) {
                 <div className='w-full  relative text-center h-[500px]'>
                     <div className='fadeUp p-12 absolute left-0 top-0 bg-black/40 w-1/2 h-full flex flex-col items-center justify-end text-white'>
                         <p className='text-sm fadeUp'>Two souls become one, two hearts beat as one</p>
-                        <h1 className={' text-3xl py-4 my-8 fadeUp '+cinzel.className}>{dataWeding.content.groom_name} & {dataWeding.content.bride_name}</h1>
+                        <h1 className={' text-3xl py-4 my-8 fadeUp font-Andrew uppercase'}>{dataWeding.content.bride_name} & {dataWeding.content.groom_name}</h1>
                         <p className='w-full fadeUp text-xs'>Thank You</p>
                     </div>
                     <Image
