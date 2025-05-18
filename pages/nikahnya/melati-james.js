@@ -24,9 +24,9 @@ function PresA05({url}) {
     const dataWeding = {
         META : {
              slug : "melati-james",
-             title : "rabine.id - The Wedding Of Melati and James",
-             description : "rabine.id - The Wedding Of Melati and James",
-             thumbnail : "http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg"
+             title : "rabine.id - The Wedding Of Melati And James",
+             description : "rabine.id - The Wedding Of Melati And James",
+             thumbnail : gDrive+"1Wud-AJuUuZcdDNpArZzT3V1tDdEu9_Wd"+gDriveAuth
          },
          content : {
              audio : "/audio/Daniel_BP.mp3",
@@ -141,7 +141,7 @@ function PresA05({url}) {
                 <title>{dataWeding.META.title}</title>
 
                 <meta name="description" content={dataWeding.META.description} />
-                <meta property="og:image" content="http://contentmanagement.cendikabangsa.sch.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-23-at-17.04.06.jpeg" />
+                <meta property="og:image" content={dataWeding.META.thumbnail} />
                 <meta property="og:image:width" content="400" />
                 <meta property="og:image:height" content="300" />
                 <link rel="icon" href="/rbn.ico" />
@@ -477,8 +477,6 @@ function PresA05({url}) {
                
                 {/* <Gallery id={'gallery'} images={images} anim={{fadeUp:'fadeUp'}}/> */}
                
-            
-
                 <Comments slug={dataWeding.META.slug} url={url} tamu={to}/>
 
                 <GalleryFade images={imagesGallery} anim={{fadeUp:'fadeUp'}} id="gallery"/>
