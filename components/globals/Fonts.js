@@ -1,4 +1,4 @@
-import { Cinzel_Decorative, Damion, Stalemate, Forum, Poppins } from 'next/font/google'
+import { Cinzel_Decorative, Damion, Stalemate, Forum, Poppins, Inter } from 'next/font/google'
  
 const cinzel = Cinzel_Decorative({
  weight:['400','700','900'],
@@ -29,6 +29,11 @@ const forum = Forum({
   display: 'swap',
 })
 
+const inter = Inter({
+  weight : ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 
-export {cinzel,damion,stalemate,forum,poppins}
+export {cinzel,damion,stalemate,forum,poppins,inter}
