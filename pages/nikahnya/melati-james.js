@@ -307,7 +307,7 @@ function PresA05({url}) {
                                 alt='appstore'
                             /> */}
                             <p className='text-center fadeUp mt-10'>
-                                “Aku takj pernah menunggumu.<br/> Kamu tak pernah sengaja datang. <br/> Tapi kita sengaja
+                                “Aku tak pernah menunggumu.<br/> Kamu tak pernah sengaja datang. <br/> Tapi kita sengaja
                                 dipertemukan Tuhan.“
                             </p>
                            
