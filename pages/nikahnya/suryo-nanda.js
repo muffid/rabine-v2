@@ -39,7 +39,7 @@ function Suryonanda({url,main_web_url}) {
             groom_sure_name : "Muhammad Suryo Alam",
             bride_sure_name : "Ananda Aulia Frialisty",
             groom_pic : gDrive+"1I_uQZq2AflB9Dy6s9p82vlqn3aXxB-Vs"+gDriveAuth, 
-            bride_pic : gDrive+"1ggQhiykksJxpxxKHPBiKoSYVi5SlNP9E"+gDriveAuth, 
+            bride_pic : gDrive+"1Y_b2QQt8vDx6BT1DExxZ7PygIan2j4nH"+gDriveAuth, 
             groom_father : "Nurul Huda", // Hanya nama dan Gelar
             groom_mother : "Mila Kholifah", // Hanya nama dan Gelar
             bride_father : "Supriyanto", // Hanya nama dan Gelar
@@ -251,7 +251,7 @@ function Suryonanda({url,main_web_url}) {
                 </div>
 
                 {/* SISI KANAN */}
-                <div className={'w-full text-slate-800 lg:w-[40%] overflow-y-auto relative '+poppins.className}>
+                <div id='gift' className={'w-full text-slate-800 lg:w-[40%] overflow-y-auto relative '+poppins.className}>
 
                     {/* NOW PLAYING*/}
                     <div className='lg:hidden flex flex-col items-center justify-between gap-x-4 fixed w-full
