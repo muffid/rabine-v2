@@ -465,7 +465,7 @@ function Suryonanda({url,main_web_url}) {
                     {/* COMMENTS */}
                     <Comments slug={dataWeding.META.slug} url={url} tamu={to} bgColor={'bg-[#94A7C0]'}/>
 
-                   <div className='w-full h-full relative  flex flex-col gap-3 items-center bg-[#222831] overflow-hidden px-10 text-white  py-8'>
+                   <div id='gallery' className='w-full h-full relative  flex flex-col gap-3 items-center bg-[#222831] overflow-hidden px-10 text-white  py-8'>
                         <Image
                             src={gDrive+'1_T9JKkTOqUBtiA135qAWrNyx44sKv92V'+gDriveAuth}
                             fill
