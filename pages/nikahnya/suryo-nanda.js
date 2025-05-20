@@ -444,7 +444,7 @@ function Suryonanda({url,main_web_url}) {
                         <TiLocationOutline className='text-3xl text-[#DFD0B8] fadeUp'/>
                         <h1 className='text-xl text-center font-Coralis tracking-wider fadeUp'>{dataWeding.content.venue}</h1>
                         <h1 className=' text-center text-xs italic mx-10 fadeUp'>{dataWeding.content.venue_address}</h1>
-                        <iframe src={dataWeding.content.gmap_frame}
+                        <iframe id='lokasi' src={dataWeding.content.gmap_frame}
                                 className='w-[400px] h-[500px] rounded-2xl my-8 fadeUp'
                                 width="600" 
                                 height="600" 
