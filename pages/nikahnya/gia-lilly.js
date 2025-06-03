@@ -35,7 +35,7 @@ function PresA02({url}) {
              song_title : "The Joker And The Queen - Ed Sheeran ft Taylor Swift",
              groom_name: "Gia",
              bride_name : "Lilly", 
-             groom_sure_name : "Giya Sugianto",
+             groom_sure_name : "Giya Sugiyanto",
              bride_sure_name : "Liyana S.Sos",
              groom_pic : gDrive+"1NRxyl-Ap-Nc6QPqFGAuexlYGhtXvVdoj"+gDriveAuth, 
              bride_pic : gDrive+'1XLzKgDYR4LOqOL__rRpmPfKaxAWYHqEY'+gDriveAuth, 
@@ -51,7 +51,7 @@ function PresA02({url}) {
              day : "Selasa",
              date : "10", // Gunakan 01, 02, 03 dst untuk tanggal kurang dari 10
              month : "06", // Gunakan 01, 02, 03 dst untuk bulan kurang dari 10
-             month_name : "JUni",
+             month_name : "Juni",
              year : "2025",
              start_akad : "09:00 WIB", // format pemisah menggunakan tanda ":" harus diberi jarak spasi antara jam dan "WIB"
              end_akad : "09:45 WIB",
@@ -312,7 +312,7 @@ function PresA02({url}) {
                     <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 pt-[100px] bg-white'>
                     
                         <p className='text-center fadeUp text-sm leading-6 italic'>
-                           Riak malam yang damai, <br/> tawa ceria di siang hari akan menjadi <br/>kebahagiaan yang tiada tara tatkala <br/> semua ada dalam pernikahan.<br/>-pegpuff
+                          Allah dan malaikatnya menjadi saksi untuk hari yang bahagia <br/>dan untuk terucapnya sumpah serta janji yang suci. <br/>Dikabarkan pernikahan kami dari bumi kepada Arsy.
                         </p>
                         <IoMdHeart className='fadeUp text-2xl my-16 text-slate-950'/>
                     </div>
@@ -579,9 +579,9 @@ function PresA02({url}) {
 
                     {/* CLOSING */}
                     <div className='w-full  relative text-center h-[500px]'>
-                        <div className='p-12 fadeUp absolute top-0 bg-black/40 w-full h-full flex flex-col items-center justify-between text-white'>
+                        <div className='p-4 fadeUp absolute top-0 bg-black/40 w-full h-full flex flex-col items-center justify-between text-white'>
                           
-                           
+                           <div></div>
                             <div className='flex flex-col items-start pt-8 '>
                                 <div className='flex flex-row items-end'>
                                     <h1 className='text-7xl font-Coralis'>{dataWeding.content.groom_name}</h1>
@@ -590,9 +590,8 @@ function PresA02({url}) {
                                 <h1 className='text-7xl font-Coralis'>{dataWeding.content.bride_name}</h1>
                                    
                             </div>
-                             <p className='fadeUp text-center'>Thank You</p>
-                           
-                            
+                             <p className='fadeUp text-center '>Thank You</p>
+                        
                         </div>
                         <Image
                             src={dataWeding.content.img_closing}
