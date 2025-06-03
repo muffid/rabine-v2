@@ -149,7 +149,7 @@ function PresA02({url}) {
                 <title>{dataWeding.META.title}</title>
 
                 <meta name="description" content={dataWeding.META.description} />
-                <meta property="og:image" content={ gDrive+"1Luk7XcsNJUj4uyC65xrGRThbIS9jWwIy"+gDriveAuth} />
+                <meta property="og:image" content={dataWeding.META.thumbnail} />
                 <meta property="og:image:width" content="400" />
                 <meta property="og:image:height" content="400" />
                 <link rel="icon" href="/rbn.ico" />
