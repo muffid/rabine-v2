@@ -356,7 +356,7 @@ function PresA02({url}) {
                                 <h1 className='text-sm italic fadeUp'>Bapak {dataWeding.content.groom_father} & Ibu {dataWeding.content.groom_mother}</h1>
                                 <h1 className='text-[0.5rem] italic mt-2 fadeUp'>Dusun I, RT/RW. 003/001, Desa Sangkanerang, Kec. Jalaksana, Kab. Kuningan</h1>
                                 <div className='flex flex-row items-center fadeUp'>
-                                    <FaInstagram className='text-sm'/><h1 className='text-sm font-bold mx-2'>@peg_puff</h1>
+                                    <FaInstagram className='text-sm'/><h1 className='text-sm font-bold mx-2'>@peg___puff</h1>
                                 </div>
                             </div>
                         </div>
