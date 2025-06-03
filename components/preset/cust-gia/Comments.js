@@ -114,17 +114,19 @@ export default function Comments({slug,url,tamu}) {
         }
       }, [replyingTo])
     return (
-        <div id='doa' className='w-full bg-white p-6 flex flex-col items-center gap-y-2 px-8 text-[#575757]'>
+      <div className='px-4'>
+        <div id='doa' className='w-full bg-white rounded-lg border-[1px]  border-slate-300 p-6 flex flex-col items-center gap-y-2 px-8 text-[#575757]'>
+            
             <h1 className='text-[2.5rem] fadeUp font-Coralis'>Kirim Ucapan</h1>
-            <h1 className='text-sm text-center fadeUp '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
+            <h1 className='text-xs text-center fadeUp '>Sebanyak {comments.length} orang telah memberi ucapan</h1>
             <input type="text" 
                 value={namaTamu}
                 onChange={handleChangeTamu}
-                className='border-[1px] fadeUp border-slate-700 text-slate-900 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
+                className='border-[1px] fadeUp rounded-lg border-slate-300 text-slate-900 bg-transparent outline-none focus:border-slate-600 text-sm mt-2 w-full p-2' />
             <textarea
                     onChange={handleChange}
                     value={commentToPost}
-                    className="border-[1px] fadeUp border-slate-700 bg-transparent outline-none focus:border-slate-700 text-sm mt-2 w-full p-6 rounded" // Menambahkan border rounded
+                    className="border-[1px] fadeUp  border-slate-300 bg-transparent outline-none focus:border-slate-700 text-sm mt-2 w-full p-6 rounded" // Menambahkan border rounded
                     placeholder={'Kirim Ucapan Dan Doa Terbaik Anda'}
                     rows={3} // Menentukan jumlah baris
                     />
@@ -187,6 +189,7 @@ export default function Comments({slug,url,tamu}) {
                     </div>
                 ))}
             </div>
+        </div>
         </div>
     )
 }
