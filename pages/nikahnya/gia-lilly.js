@@ -28,11 +28,11 @@ function PresA02({url}) {
              slug : "gia-lilly",
              title : "The Wedding of Gia And Lilly",
              description : "rabine.id -The Wedding of Gia And Lilly",
-             thumbnail : gDrive+"1Luk7XcsNJUj4uyC65xrGRThbIS9jWwIy"+gDriveAuth
+             thumbnail : gDrive+"10jbqFJdPe2EivB9JWsQuhgBcRaXk_iOi"+gDriveAuth
          },
          content : {
-             audio : "/audio/wedding-cinematic.mp3",
-             song_title : "Romantic Love - Charles P",
+             audio : "/audio/Ed_Sheeran.mp3",
+             song_title : "The Joker And The Queen - Ed Sheeran ft Taylor Swift",
              groom_name: "Gia",
              bride_name : "Lilly", 
              groom_sure_name : "Giya Sugianto",
@@ -143,7 +143,7 @@ function PresA02({url}) {
         <div className={'w-full box-content  text-[#575757] '+inter.className}>
 
             {/* TO DO: BACKDOUND MP3*/}
-            <audio  loop ref={audioRef} src="/audio/wedding-cinematic.mp3" />
+            <audio  loop ref={audioRef} src="/audio/Ed_Sheeran.mp3" />
             <Head>
                 {/* TO DO: TITLE PERNIKAHAN*/}
                 <title>{dataWeding.META.title}</title>
@@ -207,7 +207,7 @@ function PresA02({url}) {
                 {/* SISI KIRI (TAMPILAN PC) */}
 
                 {/* TO DO: GAMBAR UNTUK SISI KIRI TAMPILAN PC*/}
-                <div id='gallery' className="hidden lg:flex bg-cover bg-right md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0">
+                <div className="hidden lg:flex bg-cover bg-right md:w-1/2 lg:w-[60%] h-screen overflow-hidden sticky top-0">
                     
                     <div className='gap-y-4 w-full h-full flex flex-col justify-end items-end 
                                  relative'>
@@ -241,7 +241,7 @@ function PresA02({url}) {
                                     <h1 className='font-bold'>{isPlaying ? 'Now Playing' : 'Paused'}</h1>
 
                                     {/* TO DO: JUDUL LAGU*/}
-                                    <h1>Romantic Love - Alex P.</h1>
+                                     <h1 className='text-xs'>{dataWeding.content.song_title}</h1>
                                 </div>
                             </div>
                             {/* TO DO: NAMA MEMPELAI*/}
@@ -276,7 +276,7 @@ function PresA02({url}) {
                                 <h1 className='font-bold'>{isPlaying ? 'Now Playing' : 'Paused'}</h1>
 
                                 {/* TO DO: JUDUL LAGU*/}
-                                <h1>Romantic Love - Alex P.</h1>
+                                <h1 className='text-[0.5rem]'>{dataWeding.content.song_title}</h1>
                             </div>
                         </div>                    
                     </div>
@@ -345,7 +345,7 @@ function PresA02({url}) {
                                     src = {dataWeding.content.groom_pic}
                                     width={1200}
                                     height={1200}
-                                    className='w-[180px] h-[170px] object-cover object-center absolute bottom-2 left-0 fadeUp'
+                                    className='w-[180px] h-[170px] object-cover object-center absolute top-2 left-0 fadeUp'
                                     alt='appstore'
                                 />
                             </div>
@@ -465,7 +465,10 @@ function PresA02({url}) {
                     <div className='bg-white w-full flex flex-col items-center'>
                                 <h1 className='font-Coralis text-4xl fadeUp mb-14 mt-20'>Gallery</h1>
                     </div>
-                   <GalleryFade images={imagesGallery} anim={{fadeUp:'fadeUp'}} id="gallery"/>
+                   
+
+                   <GalleryFade images={imagesGallery} anim={{fadeUp:'fadeUp'}} id={'gallery'}/>
+                  
                     {/* GIFT */}
                     <div id='gift' className='h-full bg-white py-12 flex gap-y-8 text-[#575757] flex-col items-center justify-center fadeUp'  >
                            <h1 className='text-[2.5rem] fadeUp font-Coralis my-8'>Kirim Hadiah</h1>
@@ -576,18 +579,18 @@ function PresA02({url}) {
 
                     {/* CLOSING */}
                     <div className='w-full  relative text-center h-[500px]'>
-                        <div className='p-12 fadeUp absolute top-0 bg-black/40 w-full h-full flex flex-col items-center justify-center text-white'>
+                        <div className='p-12 fadeUp absolute top-0 bg-black/40 w-full h-full flex flex-col items-center justify-between text-white'>
                           
                            
-                            <div className='flex flex-col items-start '>
-                            <div className='flex flex-row items-end'>
-                                <h1 className='text-7xl font-Coralis'>{dataWeding.content.groom_name}</h1>
-                                <IoMdHeart className='text-2xl mb-2'/>
+                            <div className='flex flex-col items-start pt-8 '>
+                                <div className='flex flex-row items-end'>
+                                    <h1 className='text-7xl font-Coralis'>{dataWeding.content.groom_name}</h1>
+                                    <IoMdHeart className='text-2xl mb-2'/>
+                                </div>
+                                <h1 className='text-7xl font-Coralis'>{dataWeding.content.bride_name}</h1>
+                                   
                             </div>
-                            <h1 className='text-7xl font-Coralis'>{dataWeding.content.bride_name}</h1>
-                                    <p className='fadeUp w-1/3 text-left'>Thank You</p>
-                        </div>
-                            
+                             <p className='fadeUp text-center'>Thank You</p>
                            
                             
                         </div>
