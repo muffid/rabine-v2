@@ -312,7 +312,7 @@ function PresA02({url}) {
                     <div className='w-full relative text-sm flex flex-col items-center justify-center px-16 pt-[100px] bg-white'>
                     
                         <p className='text-center fadeUp text-sm leading-6 italic'>
-                          Allah dan malaikatnya menjadi saksi untuk hari yang bahagia <br/>dan untuk terucapnya sumpah serta janji yang suci. <br/>Dikabarkan pernikahan kami dari bumi kepada Arsy.
+                          Allah dan malaikatnya menjadi saksi untuk hari yang bahagia <br/>dan untuk terucapnya sumpah serta janji yang suci. <br/>Dikabarkan pernikahan kami dari bumi kepada Arsy.<br/>-pegpuff
                         </p>
                         <IoMdHeart className='fadeUp text-2xl my-16 text-slate-950'/>
                     </div>
