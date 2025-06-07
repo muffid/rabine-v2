@@ -33,7 +33,7 @@ function PresA01({url}) {
             bride_name : "Marta", 
             groom_sure_name : "Muhamad Ahmad Taufiq Api Gadi, M.Pd",
             bride_sure_name : "Marta Dwi Anggraini, S.Pd",
-            groom_pic : gDrive+"1HTpOrauzbpVauB_21cjeZkvChHncgdP4"+gDriveAuth, 
+            groom_pic : gDrive+"12bO86ka27gKMAXlRv1IUWiavuTgJ358Q"+gDriveAuth, 
             bride_pic : gDrive+"1muAfRkI28a_R2CPwQqCgXtAVqQqPcc7y"+gDriveAuth, 
             groom_father : "Gadi Gaa Junaidin", // Hanya nama dan Gelar
             groom_mother : "Nurhartati", // Hanya nama dan Gelar

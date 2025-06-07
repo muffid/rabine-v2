@@ -38,7 +38,7 @@ function Suryonanda({url,main_web_url}) {
             bride_name : "Nanda", 
             groom_sure_name : "Muhammad Suryo Alam",
             bride_sure_name : "Ananda Aulia Frialisty",
-            groom_pic : gDrive+"1VCWrKOITsvkv6vqfer5KyRze__3Doq2S"+gDriveAuth, 
+            groom_pic : gDrive+"12bO86ka27gKMAXlRv1IUWiavuTgJ358Q"+gDriveAuth, 
             bride_pic : gDrive+"1No1qzsKlp_eY49PmMu-2AYphAMIG8Isj"+gDriveAuth, 
             groom_father : "Nurul Huda", // Hanya nama dan Gelar
             groom_mother : "Mila Kholifah", // Hanya nama dan Gelar
@@ -48,7 +48,7 @@ function Suryonanda({url,main_web_url}) {
             bride_ig_account : "@nanda.af12",
             groom_ig_url : "https://www.instagram.com/yafi.a?igsh=ZXpxMHdvcHM4Y2F5",
             bride_ig_url : "https://www.instagram.com/nanda.af12?igsh=OXJwOWhnb2w1b2pu",
-            couple : "Suryo & Nanda'",
+            couple : "Suryo & Nanda",
             day_akad : "Selasa",
             date_akad : "17",
             day : "Selasa",
