@@ -29,7 +29,7 @@ function Suryonanda({url,main_web_url}) {
             slug : "suryo-nanda",
             title : "The Wedding Of Suryo & Nanda",
             description : "The Wedding Of Suryo & Nanda",
-            thumbnail : gDrive+"1JwcZJTmExbvHzJ2dgMWRHfsoU-sylSbT"+gDriveAuth
+            thumbnail : gDrive+"1OhpyJY7xtahM11GF7ShGNimQN_Uj6g1H"+gDriveAuth
         },
         content : {
             audio : "/audio/a-million-dreams.mp3",
@@ -38,8 +38,8 @@ function Suryonanda({url,main_web_url}) {
             bride_name : "Nanda", 
             groom_sure_name : "Muhammad Suryo Alam",
             bride_sure_name : "Ananda Aulia Frialisty",
-            groom_pic : gDrive+"1I_uQZq2AflB9Dy6s9p82vlqn3aXxB-Vs"+gDriveAuth, 
-            bride_pic : gDrive+"1Y_b2QQt8vDx6BT1DExxZ7PygIan2j4nH"+gDriveAuth, 
+            groom_pic : gDrive+"1VCWrKOITsvkv6vqfer5KyRze__3Doq2S"+gDriveAuth, 
+            bride_pic : gDrive+"1No1qzsKlp_eY49PmMu-2AYphAMIG8Isj"+gDriveAuth, 
             groom_father : "Nurul Huda", // Hanya nama dan Gelar
             groom_mother : "Mila Kholifah", // Hanya nama dan Gelar
             bride_father : "Supriyanto", // Hanya nama dan Gelar
@@ -64,10 +64,10 @@ function Suryonanda({url,main_web_url}) {
             venue_address : "Bakalankrajan, Kec. Sukun, Kota Malang",
             gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8991301608385!2d112.6119557!3d-8.009338199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789d516ecc29f9%3A0xca0b83612d2423ef!2sWarung%20Tengah%20Sawah%20%2F%20WTS!5e0!3m2!1sid!2sid!4v1747186117569!5m2!1sid!2sid",
             yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-            bg_opening : gDrive+"1ZpGEMqfVm0Hdjj-oGG57NR1HZ1oCcfUk"+gDriveAuth,
+            bg_opening : gDrive+"1aqIu-Y-Hmo7ZSZzdUmKX70LgDNMvU1WQ"+gDriveAuth,
             d_day_img : gDrive+"1CrWm-uG8hFz2oUkslZUo_LXWVFo40xfB"+gDriveAuth,
-            bg_first_section :gDrive+"10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh"+gDriveAuth,
-            img_left :  gDrive+"10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh"+gDriveAuth,
+            bg_first_section :gDrive+"1sT6eW_862WSZ7q_a-KzxToXGgsfqFKqo"+gDriveAuth,
+            img_left :  gDrive+"1aqIu-Y-Hmo7ZSZzdUmKX70LgDNMvU1WQ"+gDriveAuth,
             img_quote : gDrive+"1MEs2yPZirA-7xNaP_1v8GXUpbWBQqP_M"+gDriveAuth,
             img_closing : gDrive+'1VE1_J9THDCSncF-4odcZQWz943gJiAyZ'+gDriveAuth,
             bg_resepsi : gDrive+"1S1z6FeSnHJLlaWqpI7Yiz0w0X3e-Hw9W"+gDriveAuth,
