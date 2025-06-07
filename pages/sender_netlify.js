@@ -7,7 +7,7 @@ function Sender (){
 
   const router = useRouter()
     const { pengantin } = router.query
-    const url = "https://rabine.id/nikahnya/"
+    const url = "https://rabineid.netlify.app/nikahnya/"
    
   
     const defaultTeksUndangan = `Kepada Yth.
