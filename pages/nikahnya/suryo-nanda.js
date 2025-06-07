@@ -29,7 +29,7 @@ function Suryonanda({url,main_web_url}) {
             slug : "suryo-nanda",
             title : "The Wedding Of Suryo & Nanda",
             description : "The Wedding Of Suryo & Nanda",
-            thumbnail : gDrive+"1OhpyJY7xtahM11GF7ShGNimQN_Uj6g1H"+gDriveAuth
+            thumbnail : "img/suryo-nanda/E.jpg"
         },
         content : {
             audio : "/audio/a-million-dreams.mp3",
@@ -38,8 +38,8 @@ function Suryonanda({url,main_web_url}) {
             bride_name : "Nanda", 
             groom_sure_name : "Muhammad Suryo Alam",
             bride_sure_name : "Ananda Aulia Frialisty",
-            groom_pic : gDrive+"12bO86ka27gKMAXlRv1IUWiavuTgJ358Q"+gDriveAuth, 
-            bride_pic : gDrive+"1No1qzsKlp_eY49PmMu-2AYphAMIG8Isj"+gDriveAuth, 
+            groom_pic : "img/suryo-nanda/C.jpg",
+            bride_pic : "img/suryo-nanda/D.jpg",
             groom_father : "Nurul Huda", // Hanya nama dan Gelar
             groom_mother : "Mila Kholifah", // Hanya nama dan Gelar
             bride_father : "Supriyanto", // Hanya nama dan Gelar
@@ -64,7 +64,7 @@ function Suryonanda({url,main_web_url}) {
             venue_address : "Bakalankrajan, Kec. Sukun, Kota Malang",
             gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8991301608385!2d112.6119557!3d-8.009338199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789d516ecc29f9%3A0xca0b83612d2423ef!2sWarung%20Tengah%20Sawah%20%2F%20WTS!5e0!3m2!1sid!2sid!4v1747186117569!5m2!1sid!2sid",
             yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-            bg_opening : gDrive+"1hF6IJJGTJNgLlE9s7WboS-JCKQjMYVjV"+gDriveAuth,
+            bg_opening : "img/suryo-nanda/A.jpg",
             d_day_img : gDrive+"1CrWm-uG8hFz2oUkslZUo_LXWVFo40xfB"+gDriveAuth,
             bg_first_section :gDrive+"1sT6eW_862WSZ7q_a-KzxToXGgsfqFKqo"+gDriveAuth,
             img_left :  gDrive+"1aqIu-Y-Hmo7ZSZzdUmKX70LgDNMvU1WQ"+gDriveAuth,
@@ -78,11 +78,11 @@ function Suryonanda({url,main_web_url}) {
 
     const imagesGallery = [
 
-        { src: gDrive+'1eIzMipCVfxD3IroT4BaSOwu3cSRT2aPE'+gDriveAuth, alt: 'rabine.id' },
-        { src: gDrive+'10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh'+gDriveAuth, alt: 'rabine.id' },
-        { src: gDrive+'10zK6XrYUiownlq_0b60LjXPws0MUCMZm'+gDriveAuth, alt: 'rabine.id' },
-        { src: gDrive+'17sHVYDb3VLdtlZntT3lF_yBUNCZGIwlP'+gDriveAuth, alt: 'rabine.id' },
-        {src: gDrive+'1RCLDTmbibeQfOJoVt4cZeglGKlOrUAiy'+gDriveAuth}
+        { src:"img/suryo-nanda/A.jpg", alt: 'rabine.id' },
+        { src:"img/suryo-nanda/H.jpg", alt: 'rabine.id' },
+        { src:"img/suryo-nanda/B.jpg", alt: 'rabine.id' },
+        { src:"img/suryo-nanda/G.jpg", alt: 'rabine.id' },
+        {src:"img/suryo-nanda/F.jpg"}
      
         // tambhakan lagi kalau masih ada....
     ]
