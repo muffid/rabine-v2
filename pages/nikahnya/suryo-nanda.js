@@ -29,7 +29,7 @@ function Suryonanda({url,main_web_url}) {
             slug : "suryo-nanda",
             title : "The Wedding Of Suryo & Nanda",
             description : "The Wedding Of Suryo & Nanda",
-            thumbnail : "/img/suryo-nanda/E.jpg"
+            thumbnail : gDrive+"1JwcZJTmExbvHzJ2dgMWRHfsoU-sylSbT"+gDriveAuth
         },
         content : {
             audio : "/audio/a-million-dreams.mp3",
@@ -38,8 +38,8 @@ function Suryonanda({url,main_web_url}) {
             bride_name : "Nanda", 
             groom_sure_name : "Muhammad Suryo Alam",
             bride_sure_name : "Ananda Aulia Frialisty",
-            groom_pic : "/img/suryo-nanda/C.jpg",
-            bride_pic : "/img/suryo-nanda/D.png",
+            groom_pic : gDrive+"1I_uQZq2AflB9Dy6s9p82vlqn3aXxB-Vs"+gDriveAuth, 
+            bride_pic : gDrive+"1Y_b2QQt8vDx6BT1DExxZ7PygIan2j4nH"+gDriveAuth, 
             groom_father : "Nurul Huda", // Hanya nama dan Gelar
             groom_mother : "Mila Kholifah", // Hanya nama dan Gelar
             bride_father : "Supriyanto", // Hanya nama dan Gelar
@@ -48,7 +48,7 @@ function Suryonanda({url,main_web_url}) {
             bride_ig_account : "@nanda.af12",
             groom_ig_url : "https://www.instagram.com/yafi.a?igsh=ZXpxMHdvcHM4Y2F5",
             bride_ig_url : "https://www.instagram.com/nanda.af12?igsh=OXJwOWhnb2w1b2pu",
-            couple : "Suryo & Nanda",
+            couple : "Suryo & Nanda'",
             day_akad : "Selasa",
             date_akad : "17",
             day : "Selasa",
@@ -64,12 +64,12 @@ function Suryonanda({url,main_web_url}) {
             venue_address : "Bakalankrajan, Kec. Sukun, Kota Malang",
             gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8991301608385!2d112.6119557!3d-8.009338199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789d516ecc29f9%3A0xca0b83612d2423ef!2sWarung%20Tengah%20Sawah%20%2F%20WTS!5e0!3m2!1sid!2sid!4v1747186117569!5m2!1sid!2sid",
             yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-            bg_opening : "/img/suryo-nanda/A.jpg",
+            bg_opening : gDrive+"1ZpGEMqfVm0Hdjj-oGG57NR1HZ1oCcfUk"+gDriveAuth,
             d_day_img : gDrive+"1CrWm-uG8hFz2oUkslZUo_LXWVFo40xfB"+gDriveAuth,
-            bg_first_section :"/img/suryo-nanda/B.jpg",
-            img_left : "/img/suryo-nanda/A.jpg",
+            bg_first_section :gDrive+"10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh"+gDriveAuth,
+            img_left :  gDrive+"10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh"+gDriveAuth,
             img_quote : gDrive+"1MEs2yPZirA-7xNaP_1v8GXUpbWBQqP_M"+gDriveAuth,
-            img_closing : "/img/suryo-nanda/F.jpg",
+            img_closing : gDrive+'1VE1_J9THDCSncF-4odcZQWz943gJiAyZ'+gDriveAuth,
             bg_resepsi : gDrive+"1S1z6FeSnHJLlaWqpI7Yiz0w0X3e-Hw9W"+gDriveAuth,
             btn_couple : gDrive+"1DZ0CqwJ6XOi4SnKKPBulSw6K3NG_Znbn"+gDriveAuth
             
@@ -78,11 +78,11 @@ function Suryonanda({url,main_web_url}) {
 
     const imagesGallery = [
 
-        { src:"/img/suryo-nanda/A.jpg", alt: 'rabine.id' },
-        { src:"/img/suryo-nanda/H.jpg", alt: 'rabine.id' },
-        { src:"/img/suryo-nanda/B.jpg", alt: 'rabine.id' },
-        { src:"/img/suryo-nanda/G.jpg", alt: 'rabine.id' },
-        {src:"/img/suryo-nanda/I.jpg"}
+        { src: gDrive+'1eIzMipCVfxD3IroT4BaSOwu3cSRT2aPE'+gDriveAuth, alt: 'rabine.id' },
+        { src: gDrive+'10URJ7YQTrWVgbkEcc2OcdUEfvuA6JFWh'+gDriveAuth, alt: 'rabine.id' },
+        { src: gDrive+'10zK6XrYUiownlq_0b60LjXPws0MUCMZm'+gDriveAuth, alt: 'rabine.id' },
+        { src: gDrive+'17sHVYDb3VLdtlZntT3lF_yBUNCZGIwlP'+gDriveAuth, alt: 'rabine.id' },
+        {src: gDrive+'1RCLDTmbibeQfOJoVt4cZeglGKlOrUAiy'+gDriveAuth}
      
         // tambhakan lagi kalau masih ada....
     ]
@@ -283,7 +283,7 @@ function Suryonanda({url,main_web_url}) {
                     <div id='opening' className='w-full h-full  relative py-24  bg-[#222831] px-10'>
                         <div className='absolute right-0 top-0'>
                             <Image
-                                    src="/img/suryo-nanda/Asset 17.png"
+                                    src={gDrive+'1RGyV8qdTzNMmGV0f-7tm2QmN6Q7Kjjju'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[220px]'
@@ -292,7 +292,7 @@ function Suryonanda({url,main_web_url}) {
                         </div>
                         <div className='absolute left-0 top-[170px]'>
                             <Image
-                                    src="/img/suryo-nanda/Asset 18.png"
+                                    src={gDrive+'1IkNftAxE6txvLzb1nYk1FHVjujrlHytf'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[100px]'
@@ -301,7 +301,7 @@ function Suryonanda({url,main_web_url}) {
                         </div>
                         <div className='absolute bottom-0 right-0'>
                             <Image
-                                    src="/img/suryo-nanda/Asset 21.png"
+                                    src={gDrive+'1rtro5-ZKMBcRl1C0J2ZjBPvDeTH7pBkb'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[100px]'
@@ -335,7 +335,7 @@ function Suryonanda({url,main_web_url}) {
                             Ar Rum : 21
                         </p>
                         <Image
-                                    src="/img/suryo-nanda/Asset 14.png"
+                                    src={gDrive+'1RtVGZUJ3UPGQVCbuUcqRbekrmCUy5v9r'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className='w-[100px] fadeUp'
@@ -347,7 +347,7 @@ function Suryonanda({url,main_web_url}) {
                      {/* MEMPELAI */}
                      <div id='mempelai' className='w-full h-full relative bg-cover  bg-[#222831]  px-10 text-white overflow-hidden'>
                         <Image
-                            src="/img/suryo-nanda/Asset 27.png"
+                            src={gDrive+'1_T9JKkTOqUBtiA135qAWrNyx44sKv92V'+gDriveAuth}
                             fill
                             className='absolute opacity-10 object-cover scale-105'
                             alt='rabine.id'
@@ -366,7 +366,7 @@ function Suryonanda({url,main_web_url}) {
                                 
                                 <div className='absolute  w-[200px] h-[200px] rounded-full -z-10 right-2 top-1'>
                                     <Image
-                                    src="/img/suryo-nanda/Asset 26.png"
+                                    src={gDrive+'135_vLzY9sZ3thwmIZGKsMXDbeYOVA4CG'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className=' w-[600px] object-contain'
@@ -395,7 +395,7 @@ function Suryonanda({url,main_web_url}) {
                                 />
                                 <div className='absolute  w-[200px] h-[200px] rounded-full -z-10 right-2 top-1'>
                                     <Image
-                                    src="/img/suryo-nanda/Asset 26.png"
+                                    src={gDrive+'135_vLzY9sZ3thwmIZGKsMXDbeYOVA4CG'+gDriveAuth}
                                     width={1200}
                                     height={1200}
                                     className=' w-[600px] object-contain'
@@ -418,14 +418,14 @@ function Suryonanda({url,main_web_url}) {
                       <Timer 
                         targetDate = {dateCountDown} 
                         anim = {{fadeUp :'fadeUp'}} 
-                        bgImage="/img/suryo-nanda/Asset 14.png"
+                        bgImage={gDrive+"1RtVGZUJ3UPGQVCbuUcqRbekrmCUy5v9r"+gDriveAuth}
                         url={"https://calendar.google.com/calendar/u/0/r/eventedit?text=Wedding+"+dataWeding.content.groom_name+"+%26+"+dataWeding.content.bride_name+"&dates="+dataWeding.content.year+dataWeding.content.month+dataWeding.content.date+"T120000Z/"+dataWeding.content.year+dataWeding.content.month+dataWeding.content.date+"T120000Z&pli=1"}
                     />
 
                     {/* INFO ACARA */}
                     <div id='jadwal' className='relative bg-cover overflow-hidden w-full flex flex-col items-center justify-center gap-y-1 p-4 h-full bg-[#222831] text-white'>
                         <Image
-                            src="/img/suryo-nanda/Asset 27.png"
+                            src={gDrive+'1_T9JKkTOqUBtiA135qAWrNyx44sKv92V'+gDriveAuth}
                             fill
                             className='absolute opacity-10 object-cover scale-110 z-0'
                             alt='rabine.id'
@@ -467,7 +467,7 @@ function Suryonanda({url,main_web_url}) {
 
                    <div id='gallery' className='w-full h-full relative  flex flex-col gap-3 items-center bg-[#222831] overflow-hidden px-10 text-white  py-8'>
                         <Image
-                            src="/img/suryo-nanda/Asset 27.png"
+                            src={gDrive+'1_T9JKkTOqUBtiA135qAWrNyx44sKv92V'+gDriveAuth}
                             fill
                             className='absolute opacity-10 object-cover scale-110 '
                             alt='rabine.id'
@@ -518,10 +518,10 @@ function Suryonanda({url,main_web_url}) {
                         <div className='w-full  bg-red-300 rounded-lg z-[9]'>
                               <Zoom>
                                 <Image
-                                        src={imagesGallery[4].src}
+                                        src={imagesGallery[3].src}
                                             width={1200}
                                             height={1200}
-                                            className='w-full h-[170px]   object-cover object-center rounded-lg '
+                                            className='w-full h-[170px]   object-cover rounded-lg '
                                             alt='appstore'
                                     />
                                 </Zoom>
