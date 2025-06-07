@@ -1,4 +1,3 @@
-'use client'
 import React, { useState, } from 'react';
 import { useRouter } from 'next/router'
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,22 +6,11 @@ import Head from 'next/head'
 function Sender (){
 
   const router = useRouter()
-  const { pengantin,url } = router.query
-
-
-  const [namaUrl, setNamaUrl] = useState('')
-
-  useEffect(() => {
-    if (router.isReady) {
-      setNamaUrl(url || 'https://rabineid.netlify.app/nikahnya/') // default
-    }
-  }, [router.isReady,namaUrl ])
-
-  
-  
+    const { pengantin } = router.query
+    const url = "https://rabine.id/nikahnya/"
    
   
-  const defaultTeksUndangan = `Kepada Yth.
+    const defaultTeksUndangan = `Kepada Yth.
 Bapak/Ibu/Saudara/ix
 [Tamu]
 _____________________
