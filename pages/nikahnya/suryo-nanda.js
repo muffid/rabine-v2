@@ -64,7 +64,7 @@ function Suryonanda({url,main_web_url}) {
             venue_address : "Bakalankrajan, Kec. Sukun, Kota Malang",
             gmap_frame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8991301608385!2d112.6119557!3d-8.009338199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789d516ecc29f9%3A0xca0b83612d2423ef!2sWarung%20Tengah%20Sawah%20%2F%20WTS!5e0!3m2!1sid!2sid!4v1747186117569!5m2!1sid!2sid",
             yt_frame : "https://www.youtube-nocookie.com/embed/kebq86BTZFA?si=9saOo4u4j5ry06DO",
-            bg_opening : gDrive+"1aqIu-Y-Hmo7ZSZzdUmKX70LgDNMvU1WQ"+gDriveAuth,
+            bg_opening : gDrive+"1hF6IJJGTJNgLlE9s7WboS-JCKQjMYVjV"+gDriveAuth,
             d_day_img : gDrive+"1CrWm-uG8hFz2oUkslZUo_LXWVFo40xfB"+gDriveAuth,
             bg_first_section :gDrive+"1sT6eW_862WSZ7q_a-KzxToXGgsfqFKqo"+gDriveAuth,
             img_left :  gDrive+"1aqIu-Y-Hmo7ZSZzdUmKX70LgDNMvU1WQ"+gDriveAuth,
